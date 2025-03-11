@@ -1,5 +1,5 @@
 'use client'
-import type { Metadata } from "next";
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./animations.css"; 
@@ -13,8 +13,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-
 
 export default function RootLayout({
   children,
@@ -53,15 +51,14 @@ export default function RootLayout({
             zIndex: 1000,
           }}
         >
-            <h1 style={{ fontSize: "1.2rem", margin: 0 }}>
-            <a
-              href="/"
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
-              Visual Computing & Augmented Intelligence Lab
-            </a>
-            </h1>
-            <nav>
+          <h1 style={{ fontSize: "1.2rem", margin: 0 }}>
+            <Link href="/" legacyBehavior>
+              <a style={{ color: "inherit", textDecoration: "none" }}>
+                Visual Computing & Augmented Intelligence Lab
+              </a>
+            </Link>
+          </h1>
+          <nav>
             <ul
               style={{
                 display: "flex",
@@ -78,25 +75,28 @@ export default function RootLayout({
                 { label: "PUBLICATIONS", href: "./publications" },
               ].map((item) => (
                 <li key={item.href}>
-                  <a
-                    href={item.href}
-                    style={{
-                      color: "#333",
-                      textDecoration: "none",
-                      fontWeight: "bold",
-                      padding: "8px 12px",
-                      borderRadius: "4px",
-                      transition: "background-color 0.3s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLElement).style.backgroundColor = "#ddd";
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
-                    }}
-                  >
-                    {item.label}
-                  </a>
+                  <Link href={item.href} legacyBehavior>
+                    <a
+                      style={{
+                        color: "#333",
+                        textDecoration: "none",
+                        fontWeight: "bold",
+                        padding: "8px 12px",
+                        borderRadius: "4px",
+                        transition: "background-color 0.3s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        (e.currentTarget as HTMLElement).style.backgroundColor =
+                          "#ddd";
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.currentTarget as HTMLElement).style.backgroundColor =
+                          "transparent";
+                      }}
+                    >
+                      {item.label}
+                    </a>
+                  </Link>
                 </li>
               ))}
             </ul>
