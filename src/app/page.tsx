@@ -1,80 +1,146 @@
 'use client'
-import './/animations.css'; 
 
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      
-      <div style={{ width: "100%", height: "70vh", overflowX: "scroll", whiteSpace: "nowrap" }}>
-        <img src="/test2.jpg" alt="Image 1" style={{ width: "100vw", height: "100%", objectFit: "cover", display: "inline-block" }} />
-        <img src="/test1.jpeg" alt="Image 2" style={{ width: "100vw", height: "100%", objectFit: "cover", display: "inline-block" }} />
-        <img src="/test3.jpg" alt="Image 3" style={{ width: "100vw", height: "100%", objectFit: "cover", display: "inline-block" }} />
-      </div>
-
-      <h2 style={{ textAlign: "center", marginTop: "40px", fontSize: "1.7rem", color: "#efefef" }}>LATEST NEWS</h2>
-      <br></br>
-      <div style={{ padding: "20px", backgroundColor: "#f0f0f0", color: "black", borderRadius: "10px", margin: "0 40px" }}>
-        <p style={{ fontSize: "1.2rem", backgroundColor: "#efefef", textAlign: "center" }}>
-          Here is some additional information about our projects and team. We are constantly working to improve and innovate. We are always looking for new opportunities to grow and expand our services. We are committed to providing the best possible experience for our customers. We are dedicated to providing the best service possible. Our team is committed to excellence and we strive to exceed your expectations.
-        </p>
-      </div>
-
-      <h2 style={{ textAlign: "center", marginTop: "40px", fontSize: "1.7rem", color: "#ccc" }}>ABOUT US</h2>
-      <div style={{ display: "flex", height: "50vh", backgroundColor: "#black", color: "#efefef" }}>
-        <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <img src="/logo.png" alt="About Us" style={{ width: "50%", height: "50%", objectFit: "cover" }} />
+    <div style={{
+      fontFamily: "Arial, sans-serif",
+      margin: 0,
+      padding: 0,
+      backgroundColor: "#f7f7f7",
+      color: "#333"
+    }}>
+      {/* Scrolling Images */}
+      <div style={{ width: "100%", overflow: "hidden" }}>
+        <div style={{
+          display: "flex",
+          width: "calc(200 * 100vw)",
+          animation: "scroll 20s linear infinite"
+        }}>
+          {["/2.png", "/3.png", "/4.png", "/2.png", "/3.png", "/4.png"].map((src, index) => (
+            <img key={index}
+              src={src}
+              alt={`Image ${index + 1}`}
+              style={{
+                width: "100vw",
+                height: "60vh",
+                objectFit: "cover"
+              }}
+            />
+          ))}
         </div>
-        <div style={{ flex: 1, padding: "20px", display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "black" }}>
-          <p style={{ color: "#efefef", fontSize: "1.2rem", textAlign: "center", width: "75%" }}>
-        Welcome to our website. We are dedicated to providing the best service possible. Our team is committed to excellence and we strive to exceed your expectations.
+      </div>
+      <style>
+        {`
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50vw); }
+          }
+        `}
+      </style>
+
+      <div style={{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "flex-start",
+        justifyContent: "center",
+        margin: "40px auto",
+        maxWidth: "1200px"
+      }}>
+        <div style={{ flex: 2, marginRight: "20px" }}>
+          {/* Latest News */}
+          <section style={{
+        textAlign: "center",
+        padding: "40px 20px",
+        backgroundColor: "#fff",
+        marginBottom: "40px",
+        borderRadius: "8px",
+        boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+          }}>
+        <h2 style={{ marginBottom: "20px", fontSize: "1.8rem" }}>LATEST NEWS</h2>
+        <p style={{
+          fontSize: "1.1rem",
+          lineHeight: 1.6,
+          margin: 0
+        }}>
+          Here is some additional information about our projects and team. We are constantly working to improve and innovate,
+          and we are committed to providing the best experience for our customers.
+        </p>
+          </section>
+
+          {/* About Us */}
+          <section style={{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "40px 20px",
+        backgroundColor: "#fff",
+        marginBottom: "40px",
+        borderRadius: "8px",
+        boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+          }}>
+        <div style={{ flex: 1, textAlign: "center" }}>
+          <img src="/logo.png" alt="About Us"
+            style={{ width: "80%", maxWidth: "250px", objectFit: "contain" }} />
+        </div>
+        <div style={{ flex: 2, padding: "0 20px" }}>
+          <p style={{ fontSize: "1.1rem", lineHeight: 1.6, margin: 0 }}>
+            Welcome to our website. We are dedicated to providing an exceptional service and strive to exceed your expectations.
           </p>
         </div>
+          </section>
+        </div>
+
+        {/* Lab Calendar */}
+        <div style={{
+          flex: 1,
+          alignSelf: "stretch",
+          backgroundColor: "#fff",
+          padding: "40px 20px",
+          borderRadius: "8px",
+          boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
+          display: "flex",
+          flexDirection: "column"
+        }}>
+          <h2 style={{ marginBottom: "20px", fontSize: "1.8rem", textAlign: "center" }}>LAB CALENDAR</h2>
+          <p style={{
+        fontSize: "1.1rem",
+        lineHeight: 1.6,
+        textAlign: "center",
+        margin: 0
+          }}>
+        Upcoming lab events and schedules will appear here.
+          </p>
+          <ul style={{
+        listStyleType: "none",
+        padding: 0,
+        marginTop: "20px",
+        textAlign: "center"
+          }}>
+        <li>Event 1</li>
+        <li>Event 2</li>
+        <li>Event 3</li>
+        <li>Event 4</li>
+          </ul>
+        </div>
       </div>
 
-      <h2 style={{ textAlign: "center", marginTop: "40px", fontSize: "1.7rem", color: "#ccc" }}>PROJECTS</h2>
-      <br></br>
-      <div className="mt-10" style={{ display: "flex", flexWrap: "wrap", gap: "20px", margin: "0 40px" }}>
-        <div style={{ flex: "1 1 calc(33.333% - 20px)", height: "200px", backgroundColor: "#e0e0e0", display: "flex", alignItems: "center", justifyContent: "center", color: "black", borderRadius: "10px" }}>
-          <p>Project 1</p>
-        </div>
-        <div style={{ flex: "1 1 calc(33.333% - 20px)", height: "200px", backgroundColor: "#e0e0e0", display: "flex", alignItems: "center", justifyContent: "center", color: "black", borderRadius: "10px" }}>
-          <p>Project 2</p>
-        </div>
-        <div style={{ flex: "1 1 calc(33.333% - 20px)", height: "200px", backgroundColor: "#e0e0e0", display: "flex", alignItems: "center", justifyContent: "center", color: "black", borderRadius: "10px" }}>
-          <p>Project 3</p>
-        </div>
-        <div style={{ flex: "1 1 calc(33.333% - 20px)", height: "200px", backgroundColor: "#e0e0e0", display: "flex", alignItems: "center", justifyContent: "center", color: "black", borderRadius: "10px" }}>
-          <p>Project 4</p>
-        </div>
-        <div style={{ flex: "1 1 calc(33.333% - 20px)", height: "200px", backgroundColor: "#e0e0e0", display: "flex", alignItems: "center", justifyContent: "center", color: "black", borderRadius: "10px" }}>
-          <p>Project 5</p>
-        </div>
-        <div style={{ flex: "1 1 calc(33.333% - 20px)", height: "200px", backgroundColor: "#e0e0e0", display: "flex", alignItems: "center", justifyContent: "center", color: "black", borderRadius: "10px" }}>
-          <p>Project 6</p>
-        </div>
-        <div style={{ flex: "1 1 calc(33.333% - 20px)", height: "200px", backgroundColor: "#e0e0e0", display: "flex", alignItems: "center", justifyContent: "center", color: "black", borderRadius: "10px" }}>
-          <p>Project 7</p>
-        </div>
-        <div style={{ flex: "1 1 calc(33.333% - 20px)", height: "200px", backgroundColor: "#e0e0e0", display: "flex", alignItems: "center", justifyContent: "center", color: "black", borderRadius: "10px" }}>
-          <p>Project 8</p>
-        </div>
-        <div style={{ flex: "1 1 calc(33.333% - 20px)", height: "200px", backgroundColor: "#e0e0e0", display: "flex", alignItems: "center", justifyContent: "center", color: "black", borderRadius: "10px" }}>
-          <p>Project 9</p>
-        </div>
-      </div>
-
-      
-
-      <footer style={{ marginTop: "20px", padding: "20px", backgroundColor: "#333", color: "#fff", textAlign: "center" }}>
-        <p>&copy; 2025 Your Lab. All rights reserved.</p>
-        <p>
-          <a href="/privacy-policy" style={{ color: "#fff", textDecoration: "underline" }}>Privacy Policy</a> | 
-          <a href="/terms-of-service" style={{ color: "#fff", textDecoration: "underline", marginLeft: "10px" }}>Terms of Service</a>
+      {/* Footer */}
+      <footer style={{
+        padding: "20px",
+        backgroundColor: "#fff",
+        textAlign: "center",
+        fontSize: "0.9rem",
+        boxShadow: "0 -2px 5px rgba(0,0,0,0.05)"
+      }}>
+        <p style={{ margin: "5px 0" }}>&copy; 2025 Your Lab. All rights reserved.</p>
+        <p style={{ margin: "5px 0" }}>
+          <a href="/privacy-policy" style={{ color: "#333", textDecoration: "underline", marginRight: "10px" }}>Privacy Policy</a>
+          <a href="/terms-of-service" style={{ color: "#333", textDecoration: "underline" }}>Terms of Service</a>
         </p>
       </footer>
-
     </div>
   );
 }
