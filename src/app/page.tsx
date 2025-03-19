@@ -38,14 +38,15 @@ export default function Home() {
         `}
       </style>
 
-      <div style={{
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "flex-start",
-        justifyContent: "center",
-        margin: "40px auto",
-        maxWidth: "1200px"
-      }}>
+      <div className="content-container">
+        <div style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "flex-start",
+          justifyContent: "center",
+          margin: "40px auto",
+          maxWidth: "1200px"
+        }}>
         <div style={{ flex: 2, marginRight: "20px" }}>
           {/* Latest News */}
           <section style={{
@@ -123,7 +124,24 @@ export default function Home() {
         <li>Event 4</li>
           </ul>
         </div>
+        </div>
       </div>
+
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .content-container > div {
+              flex-direction: column !important;
+              align-items: center;
+            }
+            .content-container > div > div {
+              margin-right: 0;
+              margin-bottom: 20px;
+              width: 100%;
+            }
+          }
+        `}
+      </style>
 
       {/* Footer */}
       <footer style={{
