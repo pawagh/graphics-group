@@ -89,7 +89,6 @@ export default function RootLayout({
               }}
             >
               {[
-                { label: "HOME", href: "/" },
                 { label: "PEOPLE", href: "./people" },
                 { label: "PROJECTS", href: "./projects" },
                 { label: "PUBLICATIONS", href: "./publications" },
