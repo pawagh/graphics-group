@@ -16,17 +16,18 @@ export default function Home() {
           width: "calc(200 * 100vw)",
           animation: "scroll 20s linear infinite"
         }}>
-          {["/2.png", "/3.png", "/4.png", "/2.png", "/3.png", "/4.png"].map((src, index) => (
+            {["/2.png", "/3.png", "/4.png", "/2.png", "/3.png", "/4.png"].map((src, index) => (
             <img key={index}
               src={src}
               alt={`Image ${index + 1}`}
               style={{
-                width: "100vw",
-                height: "60vh",
-                objectFit: "cover"
+              width: "100vw",
+              height: "60vh",
+              objectFit: "cover"
               }}
             />
-          ))}
+            ))}
+            <div style={{ display: "none" }} className="mobile-nav"></div>
         </div>
       </div>
       <style>
@@ -37,7 +38,33 @@ export default function Home() {
           }
         `}
       </style>
-
+          <style>
+            {`
+              .mobile-nav {
+                display: none;
+              }
+              @media (max-width: 768px) {
+                .mobile-nav {
+                  display: block;
+                  padding: 15px;
+                  background-color: #fff;
+                  text-align: center;
+                  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                }
+                .mobile-nav a {
+                  color: #333;
+                  text-decoration: none;
+                  margin: 0 10px;
+                  font-size: 1.1rem;
+                }
+              }
+            `}
+          </style>
+          <div className="mobile-nav">
+            <a href="./people">People</a>
+            <a href="./projects">Projects</a>
+            <a href="./publications">Publications</a>
+          </div>
       <div className="content-container">
         <div style={{
           display: "flex",
@@ -104,14 +131,6 @@ export default function Home() {
           flexDirection: "column"
         }}>
           <h2 style={{ marginBottom: "20px", fontSize: "1.8rem", textAlign: "center" }}>LAB CALENDAR</h2>
-          <p style={{
-        fontSize: "1.1rem",
-        lineHeight: 1.6,
-        textAlign: "center",
-        margin: 0
-          }}>
-        Upcoming lab events and schedules will appear here.
-          </p>
           <ul style={{
         listStyleType: "none",
         padding: 0,
@@ -151,11 +170,7 @@ export default function Home() {
         fontSize: "0.9rem",
         boxShadow: "0 -2px 5px rgba(0,0,0,0.05)"
       }}>
-        <p style={{ margin: "5px 0" }}>&copy; 2025 Your Lab. All rights reserved.</p>
-        <p style={{ margin: "5px 0" }}>
-          <a href="/privacy-policy" style={{ color: "#333", textDecoration: "underline", marginRight: "10px" }}>Privacy Policy</a>
-          <a href="/terms-of-service" style={{ color: "#333", textDecoration: "underline" }}>Terms of Service</a>
-        </p>
+        <p style={{ margin: "5px 0" }}>Visual Computing and Augmented Intelligence Lab</p>
       </footer>
     </div>
   );
