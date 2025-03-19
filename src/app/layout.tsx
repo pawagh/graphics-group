@@ -1,6 +1,7 @@
 'use client'
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
+import { useState } from "react";
 import "./globals.css";
 import "./animations.css"; 
 
@@ -19,6 +20,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <html lang="en">
       <body
@@ -39,11 +42,11 @@ export default function RootLayout({
             color: "black",
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-between",
+            justifyContent: "space-around",
             position: "fixed",
             top: 0,
             left: 0,
-            padding: "0 30px",
+            padding: "0 15px",
             backdropFilter: "blur(8px)",
             boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
             fontFamily: "'Courier New', Courier, monospace",
@@ -51,14 +54,30 @@ export default function RootLayout({
             zIndex: 1000,
           }}
         >
-          <h1 style={{ fontSize: "1.2rem", margin: 0 }}>
+          <h1 style={{ fontSize: "1.2rem", margin: 0, flex: 1 }}>
             <Link href="/" legacyBehavior>
               <a style={{ color: "inherit", textDecoration: "none" }}>
-                Visual Computing & Augmented Intelligence Lab
+                VC & AI Lab
               </a>
             </Link>
           </h1>
-          <nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            style={{
+              display: "none",
+              background: "none",
+              border: "none",
+              fontSize: "1.5rem",
+              cursor: "pointer",
+            }}
+            className="menu-button"
+          >
+            ☰
+          </button>
+
+          <nav className={`nav-menu ${menuOpen ? "open" : ""}`}>
             <ul
               style={{
                 display: "flex",
@@ -66,6 +85,7 @@ export default function RootLayout({
                 gap: "20px",
                 margin: 0,
                 padding: 0,
+                flexDirection: "row",
               }}
             >
               {[
@@ -102,6 +122,38 @@ export default function RootLayout({
             </ul>
           </nav>
         </header>
+
+        <style>
+          {`
+            @media (max-width: 768px) {
+              .menu-button {
+                display: block;
+              }
+              .nav-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 0;
+              }
+              .nav-menu.open {
+                display: flex;
+              }
+              .nav-menu ul {
+                flex-direction: column;
+                gap: 10px;
+              }
+              h1 {
+                font-size: 1rem;
+              }
+            }
+          `}
+        </style>
 
         {children}
       </body>
