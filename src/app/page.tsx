@@ -2,150 +2,69 @@
 
 export default function Home() {
   return (
-    <div style={{
-      fontFamily: "Arial, sans-serif",
-      margin: 0,
-      padding: 0,
-      backgroundColor: "#f7f7f7",
-      color: "#333"
-    }}>
+    <div className="font-sans bg-gray-50 text-gray-900">
       {/* Scrolling Images */}
-      <div style={{ width: "100%", overflow: "hidden" }}>
-        <div style={{
-          display: "flex",
-          width: "calc(200 * 100vw)",
-          animation: "scroll 20s linear infinite"
-        }}>
-            {["/2.png", "/3.png", "/4.png", "/2.png", "/3.png", "/4.png"].map((src, index) => (
+      <div className="w-full overflow-hidden relative">
+        <div className="flex w-[200vw] animate-[scroll_30s_linear_infinite]">
+          {["/2.png", "/3.png", "/4.png", "/2.png", "/3.png", "/4.png"].map((src, index) => (
             <img key={index}
               src={src}
               alt={`Image ${index + 1}`}
-              style={{
-              width: "100vw",
-              height: "60vh",
-              objectFit: "cover"
-              }}
+              className="w-screen h-[60vh] object-cover"
             />
-            ))}
-            <div style={{ display: "none" }} className="mobile-nav"></div>
+          ))}
         </div>
       </div>
+
+      <div className="content-container max-w-6xl mx-auto my-10 flex flex-col md:flex-row gap-8">
+        <div className="flex-2 space-y-10">
+          {/* Latest News */}
+          <section className="text-center p-10 bg-white rounded-lg shadow-lg border-t-4 border-blue-500">
+            <h2 className="text-2xl font-bold text-blue-700 mb-4">LATEST NEWS</h2>
+            <p className="text-lg leading-relaxed">
+              Stay updated with our latest projects and team insights. We are constantly working to innovate and enhance our research.
+            </p>
+          </section>
+
+          {/* About Us */}
+          <section className="flex flex-col md:flex-row items-center p-10 bg-white rounded-lg shadow-lg border-t-4 border-blue-500">
+            <div className="flex-1 text-center">
+              <img src="/logo.png" alt="About Us"
+                className="w-4/5 max-w-[250px] object-contain mx-auto" />
+            </div>
+            <div className="flex-2 p-5">
+              <p className="text-lg leading-relaxed">
+                Welcome to our website. Our mission is to push the boundaries of visual computing and AI to create innovative solutions.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        {/* Lab Calendar */}
+        <div className="flex-1 bg-white p-10 rounded-lg shadow-lg border-t-4 border-blue-500 flex flex-col">
+          <h2 className="text-2xl font-bold text-blue-700 text-center mb-4">LAB CALENDAR</h2>
+          <ul className="list-none mt-4 text-center space-y-3 text-gray-700">
+            <li className="py-2 px-4 bg-blue-50 rounded-lg">Event 1</li>
+            <li className="py-2 px-4 bg-blue-100 rounded-lg">Event 2</li>
+            <li className="py-2 px-4 bg-blue-200 rounded-lg">Event 3</li>
+            <li className="py-2 px-4 bg-blue-300 rounded-lg">Event 4</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="p-5 bg-gray-700 text-white text-center text-sm shadow-md">
+        <p className="m-0">Visual Computing and Augmented Intelligence Lab</p>
+      </footer>
+
       <style>
         {`
           @keyframes scroll {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50vw); }
+            100% { transform: translateX(-100%); }
           }
         `}
       </style>
-      
-      <div className="content-container">
-        <div style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "flex-start",
-          justifyContent: "center",
-          margin: "40px auto",
-          maxWidth: "1200px"
-        }}>
-          <div style={{ flex: 2, marginRight: "20px" }}>
-            {/* Latest News */}
-            <section style={{
-              textAlign: "center",
-              padding: "40px 20px",
-              backgroundColor: "#fff",
-              marginBottom: "40px",
-              borderRadius: "8px",
-              boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
-            }}>
-              <h2 style={{ marginBottom: "20px", fontSize: "1.8rem" }}>LATEST NEWS</h2>
-              <p style={{
-                fontSize: "1.1rem",
-                lineHeight: 1.6,
-                margin: 0
-              }}>
-                Here is some additional information about our projects and team. We are constantly working to improve and innovate,
-                and we are committed to providing the best experience for our customers.
-              </p>
-            </section>
-
-            {/* About Us */}
-            <section style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "40px 20px",
-              backgroundColor: "#fff",
-              marginBottom: "40px",
-              borderRadius: "8px",
-              boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
-            }}>
-              <div style={{ flex: 1, textAlign: "center" }}>
-                <img src="/logo.png" alt="About Us"
-                  style={{ width: "80%", maxWidth: "250px", objectFit: "contain" }} />
-              </div>
-              <div style={{ flex: 2, padding: "0 20px" }}>
-                <p style={{ fontSize: "1.1rem", lineHeight: 1.6, margin: 0 }}>
-                  Welcome to our website. We are dedicated to providing an exceptional service and strive to exceed your expectations.
-                </p>
-              </div>
-            </section>
-          </div>
-
-          {/* Lab Calendar */}
-          <div style={{
-            flex: 1,
-            alignSelf: "stretch",
-            backgroundColor: "#fff",
-            padding: "40px 20px",
-            borderRadius: "8px",
-            boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-            display: "flex",
-            flexDirection: "column"
-          }}>
-            <h2 style={{ marginBottom: "20px", fontSize: "1.8rem", textAlign: "center" }}>LAB CALENDAR</h2>
-            <ul style={{
-              listStyleType: "none",
-              padding: 0,
-              marginTop: "20px",
-              textAlign: "center"
-            }}>
-              <li>Event 1</li>
-              <li>Event 2</li>
-              <li>Event 3</li>
-              <li>Event 4</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <style>
-        {`
-          @media (max-width: 768px) {
-            .content-container > div {
-              flex-direction: column !important;
-              align-items: center;
-            }
-            .content-container > div > div {
-              margin-right: 0;
-              margin-bottom: 20px;
-              width: 100%;
-            }
-          }
-        `}
-      </style>
-
-      {/* Footer */}
-      <footer style={{
-        padding: "20px",
-        backgroundColor: "#fff",
-        textAlign: "center",
-        fontSize: "0.9rem",
-        boxShadow: "0 -2px 5px rgba(0,0,0,0.05)"
-      }}>
-        <p style={{ margin: "5px 0" }}>Visual Computing and Augmented Intelligence Lab</p>
-      </footer>
     </div>
   );
 }
