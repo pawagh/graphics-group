@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Visual and Computing Artificial Intelligence Lab (VCAIL)
 
-## Getting Started
+This website serves as the online presence for the Visual and Computing Artificial Intelligence Lab (VCAIL) at the University of North Carolina at Chapel Hill.
 
-First, run the development server:
+## About
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The VCAIL is dedicated to advancing research in the fields of visual computing and artificial intelligence. Our work spans a variety of projects, ranging from machine learning innovations to state-of-the-art computer vision solutions. We foster an environment of collaboration and cutting-edge technology to push the boundaries of research and development.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Research
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Our lab focuses on:
+- **Artificial Intelligence:** Developing new AI models and algorithms to solve complex problems.
+- **Visual Computing:** Exploring innovative approaches in graphics, vision, and visualization.
+- **Interdisciplinary Projects:** Combining expertise from various fields to drive breakthroughs in research.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+We invite you to explore our website and learn more about our research activities, publications, and the team driving the VCAIL.
