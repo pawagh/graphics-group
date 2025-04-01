@@ -24,7 +24,7 @@ export default function RootLayout({
 
   const navItems = [
     { label: "PEOPLE", href: "./people" },
-    { label: "PROJECTS", href: "./projects" },
+    { label: "TEACHING", href: "./teaching" },
     { label: "PUBLICATIONS", href: "./publications" },
   ];
 
@@ -32,11 +32,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} bg-gray-100 text-black antialiased pt-16 font-sans`}>
         <header className="fixed top-0 left-0 w-full h-16 bg-gradient-to-r from-gray-200 to-white shadow-md flex items-center justify-between px-4 backdrop-blur-md z-50 font-mono font-bold">
-          <h1 className="text-lg">
-            <Link href="/" legacyBehavior>
-              <a className="text-inherit no-underline">VC & AI Lab</a>
-            </Link>
-          </h1>
+        <h1 className="text-lg">
+          <Link href="/" legacyBehavior>
+            <a className="text-inherit no-underline">
+              <span className="block md:hidden">VC & AI Lab</span>
+              <span className="hidden md:block">Visual Computing and Augmented Intelligence Lab</span>
+            </a>
+          </Link>
+        </h1>
 
           <div className="relative">
             <button
