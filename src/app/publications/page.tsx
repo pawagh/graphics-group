@@ -1,7 +1,9 @@
+'use client'
 import React from 'react';
 import Link from 'next/link';
 
 export default function Publications() {
+
   const publications = [
     {
       title: "Beating bandwidth limits for large aperture broadband nano-optics",
@@ -9,7 +11,8 @@ export default function Publications() {
         "Johannes E Fröch*, Praneeth Chakravarthula*, Jipeng Sun, Ethan Tseng, Shane Colburn, Alan Zhan, Forrest Miller, Anna Wirth-Singh, Quentin AA Tanguy, Zheyi Han, Karl F Böhringer, Felix Heide, Arka Majumdar",
       meta: "Nature Communications 2025",
       image: "/images/beating-bandwidth-limits.png",
-      link: "#"
+      link: "#",
+      tags: ["Journal", "Nature Communications", "2025"]
     },
     {
       title:
@@ -17,7 +20,8 @@ export default function Publications() {
       authors: "Yujie Wang, Baoquan Chen*, Praneeth Chakravarthula*",
       meta: "CVPR 2025",
       image: "/images/dof-gs.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "CVPR", "2025"]
     },
     {
       title:
@@ -26,14 +30,16 @@ export default function Publications() {
         "Ziyuan Qu, Zihao Zou, Vivek Boominathan, Praneeth Chakravarthula, Adithya Pediredla",
       meta: "CVPR 2025",
       image: "/images/event-fields.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "CVPR", "2025"]
     },
     {
       title: "Present and Future of Everyday-use Augmented Reality Eyeglasses",
       authors: "Praneeth Chakravarthula",
       meta: "IEEE Computer Graphics and Applications 2025",
       image: "/images/everyday-ar-eyeglasses.png",
-      link: "#"
+      link: "#",
+      tags: ["Journal", "IEEE CG&A", "2025"]
     },
     {
       title:
@@ -42,7 +48,8 @@ export default function Publications() {
         "Guansen Tong, Jonathan Leung, Haosheng Shi, Liujie Zheng, Shengze Wang, Xi Peng, Grace Fei, Praneeth Chakravarthula",
       meta: "Best Paper Honorable Mention, IEEE VR (TVCG) 2025",
       image: "/images/multimodal-neural-acoustic.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "IEEE VR", "2025"]
     },
     {
       title: "Perceptually-Guided Acoustic Foveation",
@@ -50,7 +57,8 @@ export default function Publications() {
         "Xi Peng, Kenneth Chen, Iran Roman, Juan Pablo Bello, Qi Sun*, Praneeth Chakravarthula*",
       meta: "IEEE VR 2025",
       image: "/images/acoustic-foveation.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "IEEE VR", "2025"]
     },
     {
       title: "FlatTrack: Eye-tracking with ultra-thin lensless cameras",
@@ -58,7 +66,8 @@ export default function Publications() {
         "Purvam Jain, Althaf M. Nazar, Salman S. Khan, Kaushik Mitra, Praneeth Chakravarthula",
       meta: "Best Paper Award, GMCV & WACV 2025",
       image: "/images/flattrack.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "WACV", "2025"]
     },
     {
       title: "Spatially Varying Nanophotonic Neural Networks",
@@ -66,7 +75,8 @@ export default function Publications() {
         "Kaixuan Wei*, Xiao Li*, Johannes Froech*, Praneeth Chakravarthula, James Whitehead, Ethan Tseng, Arka Majumdar, Felix Heide",
       meta: "Science Advances 2024",
       image: "/images/spatially-varying-nanophotonic.png",
-      link: "#"
+      link: "#",
+      tags: ["Journal", "Science Advances", "2024"]
     },
     {
       title:
@@ -75,7 +85,8 @@ export default function Publications() {
         "Xinge Yang, Matheus Souza, Kunyi Wang, Praneeth Chakravarthula, Qiang Fu, Wolfgang Heidrich",
       meta: "SIGGRAPH Asia 2024",
       image: "/images/hybrid-lens-design.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SIGGRAPH Asia", "2024"]
     },
     {
       title:
@@ -83,7 +94,8 @@ export default function Publications() {
       authors: "Jay Bhanushali, Manivannan Muniyandi, Praneeth Chakravarthula",
       meta: "Best Paper Award, OmniCV & CVPR 2024",
       image: "/images/cross-domain-depth-normal.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "CVPR", "2024"]
     },
     {
       title:
@@ -92,7 +104,8 @@ export default function Publications() {
         "Ethan Tseng, Seung-Hwan Baek, Grace Kuo, Nathan Matsuda, Andrew Maimone, Praneeth Chakravarthula, Qiang Fu, Wolfgang Heidrich, Douglas Lanman, Felix Heide",
       meta: "Nature Communications 2024",
       image: "/images/neural-etendue-expander.png",
-      link: "#"
+      link: "#",
+      tags: ["Journal", "Nature Communications", "2024"]
     },
     {
       title:
@@ -101,7 +114,8 @@ export default function Publications() {
         "Mi Zhou, Shuming Jiao, Praneeth Chakravarthula, Yang Yue, Ping Su, Ercan Engin Kuruoglu, Zihan Geng",
       meta: "SPIE 2024",
       image: "/images/point-spread-function.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SPIE", "2024"]
     },
     {
       title: "Thin On-Sensor Nanophotonic Array Cameras",
@@ -109,7 +123,8 @@ export default function Publications() {
         "Praneeth Chakravarthula, Jipeng Sun, Xiao Li, Chenyang Lei, Gene Chou, Mario Bijelic, Johannes Froesch, Arka Majumdar, Felix Heide",
       meta: "SIGGRAPH Asia 2023",
       image: "/images/thin-on-sensor.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SIGGRAPH Asia", "2023"]
     },
     {
       title:
@@ -118,7 +133,8 @@ export default function Publications() {
         "Praneeth Chakravarthula, Jim Aldon D'Souza, Ethan Tseng, Joe Bartusek, Felix Heide",
       meta: "CVPR 2023",
       image: "/images/seeing-with-sound.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "CVPR", "2023"]
     },
     {
       title: "Stochastic Light Field Holography",
@@ -126,7 +142,8 @@ export default function Publications() {
         "Florian Schiffers, Praneeth Chakravarthula, Nathan Matsuda, Grace Kuo, Ethan Tseng, Douglas Lanman, Felix Heide, Oliver Cossairt",
       meta: "ICCP 2023",
       image: "/images/stochastic-light-field.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "ICCP", "2023"]
     },
     {
       title:
@@ -135,7 +152,8 @@ export default function Publications() {
         "Mi Zhou, Hao Zhang, Shuming Jiao, Praneeth Chakravarthula, Zihan Geng",
       meta: "Optics Express 2023",
       image: "/images/compression-aware-cgh.png",
-      link: "#"
+      link: "#",
+      tags: ["Journal", "Optics Express", "2023"]
     },
     {
       title: "Hexagonal Diffractive Optical Elements",
@@ -143,7 +161,8 @@ export default function Publications() {
         "Yidan Zheng, Qiang Fu, Hadi Amata, Praneeth Chakravarthula, Felix Heide, Wolfgang Heidrich",
       meta: "Optics Express 2023",
       image: "/images/hexagonal-diffractive.png",
-      link: "#"
+      link: "#",
+      tags: ["Journal", "Optics Express", "2023"]
     },
     {
       title:
@@ -151,7 +170,8 @@ export default function Publications() {
       authors: "Ahmet Guzel, Jeanne Beyazian, Praneeth Chakravarthula, Kaan Aksit",
       meta: "Biomedical Optics Express 2023",
       image: "/images/chromacorrect.png",
-      link: "#"
+      link: "#",
+      tags: ["Journal", "Biomedical Optics Express", "2023"]
     },
     {
       title:
@@ -160,7 +180,8 @@ export default function Publications() {
         "Andreas Georgiou, Joel Kollin, Charlie Hewitt, Praneeth Chakravarthula, Brian Guenter",
       meta: "Elsevier Displays 2022",
       image: "/images/visual-perception-noise.png",
-      link: "#"
+      link: "#",
+      tags: ["Journal", "Elsevier Displays", "2022"]
     },
     {
       title: "Pupil-aware Holography",
@@ -168,7 +189,8 @@ export default function Publications() {
         "Praneeth Chakravarthula, Seung-Hwan Baek, Florian Schiffers, Ethan Tseng, Grace Kuo, Andrew Maimone, Nathan Matsuda, Oliver Cossairt, Douglas Lanman, Felix Heide",
       meta: "Spotlight Poster ICCP 2022, SIGGRAPH Asia 2022",
       image: "/images/pupil-aware-holography.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SIGGRAPH Asia", "2022"]
     },
     {
       title: "FoV-NeRF: Foveated Neural Radiance Fields for Virtual Reality",
@@ -176,7 +198,8 @@ export default function Publications() {
         "Nianchen Deng, Zhenyi He, Jiannan Ye, Budmonde Duinkharjav, Praneeth Chakravarthula, Xubo Yang, Qi Sun",
       meta: "Best Paper Award, IEEE TVCG 2022",
       image: "/images/fov-nerf.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "IEEE TVCG", "2022"]
     },
     {
       title:
@@ -185,7 +208,8 @@ export default function Publications() {
         "Conny Lu, Praneeth Chakravarthula, Kaihao Liu, Xixiang Liu, Siyuan Li, Henry Fuchs",
       meta: "ISMAR 2022",
       image: "/images/neural-3d-gaze.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "ISMAR", "2022"]
     },
     {
       title:
@@ -194,7 +218,8 @@ export default function Publications() {
         "Budmonde Duinkharjav, Praneeth Chakravarthula, Rachel Albert, Anjul Patney, Qi Sun",
       meta: "Best Paper Award, SIGGRAPH 2022",
       image: "/images/image-features-influence.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SIGGRAPH", "2022"]
     },
     {
       title: "Hogel-free Holography",
@@ -202,7 +227,8 @@ export default function Publications() {
         "Praneeth Chakravarthula, Ethan Tseng, Henry Fuchs, Felix Heide",
       meta: "SIGGRAPH 2022",
       image: "/images/hogel-free-holography.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SIGGRAPH", "2022"]
     },
     {
       title:
@@ -211,7 +237,8 @@ export default function Publications() {
         "Yujie Wang*, Praneeth Chakravarthula*, Qi Sun, Baoquan Chen",
       meta: "Best Paper Honorable Mention, SIGGRAPH 2022",
       image: "/images/joint-neural-phase.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SIGGRAPH", "2022"]
     },
     {
       title: "Seeing Through Obstructions with Diffractive Cloaking",
@@ -219,14 +246,16 @@ export default function Publications() {
         "Zheng Shi, Yuval Bahat, Seung-Hwan Baek, Qiang Fu, Hadi Amata, Xiao Li, Praneeth Chakravarthula, Wolfgang Heidrich, Felix Heide",
       meta: "SIGGRAPH 2022",
       image: "/images/obstructions-diffractive-cloaking.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SIGGRAPH", "2022"]
     },
     {
       title: "Towards Everyday-use Augmented Reality Eyeglasses",
       authors: "Praneeth Chakravarthula",
       meta: "IEEE VR Best Dissertation Award, Ph.D. Dissertation 2021",
       image: "/images/everyday-ar-eyeglasses-2.png",
-      link: "#"
+      link: "#",
+      tags: ["Dissertation", "2021"]
     },
     {
       title:
@@ -235,7 +264,8 @@ export default function Publications() {
         "Praneeth Chakravarthula, Zhan Zhang, Okan Tursun, Piotr Didyk, Qi Sun, Henry Fuchs",
       meta: "IEEE TVCG 2021",
       image: "/images/gaze-contingent-retinal.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "IEEE TVCG", "2021"]
     },
     {
       title:
@@ -244,7 +274,8 @@ export default function Publications() {
         "Praneeth Chakravarthula, Ethan Tseng, Tarun Srivastava, Henry Fuchs, Felix Heide",
       meta: "SIGGRAPH Asia 2020",
       image: "/images/hardware-in-loop-phase.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SIGGRAPH Asia", "2020"]
     },
     {
       title:
@@ -253,7 +284,8 @@ export default function Publications() {
         "M. Hossein Eybposh, Nicholas W. Caira, Mathew Atisa, Praneeth Chakravarthula, Nicolas C. Pégard",
       meta: "Best Paper Award, Optics Express 2020",
       image: "/images/deepcgh.png",
-      link: "#"
+      link: "#",
+      tags: ["Journal", "Optics Express", "2020"]
     },
     {
       title:
@@ -262,7 +294,8 @@ export default function Publications() {
         "Xinran Lu, Praneeth Chakravarthula, Yujie Tao, Steven Chen, Henry Fuchs",
       meta: "ISMAR 2020",
       image: "/images/purkinje-tracking.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "ISMAR", "2020"]
     },
     {
       title:
@@ -271,7 +304,8 @@ export default function Publications() {
         "Xinxing Xia, Yunqing Guan, Andrei State, Praneeth Chakravarthula, Tat-Jen Cham, Henry Fuchs",
       meta: "ISMAR 2020",
       image: "/images/eyeglasses-holographic.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "ISMAR", "2020"]
     },
     {
       title:
@@ -280,7 +314,8 @@ export default function Publications() {
         "Praneeth Chakravarthula, Yifan Peng, Joel Kollin, Felix Heide, Henry Fuchs",
       meta: "Optical Design Award, SPIE Photonics West 2020",
       image: "/images/phase-only-holograms.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SPIE", "2020"]
     },
     {
       title: "Wirtinger Holography for Near-Eye Displays",
@@ -288,7 +323,8 @@ export default function Publications() {
         "Praneeth Chakravarthula, Yifan Peng, Joel Kollin, Henry Fuchs, Felix Heide",
       meta: "SIGGRAPH Asia 2019",
       image: "/images/wirtinger-holography.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SIGGRAPH Asia", "2019"]
     },
     {
       title:
@@ -297,7 +333,8 @@ export default function Publications() {
         "Xinxing Xia, Yunqing Guan, Andrei State, Praneeth Chakravarthula, Kishore Rathinavel, Tat-Jen Cham, Henry Fuchs",
       meta: "IEEE TVCG (presented at ISMAR 2019",
       image: "/images/switchable-arvr.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "IEEE TVCG", "2019"]
     },
     {
       title: "Manufacturing Application Driven Near-Eye Displays",
@@ -305,7 +342,8 @@ export default function Publications() {
         "Kaan Aksit, Praneeth Chakravarthula, Kishore Rathinavel, Youngmo Jeong, Rachel Albert, Henry Fuchs, David Luebke",
       meta: "Best Paper Nominee, IEEE TVCG (presented at IEEE VR 2019)",
       image: "/images/manufacturing-near-eye.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "IEEE TVCG", "2019"]
     },
     {
       title:
@@ -314,7 +352,8 @@ export default function Publications() {
         "Praneeth Chakravarthula, David Dunn, Kaan Aksit, Henry Fuchs",
       meta: "Best Paper Award, Talk, IEEE TVCG (presented at SIGGRAPH Asia 2018, ISMAR 2018)",
       image: "/images/focusar.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "IEEE TVCG", "SIGGRAPH Asia", "2018"]
     },
     {
       title: "Steerable Application-Adaptive Near-Eye Displays",
@@ -322,7 +361,8 @@ export default function Publications() {
         "Kishore Rathinavel, Praneeth Chakravarthula, Kaan Aksit, Josef Spjut, Ben Boudaoud, Turner Whitted, David Luebke, Henry Fuchs",
       meta: "Best in Show Award, SIGGRAPH 2018 Emerging Technologies",
       image: "/images/steerable-near-eye.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SIGGRAPH", "2018"]
     },
     {
       title:
@@ -330,7 +370,8 @@ export default function Publications() {
       authors: "David Dunn, Praneeth Chakravarthula, Qian Dong, Henry Fuchs",
       meta: "Best Optical Design Award, SPIE Digital Optics for Immersive Displays 2018",
       image: "/images/mitigating-vergence.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SPIE", "2018"]
     },
     {
       title:
@@ -339,7 +380,8 @@ export default function Publications() {
         "David Dunn, Praneeth Chakravarthula, Qian Dong, Kaan Aksit, Henry Fuchs",
       meta: "SID Display Week 2018",
       image: "/images/varifocal-ar.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "SID Display Week", "2018"]
     },
     {
       title:
@@ -347,7 +389,8 @@ export default function Publications() {
       authors: "Praneeth Chakravarthula, Pattie Maes",
       meta: "IEEE 3DUI 2015",
       image: "/images/penetra3d.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "IEEE 3DUI", "2015"]
     },
     {
       title:
@@ -356,9 +399,15 @@ export default function Publications() {
         "Praneeth Chakravarthula, Ravi Poovaiah, Ajanta Sen, Priya Ganadas",
       meta: "IEEE TechSym 2014",
       image: "/images/indoor-localization.png",
-      link: "#"
+      link: "#",
+      tags: ["Conference", "IEEE TechSym", "2014"]
     }
   ];
+
+  // Filtering: Create state for the selected tag and compute unique tags from the publications.
+  const [selectedTag, setSelectedTag] = React.useState("All");
+  const uniqueTags = Array.from(new Set(publications.flatMap(pub => pub.tags)));
+  const filteredPublications = selectedTag === "All" ? publications : publications.filter(pub => pub.tags.includes(selectedTag));
 
   return (
     <div className="flex justify-center items-start min-h-screen">
@@ -367,8 +416,30 @@ export default function Publications() {
         <p className="text-lg mb-8">
           Please see my Google scholar for a complete publication list.
         </p>
+        {/* Filter Section */}
+        <div className="mb-8">
+          <h3 className="text-lg font-medium mb-2">Filter by Tag:</h3>
+          <div className="flex flex-wrap gap-2">
+            <button
+              className={`px-3 py-1 rounded ${selectedTag === "All" ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"}`}
+              onClick={() => setSelectedTag("All")}
+            >
+              All
+            </button>
+            {uniqueTags.map((tag, idx) => (
+              <button
+                key={idx}
+                className={`px-3 py-1 rounded ${selectedTag === tag ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"}`}
+                onClick={() => setSelectedTag(tag)}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
+        {/* Publications Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {publications.map((pub, index) => (
+          {filteredPublications.map((pub, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden flex">
               <img
                 src={pub.image}
@@ -383,6 +454,14 @@ export default function Publications() {
                 </Link>
                 <p className="text-sm text-gray-600 mt-1">{pub.authors}</p>
                 <p className="text-sm text-gray-600">{pub.meta}</p>
+                {/* Display tags for each publication */}
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {pub.tags.map((tag, idx) => (
+                    <span key={idx} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
