@@ -406,7 +406,8 @@ export default function Publications() {
 
   // Filtering: Create state for the selected tag and compute unique tags from the publications.
   const [selectedTag, setSelectedTag] = React.useState("All");
-  const uniqueTags = Array.from(new Set(publications.flatMap(pub => pub.tags)));
+  const filterableTags = Array.from(new Set(publications.flatMap(pub => pub.tags)))
+    .filter(tag => tag === "Journal" || tag === "Conference" || /^[0-9]{4}$/.test(tag));
   const filteredPublications = selectedTag === "All" ? publications : publications.filter(pub => pub.tags.includes(selectedTag));
 
   return (
@@ -419,14 +420,14 @@ export default function Publications() {
         {/* Filter Section */}
         <div className="mb-8">
           <h3 className="text-lg font-medium mb-2">Filter by Tag:</h3>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 justify-center">
             <button
               className={`px-3 py-1 rounded ${selectedTag === "All" ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"}`}
               onClick={() => setSelectedTag("All")}
             >
               All
             </button>
-            {uniqueTags.map((tag, idx) => (
+            {filterableTags.map((tag, idx) => (
               <button
                 key={idx}
                 className={`px-3 py-1 rounded ${selectedTag === tag ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"}`}
@@ -454,13 +455,15 @@ export default function Publications() {
                 </Link>
                 <p className="text-sm text-gray-600 mt-1">{pub.authors}</p>
                 <p className="text-sm text-gray-600">{pub.meta}</p>
-                {/* Display tags for each publication */}
+                {/* Display tags for each publication (only Journal/Conference and year tags) */}
                 <div className="mt-2 flex flex-wrap gap-2">
-                  {pub.tags.map((tag, idx) => (
-                    <span key={idx} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
-                      {tag}
-                    </span>
-                  ))}
+                  {pub.tags
+                    .filter(tag => tag === "Journal" || tag === "Conference" || /^[0-9]{4}$/.test(tag))
+                    .map((tag, idx) => (
+                      <span key={idx} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
+                        {tag}
+                      </span>
+                    ))}
                 </div>
               </div>
             </div>

@@ -26,6 +26,8 @@ export default function RootLayout({
     { label: "PEOPLE", href: "./people" },
     { label: "TEACHING", href: "./teaching" },
     { label: "PUBLICATIONS", href: "./publications" },
+    { label: "OPPORTUNITIES", href: "./opportunities" },
+    { label: "CONTACT US", href: "./contact-us" },
   ];
 
   return (
@@ -35,7 +37,7 @@ export default function RootLayout({
         <h1 className="text-lg">
           <Link href="/" legacyBehavior>
             <a className="text-inherit no-underline">
-              <span className="block md:hidden">VC & AI Lab</span>
+              <span className="block md:hidden">Visual Computing & AI Lab</span>
               <span className="hidden md:block">Visual Computing and Augmented Intelligence Lab</span>
             </a>
           </Link>

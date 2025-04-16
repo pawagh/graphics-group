@@ -12,7 +12,7 @@ export default function People() {
 
                 {/* Grid Layout */}
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                     {/* Person 0 */}
                     <div className="bg-white rounded-lg shadow-md overflow-hidden">
                         <img 
@@ -46,7 +46,7 @@ export default function People() {
                                 </h2>
                             </Link>
                             <p className="text-sm text-gray-600">
-                                Lab Member
+                                PhD Student
                             </p>
                         </div>
                     </div>
