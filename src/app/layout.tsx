@@ -1,18 +1,13 @@
 'use client'
 import Link from "next/link";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import { useState } from "react";
 import "./globals.css";
 import "./animations.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export default function RootLayout({
@@ -32,8 +27,8 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} bg-gray-100 text-black antialiased pt-16 font-sans`}>
-        <header className="fixed top-0 left-0 w-full h-16 bg-gradient-to-r from-gray-200 to-white shadow-md flex items-center justify-between px-4 backdrop-blur-md z-50 font-mono font-bold">
+      <body className={`${inter.variable} bg-gray-100 text-black antialiased pt-16 font-sans`}>
+        <header className="fixed top-0 left-0 w-full h-16 bg-gradient-to-r from-gray-200 to-white shadow-md flex items-center justify-between px-4 backdrop-blur-md z-50 font-bold">
         <h1 className="text-lg">
           <Link href="/" legacyBehavior>
             <a className="text-inherit no-underline">
