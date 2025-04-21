@@ -1,22 +1,13 @@
 .fade-in {
-    opacity: 0; 
-    animation: fadeIn 2s ease-in-out forwards;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+  opacity: 0; 
+  animation: fadeIn 1s ease-in-out forwards;
+}
 
-  @keyframes scrollImages {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}

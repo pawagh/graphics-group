@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import '../animations.css';
 
 export default function People() {
     return (
@@ -12,7 +13,7 @@ export default function People() {
 
                 {/* Grid Layout */}
                 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="fade-in grid grid-cols-1 md:grid-cols-4 gap-6">
                     {/* Person 0 */}
                     <div className="bg-white rounded-lg shadow-md overflow-hidden">
                         <img 

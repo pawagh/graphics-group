@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import '../animations.css';
 
 export default function Teaching() {
     return (
-        <div className='flex justify-center items-start min-h-screen'>
+        <div className='fade-in flex justify-center items-start min-h-screen'>
             <div className='text-center mt-20 w-11/12 max-w-6xl'>
                 <h1 className='text-4xl font-bold mb-4'>Teaching</h1>
                 <p className='text-lg mb-8'>Welcome to the teaching page. Here you will find a list of our educational resources.</p>

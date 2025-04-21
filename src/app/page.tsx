@@ -1,8 +1,9 @@
 'use client'
+import './animations.css';
 
 export default function Home() {
   return (
-    <div className="font-sans bg-gray-50 text-gray-900">
+    <div className="fade-in font-sans bg-gray-50 text-gray-900">
       {/* Fading Images */}
       <div className="w-full h-[60vh] relative overflow-hidden">
         {["/2.png", "/3.png", "/4.png"].map((src, index, arr) => {

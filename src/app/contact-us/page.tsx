@@ -1,8 +1,9 @@
 import React from 'react';
+import '../animations.css';
 
 export default function ContactUsPage() {
   return (
-    <div className="min-h-screen bg-gray-50 px-6 py-16 text-gray-800">
+    <div className="fade-in min-h-screen bg-gray-50 px-6 py-16 text-gray-800">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-center">Get in Touch</h1>
         
