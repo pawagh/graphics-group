@@ -1,8 +1,9 @@
 import React from 'react';
+import '../animations.css';
 
 export default function OpportunitiesPage() {
   return (
-    <div className="min-h-screen bg-gray-50 px-6 py-16 text-gray-800">
+    <div className="fade-in min-h-screen bg-gray-50 px-6 py-16 text-gray-800">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-center">Research Opportunities</h1>
 

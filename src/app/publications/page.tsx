@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import Link from 'next/link';
+import '../animations.css';
 
 export default function Publications() {
 
@@ -439,7 +440,7 @@ export default function Publications() {
           </div>
         </div>
         {/* Publications Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="fade-in grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredPublications.map((pub, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden flex">
               <img

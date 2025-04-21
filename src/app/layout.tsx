@@ -21,19 +21,19 @@ export default function RootLayout({
     { label: "PEOPLE", href: "./people" },
     { label: "TEACHING", href: "./teaching" },
     { label: "PUBLICATIONS", href: "./publications" },
-    { label: "OPPORTUNITIES", href: "./opportunities" },
-    { label: "CONTACT US", href: "./contact-us" },
+    { label: "RESEARCH", href: "./opportunities" },
+    { label: "CONTACT", href: "./contact-us" },
   ];
 
   return (
     <html lang="en">
       <body className={`${inter.variable} bg-gray-100 text-black antialiased pt-16 font-sans`}>
-        <header className="fixed top-0 left-0 w-full h-16 bg-gradient-to-r from-gray-200 to-white shadow-md flex items-center justify-between px-4 backdrop-blur-md z-50 font-bold">
+        <header className="fixed top-0 left-0 w-full h-16 bg-gradient-to-r from-gray-200 to-white shadow-lg flex items-center justify-between px-4 backdrop-blur-lg z-50 font-bold">
         <h1 className="text-lg">
           <Link href="/" legacyBehavior>
             <a className="text-inherit no-underline">
-              <span className="block md:hidden">Visual Computing & AI Lab</span>
-              <span className="hidden md:block">Visual Computing and Augmented Intelligence Lab</span>
+              <span className="block lg:hidden">Visual Computing & AI Lab</span>
+              <span className="hidden lg:block">Visual Computing and Augmented Intelligence Lab</span>
             </a>
           </Link>
         </h1>
@@ -41,13 +41,13 @@ export default function RootLayout({
           <div className="relative">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="menu-button text-2xl cursor-pointer md:hidden"
+              className="menu-button text-2xl cursor-pointer lg:hidden"
             >
               ☰
             </button>
 
-            <nav className={`navbar absolute top-16 right-0 bg-white shadow-md rounded-md z-50 w-40 flex-col ${menuOpen ? "flex" : "hidden"} md:static md:flex-row md:flex md:bg-transparent md:shadow-none md:w-auto`}>
-              <ul className="list-none m-0 p-0 flex flex-col md:flex-row gap-5">
+            <nav className={`navbar absolute top-16 right-0 bg-white shadow-lg rounded-lg z-50 w-40 flex-col ${menuOpen ? "flex" : "hidden"} lg:static lg:flex-row lg:flex lg:bg-transparent lg:shadow-none lg:w-auto`}>
+              <ul className="list-none m-0 p-0 flex flex-col lg:flex-row gap-5">
                 {navItems.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} legacyBehavior>
