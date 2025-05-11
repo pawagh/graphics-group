@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import '../animations.css';
 
@@ -405,71 +405,98 @@ export default function Publications() {
     }
   ];
 
-  // Filtering: Create state for the selected tag and compute unique tags from the publications.
-  const [selectedTag, setSelectedTag] = React.useState("All");
-  const filterableTags = Array.from(new Set(publications.flatMap(pub => pub.tags)))
-    .filter(tag => tag === "Journal" || tag === "Conference" || /^[0-9]{4}$/.test(tag));
-  const filteredPublications = selectedTag === "All" ? publications : publications.filter(pub => pub.tags.includes(selectedTag));
+  // Get all unique years from tags
+  const years = Array.from(
+    new Set(publications.flatMap(pub => pub.tags.filter(tag => /^\d{4}$/.test(tag))))
+  ).sort((a, b) => b.localeCompare(a)); // Descending order
+
+  // Get all unique tags except years
+  const allTags = Array.from(
+    new Set(publications.flatMap(pub => pub.tags.filter(tag => !/^\d{4}$/.test(tag))))
+  );
+
+  const [selectedTag, setSelectedTag] = useState<string>('All');
+  const [search, setSearch] = useState<string>('');
+
+  // Filter publications by tag and search
+  const filteredPubs = publications.filter(pub => {
+    const matchesTag = selectedTag === 'All' || pub.tags.includes(selectedTag);
+    const matchesSearch =
+      pub.title.toLowerCase().includes(search.toLowerCase()) ||
+      pub.authors.toLowerCase().includes(search.toLowerCase()) ||
+      pub.meta.toLowerCase().includes(search.toLowerCase());
+    return matchesTag && matchesSearch;
+  });
+
+  // Group by year
+  const pubsByYear = years.map(year => ({
+    year,
+    pubs: filteredPubs.filter(pub => pub.tags.includes(year)),
+  }));
 
   return (
-    <div className="flex justify-center items-start min-h-screen">
-      <div className="text-center mt-20 w-11/12 max-w-6xl">
-        <h1 className="text-4xl font-bold mb-4">Publications</h1>
-        <p className="text-lg mb-8">
-          Please see my Google scholar for a complete publication list.
-        </p>
-        {/* Filter Section */}
-        <div className="mb-8">
-          <h3 className="text-lg font-medium mb-2">Filter by Tag:</h3>
-          <div className="flex flex-wrap gap-2 justify-center">
-            <button
-              className={`px-3 py-1 rounded ${selectedTag === "All" ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"}`}
-              onClick={() => setSelectedTag("All")}
-            >
-              All
-            </button>
-            {filterableTags.map((tag, idx) => (
-              <button
-                key={idx}
-                className={`px-3 py-1 rounded ${selectedTag === tag ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"}`}
-                onClick={() => setSelectedTag(tag)}
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
+    <div className="fade-in min-h-screen bg-gray-50 text-gray-800 flex flex-col items-center">
+      {/* Banner */}
+      <div className="w-full h-64 md:h-80 relative mb-8">
+        <img src="/publications_banner.jpg" alt="Publications Banner" className="w-full h-full object-cover object-center rounded-b-lg shadow-md" />
+        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Publications</h1>
         </div>
-        {/* Publications Grid */}
-        <div className="fade-in grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredPublications.map((pub, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden flex">
-              <img
-                src={pub.image}
-                alt={pub.title}
-                className="w-24 h-24 object-contain m-4"
-              />
-              <div className="p-4 text-left flex-1">
-                <Link href={pub.link} target="_blank">
-                  <h2 className="text-xl font-semibold text-black hover:text-blue-500 transition">
-                    {pub.title}
-                  </h2>
-                </Link>
-                <p className="text-sm text-gray-600 mt-1">{pub.authors}</p>
-                <p className="text-sm text-gray-600">{pub.meta}</p>
-                {/* Display tags for each publication (only Journal/Conference and year tags) */}
-                <div className="mt-2 flex flex-wrap gap-2">
-                  {pub.tags
-                    .filter(tag => tag === "Journal" || tag === "Conference" || /^[0-9]{4}$/.test(tag))
-                    .map((tag, idx) => (
-                      <span key={idx} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
-                        {tag}
-                      </span>
-                    ))}
-                </div>
+      </div>
+
+      {/* Main content container */}
+      <div className="max-w-5xl w-full px-4 py-8 mx-auto">
+        {/* Search Bar */}
+        <input
+          type="text"
+          placeholder="Search publications..."
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          className="mb-4 p-2 border rounded w-full max-w-md"
+        />
+
+        {/* Tag Dropdown */}
+        <select
+          value={selectedTag}
+          onChange={e => setSelectedTag(e.target.value)}
+          className="mb-8 p-2 border rounded"
+        >
+          <option value="All">All</option>
+          {allTags.map(tag => (
+            <option key={tag} value={tag}>{tag}</option>
+          ))}
+        </select>
+
+        {/* Publications grouped by year */}
+        {pubsByYear.map(({ year, pubs }) =>
+          pubs.length > 0 ? (
+            <div key={year}>
+              <h2 className="text-2xl font-bold mt-8 mb-4 text-carolina">{year}</h2>
+              <div className="grid gap-6">
+                {pubs.map((pub, idx) => (
+                  <div key={pub.title + idx} className="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row gap-6 items-center">
+                    <img src={pub.image} alt={pub.title} className="w-32 h-32 object-cover rounded-md" />
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-2">{pub.title}</h3>
+                      <p className="text-gray-700 mb-1">{pub.authors}</p>
+                      <p className="text-gray-500 mb-2">{pub.meta}</p>
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        {pub.tags.map(tag => (
+                          <span key={tag} className="bg-carolina text-white px-2 py-1 rounded text-xs">{tag}</span>
+                        ))}
+                      </div>
+                      {pub.link && (
+                        <Link href={pub.link} target="_blank" className="text-carolina underline font-semibold">
+                          View Publication
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
+          ) : null
+        )}
       </div>
     </div>
   );
