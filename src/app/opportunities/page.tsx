@@ -8,7 +8,7 @@ export default function OpportunitiesPage() {
       <div className="w-full h-64 md:h-80 relative mb-8">
         <img src="/opportunities_banner.jpg" alt="Opportunities Banner" className="w-full h-full object-cover object-center rounded-b-lg shadow-md" />
         <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold" style={{ color: '#4B9CD3' }}>Opportunities</h1>
+          <h1 className="text-4xl md:text-5xl font-bold" style={{ color: '#FFFFFF' }}>Opportunities</h1>
         </div>
       </div>
       <div className="max-w-5xl w-full px-6 py-16 mx-auto">
