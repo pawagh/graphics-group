@@ -431,7 +431,7 @@ export default function Publications() {
   }));
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800 flex flex-col">
+    <div className="fade-in min-h-screen bg-gray-50 text-gray-800 flex flex-col">
       {/* Banner */}
       <div className="w-full h-64 md:h-80 relative">
         <img src="/publications_banner.jpg" alt="Publications Banner" className="w-full h-full object-cover object-center" />
