@@ -21,13 +21,13 @@ export default function RootLayout({
     { label: "PEOPLE", href: "./people" },
     { label: "TEACHING", href: "./teaching" },
     { label: "PUBLICATIONS", href: "./publications" },
-    { label: "RESEARCH", href: "./opportunities" },
+    { label: "OPPORTUNITIES", href: "./opportunities" },
   ];
 
   return (
     <html lang="en">
       <body className={`${inter.variable} bg-gray-100 text-black antialiased pt-16 font-sans`}>
-        <header className="fixed top-0 left-0 w-full h-16 bg-carolina shadow-lg flex items-center justify-between px-4 backdrop-blur-lg z-50 font-bold">
+        <header className="fixed top-0 left-0 w-full h-16 bg-carolina shadow-lg flex items-center justify-between px-8 md:px-12 backdrop-blur-lg z-50 font-bold">
           <h1 className="text-lg">
             <Link href="/" legacyBehavior>
               <a className="text-white no-underline">
@@ -48,7 +48,7 @@ export default function RootLayout({
                 {navItems.map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} legacyBehavior>
-                      <a className="text-white font-bold p-2 rounded hover:bg-carolina/80" onClick={() => setMenuOpen(false)}>
+                      <a className="text-white font-bold px-2 py-2 rounded hover:bg-carolina/80 transition" onClick={() => setMenuOpen(false)}>
                         {item.label}
                       </a>
                     </Link>
