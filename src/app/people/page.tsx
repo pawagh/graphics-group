@@ -4,7 +4,7 @@ import '../animations.css';
 
 export default function People() {
     return (
-        <div className="flex flex-col items-center min-h-screen bg-gray-50">
+        <div className="fade-in flex flex-col items-center min-h-screen bg-gray-50">
             {/* Banner Image */}
             <div className="w-full h-64 md:h-80 relative mb-8">
                 <img src="/team_banner.jpg" alt="Group Banner" className="w-full h-full object-cover object-center rounded-b-lg shadow-md" />
