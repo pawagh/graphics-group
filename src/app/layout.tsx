@@ -62,8 +62,22 @@ export default function RootLayout({
           <main className="flex-1">
             {children}
           </main>
-          <footer className="bg-carolina text-white py-8 px-4 mt-8">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <footer className="relative text-white py-8 px-4 mt-8 overflow-hidden">
+            {/* Background image layer */}
+            <div
+              className="absolute inset-0 w-full h-full z-0"
+              style={{
+                backgroundImage: "url('/unc_background.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                pointerEvents: "none"
+              }}
+              aria-hidden="true"
+            />
+            {/* Overlay for extra contrast if needed */}
+            <div className="absolute inset-0 bg-carolina/80 z-0" />
+            {/* Footer content */}
+            <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="text-center md:text-left">
                 <h2 className="text-lg font-bold mb-2">Visual Computing and Augmented Intelligence Lab</h2>
                 <p className="mb-1">123 Innovation Drive, Chapel Hill, NC 27514</p>

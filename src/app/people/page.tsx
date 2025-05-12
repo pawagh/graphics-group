@@ -7,7 +7,7 @@ export default function People() {
         <div className="flex flex-col items-center min-h-screen bg-gray-50">
             {/* Banner Image */}
             <div className="w-full h-64 md:h-80 relative mb-8">
-                <img src="/group_photo.jpg" alt="Group Banner" className="w-full h-full object-cover object-center rounded-b-lg shadow-md" />
+                <img src="/team_banner.jpg" alt="Group Banner" className="w-full h-full object-cover object-center rounded-b-lg shadow-md" />
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                     <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Our Team</h1>
                 </div>
