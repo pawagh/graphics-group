@@ -60,7 +60,7 @@ export default function Home() {
           {/* Featured Projects */}
             <section className="text-center p-8 md:p-10 bg-white rounded-lg shadow-lg border-t-4 border-[#4B9CD3]">
             <h2 className="text-2xl font-bold text-[#4B9CD3] mb-4">FEATURED PROJECTS</h2>
-            <div className="flex flex-row space-x-6 justify-center items-center">
+            <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 justify-center items-center">
               {/* Project 1 */}
               <div className="w-80 min-h-[420px] p-4 bg-gray-100 rounded-lg shadow-md flex flex-col items-center justify-between">
                 <img src="https://www.cs.unc.edu/~cpk/data/thumbnails/1cm-metalens.PNG" alt="Beating bandwidth limits for large aperture broadband nano-optics" className="w-32 h-32 object-cover rounded mb-4" />
