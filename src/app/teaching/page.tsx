@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import '../animations.css';
 
 export default function Teaching() {
