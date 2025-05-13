@@ -90,6 +90,35 @@ export default function Home() {
               </div>
             </div>
             </section>
+
+          {/* Awards & News */}
+          <section className="mt-8 p-8 bg-white rounded-2xl shadow-xl border-t-4 border-[#4B9CD3] max-w-7xl mx-auto px-4 md:px-12">
+            <h2 className="text-2xl font-bold text-[#4B9CD3] mb-4">Awards & News</h2>
+            <div className="flex flex-col md:flex-row gap-8">
+              {/* News */}
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">Recent News</h3>
+                <ul className="list-disc ml-6 text-gray-700 space-y-1">
+                  <li><strong>April 2025:</strong> Event Fields selected as a CVPR Highlight.</li>
+                  <li><strong>March 2025:</strong> Metalens imaging paper published in Nature Communications.</li>
+                  <li><strong>Feb. 2025:</strong> Best Paper Honorable Mention at IEEE VR.</li>
+                  <li><strong>May 2024:</strong> Best Paper Award at OmniCV, CVPR 2024.</li>
+                </ul>
+              </div>
+              {/* Awards */}
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">Major Awards</h3>
+                <ul className="list-disc ml-6 text-gray-700 space-y-1">
+                  <li>Highlight Paper, <strong>Event fields</strong>, CVPR 2025</li>
+                  <li>Best Paper Award, <strong>FlatTrack: Eye-tracking with ultra-thin lensless cameras</strong>, GMCV, WACV 2025</li>
+                  <li>Best Paper Award, <strong>Cross-Domain Synthetic-to-Real Depth and Normal Estimation</strong>, OmniCV, CVPR 2024</li>
+                  <li>Best Dissertation Award, <strong>Towards Everyday-use Augmented Reality Eyeglasses</strong>, IEEE VGTC 2023</li>
+                  <li>Best Paper Award, <strong>Image Features Influence Reaction Time</strong>, ACM SIGGRAPH 2022</li>
+                  <li>Best Paper Award, <strong>DeepCGH: 3D Computer-Generated Holography Using Deep Learning</strong>, OSA Biophotonics Congress 2020</li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </div>
 
       </div>
