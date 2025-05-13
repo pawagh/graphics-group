@@ -22,31 +22,24 @@ export default function Teaching() {
                 </div>
                 {/* Grid Layout */}
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                    {/* Example course blocks, with different color themes for spring/fall */}
+                    {/* Spring course block */}
                     <div className='bg-blue-50 border-l-4 border-blue-400 rounded-lg p-4 shadow-md flex'>
-                        <img src="/course1.jpg" alt="Course 1" className="w-16 h-16 mr-4 rounded object-cover" />
+                        <img src="/course1.jpg" alt="Computational Imaging" className="w-16 h-16 mr-4 rounded object-cover" />
                         <div className='text-left flex-1'>
-                            <Link href="/teaching/course1" target="_blank">
-                                <h2 className='text-xl font-semibold text-black hover:text-blue-500 transition'>Introduction to Computational Imaging</h2>
-                            </Link>
-                            <p className='text-sm text-gray-600 mb-1'>Spring 2025</p>
-                            <p className='text-xs text-gray-500 mb-2'>Learn the fundamentals of computational imaging, including optics, sensors, and algorithms for image formation and analysis.</p>
-                            <p className='text-xs text-gray-700 mb-1'><strong>TA:</strong> Jane Doe</p>
-                            <p className='text-xs text-gray-700 mb-1'><strong>Office Hours:</strong> Mon 2-4pm</p>
-                            <p className='text-xs text-gray-700 mb-1'><strong>Room:</strong> SN 123</p>
+                            <h2 className='text-xl font-semibold text-black hover:text-blue-500 transition'>Computational Imaging</h2>
+                            <p className='text-sm text-gray-600 mb-1'>Spring 2026</p>
+                            <p className='text-xs text-gray-500 mb-2'>An introduction to computational imaging, covering optics, sensors, algorithms, and modern techniques for image formation and analysis.</p>
+                            {/* Optionally add TA, office hours, room if known */}
                         </div>
                     </div>
+                    {/* Fall course block */}
                     <div className='bg-orange-50 border-l-4 border-orange-400 rounded-lg p-4 shadow-md flex'>
-                        <img src="/course2.jpg" alt="Course 2" className="w-16 h-16 mr-4 rounded object-cover" />
+                        <img src="/course2.jpg" alt="Visual Computing Systems" className="w-16 h-16 mr-4 rounded object-cover" />
                         <div className='text-left flex-1'>
-                            <Link href="/teaching/course2" target="_blank">
-                                <h2 className='text-xl font-semibold text-black hover:text-orange-500 transition'>Machine Learning for Visual Computing</h2>
-                            </Link>
-                            <p className='text-sm text-gray-600 mb-1'>Fall 2024</p>
-                            <p className='text-xs text-gray-500 mb-2'>Explore machine learning techniques for image and video analysis, including deep learning, feature extraction, and applications in AR/VR.</p>
-                            <p className='text-xs text-gray-700 mb-1'><strong>TA:</strong> John Smith</p>
-                            <p className='text-xs text-gray-700 mb-1'><strong>Office Hours:</strong> Wed 10-12pm</p>
-                            <p className='text-xs text-gray-700 mb-1'><strong>Room:</strong> SN 456</p>
+                            <h2 className='text-xl font-semibold text-black hover:text-orange-500 transition'>Visual Computing Systems</h2>
+                            <p className='text-sm text-gray-600 mb-1'>Fall 2025</p>
+                            <p className='text-xs text-gray-500 mb-2'>A course on the design and implementation of visual computing systems, including hardware, software, and applications in graphics, vision, and AR/VR.</p>
+                            {/* Optionally add TA, office hours, room if known */}
                         </div>
                     </div>
                     {/* Add more courses as needed, using color/image themes for spring/fall */}

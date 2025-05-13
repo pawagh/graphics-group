@@ -23,27 +23,25 @@ export default function OpportunitiesPage() {
             <p className="mb-4 text-gray-700">
               Open to undergraduate students in computer science, neuroscience, or a related field. Interns will work on hands-on data analysis, software development, or experimental design.
             </p>
-            <a href="mailto:info@yourlab.com?subject=Summer 2025 Internship Application" className="text-blue-600 hover:underline">Apply Now</a>
+            {/* Add real application email here */}
           </div>
           <div className="bg-white shadow-md rounded p-6" style={{ borderLeft: '4px solid #4B9CD3' }}>
             <h2 className="text-2xl font-semibold mb-2" style={{ color: '#4B9CD3' }}>Graduate & Postdoc Opportunities</h2>
             <p className="mb-4 text-gray-700">
               We are always looking for motivated graduate students and postdocs to join our team. Please send your CV and a brief statement of interest.
             </p>
-            <a href="mailto:info@yourlab.com?subject=Graduate/Postdoc Application" className="text-blue-600 hover:underline">Contact Us</a>
+            {/* Add real application email here */}
           </div>
           <div className="bg-white shadow-md rounded p-6" style={{ borderLeft: '4px solid #4B9CD3' }}>
             <h2 className="text-2xl font-semibold mb-2" style={{ color: '#4B9CD3' }}>Independent Study</h2>
             <p className="mb-4 text-gray-700">
               Work with our faculty on ongoing research as part of a for-credit independent study. Open to UNC students. Must have completed at least one course in data science or experimental psychology.
             </p>
-            <a href="mailto:info@yourlab.com?subject=Independent Study Inquiry" className="text-blue-600 hover:underline">Contact Us</a>
+            {/* Add real application email here */}
           </div>
           <div className="bg-white shadow-md rounded p-6" style={{ borderLeft: '4px solid #4B9CD3' }}>
             <h2 className="text-2xl font-semibold mb-2" style={{ color: '#4B9CD3' }}>Contact Information</h2>
-            <p className="mb-2"><strong>Email:</strong> <a href="mailto:info@yourlab.com" className="text-blue-600 hover:underline">info@yourlab.com</a></p>
-            <p className="mb-2"><strong>Phone:</strong> (123) 456-7890</p>
-            <p className="mb-2"><strong>Location:</strong><br />123 Innovation Drive<br />Chapel Hill, NC 27514</p>
+            {/* Add real contact info here */}
           </div>
         </div>
       </div>

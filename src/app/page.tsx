@@ -41,16 +41,18 @@ export default function Home() {
         <div className="flex-2 space-y-10">
 
           {/* About Us */}
-            <section className="p-6 md:p-8 bg-white rounded-lg shadow-lg border-t-4 border-[#4B9CD3] flex items-center gap-4 md:gap-6">
-              <img
-                src="/logo.png"
-                alt="Visual Computing and Augmented Intelligence Lab"
-                className="w-1/3 max-w-[120px] object-contain"
-              />
-              <div className="w-2/3">
-                <h2 className="text-2xl font-bold text-center text-[#4B9CD3] mb-2">ABOUT US</h2>
-                <p className="text-base leading-relaxed">
-                  Welcome to the Visual Computing and Augmented Intelligence Lab at UNC. Our team is dedicated to advancing research in computational imaging, visual perception, and AI-driven solutions. We collaborate across disciplines to create transformative technologies that redefine the future of visual computing.
+            <section className="relative flex flex-col md:flex-row items-center gap-6 md:gap-10 p-8 bg-gradient-to-br from-white via-blue-50 to-blue-100 rounded-2xl shadow-xl border-t-4 border-[#4B9CD3] overflow-hidden">
+              <div className="flex-shrink-0 flex justify-center items-center w-full md:w-auto">
+                <img
+                  src="/logo.png"
+                  alt="Visual Computing and Augmented Intelligence Lab"
+                  className="w-32 h-32 md:w-40 md:h-40 object-contain rounded-full border-4 border-[#4B9CD3] shadow-lg bg-white"
+                />
+              </div>
+              <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">
+                <h2 className="text-3xl font-extrabold text-[#2563eb] mb-3 tracking-tight drop-shadow">About Us</h2>
+                <p className="text-lg leading-relaxed text-gray-700 font-medium w-full">
+                  Welcome to the <span className="font-bold text-[#4B9CD3]">Visual Computing and Augmented Intelligence Lab</span> at UNC. Our team is dedicated to advancing research in computational imaging, visual perception, and AI-driven solutions. We collaborate across disciplines to create transformative technologies that redefine the future of visual computing.
                 </p>
               </div>
             </section>
@@ -59,23 +61,32 @@ export default function Home() {
             <section className="text-center p-8 md:p-10 bg-white rounded-lg shadow-lg border-t-4 border-[#4B9CD3]">
             <h2 className="text-2xl font-bold text-[#4B9CD3] mb-4">FEATURED PROJECTS</h2>
             <div className="flex flex-row space-x-6 justify-center items-center">
-              <div className="w-80 p-4 bg-gray-100 rounded-lg shadow-md aspect-square flex flex-col items-center justify-center">
-              <h3 className="text-xl font-bold mb-2 text-[#4B9CD3]">Featured Project One</h3>
-              <p className="text-gray-700 text-center">
-                A brief description of the first featured project.
-              </p>
+              {/* Project 1 */}
+              <div className="w-80 min-h-[420px] p-4 bg-gray-100 rounded-lg shadow-md flex flex-col items-center justify-between">
+                <img src="https://www.cs.unc.edu/~cpk/data/thumbnails/1cm-metalens.PNG" alt="Beating bandwidth limits for large aperture broadband nano-optics" className="w-32 h-32 object-cover rounded mb-4" />
+                <h3 className="text-xl font-bold mb-2 text-[#4B9CD3] text-center">Beating bandwidth limits for large aperture broadband nano-optics</h3>
+                <p className="text-gray-700 text-center mb-2 flex-1">
+                  Breakthrough in nano-optics, overcoming bandwidth limits for large aperture broadband metalenses.
+                </p>
+                <a href="https://www.nature.com/articles/s41467-025-58208-4" target="_blank" className="text-carolina underline font-semibold">Read more</a>
               </div>
-              <div className="w-80 p-4 bg-gray-100 rounded-lg shadow-md aspect-square flex flex-col items-center justify-center">
-              <h3 className="text-xl font-bold mb-2 text-[#4B9CD3]">Featured Project Two</h3>
-              <p className="text-gray-700 text-center">
-                A brief description of the second featured project.
-              </p>
+              {/* Project 2 */}
+              <div className="w-80 min-h-[420px] p-4 bg-gray-100 rounded-lg shadow-md flex flex-col items-center justify-between">
+                <img src="https://www.cs.unc.edu/~cpk/data/thumbnails/dof-gs.PNG" alt="DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting" className="w-32 h-32 object-cover rounded mb-4" />
+                <h3 className="text-xl font-bold mb-2 text-[#4B9CD3] text-center">DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting</h3>
+                <p className="text-gray-700 text-center mb-2 flex-1">
+                  Novel 3D Gaussian Splatting technique for flexible depth-of-field control in computational photography.
+                </p>
+                <a href="https://arxiv.org/abs/2405.17351" target="_blank" className="text-carolina underline font-semibold">Read more</a>
               </div>
-              <div className="w-80 p-4 bg-gray-100 rounded-lg shadow-md aspect-square flex flex-col items-center justify-center">
-              <h3 className="text-xl font-bold mb-2 text-[#4B9CD3]">Featured Project Three</h3>
-              <p className="text-gray-700 text-center">
-                A brief description of the second featured project.
-              </p>
+              {/* Project 3 */}
+              <div className="w-80 min-h-[420px] p-4 bg-gray-100 rounded-lg shadow-md flex flex-col items-center justify-between">
+                <img src="https://www.cs.unc.edu/~cpk/data/thumbnails/eventfield.png" alt="Event fields: Capturing light fields at high speed, resolution, and dynamic range" className="w-32 h-32 object-cover rounded mb-4" />
+                <h3 className="text-xl font-bold mb-2 text-[#4B9CD3] text-center">Event fields: Capturing light fields at high speed, resolution, and dynamic range</h3>
+                <p className="text-gray-700 text-center mb-2 flex-1">
+                  Pioneering event-based light field capture for high-speed, high-resolution, and high-dynamic-range imaging.
+                </p>
+                <a href="https://arxiv.org/abs/2412.06191" target="_blank" className="text-carolina underline font-semibold">Read more</a>
               </div>
             </div>
             </section>

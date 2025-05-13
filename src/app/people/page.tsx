@@ -99,8 +99,7 @@ export default function People() {
                   <p className="mb-6 text-gray-700">We believe in interdisciplinary collaboration, open science, and fostering a supportive environment for innovation and learning. Our group values curiosity, diversity, and impact-driven research.</p>
                   <h3 className="text-2xl font-bold mb-2 text-blue-800">Collaborators</h3>
                   <ul className="list-disc ml-6 text-gray-700">
-                    <li>Dr. Jane Doe (Optics, MIT)</li>
-                    <li>Dr. John Smith (AI, Stanford)</li>
+                    {/* Add real collaborators here if available */}
                   </ul>
                   <h3 className="text-2xl font-bold mb-2 text-blue-800 mt-8">Team Blurb</h3>
                   <p className="text-gray-700">Our team brings together expertise in optics, computer vision, machine learning, and human-computer interaction to solve real-world problems in visual computing and augmented intelligence.</p>
