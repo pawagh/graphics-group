@@ -26,6 +26,24 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <title>Visual Computing and Augmented Intelligence Lab | UNC Chapel Hill</title>
+        <meta name="description" content="The Visual Computing and Augmented Intelligence Lab at UNC Chapel Hill advances research in computational imaging, computer vision, AR/VR, nano-optics, and AI-driven solutions." />
+        <meta name="keywords" content="visual computing, augmented intelligence, UNC, Chapel Hill, computational imaging, computer vision, AR, VR, nano-optics, research, Praneeth Chakravarthula" />
+        <meta name="author" content="Praneeth Chakravarthula" />
+        <link rel="canonical" href="https://www.cs.unc.edu/~cpk/" />
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Visual Computing and Augmented Intelligence Lab | UNC Chapel Hill" />
+        <meta property="og:description" content="Advancing research in computational imaging, computer vision, AR/VR, nano-optics, and AI-driven solutions at UNC Chapel Hill." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cs.unc.edu/~cpk/" />
+        <meta property="og:image" content="/logo.png" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Visual Computing and Augmented Intelligence Lab | UNC Chapel Hill" />
+        <meta name="twitter:description" content="Advancing research in computational imaging, computer vision, AR/VR, nano-optics, and AI-driven solutions at UNC Chapel Hill." />
+        <meta name="twitter:image" content="/logo.png" />
+      </head>
       <body className={`${inter.variable} bg-gray-100 text-black antialiased pt-16 font-sans`}>
         <header className="fixed top-0 left-0 w-full h-16 bg-carolina shadow-lg flex items-center justify-between px-8 md:px-12 backdrop-blur-lg z-50 font-bold">
           <h1 className="text-lg">
