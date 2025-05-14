@@ -1,5 +1,6 @@
 import React from 'react';
 import '../animations.css';
+import Link from 'next/link';
 
 export default function Teaching() {
     return (
@@ -25,7 +26,11 @@ export default function Teaching() {
                     <div className='bg-blue-50 border-l-4 border-blue-400 rounded-lg p-4 shadow-md flex'>
                         <img src="/course1.jpg" alt="Computational Imaging" className="w-16 h-16 mr-4 rounded object-cover" />
                         <div className='text-left flex-1'>
-                            <h2 className='text-xl font-semibold text-black hover:text-blue-500 transition'>Computational Imaging</h2>
+                            <h2 className='text-xl font-semibold'>
+                              <Link href="/teaching/computational-imaging" className="text-black hover:text-blue-500 transition underline">
+                                Computational Imaging
+                              </Link>
+                            </h2>
                             <p className='text-sm text-gray-600 mb-1'>Spring 2026</p>
                             <p className='text-xs text-gray-500 mb-2'>An introduction to computational imaging, covering optics, sensors, algorithms, and modern techniques for image formation and analysis.</p>
                             {/* Optionally add TA, office hours, room if known */}
@@ -35,7 +40,11 @@ export default function Teaching() {
                     <div className='bg-orange-50 border-l-4 border-orange-400 rounded-lg p-4 shadow-md flex'>
                         <img src="/course2.jpg" alt="Visual Computing Systems" className="w-16 h-16 mr-4 rounded object-cover" />
                         <div className='text-left flex-1'>
-                            <h2 className='text-xl font-semibold text-black hover:text-orange-500 transition'>Visual Computing Systems</h2>
+                            <h2 className='text-xl font-semibold'>
+                              <Link href="/teaching/visual-computing-systems" className="text-black hover:text-orange-500 transition underline">
+                                Visual Computing Systems
+                              </Link>
+                            </h2>
                             <p className='text-sm text-gray-600 mb-1'>Fall 2025</p>
                             <p className='text-xs text-gray-500 mb-2'>A course on the design and implementation of visual computing systems, including hardware, software, and applications in graphics, vision, and AR/VR.</p>
                             {/* Optionally add TA, office hours, room if known */}
