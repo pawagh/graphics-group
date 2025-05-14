@@ -18,10 +18,10 @@ export default function RootLayout({
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "PEOPLE", href: "./people" },
-    { label: "TEACHING", href: "./teaching" },
-    { label: "PUBLICATIONS", href: "./publications" },
-    { label: "OPPORTUNITIES", href: "./opportunities" },
+    { label: "PEOPLE", href: "/people" },
+    { label: "TEACHING", href: "/teaching" },
+    { label: "PUBLICATIONS", href: "/publications" },
+    { label: "OPPORTUNITIES", href: "/opportunities" },
   ];
 
   return (
