@@ -1,6 +1,6 @@
 'use client'
 
-import { publications, Publication } from './data';
+import { publications } from './data';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import '../animations.css';
