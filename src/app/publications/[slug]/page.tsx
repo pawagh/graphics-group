@@ -1,4 +1,3 @@
-import { notFound } from 'next/navigation';
 import { publications, Publication } from '../data';
 
 export default function PublicationDetail({ params }: { params: { slug: string } }) {
