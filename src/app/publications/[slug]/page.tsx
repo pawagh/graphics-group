@@ -1,11 +1,11 @@
 import { publications, Publication } from '../data';
 
-interface PageProps {
+export default function PublicationDetail({
+  params,
+}: {
   params: { slug: string };
   searchParams?: { [key: string]: string | string[] | undefined };
-}
-
-export default function PublicationDetail({ params }: PageProps) {
+}) {
   const publication = publications.find((pub: Publication) => pub.slug === params.slug);
 
   if (!publication) {
