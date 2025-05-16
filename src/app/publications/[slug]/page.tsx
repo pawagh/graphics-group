@@ -1,5 +1,6 @@
 import { publications, Publication } from '../data';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function PublicationDetail({ params }: any) {
   const publication = publications.find((pub: Publication) => pub.slug === params.slug);
 
