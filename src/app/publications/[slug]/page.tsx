@@ -1,11 +1,6 @@
 import { publications, Publication } from '../data';
 
-export default function PublicationDetail({
-  params,
-}: {
-  params: { slug: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}) {
+export default function PublicationDetail({ params }: any) {
   const publication = publications.find((pub: Publication) => pub.slug === params.slug);
 
   if (!publication) {
