@@ -8,7 +8,7 @@ export default function PublicationDetail({ params }: { params: { slug: string }
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4 text-carolina">Publication Not Found</h1>
-          <p className="text-gray-600">Sorry, we couldn't find the publication you were looking for.</p>
+          <p className="text-gray-600">Sorry, we couldn&#39;t find the publication you were looking for.</p>
         </div>
       </div>
     );
