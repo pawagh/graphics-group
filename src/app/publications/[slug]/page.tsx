@@ -2,8 +2,9 @@ import { publications, Publication } from '../data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 
-export default function PublicationDetail({ params }: { params: { slug: string } }) {
-  const publication = publications.find((pub: Publication) => pub.slug === params.slug);
+export default async function PublicationDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const publication = publications.find((pub: Publication) => pub.slug === slug);
 
   if (!publication) {
     notFound();
