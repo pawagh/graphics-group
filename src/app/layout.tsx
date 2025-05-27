@@ -44,31 +44,34 @@ export default function RootLayout({
         <meta name="twitter:description" content="Advancing research in computational imaging, computer vision, AR/VR, nano-optics, and AI-driven solutions at UNC Chapel Hill." />
         <meta name="twitter:image" content="/logo.png" />
       </head>
-      <body className={`${inter.variable} bg-gray-100 text-black antialiased pt-16 font-sans`}>
-        <header className="fixed top-0 left-0 w-full h-16 bg-carolina shadow-lg flex items-center justify-between px-8 md:px-12 backdrop-blur-lg z-50 font-bold">
-          <h1 className="text-lg">
-            <Link href="/" legacyBehavior>
-              <a className="text-white no-underline">
-                <span className="block lg:hidden">Visual Computing & AI Lab</span>
-                <span className="hidden lg:block">Visual Computing and Augmented Intelligence Lab</span>
-              </a>
+      <body className={`${inter.variable} bg-neutral-50 text-neutral-900 antialiased pt-16 font-sans`}>
+        {/* Header matching template with Carolina Blue background */}
+        <header className="fixed top-0 left-0 w-full h-16 bg-carolina-blue shadow-lg flex items-center justify-between px-8 md:px-12 backdrop-blur-lg z-50">
+          {/* Lab title matching template */}
+          <h1 className="header-title">
+            <Link href="/" className="text-white no-underline hover:text-orange transition-colors duration-300">
+              <span className="block lg:hidden">VCAIL</span>
+              <span className="hidden lg:block">Visual Computing and Augmented Intelligence Lab</span>
             </Link>
           </h1>
+          
+          {/* Navigation */}
           <div className="relative">
+            {/* Mobile menu button */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="menu-button text-2xl text-white cursor-pointer lg:hidden"
+              className="text-2xl text-white cursor-pointer lg:hidden hover:text-orange transition-colors duration-300"
             >
               ☰
             </button>
-            <nav className={`navbar absolute top-16 right-0 bg-carolina shadow-lg rounded-lg z-50 w-40 flex-col ${menuOpen ? "flex" : "hidden"} lg:static lg:flex-row lg:flex lg:bg-transparent lg:shadow-none lg:w-auto`}>
+            
+            {/* Navigation menu */}
+            <nav className={`navbar absolute top-16 right-0 bg-carolina-blue shadow-lg rounded-lg z-50 w-40 flex-col ${menuOpen ? "flex" : "hidden"} lg:static lg:flex-row lg:flex lg:bg-transparent lg:shadow-none lg:w-auto`}>
               <ul className="list-none m-0 p-0 flex flex-col lg:flex-row gap-5">
                 {navItems.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} legacyBehavior>
-                      <a className="text-white font-bold px-2 py-2 rounded hover:bg-carolina/80 transition" onClick={() => setMenuOpen(false)}>
-                        {item.label}
-                      </a>
+                    <Link href={item.href} className="nav-link" onClick={() => setMenuOpen(false)}>
+                      {item.label}
                     </Link>
                   </li>
                 ))}
@@ -76,12 +79,16 @@ export default function RootLayout({
             </nav>
           </div>
         </header>
+
+        {/* Main content area */}
         <div className="min-h-screen flex flex-col justify-between">
           <main className="flex-1">
             {children}
           </main>
+          
+          {/* Footer with UNC branding */}
           <footer className="relative text-white py-8 px-4 mt-8 overflow-hidden">
-            {/* Background image layer */}
+            {/* Background with UNC colors */}
             <div
               className="absolute inset-0 w-full h-full z-0"
               style={{
@@ -92,27 +99,41 @@ export default function RootLayout({
               }}
               aria-hidden="true"
             />
-            {/* Overlay for extra contrast if needed */}
-            <div className="absolute inset-0 bg-carolina/80 z-0" />
+            {/* Carolina Blue overlay */}
+            <div className="absolute inset-0 bg-carolina-blue/90 z-0" />
+            
             {/* Footer content */}
             <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="text-center md:text-left">
                 <h2 className="text-lg font-bold mb-2">Visual Computing and Augmented Intelligence Lab</h2>
-                <p className="mb-1">123 Innovation Drive, Chapel Hill, NC 27514</p>
-                <p className="mb-1">Email: <a href="mailto:info@yourlab.com" className="underline text-white decoration-carolina">info@yourlab.com</a></p>
-                <p className="mb-1">Phone: (123) 456-7890</p>
+                <p className="mb-1">University of North Carolina at Chapel Hill</p>
+                <p className="mb-1">Email: <a href="mailto:cpk@cs.unc.edu" className="underline text-white hover:text-orange transition-colors duration-300">cpk@cs.unc.edu</a></p>
+                <p className="mb-1">Department of Computer Science</p>
               </div>
+              
+              {/* Social links with orange hover */}
               <div className="flex gap-4 items-center">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-white">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195A4.92 4.92 0 0 0 16.616 3c-2.73 0-4.942 2.21-4.942 4.932 0 .386.045.763.127 1.124C7.728 8.807 4.1 6.884 1.671 3.965c-.423.722-.666 1.561-.666 2.475 0 1.708.87 3.216 2.188 4.099a4.904 4.904 0 0 1-2.237-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.209c9.057 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.636A9.936 9.936 0 0 0 24 4.557z"/></svg>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="icon-hover">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195A4.92 4.92 0 0 0 16.616 3c-2.73 0-4.942 2.21-4.942 4.932 0 .386.045.763.127 1.124C7.728 8.807 4.1 6.884 1.671 3.965c-.423.722-.666 1.561-.666 2.475 0 1.708.87 3.216 2.188 4.099a4.904 4.904 0 0 1-2.237-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.209c9.057 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.636A9.936 9.936 0 0 0 24 4.557z"/>
+                  </svg>
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-white">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/></svg>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="icon-hover">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/>
+                  </svg>
                 </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-white">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.326 24H12.82v-9.294H9.692v-3.622h3.127V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="icon-hover">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
                 </a>
               </div>
+            </div>
+            
+            {/* Copyright */}
+            <div className="relative z-10 text-center mt-6 pt-4 border-t border-white/30">
+              <p className="text-sm">© 2025 Visual Computing and Augmented Intelligence Lab, UNC Chapel Hill</p>
             </div>
           </footer>
         </div>
