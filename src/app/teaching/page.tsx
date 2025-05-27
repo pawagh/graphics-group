@@ -1,6 +1,7 @@
 'use client'
 import '../animations.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Teaching() {
   const courses = [
@@ -26,12 +27,13 @@ export default function Teaching() {
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
       {/* Hero banner section */}
       <div className="w-full h-64 md:h-80 relative mb-8">
-        <img 
+        <Image 
           src="/teaching_banner.jpg" 
           alt="Teaching and Education Banner" 
-          className="w-full h-full object-cover object-center rounded-b-lg shadow-md" 
+          fill
+          className="object-cover object-center rounded-b-lg shadow-md" 
         />
-        <div className="absolute inset-0 bg-carolina-blue bg-opacity-60 flex items-center justify-center">
+        <div className="absolute inset-0 bg-carolina-blue bg-opacity-60 flex items-center justify-center z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Teaching</h1>
         </div>
       </div>
@@ -63,17 +65,19 @@ export default function Teaching() {
           <section className="section-card">
             <h3 className="section-title">Courses</h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {courses.map((course, index) => (
+              {courses.map((course) => (
                 <div 
                   key={course.title} 
                   className="card group p-6 hover:shadow-card-hover transition-all duration-300"
                 >
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
-                      <img 
+                      <Image 
                         src={course.image} 
                         alt={course.title} 
-                        className="w-20 h-20 rounded-lg object-cover shadow-md transition-transform duration-300 group-hover:scale-110" 
+                        width={80}
+                        height={80}
+                        className="rounded-lg object-cover shadow-md transition-transform duration-300 group-hover:scale-110" 
                       />
                     </div>
                     <div className="flex-1">

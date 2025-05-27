@@ -1,5 +1,6 @@
 'use client'
 import '../animations.css';
+import Image from 'next/image';
 
 export default function People() {
   const people = [
@@ -41,12 +42,13 @@ export default function People() {
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
       {/* Hero banner section */}
       <div className="w-full h-64 md:h-80 relative mb-8">
-        <img 
+        <Image 
           src="/team_banner.jpg" 
           alt="Visual Computing Team Banner" 
-          className="w-full h-full object-cover object-center rounded-b-lg shadow-md" 
+          fill
+          className="object-cover object-center rounded-b-lg shadow-md" 
         />
-        <div className="absolute inset-0 bg-carolina-blue bg-opacity-60 flex items-center justify-center">
+        <div className="absolute inset-0 bg-carolina-blue bg-opacity-60 flex items-center justify-center z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Our Team</h1>
         </div>
       </div>
@@ -73,10 +75,12 @@ export default function People() {
                   className="card overflow-hidden group transition-all duration-300 hover:shadow-card-hover"
                 >
                   <div className="relative overflow-hidden">
-                    <img 
+                    <Image 
                       src={person.image} 
                       alt={person.name} 
-                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" 
+                      width={300}
+                      height={192}
+                      className="object-cover transition-transform duration-500 group-hover:scale-110" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>

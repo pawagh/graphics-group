@@ -1,5 +1,6 @@
 'use client'
 import Link from "next/link";
+import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useState } from "react";
 import "./globals.css";
@@ -89,16 +90,16 @@ export default function RootLayout({
           {/* Footer with UNC branding */}
           <footer className="relative text-white py-8 px-4 mt-8 overflow-hidden">
             {/* Background with UNC colors */}
-            <div
-              className="absolute inset-0 w-full h-full z-0"
-              style={{
-                backgroundImage: "url('/unc_background.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                pointerEvents: "none"
-              }}
-              aria-hidden="true"
-            />
+            <div className="absolute inset-0 w-full h-full z-0">
+              <Image
+                src="/unc_background.jpg"
+                alt="UNC Background"
+                fill
+                className="object-cover"
+                style={{ pointerEvents: "none" }}
+                priority={false}
+              />
+            </div>
             {/* Carolina Blue overlay */}
             <div className="absolute inset-0 bg-carolina-blue/90 z-0" />
             

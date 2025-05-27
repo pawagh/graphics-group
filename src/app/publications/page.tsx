@@ -3,6 +3,7 @@
 import { publications } from './data';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import '../animations.css';
 
 export default function Publications() {
@@ -35,12 +36,13 @@ export default function Publications() {
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
       {/* Hero banner section */}
       <div className="w-full h-64 md:h-80 relative mb-8">
-        <img 
+        <Image 
           src="/publications_banner.jpg" 
           alt="Publications and Research Banner" 
-          className="w-full h-full object-cover object-center rounded-b-lg shadow-md" 
+          fill
+          className="object-cover object-center rounded-b-lg shadow-md" 
         />
-        <div className="absolute inset-0 bg-carolina-blue bg-opacity-60 flex items-center justify-center">
+        <div className="absolute inset-0 bg-carolina-blue bg-opacity-60 flex items-center justify-center z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Publications</h1>
         </div>
       </div>
@@ -119,10 +121,12 @@ export default function Publications() {
                       >
                         <div className="flex flex-col md:flex-row gap-6 items-start">
                           <div className="flex-shrink-0">
-                            <img 
+                            <Image 
                               src={pub.image} 
                               alt={pub.title} 
-                              className="w-32 h-32 object-cover rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105" 
+                              width={128}
+                              height={128}
+                              className="object-cover rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105" 
                             />
                           </div>
                           <div className="flex-1">

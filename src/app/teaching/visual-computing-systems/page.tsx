@@ -1,13 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import '../../animations.css';
 
 export default function VisualComputingSystems() {
   return (
     <div className="fade-in flex flex-col items-center min-h-screen bg-gray-50">
       <div className="w-full h-64 md:h-80 relative mb-8">
-        <img src="/course2.jpg" alt="Visual Computing Systems Banner" className="w-full h-full object-cover object-center rounded-b-lg shadow-md" />
-        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+        <Image 
+          src="/course2.jpg" 
+          alt="Visual Computing Systems Banner" 
+          fill
+          className="object-cover object-center rounded-b-lg shadow-md" 
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Visual Computing Systems</h1>
         </div>
       </div>
