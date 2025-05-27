@@ -1,5 +1,6 @@
 'use client'
 import './animations.css';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -11,12 +12,14 @@ export default function Home() {
           const duration = 18; // Total duration for one full cycle in seconds
           const delay = (index * duration) / total; // Stagger the animation for each image
           return (
-            <img
+            <Image
               key={index}
               src={src}
               alt={`Visual Computing Research ${index + 1}`}
-              className="absolute w-full h-[60vh] object-cover fade-image"
+              fill
+              className="absolute object-cover fade-image"
               style={{ animationDelay: `${delay}s` }}
+              priority={index === 0}
             />
           );
         })}
@@ -45,10 +48,12 @@ export default function Home() {
           <section className="section-card">
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
               <div className="flex-shrink-0 flex justify-center items-center w-full md:w-auto">
-                <img
+                <Image
                   src="/logo.png"
                   alt="Visual Computing and Augmented Intelligence Lab"
-                  className="w-32 h-32 md:w-40 md:h-40 object-contain rounded-full border-4 border-carolina-blue shadow-lg bg-white"
+                  width={160}
+                  height={160}
+                  className="object-contain rounded-full border-4 border-carolina-blue shadow-lg bg-white"
                 />
               </div>
               <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">
@@ -69,10 +74,12 @@ export default function Home() {
               
               {/* Project 1 */}
               <div className="project-card group">
-                <img 
+                <Image 
                   src="https://www.cs.unc.edu/~cpk/data/thumbnails/1cm-metalens.PNG" 
                   alt="Beating bandwidth limits for large aperture broadband nano-optics" 
-                  className="w-32 h-32 object-cover rounded mb-4 transition-transform duration-300 group-hover:scale-110" 
+                  width={128}
+                  height={128}
+                  className="object-cover rounded mb-4 transition-transform duration-300 group-hover:scale-110" 
                 />
                 <h3 className="text-xl font-bold mb-2 text-carolina-blue text-center project-title transition-colors duration-300">
                   Beating bandwidth limits for large aperture broadband nano-optics
@@ -87,10 +94,12 @@ export default function Home() {
 
               {/* Project 2 */}
               <div className="project-card group">
-                <img 
+                <Image 
                   src="https://www.cs.unc.edu/~cpk/data/thumbnails/dof-gs.PNG" 
                   alt="DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting" 
-                  className="w-32 h-32 object-cover rounded mb-4 transition-transform duration-300 group-hover:scale-110" 
+                  width={128}
+                  height={128}
+                  className="object-cover rounded mb-4 transition-transform duration-300 group-hover:scale-110" 
                 />
                 <h3 className="text-xl font-bold mb-2 text-carolina-blue text-center project-title transition-colors duration-300">
                   DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting
@@ -105,10 +114,12 @@ export default function Home() {
 
               {/* Project 3 */}
               <div className="project-card group">
-                <img 
+                <Image 
                   src="https://www.cs.unc.edu/~cpk/data/thumbnails/eventfield.png" 
                   alt="Event fields: Capturing light fields at high speed, resolution, and dynamic range" 
-                  className="w-32 h-32 object-cover rounded mb-4 transition-transform duration-300 group-hover:scale-110" 
+                  width={128}
+                  height={128}
+                  className="object-cover rounded mb-4 transition-transform duration-300 group-hover:scale-110" 
                 />
                 <h3 className="text-xl font-bold mb-2 text-carolina-blue text-center project-title transition-colors duration-300">
                   Event fields: Capturing light fields at high speed, resolution, and dynamic range

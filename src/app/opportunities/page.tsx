@@ -1,5 +1,6 @@
 'use client'
 import '../animations.css';
+import Image from 'next/image';
 
 export default function OpportunitiesPage() {
   const opportunities = [
@@ -37,12 +38,13 @@ export default function OpportunitiesPage() {
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
       {/* Hero banner section */}
       <div className="w-full h-64 md:h-80 relative mb-8">
-        <img 
+        <Image 
           src="/opportunities_banner.jpg" 
           alt="Opportunities and Careers Banner" 
-          className="w-full h-full object-cover object-center rounded-b-lg shadow-md" 
+          fill
+          className="object-cover object-center rounded-b-lg shadow-md" 
         />
-        <div className="absolute inset-0 bg-carolina-blue bg-opacity-60 flex items-center justify-center">
+        <div className="absolute inset-0 bg-carolina-blue bg-opacity-60 flex items-center justify-center z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Opportunities</h1>
         </div>
       </div>
@@ -167,7 +169,7 @@ export default function OpportunitiesPage() {
             <h3 className="section-title text-center">Contact Information</h3>
             <div className="max-w-2xl mx-auto text-center">
               <p className="text-lg text-neutral-600 mb-6">
-                Have questions about our research or opportunities? We'd love to hear from you.
+                Have questions about our research or opportunities? We&apos;d love to hear from you.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -201,7 +203,7 @@ export default function OpportunitiesPage() {
               <h2 className="text-3xl font-bold text-unc-navy mb-6">Ready to Join Our Team?</h2>
               <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
                 Take the first step towards advancing the future of visual computing and augmented intelligence. 
-                We're excited to welcome passionate researchers to our lab.
+                We&apos;re excited to welcome passionate researchers to our lab.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="mailto:cpk@cs.unc.edu?subject=Interest in Visual Computing Lab" className="btn-primary inline-flex items-center justify-center">
