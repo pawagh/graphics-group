@@ -190,8 +190,8 @@ export default function Home() {
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold text-unc-navy mb-6">Join Our Research</h2>
               <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
-                Interested in pushing the boundaries of visual computing and augmented intelligence? 
-                We're always looking for passionate students and researchers to join our team.
+                Take the first step towards advancing the future of visual computing and augmented intelligence. 
+                We&apos;re excited to welcome passionate researchers to our lab.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/people" className="btn-primary inline-flex items-center justify-center">

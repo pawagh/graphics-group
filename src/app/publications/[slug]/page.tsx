@@ -2,7 +2,6 @@ import { publications, Publication } from '../data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function PublicationDetail({ params }: { params: { slug: string } }) {
   const publication = publications.find((pub: Publication) => pub.slug === params.slug);
 

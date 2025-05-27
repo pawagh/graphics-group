@@ -66,7 +66,7 @@ export default function OpportunitiesPage() {
           <section className="section-card">
             <h3 className="section-title">Current Openings</h3>
             <div className="grid gap-8">
-              {opportunities.map((opportunity, index) => (
+              {opportunities.map((opportunity) => (
                 <div 
                   key={opportunity.title} 
                   className="card p-6 group hover:shadow-card-hover transition-all duration-300"
