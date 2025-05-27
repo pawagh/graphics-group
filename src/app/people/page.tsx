@@ -69,7 +69,7 @@ export default function People() {
           {/* Team members grid */}
           <section className="section-card">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {people.map((person, index) => (
+              {people.map((person) => (
                 <div 
                   key={person.name} 
                   className="card overflow-hidden group transition-all duration-300 hover:shadow-card-hover"
@@ -130,7 +130,7 @@ export default function People() {
               <h3 className="section-title">Group Philosophy</h3>
               <p className="text-neutral-700 leading-relaxed">
                 We believe in interdisciplinary collaboration, open science, and fostering a supportive environment for innovation and learning. 
-                Our group values curiosity, diversity, and impact-driven research that pushes the boundaries of what's possible in visual computing.
+                Our group values curiosity, diversity, and impact-driven research that pushes the boundaries of what&apos;s possible in visual computing.
               </p>
             </section>
 
@@ -139,7 +139,7 @@ export default function People() {
               <h3 className="section-title">Team Impact</h3>
               <p className="text-neutral-700 leading-relaxed">
                 Our team brings together expertise in optics, computer vision, machine learning, and human-computer interaction to solve 
-                real-world problems in visual computing and augmented intelligence. Together, we're shaping the future of how humans interact with technology.
+                real-world problems in visual computing and augmented intelligence. Together, we&apos;re shaping the future of how humans interact with technology.
               </p>
             </section>
           </div>
@@ -149,7 +149,7 @@ export default function People() {
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold text-unc-navy mb-6">Join Our Team</h2>
               <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
-                We're always looking for passionate students and researchers to join our lab. 
+                We&apos;re always looking for passionate students and researchers to join our lab. 
                 Check out our current opportunities and see how you can contribute to cutting-edge research in visual computing.
               </p>
               <a href="/opportunities" className="btn-primary inline-flex items-center justify-center">
