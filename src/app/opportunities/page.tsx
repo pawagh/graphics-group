@@ -5,32 +5,11 @@ import Image from 'next/image';
 export default function OpportunitiesPage() {
   const opportunities = [
     {
-      title: "Undergraduate Research Opportunities",
-      deadline: "Applications due: May 1, 2025",
-      description: "Open to undergraduate students in computer science, engineering, or related fields. Interns will work on hands-on research in computational imaging, computer vision, or AR/VR systems.",
-      requirements: ["Junior or Senior standing", "Strong programming skills", "GPA > 3.0", "Interest in visual computing"],
-      type: "Undergraduate"
-    },
-    {
       title: "Graduate Student Positions",
       deadline: "Rolling applications",
       description: "PhD and MS positions available for motivated students interested in visual computing research. Full funding available for qualified candidates.",
       requirements: ["BS/MS in Computer Science or related field", "Research experience preferred", "Strong mathematical background", "Programming proficiency"],
       type: "Graduate"
-    },
-    {
-      title: "Postdoctoral Research Associate",
-      deadline: "Applications accepted year-round",
-      description: "Seeking postdocs with expertise in computational imaging, computer vision, or AR/VR. Opportunity to lead independent research projects.",
-      requirements: ["PhD in relevant field", "Strong publication record", "Independent research experience", "Collaboration skills"],
-      type: "Postdoc"
-    },
-    {
-      title: "Independent Study",
-      deadline: "Contact before semester starts",
-      description: "Work with our faculty on ongoing research as part of a for-credit independent study. Perfect for UNC students seeking research experience.",
-      requirements: ["UNC student", "Completed data science or computer vision course", "Available 10+ hours/week", "Academic advisor approval"],
-      type: "Independent Study"
     }
   ];
 
@@ -46,19 +25,21 @@ export default function OpportunitiesPage() {
         />
       </div>
 
+      {/* Join Us Philosophy - Orange translucent banner */}
+      <div className="w-full bg-orange/20 backdrop-blur-sm border-t-4 border-orange py-3 mb-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-12">
+          <h2 className="text-2xl font-bold text-orange text-center mb-3">JOIN US</h2>
+          <p className="text-md text-center text-neutral-700 max-w-4xl mx-auto leading-relaxed">
+            Interested in joining our lab? We offer diverse research opportunities for undergraduate and graduate students, 
+            postdocs, and collaborators. Join us in pushing the boundaries of visual computing and augmented intelligence.
+          </p>
+        </div>
+      </div>
+
       {/* Main content */}
       <div className="content-container">
         <div className="space-y-10">
           
-          {/* Introduction section */}
-          <section className="section-card">
-            <h2 className="section-title text-center">JOIN US</h2>
-            <p className="text-lg text-center text-neutral-600 max-w-4xl mx-auto leading-relaxed">
-              Interested in joining our lab? We offer diverse research opportunities for undergraduate and graduate students, 
-              postdocs, and collaborators. Join us in pushing the boundaries of visual computing and augmented intelligence.
-            </p>
-          </section>
-
           {/* Current openings */}
           <section className="section-card">
             <h2 className="section-title text-center">CURRENT OPENINGS</h2>

@@ -35,19 +35,21 @@ export default function Teaching() {
         />
       </div>
 
+      {/* Teaching Philosophy - Orange translucent banner */}
+      <div className="w-full bg-orange/20 backdrop-blur-sm border-t-4 border-orange py-3 mb-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-12">
+          <h2 className="text-2xl font-bold text-orange text-center mb-3">TEACHING</h2>
+          <p className="text-md text-center text-neutral-700 max-w-4xl mx-auto leading-relaxed">
+            We are committed to excellence in education, fostering the next generation of visual computing researchers and practitioners. 
+            Our courses blend theory with hands-on experience in cutting-edge technologies.
+          </p>
+        </div>
+      </div>
+
       {/* Main content */}
       <div className="content-container">
         <div className="space-y-10">
           
-          {/* Introduction section */}
-          <section className="section-card">
-            <h2 className="section-title text-center">TEACHING</h2>
-            <p className="text-lg text-center text-neutral-600 max-w-4xl mx-auto leading-relaxed">
-              We are committed to excellence in education, fostering the next generation of visual computing researchers and practitioners. 
-              Our courses blend theory with hands-on experience in cutting-edge technologies.
-            </p>
-          </section>
-
           {/* Courses section */}
           <section className="section-card">
             <h3 className="section-title text-center">COURSES</h3>
