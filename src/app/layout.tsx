@@ -23,13 +23,12 @@ function AnimatedLabTitle() {
         setIsTransitioning(false);
       }, 300); // Half the transition duration
     }, 4000);
-    
     return () => clearInterval(interval);
   }, []);
   
   return (
     <span 
-      className={`hidden lg:block animated-lab-title transition-opacity duration-600 ease-in-out ${
+      className={`animated-lab-title transition-opacity duration-600 ease-in-out ${
         isTransitioning ? 'opacity-0' : 'opacity-100'
       }`}
     >
@@ -74,7 +73,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} bg-neutral-50 text-neutral-900 antialiased pt-20 font-sans`}>
         {/* Enhanced Header with sophisticated styling */}
-        <header className="fixed top-0 left-0 w-full h-20 bg-gradient-to-r from-unc-navy via-slate-800 to-unc-navy shadow-2xl flex items-center justify-between px-6 md:px-12 backdrop-blur-xl z-50 border-b border-white/10">
+        <header className="fixed top-0 left-0 w-full h-20 bg-gradient-to-r from-carolina-blue via-carolina-blue to-unc-navy shadow-2xl flex items-center justify-between px-6 md:px-12 backdrop-blur-xl z-50 border-b border-white/10">
           {/* Enhanced Logo and Lab title */}
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-4 text-white no-underline hover:text-white transition-all duration-500 group">
@@ -89,8 +88,9 @@ export default function RootLayout({
                 />
               </div>
               <div className="header-title">
-                <span className="block lg:hidden text-xl font-bold">VCAIL</span>
-                <AnimatedLabTitle />
+                <div className="text-xl lg:text-lg font-bold">
+                  <AnimatedLabTitle />
+                </div>
               </div>
             </Link>
           </div>
@@ -111,7 +111,7 @@ export default function RootLayout({
             </button>
             
             {/* Enhanced Navigation menu */}
-            <nav className={`navbar absolute top-24 right-0 bg-gradient-to-br from-unc-navy via-slate-800 to-unc-navy shadow-2xl rounded-2xl z-50 w-64 lg:w-auto flex-col border border-white/20 backdrop-blur-xl ${menuOpen ? "flex" : "hidden"} lg:static lg:flex-row lg:flex lg:bg-transparent lg:shadow-none lg:border-none lg:backdrop-blur-none lg:rounded-none`}>
+            <nav className={`navbar absolute top-24 right-0 shadow-2xl rounded-2xl z-50 w-64 lg:w-auto flex-col border border-white/20 backdrop-blur-xl ${menuOpen ? "flex bg-gradient-to-br from-carolina-blue via-carolina-blue to-unc-navy" : "hidden"} lg:static lg:flex-row lg:flex lg:bg-transparent lg:shadow-none lg:border-none lg:backdrop-blur-none lg:rounded-none`}>
               <ul className="list-none m-0 p-6 lg:p-0 flex flex-col lg:flex-row gap-2 lg:gap-8">
                 {navItems.map((item, index) => (
                   <li key={item.href} className="relative">

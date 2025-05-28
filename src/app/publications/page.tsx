@@ -44,19 +44,21 @@ export default function Publications() {
         />
       </div>
 
+      {/* Publications Philosophy - Orange translucent banner */}
+      <div className="w-full bg-orange/20 backdrop-blur-sm border-t-4 border-orange py-3 mb-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-12">
+          <h2 className="text-2xl font-bold text-orange text-center mb-3">PUBLICATIONS</h2>
+          <p className="text-md text-center text-neutral-700 max-w-4xl mx-auto leading-relaxed">
+            Explore our cutting-edge research in visual computing and augmented intelligence. 
+            Our publications span computational imaging, computer vision, AR/VR, nano-optics, and machine learning.
+          </p>
+        </div>
+      </div>
+
       {/* Main content */}
       <div className="content-container">
         <div className="space-y-10">
           
-          {/* Introduction section */}
-          <section className="section-card">
-            <h2 className="section-title text-center">PUBLICATIONS</h2>
-            <p className="text-lg text-center text-neutral-600 max-w-4xl mx-auto leading-relaxed">
-              Explore our cutting-edge research in visual computing and augmented intelligence. 
-              Our publications span computational imaging, computer vision, AR/VR, nano-optics, and machine learning.
-            </p>
-          </section>
-
           {/* Search and filter section */}
           <section className="section-card">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
