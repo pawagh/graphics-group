@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./globals.css";
 import "./animations.css";
 
@@ -10,6 +10,33 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
+
+function AnimatedLabTitle() {
+  const [showFullName, setShowFullName] = useState(true);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setShowFullName(prev => !prev);
+        setIsTransitioning(false);
+      }, 300); // Half the transition duration
+    }, 4000);
+    
+    return () => clearInterval(interval);
+  }, []);
+  
+  return (
+    <span 
+      className={`hidden lg:block transition-opacity duration-600 ease-in-out ${
+        isTransitioning ? 'opacity-0' : 'opacity-100'
+      }`}
+    >
+      {showFullName ? "Visual Computing and Augmented Intelligence Lab" : "VCAIL"}
+    </span>
+  );
+}
 
 export default function RootLayout({
   children,
@@ -48,20 +75,29 @@ export default function RootLayout({
       <body className={`${inter.variable} bg-neutral-50 text-neutral-900 antialiased pt-16 font-sans`}>
         {/* Header matching template with Carolina Blue background */}
         <header className="fixed top-0 left-0 w-full h-16 bg-carolina-blue shadow-lg flex items-center justify-between px-8 md:px-12 backdrop-blur-lg z-50">
-          {/* Lab title matching template */}
-          <h1 className="header-title">
-            <Link href="/" className="text-white no-underline hover:text-orange transition-colors duration-300">
-              <span className="block lg:hidden">VCAIL</span>
-              <span className="hidden lg:block">Visual Computing and Augmented Intelligence Lab</span>
+          {/* Logo and Lab title */}
+          <div className="flex items-center gap-4">
+            <Link href="/" className="flex items-center gap-3 text-white no-underline hover:text-white transition-colors duration-300">
+              <Image
+                src="/logo.png"
+                alt="VCAIL Logo"
+                width={40}
+                height={40}
+                className="object-contain rounded-full bg-white p-1"
+              />
+              <div className="header-title">
+                <span className="block lg:hidden">VCAIL</span>
+                <AnimatedLabTitle />
+              </div>
             </Link>
-          </h1>
+          </div>
           
           {/* Navigation */}
           <div className="relative">
             {/* Mobile menu button */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-2xl text-white cursor-pointer lg:hidden hover:text-orange transition-colors duration-300"
+              className="text-2xl text-white cursor-pointer lg:hidden hover:text-white transition-colors duration-300"
             >
               ☰
             </button>
@@ -101,33 +137,42 @@ export default function RootLayout({
               />
             </div>
             {/* Carolina Blue overlay */}
-            <div className="absolute inset-0 bg-carolina-blue/90 z-0" />
+            <div className="absolute inset-0 bg-carolina-blue/60 z-0" />
             
             {/* Footer content */}
             <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="text-center md:text-left">
                 <h2 className="text-lg font-bold mb-2">Visual Computing and Augmented Intelligence Lab</h2>
                 <p className="mb-1">University of North Carolina at Chapel Hill</p>
-                <p className="mb-1">Email: <a href="mailto:cpk@cs.unc.edu" className="underline text-white hover:text-orange transition-colors duration-300">cpk@cs.unc.edu</a></p>
+                <p className="mb-1">Email: <a href="mailto:cpk@cs.unc.edu" className="underline text-white hover:text-white transition-colors duration-300">cpk@cs.unc.edu</a></p>
                 <p className="mb-1">Department of Computer Science</p>
               </div>
               
-              {/* Social links with orange hover */}
+              {/* Social links with enhanced interactions */}
               <div className="flex gap-4 items-center">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="icon-hover">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195A4.92 4.92 0 0 0 16.616 3c-2.73 0-4.942 2.21-4.942 4.932 0 .386.045.763.127 1.124C7.728 8.807 4.1 6.884 1.671 3.965c-.423.722-.666 1.561-.666 2.475 0 1.708.87 3.216 2.188 4.099a4.904 4.904 0 0 1-2.237-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.209c9.057 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.636A9.936 9.936 0 0 0 24 4.557z"/>
-                  </svg>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="icon-hover spring-hover group">
+                  <div className="relative">
+                    <svg className="w-6 h-6 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195A4.92 4.92 0 0 0 16.616 3c-2.73 0-4.942 2.21-4.942 4.932 0 .386.045.763.127 1.124C7.728 8.807 4.1 6.884 1.671 3.965c-.423.722-.666 1.561-.666 2.475 0 1.708.87 3.216 2.188 4.099a4.904 4.904 0 0 1-2.237-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.209c9.057 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.636A9.936 9.936 0 0 0 24 4.557z"/>
+                    </svg>
+                    <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-150 transition-transform duration-500 -z-10" />
+                  </div>
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="icon-hover">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/>
-                  </svg>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="icon-hover spring-hover group">
+                  <div className="relative">
+                    <svg className="w-6 h-6 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/>
+                    </svg>
+                    <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-150 transition-transform duration-500 -z-10" />
+                  </div>
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="icon-hover">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                  </svg>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="icon-hover spring-hover group">
+                  <div className="relative">
+                    <svg className="w-6 h-6 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-150 transition-transform duration-500 -z-10" />
+                  </div>
                 </a>
               </div>
             </div>

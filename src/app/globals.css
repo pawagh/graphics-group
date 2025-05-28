@@ -71,11 +71,13 @@ html {
 
 /* Card components matching the template */
 .card {
-  @apply bg-white rounded-card shadow-card border border-neutral-200 transition-all duration-300;
+  @apply bg-white rounded-card shadow-card border border-neutral-200 transition-all duration-300 backdrop-blur-sm;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.98) 100%);
 }
 
 .card:hover {
-  @apply shadow-card-hover border-orange transform -translate-y-1;
+  @apply shadow-card-hover border-carolina-blue transform -translate-y-1;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15), 0 8px 16px -4px rgba(75, 156, 211, 0.1);
 }
 
 /* Header styling to match template */
@@ -85,47 +87,125 @@ html {
 
 /* Section cards like in template */
 .section-card {
-  @apply bg-white rounded-card p-8 shadow-card border-t-4 border-carolina-blue;
+  @apply bg-white rounded-card p-8 shadow-card border-t-4 border-carolina-blue transition-all duration-300 backdrop-blur-sm;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.98) 100%);
 }
 
 .section-card:hover {
   @apply shadow-card-hover;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 10px 20px -4px rgba(75, 156, 211, 0.1);
 }
 
 /* Button styles */
 .btn-primary {
-  @apply bg-carolina-blue hover:bg-orange text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-orange focus:ring-offset-2;
+  @apply bg-carolina-blue hover:bg-unc-navy text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-carolina-blue focus:ring-offset-2;
+  background: linear-gradient(135deg, #4B9CD3 0%, #357ABD 100%);
+  box-shadow: 0 4px 12px rgba(75, 156, 211, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #13294B 0%, #1e3a5f 100%);
+  box-shadow: 0 8px 24px rgba(19, 41, 75, 0.4);
 }
 
 .btn-secondary {
-  @apply bg-neutral-100 hover:bg-orange-50 text-neutral-700 hover:text-orange font-medium px-6 py-3 rounded-lg transition-all duration-300 border border-neutral-200 hover:border-orange;
+  @apply bg-neutral-100 hover:bg-neutral-200 text-neutral-700 hover:text-neutral-800 font-medium px-6 py-3 rounded-lg transition-all duration-300 border border-neutral-200 hover:border-neutral-300;
+  background: linear-gradient(135deg, rgba(243, 244, 246, 0.8) 0%, rgba(249, 250, 251, 0.9) 100%);
 }
 
 /* Link styles */
 .link-hover {
-  @apply text-carolina-blue hover:text-orange transition-colors duration-300;
+  @apply text-carolina-blue hover:text-unc-navy transition-colors duration-300;
+  position: relative;
+}
+
+.link-hover::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, #4B9CD3, #13294B);
+  transition: width 0.3s ease;
+}
+
+.link-hover:hover::after {
+  width: 100%;
 }
 
 /* Navigation styles */
 .nav-link {
   @apply text-white font-bold px-2 py-2 rounded hover:bg-white hover:bg-opacity-20 transition-all duration-300;
+  position: relative;
 }
 
 .nav-link:hover {
-  @apply text-orange;
+  @apply text-white;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 80%;
 }
 
 /* Project card styles matching template */
 .project-card {
-  @apply bg-neutral-100 rounded-lg shadow-card p-4 flex flex-col items-center justify-between min-h-[420px] w-80 transition-all duration-300;
+  @apply bg-neutral-100 rounded-lg shadow-card p-4 flex flex-col items-center justify-between min-h-[420px] w-80 transition-all duration-300 backdrop-blur-sm;
+  background: linear-gradient(135deg, rgba(243, 244, 246, 0.9) 0%, rgba(249, 250, 251, 0.95) 100%);
 }
 
 .project-card:hover {
-  @apply shadow-card-hover transform -translate-y-2 bg-orange-50;
+  @apply shadow-card-hover transform -translate-y-2;
+  background: linear-gradient(135deg, rgba(229, 231, 235, 0.9) 0%, rgba(243, 244, 246, 0.95) 100%);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15), 0 8px 16px -4px rgba(75, 156, 211, 0.1);
 }
 
 .project-card:hover .project-title {
-  @apply text-orange;
+  @apply text-unc-navy;
+}
+
+/* Enhanced banner images */
+.banner-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(75, 156, 211, 0.1) 0%, rgba(19, 41, 75, 0.05) 100%);
+  z-index: 1;
+}
+
+/* Enhanced shadows and depth */
+.enhanced-shadow {
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24),
+    0 4px 8px rgba(75, 156, 211, 0.08);
+}
+
+.enhanced-shadow:hover {
+  box-shadow: 
+    0 14px 28px rgba(0, 0, 0, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(75, 156, 211, 0.1);
 }
 
 /* Typography improvements */
@@ -194,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .icon-hover:hover {
-  @apply text-orange transform scale-110;
+  @apply text-carolina-blue transform scale-110;
 }
 
 /* Staggered animation delays */
