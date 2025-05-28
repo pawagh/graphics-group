@@ -3,14 +3,6 @@ import '../animations.css';
 import Image from 'next/image';
 
 export default function OpportunitiesPage() {
-  const opportunities: Array<{
-    title: string;
-    deadline: string;
-    description: string;
-    requirements: string[];
-    type: string;
-  }> = []; // No current openings
-
   return (
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
       {/* Hero banner section */}
