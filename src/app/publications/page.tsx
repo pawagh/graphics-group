@@ -37,14 +37,11 @@ export default function Publications() {
       {/* Hero banner section */}
       <div className="w-full h-64 md:h-80 relative mb-8">
         <Image 
-          src="/publications_banner.jpg" 
-          alt="Publications and Research Banner" 
+          src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" 
+          alt="Research and academic publications" 
           fill
           className="object-cover object-center rounded-b-lg shadow-md" 
         />
-        <div className="absolute inset-0 bg-carolina-blue bg-opacity-60 flex items-center justify-center z-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Publications</h1>
-        </div>
       </div>
 
       {/* Main content */}
@@ -117,66 +114,68 @@ export default function Publications() {
                     {pubs.map((pub, idx) => (
                       <div 
                         key={pub.title + idx} 
-                        className="card p-6 group hover:shadow-card-hover transition-all duration-300"
+                        className="card p-6 group hover-lift magnetic-hover enhanced-shadow transition-all duration-500 stagger-item"
+                        style={{ animationDelay: `${idx * 0.1}s` }}
                       >
                         <div className="flex flex-col md:flex-row gap-6 items-start">
-                          <div className="flex-shrink-0">
-                            <Image 
-                              src={pub.image} 
-                              alt={pub.title} 
-                              width={128}
-                              height={128}
-                              className="object-cover rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105" 
-                            />
+                          <div className="flex-shrink-0 relative">
+                            <div className="relative overflow-hidden rounded-lg border-2 border-carolina-blue/20 group-hover:border-carolina-blue transition-colors duration-500">
+                              <Image 
+                                src={pub.image} 
+                                alt={pub.title} 
+                                width={128}
+                                height={128}
+                                className="object-cover rounded-lg shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-1" 
+                              />
+                              {/* Subtle overlay on hover */}
+                              <div className="absolute inset-0 bg-carolina-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+                            </div>
+                            {/* Floating publication type badge */}
+                            <div className="absolute -top-2 -left-2 bg-unc-navy text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-75">
+                              {pub.tags[0]}
+                            </div>
                           </div>
                           <div className="flex-1">
-                            <Link 
-                              href={`/publications/${pub.slug}`} 
-                              className="group"
-                            >
-                              <h3 className="text-xl font-bold mb-3 text-carolina-blue group-hover:text-orange transition-colors duration-300 leading-tight">
-                                {pub.title}
-                              </h3>
-                            </Link>
-                            <p className="text-neutral-700 mb-2 font-medium">{pub.authors}</p>
-                            <p className="text-neutral-600 mb-4 italic">{pub.meta}</p>
-                            
-                            {/* Tags */}
+                            <h3 className="text-xl font-bold text-unc-navy mb-3 group-hover:text-carolina-blue transition-colors duration-300 leading-tight">
+                              {pub.title}
+                            </h3>
+                            <p className="text-neutral-600 mb-2 group-hover:text-neutral-700 transition-colors duration-300 font-medium">
+                              {pub.authors}
+                            </p>
+                            <p className="text-carolina-blue font-semibold mb-4 group-hover:text-unc-navy transition-colors duration-300">
+                              {pub.meta}
+                            </p>
                             <div className="flex flex-wrap gap-2 mb-4">
-                              {pub.tags.map(tag => (
+                              {pub.tags.map((tag) => (
                                 <span 
                                   key={tag} 
-                                  className="bg-carolina-blue text-white px-3 py-1 rounded-full text-xs font-medium hover:bg-orange transition-colors duration-300"
+                                  className="px-3 py-1 bg-carolina-blue/10 text-carolina-blue text-sm rounded-full border border-carolina-blue/20 group-hover:bg-carolina-blue group-hover:text-white transition-all duration-300 spring-hover"
                                 >
                                   {tag}
                                 </span>
                               ))}
                             </div>
-                            
-                            {/* Links */}
-                            <div className="flex flex-wrap gap-4">
-                              <Link 
-                                href={`/publications/${pub.slug}`}
-                                className="link-hover font-semibold inline-flex items-center"
+                            <div className="flex gap-4">
+                              <a 
+                                href={pub.link} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="link-hover font-semibold spring-hover flex items-center gap-2"
                               >
-                                Read More
-                                <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                Read Paper
+                                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                              </a>
+                              <Link 
+                                href={`/publications/${pub.slug}`} 
+                                className="text-neutral-600 hover:text-carolina-blue transition-colors duration-300 font-medium spring-hover flex items-center gap-2"
+                              >
+                                View Details
+                                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                               </Link>
-                              {pub.link && (
-                                <Link 
-                                  href={pub.link} 
-                                  target="_blank"
-                                  rel="noopener noreferrer" 
-                                  className="link-hover font-semibold inline-flex items-center"
-                                >
-                                  View Publication
-                                  <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                  </svg>
-                                </Link>
-                              )}
                             </div>
                           </div>
                         </div>
@@ -187,40 +186,6 @@ export default function Publications() {
               ) : null
             )}
           </div>
-
-          {/* Research impact section */}
-          <section className="section-card">
-            <h3 className="section-title text-center">Research Impact</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-carolina-blue rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-orange transition-colors duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                  </svg>
-                </div>
-                <h4 className="text-lg font-semibold text-unc-navy mb-2">Award-Winning Research</h4>
-                <p className="text-neutral-600">Multiple best paper awards and conference highlights.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-carolina-blue rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-orange transition-colors duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h4 className="text-lg font-semibold text-unc-navy mb-2">Cutting-Edge Innovation</h4>
-                <p className="text-neutral-600">Pioneering advances in computational imaging and AI.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-carolina-blue rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-orange transition-colors duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
-                  </svg>
-                </div>
-                <h4 className="text-lg font-semibold text-unc-navy mb-2">Global Collaboration</h4>
-                <p className="text-neutral-600">International partnerships and cross-disciplinary research.</p>
-              </div>
-            </div>
-          </section>
 
         </div>
       </div>

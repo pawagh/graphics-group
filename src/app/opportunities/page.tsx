@@ -39,14 +39,11 @@ export default function OpportunitiesPage() {
       {/* Hero banner section */}
       <div className="w-full h-64 md:h-80 relative mb-8">
         <Image 
-          src="/opportunities_banner.jpg" 
-          alt="Opportunities and Careers Banner" 
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" 
+          alt="Career opportunities and growth" 
           fill
           className="object-cover object-center rounded-b-lg shadow-md" 
         />
-        <div className="absolute inset-0 bg-carolina-blue bg-opacity-60 flex items-center justify-center z-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">Opportunities</h1>
-        </div>
       </div>
 
       {/* Main content */}
@@ -64,103 +61,74 @@ export default function OpportunitiesPage() {
 
           {/* Current openings */}
           <section className="section-card">
-            <h3 className="section-title">Current Openings</h3>
-            <div className="grid gap-8">
-              {opportunities.map((opportunity) => (
+            <h2 className="section-title text-center">CURRENT OPENINGS</h2>
+            <div className="grid gap-8 max-w-5xl mx-auto">
+              {opportunities.map((opportunity, index) => (
                 <div 
                   key={opportunity.title} 
-                  className="card p-6 group hover:shadow-card-hover transition-all duration-300"
+                  className="card p-8 group hover-lift magnetic-hover enhanced-shadow transition-all duration-500 stagger-item"
+                  style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   <div className="flex flex-col lg:flex-row lg:items-start gap-6">
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-3">
-                        <h4 className="text-xl font-bold text-carolina-blue group-hover:text-orange transition-colors duration-300">
-                          {opportunity.title}
-                        </h4>
-                        <span className="bg-carolina-blue text-white px-3 py-1 rounded-full text-xs font-medium hover:bg-orange transition-colors duration-300">
-                          {opportunity.type}
-                        </span>
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex-1">
+                          <h3 className="text-2xl font-bold text-unc-navy mb-2 group-hover:text-carolina-blue transition-colors duration-300">
+                            {opportunity.title}
+                          </h3>
+                          <div className="flex items-center gap-4 mb-3">
+                            <span className="px-4 py-2 bg-carolina-blue/10 text-carolina-blue text-sm font-semibold rounded-full border border-carolina-blue/20 group-hover:bg-carolina-blue group-hover:text-white transition-all duration-300">
+                              {opportunity.type}
+                            </span>
+                            <span className="text-neutral-600 font-medium group-hover:text-neutral-700 transition-colors duration-300">
+                              {opportunity.deadline}
+                            </span>
+                          </div>
+                        </div>
+                        {/* Floating type indicator */}
+                        <div className="w-12 h-12 bg-carolina-blue rounded-full flex items-center justify-center group-hover:bg-unc-navy transition-colors duration-500 flex-shrink-0 ml-4">
+                          <svg className="w-6 h-6 text-white transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0H8m8 0v2a2 2 0 002 2V8a2 2 0 00-2-2z" />
+                          </svg>
+                        </div>
                       </div>
                       
-                      <p className="text-sm text-unc-navy font-medium mb-3">{opportunity.deadline}</p>
-                      <p className="text-neutral-700 leading-relaxed mb-4">{opportunity.description}</p>
+                      <p className="text-neutral-600 mb-6 leading-relaxed text-lg group-hover:text-neutral-700 transition-colors duration-300">
+                        {opportunity.description}
+                      </p>
                       
-                      <div>
-                        <h5 className="text-sm font-semibold text-unc-navy mb-2">Requirements:</h5>
-                        <ul className="list-disc list-inside text-neutral-600 space-y-1">
+                      <div className="mb-6">
+                        <h4 className="text-lg font-semibold text-unc-navy mb-3 group-hover:text-carolina-blue transition-colors duration-300">
+                          Requirements
+                        </h4>
+                        <ul className="space-y-2">
                           {opportunity.requirements.map((req, reqIndex) => (
-                            <li key={reqIndex} className="hover:text-orange transition-colors duration-300">
-                              {req}
+                            <li 
+                              key={reqIndex} 
+                              className="flex items-start gap-3 text-neutral-600 group-hover:text-neutral-700 transition-colors duration-300"
+                            >
+                              <div className="w-2 h-2 bg-carolina-blue rounded-full mt-2 flex-shrink-0 group-hover:bg-unc-navy transition-colors duration-300" />
+                              <span>{req}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
-                    </div>
-                    
-                    <div className="flex-shrink-0">
-                      <a 
-                        href="mailto:cpk@cs.unc.edu?subject=Application for Visual Computing Lab"
-                        className="btn-primary inline-flex items-center justify-center"
-                      >
-                        Apply Now
-                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                      </a>
+                      
+                      <div className="flex flex-col sm:flex-row gap-4">
+                        <button className="btn-primary spring-hover inline-flex items-center justify-center gap-2">
+                          Apply Now
+                          <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                          </svg>
+                        </button>
+                        <button className="btn-secondary spring-hover">
+                          Learn More
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               ))}
-            </div>
-          </section>
-
-          {/* Application process */}
-          <section className="section-card">
-            <h3 className="section-title">Application Process</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-lg font-semibold text-unc-navy mb-4">What to Include</h4>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-carolina-blue rounded-full mt-2 hover:bg-orange transition-colors duration-300"></div>
-                    <span className="text-neutral-700">CV or Resume</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-carolina-blue rounded-full mt-2 hover:bg-orange transition-colors duration-300"></div>
-                    <span className="text-neutral-700">Brief statement of interest (1-2 paragraphs)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-carolina-blue rounded-full mt-2 hover:bg-orange transition-colors duration-300"></div>
-                    <span className="text-neutral-700">Transcripts (for students)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-carolina-blue rounded-full mt-2 hover:bg-orange transition-colors duration-300"></div>
-                    <span className="text-neutral-700">Portfolio or code samples (if available)</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-semibold text-unc-navy mb-4">Next Steps</h4>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-carolina-blue text-white rounded-full flex items-center justify-center text-xs font-bold hover:bg-orange transition-colors duration-300">1</div>
-                    <span className="text-neutral-700">Submit application via email</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-carolina-blue text-white rounded-full flex items-center justify-center text-xs font-bold hover:bg-orange transition-colors duration-300">2</div>
-                    <span className="text-neutral-700">Initial review (1-2 weeks)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-carolina-blue text-white rounded-full flex items-center justify-center text-xs font-bold hover:bg-orange transition-colors duration-300">3</div>
-                    <span className="text-neutral-700">Interview with lab members</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-carolina-blue text-white rounded-full flex items-center justify-center text-xs font-bold hover:bg-orange transition-colors duration-300">4</div>
-                    <span className="text-neutral-700">Final decision and onboarding</span>
-                  </li>
-                </ul>
-              </div>
             </div>
           </section>
 
@@ -197,30 +165,6 @@ export default function OpportunitiesPage() {
             </div>
           </section>
 
-          {/* Call to action */}
-          <section className="text-center py-12">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold text-unc-navy mb-6">Ready to Join Our Team?</h2>
-              <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
-                Take the first step towards advancing the future of visual computing and augmented intelligence. 
-                We&apos;re excited to welcome passionate researchers to our lab.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:cpk@cs.unc.edu?subject=Interest in Visual Computing Lab" className="btn-primary inline-flex items-center justify-center">
-                  Contact Us
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </a>
-                <a href="/people" className="btn-secondary inline-flex items-center justify-center">
-                  Meet Our Team
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </section>
 
         </div>
       </div>
