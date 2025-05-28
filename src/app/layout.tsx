@@ -29,7 +29,7 @@ function AnimatedLabTitle() {
   
   return (
     <span 
-      className={`hidden lg:block transition-opacity duration-600 ease-in-out ${
+      className={`hidden lg:block animated-lab-title transition-opacity duration-600 ease-in-out ${
         isTransitioning ? 'opacity-0' : 'opacity-100'
       }`}
     >
@@ -72,43 +72,67 @@ export default function RootLayout({
         <meta name="twitter:description" content="Advancing research in computational imaging, computer vision, AR/VR, nano-optics, and AI-driven solutions at UNC Chapel Hill." />
         <meta name="twitter:image" content="/logo.png" />
       </head>
-      <body className={`${inter.variable} bg-neutral-50 text-neutral-900 antialiased pt-16 font-sans`}>
-        {/* Header matching template with Carolina Blue background */}
-        <header className="fixed top-0 left-0 w-full h-16 bg-carolina-blue shadow-lg flex items-center justify-between px-8 md:px-12 backdrop-blur-lg z-50">
-          {/* Logo and Lab title */}
-          <div className="flex items-center gap-4">
-            <Link href="/" className="flex items-center gap-3 text-white no-underline hover:text-white transition-colors duration-300">
-              <Image
-                src="/logo.png"
-                alt="VCAIL Logo"
-                width={40}
-                height={40}
-                className="object-contain rounded-full bg-white p-1"
-              />
+      <body className={`${inter.variable} bg-neutral-50 text-neutral-900 antialiased pt-20 font-sans`}>
+        {/* Enhanced Header with sophisticated styling */}
+        <header className="fixed top-0 left-0 w-full h-20 bg-gradient-to-r from-unc-navy via-slate-800 to-unc-navy shadow-2xl flex items-center justify-between px-6 md:px-12 backdrop-blur-xl z-50 border-b border-white/10">
+          {/* Enhanced Logo and Lab title */}
+          <div className="flex items-center gap-6">
+            <Link href="/" className="flex items-center gap-4 text-white no-underline hover:text-white transition-all duration-500 group">
+              <div className="relative">
+                <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-150 transition-transform duration-500 -z-10" />
+                <Image
+                  src="/logo.png"
+                  alt="VCAIL Logo"
+                  width={48}
+                  height={48}
+                  className="object-contain rounded-full bg-white/90 p-2 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 border-2 border-white/20"
+                />
+              </div>
               <div className="header-title">
-                <span className="block lg:hidden">VCAIL</span>
+                <span className="block lg:hidden text-xl font-bold">VCAIL</span>
                 <AnimatedLabTitle />
               </div>
             </Link>
           </div>
           
-          {/* Navigation */}
+          {/* Enhanced Navigation */}
           <div className="relative">
-            {/* Mobile menu button */}
+            {/* Sophisticated mobile menu button */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-2xl text-white cursor-pointer lg:hidden hover:text-white transition-colors duration-300"
+              className="text-2xl text-white cursor-pointer lg:hidden hover:text-white transition-all duration-300 relative group p-2"
             >
-              ☰
+              <div className="absolute inset-0 bg-white/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300" />
+              <div className="relative">
+                <div className={`w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
+                <div className={`w-6 h-0.5 bg-white mt-1.5 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+                <div className={`w-6 h-0.5 bg-white mt-1.5 transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+              </div>
             </button>
             
-            {/* Navigation menu */}
-            <nav className={`navbar absolute top-16 right-0 bg-carolina-blue shadow-lg rounded-lg z-50 w-40 flex-col ${menuOpen ? "flex" : "hidden"} lg:static lg:flex-row lg:flex lg:bg-transparent lg:shadow-none lg:w-auto`}>
-              <ul className="list-none m-0 p-0 flex flex-col lg:flex-row gap-5">
-                {navItems.map((item) => (
-                  <li key={item.href}>
-                    <Link href={item.href} className="nav-link" onClick={() => setMenuOpen(false)}>
-                      {item.label}
+            {/* Enhanced Navigation menu */}
+            <nav className={`navbar absolute top-24 right-0 bg-gradient-to-br from-unc-navy via-slate-800 to-unc-navy shadow-2xl rounded-2xl z-50 w-64 lg:w-auto flex-col border border-white/20 backdrop-blur-xl ${menuOpen ? "flex" : "hidden"} lg:static lg:flex-row lg:flex lg:bg-transparent lg:shadow-none lg:border-none lg:backdrop-blur-none lg:rounded-none`}>
+              <ul className="list-none m-0 p-6 lg:p-0 flex flex-col lg:flex-row gap-2 lg:gap-8">
+                {navItems.map((item, index) => (
+                  <li key={item.href} className="relative">
+                    <Link 
+                      href={item.href} 
+                      className="nav-link-enhanced group block relative overflow-hidden" 
+                      onClick={() => setMenuOpen(false)}
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      <span className="relative z-10 block px-4 py-3 lg:px-3 lg:py-2 text-white font-bold text-lg lg:text-base tracking-wide transition-all duration-300 group-hover:text-white">
+                        {item.label}
+                      </span>
+                      
+                      {/* Sophisticated hover background */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-lg" />
+                      
+                      {/* Enhanced animated underline */}
+                      <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-white to-white/80 group-hover:w-4/5 group-hover:left-[10%] transition-all duration-500 ease-out" />
+                      
+                      {/* Subtle glow effect */}
+                      <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg blur-sm" />
                     </Link>
                   </li>
                 ))}

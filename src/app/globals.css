@@ -65,7 +65,24 @@ html {
 
 /* Focus states */
 *:focus {
-  outline: 2px solid var(--orange);
+  outline: 2px solid var(--carolina-blue);
+  outline-offset: 2px;
+}
+
+/* Remove focus outline from navigation links */
+.nav-link-enhanced:focus,
+.nav-link-enhanced:focus-visible {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Keep focus for buttons and form elements */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--carolina-blue);
   outline-offset: 2px;
 }
 
@@ -83,6 +100,11 @@ html {
 /* Header styling to match template */
 .header-title {
   @apply text-lg font-bold text-white;
+  transition: all 0.5s ease;
+}
+
+.header-title:hover {
+  transform: translateX(2px);
 }
 
 /* Section cards like in template */
@@ -158,6 +180,78 @@ html {
 
 .nav-link:hover::after {
   width: 80%;
+}
+
+/* Enhanced Navigation Styles */
+.nav-link-enhanced {
+  position: relative;
+  display: block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0.5rem;
+  border: none !important;
+  outline: none !important;
+}
+
+.nav-link-enhanced:hover {
+  transform: translateY(-1px);
+}
+
+.nav-link-enhanced:focus {
+  outline: none !important;
+  border: none !important;
+}
+
+/* Sophisticated mobile menu animations */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.navbar {
+  animation: slideInFromTop 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced navigation items with staggered animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-link-enhanced {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Sophisticated backdrop blur for header */
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* Enhanced shadow system */
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Logo hover effects */
+.logo-glow {
+  filter: drop-shadow(0 0 8px rgba(75, 156, 211, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.logo-glow:hover {
+  filter: drop-shadow(0 0 16px rgba(75, 156, 211, 0.6));
 }
 
 /* Project card styles matching template */
@@ -283,3 +377,30 @@ h1, h2, h3, h4, h5, h6 {
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
+
+/* Enhanced header title styling */
+.header-title .hidden.lg\\:block {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* AnimatedLabTitle enhancements */
+.animated-lab-title {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Header gradient enhancement */
+.header-gradient {
+  background: linear-gradient(135deg, 
+    var(--carolina-blue) 0%, 
+    var(--carolina-blue) 40%, 
+    var(--unc-navy) 100%);
+}

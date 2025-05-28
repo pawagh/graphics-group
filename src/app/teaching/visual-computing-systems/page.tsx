@@ -8,8 +8,8 @@ export default function VisualComputingSystems() {
     <div className="fade-in flex flex-col items-center min-h-screen bg-gray-50">
       <div className="w-full h-64 md:h-80 relative mb-8">
         <Image 
-          src="/course2.jpg" 
-          alt="Visual Computing Systems Banner" 
+          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" 
+          alt="Visual Computing and Technology Systems" 
           fill
           className="object-cover object-center rounded-b-lg shadow-md" 
         />

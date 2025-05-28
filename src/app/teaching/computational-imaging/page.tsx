@@ -8,8 +8,8 @@ export default function ComputationalImaging() {
     <div className="fade-in flex flex-col items-center min-h-screen bg-gray-50">
       <div className="w-full h-64 md:h-80 relative mb-8">
         <Image 
-          src="/course1.jpg" 
-          alt="Computational Imaging Banner" 
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" 
+          alt="Computational Imaging and Optics" 
           fill
           className="object-cover object-center rounded-b-lg shadow-md" 
         />

@@ -42,18 +42,22 @@
 
 /* Floating animation for hero elements */
 .float-gentle {
-  animation: floatGentle 6s ease-in-out infinite;
+  animation: floatGentleEnhanced 6s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
-@keyframes floatGentle {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+@keyframes floatGentleEnhanced {
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+    opacity: 0.95;
   }
-  33% {
-    transform: translateY(-8px) rotate(0.5deg);
+  33% { 
+    transform: translateY(-8px) scale(1.01);
+    opacity: 1;
   }
-  66% {
-    transform: translateY(-4px) rotate(-0.5deg);
+  66% { 
+    transform: translateY(-4px) scale(0.99);
+    opacity: 0.98;
   }
 }
 
@@ -122,7 +126,7 @@
 .scroll-reveal {
   opacity: 0;
   transform: translateY(50px);
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .scroll-reveal.revealed {
@@ -204,7 +208,7 @@
   background-size: 300% 300%;
   border-radius: inherit;
   z-index: -1;
-  animation: borderGlow 3s ease infinite;
+  animation: borderGlow 20s ease infinite;
 }
 
 @keyframes borderGlow {
@@ -228,4 +232,51 @@
     0 0 0 3px rgba(75, 156, 211, 0.2),
     0 0 0 6px rgba(75, 156, 211, 0.1);
   transform: scale(1.02);
+}
+
+/* Enhanced banner carousel animations */
+@keyframes bannerFadeEnhanced {
+  0% { 
+    opacity: 1; 
+    transform: scale(1) translateZ(0);
+    filter: brightness(1);
+  }
+  18% { 
+    opacity: 1; 
+    transform: scale(1.008) translateZ(0);
+    filter: brightness(1.05);
+  }
+  22% { 
+    opacity: 0.7; 
+    transform: scale(1.01) translateZ(0);
+    filter: brightness(0.95);
+  }
+  25% { 
+    opacity: 0; 
+    transform: scale(1.015) translateZ(0);
+    filter: brightness(0.9);
+  }
+  100% { 
+    opacity: 0; 
+    transform: scale(1) translateZ(0);
+    filter: brightness(1);
+  }
+}
+
+.banner-carousel-enhanced {
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.fade-image-enhanced {
+  opacity: 0;
+  animation: bannerFadeEnhanced 20s infinite ease-in-out;
+  will-change: opacity, transform, filter;
+  transform: translateZ(0);
+}
+
+.first-image-enhanced {
+  opacity: 1 !important;
+  animation-delay: 0s !important;
 }

@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     // Stagger the visibility of sections for enhanced reveal
-    const timeouts = [0, 300, 600, 900].map((delay, index) =>
+    const timeouts = [0, 800, 1600, 2400].map((delay, index) =>
       setTimeout(() => {
         setVisibleSections(prev => [...prev, index]);
       }, delay)
@@ -21,47 +21,61 @@ export default function Home() {
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
       {/* Enhanced Hero image carousel with parallax effect */}
       <div className="w-full h-[60vh] relative overflow-hidden bg-gradient-to-br from-carolina-blue to-unc-navy">
-        {["/2.png", "/3.png", "/4.png"].map((src, index, arr) => {
+        {[
+          "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80", // Modern technology/computing
+          "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80", // Computational imaging/holography
+          "https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80", // Advanced optics/nano-technology
+          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80"  // AI and neural networks
+        ].map((src, index, arr) => {
           const total = arr.length;
-          const duration = 15; // Reduced duration for faster cycling
+          const duration = 20; // Slower, more elegant timing
           const delay = (index * duration) / total;
+          const altTexts = [
+            "Modern Computing and Technology Research",
+            "Computational Imaging and Holography", 
+            "Advanced Optics and Nano-technology",
+            "AI and Neural Network Systems"
+          ];
           return (
             <Image
               key={index}
               src={src}
-              alt={`Visual Computing Research ${index + 1}`}
+              alt={altTexts[index]}
               fill
-              className={`absolute object-cover fade-image ${index === 0 ? 'first-image' : ''}`}
-              style={{ animationDelay: `${delay}s` }}
+              className={`absolute object-cover fade-image-enhanced ${index === 0 ? 'first-image-enhanced' : ''}`}
+              style={{ 
+                animationDelay: `${delay}s`,
+                animationDuration: `${duration}s`
+              }}
               priority={index === 0}
             />
           );
         })}
         {/* Sophisticated overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-carolina-blue/30 via-transparent to-unc-navy/20 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-carolina-blue/40 via-unc-navy/20 to-carolina-blue/30 z-10" />
         
         {/* Floating research indicators */}
         <div className="absolute bottom-8 left-8 z-20 text-white">
-          <div className="float-gentle bg-white/15 backdrop-blur-md rounded-lg p-6 border border-white/20">
-            <h3 className="text-xl font-bold mb-2">Latest Research</h3>
-            <p className="text-sm opacity-90">Advancing the frontiers of visual computing</p>
+          <div className="float-gentle bg-white/15 backdrop-blur-md rounded-xl p-6 border border-white/20 shadow-2xl">
+            <h3 className="text-xl font-bold mb-2">Visual Computing & AI Research</h3>
+            <p className="text-sm opacity-90">Advancing the frontiers of computational imaging, AR/VR, and augmented intelligence</p>
           </div>
         </div>
       </div>
       
-      {/* Enhanced fade animation */}
+      {/* Enhanced fade animation with smoother transitions */}
       <style jsx>{`
-        @keyframes fadeAnimation {
+        @keyframes fadeAnimationEnhanced {
           0% { opacity: 1; transform: scale(1); }
-          25% { opacity: 1; transform: scale(1); }
-          33% { opacity: 0; transform: scale(0.98); }
-          100% { opacity: 0; transform: scale(0.98); }
+          20% { opacity: 1; transform: scale(1.01); }
+          25% { opacity: 0; transform: scale(1.02); }
+          100% { opacity: 0; transform: scale(1); }
         }
-        .fade-image {
+        .fade-image-enhanced {
           opacity: 0;
-          animation: fadeAnimation 15s infinite;
+          animation: fadeAnimationEnhanced 20s infinite ease-in-out;
         }
-        .first-image {
+        .first-image-enhanced {
           opacity: 1;
           animation-delay: 0s !important;
         }
@@ -78,7 +92,7 @@ export default function Home() {
             <div className="flex flex-col items-center gap-6 text-center">
               <div className="flex-1">
                 <h2 className="section-title text-center text-reveal">ABOUT US</h2>
-                <p className="text-lg leading-relaxed text-neutral-700 font-medium max-w-3xl mx-auto">
+                <p className="text-lg leading-relaxed text-gray-200 font-medium max-w-3xl mx-auto">
                   Welcome to the <span className="font-bold text-carolina-blue hover:text-unc-navy transition-colors duration-300">Visual Computing and Augmented Intelligence Lab</span> at UNC Chapel Hill. 
                   Our team is dedicated to advancing research in computational imaging, visual perception, and AI-driven solutions. 
                   We collaborate across disciplines to create transformative technologies that redefine the future of visual computing.
