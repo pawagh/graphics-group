@@ -7,9 +7,12 @@
 :root {
   --background: #f9fafb;
   --foreground: #111827;
-  --carolina-blue: #4B9CD3;
-  --unc-navy: #13294B;
-  --orange: #FF6B35;
+  /* Official UNC Brand Colors - https://identity.unc.edu/brand/color-palette/ */
+  --carolina-blue: #4B9CD3; /* Web Carolina Blue - RGB 75, 156, 211 */
+  --unc-navy: #13294B; /* Navy - PMS 2767, RGB 19, 41, 75 */
+  --unc-black: #151515; /* Black - PMS Black 3, RGB 21, 21, 21 */
+  --campus-sandstone: #F4E8DD; /* Campus Sandstone - PMS 2309 at 50%, RGB 244, 232, 221 */
+  --orange: #FF6B35; /* Custom orange for interactions */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -121,12 +124,12 @@ select:focus {
 /* Button styles */
 .btn-primary {
   @apply bg-carolina-blue hover:bg-unc-navy text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 focus:ring-2 focus:ring-carolina-blue focus:ring-offset-2;
-  background: linear-gradient(135deg, #4B9CD3 0%, #357ABD 100%);
+  background: linear-gradient(135deg, #4B9CD3 0%, #13294B 100%);
   box-shadow: 0 4px 12px rgba(75, 156, 211, 0.3);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #13294B 0%, #1e3a5f 100%);
+  background: linear-gradient(135deg, #13294B 0%, #4B9CD3 100%);
   box-shadow: 0 8px 24px rgba(19, 41, 75, 0.4);
 }
 

@@ -11,30 +11,31 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        // Official UNC Brand Colors from https://identity.unc.edu/brand/color-palette/
-        "carolina-blue": "#4B9CD3", // Primary Carolina Blue
-        "unc-navy": "#13294B", // Navy
-        "unc-black": "#151515", // UNC Black
+        
+        // Official UNC Primary Brand Colors from https://identity.unc.edu/brand/color-palette/
+        "carolina-blue": "#4B9CD3", // Web Carolina Blue (Hex #4B9CD3, RGB 75, 156, 211) - for digital use
+        "unc-navy": "#13294B", // Navy (PMS 2767, Hex #13294B, RGB 19, 41, 75)
+        "unc-black": "#151515", // Black (PMS Black 3, Hex #151515, RGB 21, 21, 21)
         "unc-white": "#FFFFFF", // White
-        "unc-gray": "#F8F8F8", // Light Gray
+        "unc-gray": "#F8F8F8", // Gray (CMYK 4, 3, 3, 0, Hex #F8F8F8, RGB 248, 248, 248)
         
-        // UNC Secondary Palette
-        "basin-slate": "#4F758B",
-        "campus-sandstone": "#F4E8DD",
-        "longleaf-pine": "#00594C",
-        "azalea-pink": "#EF426F",
-        "tile-teal": "#00A5AD",
-        "sunburst-yellow": "#FFD100",
-        "davie-green": "#C4D600",
+        // Official UNC Secondary Brand Colors from https://identity.unc.edu/brand/color-palette/
+        "basin-slate": "#4F758B", // Basin Slate (PMS 5405, Hex #4F758B, RGB 79, 117, 139)
+        "campus-sandstone": "#F4E8DD", // Campus Sandstone (PMS 2309 at 50%, Hex #F4E8DD, RGB 244, 232, 221)
+        "longleaf-pine": "#00594C", // Longleaf Pine (PMS 561, Hex #00594C, RGB 0, 89, 76)
+        "azalea-pink": "#EF426F", // Azalea Pink (PMS 191, Hex #EF426F, RGB 239, 68, 111)
+        "tile-teal": "#00A5AD", // Tile Teal (PMS 7466, Hex #00A5AD, RGB 0, 165, 173)
+        "sunburst-yellow": "#FFD100", // Sunburst Yellow (PMS 109, Hex #FFD100, RGB 255, 209, 0)
+        "davie-green": "#C4D600", // Davie Green (PMS 382, Hex #C4D600, RGB 196, 214, 0)
         
-        // Orange hover colors (custom accent for interactions)
-        "orange": "#FF6B35",
+        // Orange accent colors - using a UNC-appropriate orange tone for hover effects
+        "orange": "#FF6B35", // Custom orange for interactions (warm, accessible)
         "orange-light": "#FF8C69",
         "orange-dark": "#E5541C",
         "orange-50": "#FFF4F0",
         "orange-100": "#FFE4D6",
         
-        // Neutral grays for UI
+        // Neutral grays for UI elements
         "neutral-50": "#f9fafb",
         "neutral-100": "#f3f4f6",
         "neutral-200": "#e5e7eb",
