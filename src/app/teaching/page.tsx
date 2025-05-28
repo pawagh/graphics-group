@@ -58,25 +58,8 @@ export default function Teaching() {
                   className="card group p-8 hover-lift magnetic-hover enhanced-shadow transition-all duration-500 stagger-item"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <div className="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-8">
-                    <div className="flex-shrink-0 mx-auto md:mx-0 relative">
-                      <div className="relative overflow-hidden rounded-2xl border-4 border-carolina-blue/20 group-hover:border-carolina-blue transition-colors duration-500">
-                        <Image 
-                          src={course.image} 
-                          alt={course.title} 
-                          width={160}
-                          height={160}
-                          className="rounded-2xl object-cover shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-2" 
-                        />
-                        {/* Course type overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-carolina-blue/20 via-transparent to-unc-navy/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-                      </div>
-                      {/* Floating semester badge */}
-                      <div className="absolute -top-3 -right-3 bg-unc-navy text-white text-sm px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-75 font-medium">
-                        {course.semester}
-                      </div>
-                    </div>
-                    <div className="flex-1 text-center md:text-left">
+                  <div className="flex flex-col items-start space-y-6">
+                    <div className="flex-1 text-center md:text-left w-full">
                       <h3 className="text-2xl font-bold text-unc-navy mb-3 group-hover:text-carolina-blue transition-colors duration-300">
                         {course.title}
                       </h3>
