@@ -123,11 +123,15 @@ export default function Publications() {
                           <div className="flex-shrink-0 relative">
                             <div className="relative overflow-hidden rounded-lg border-2 border-carolina-blue/20 group-hover:border-carolina-blue transition-colors duration-500">
                               <Image 
-                                src={pub.image} 
+                                src={pub.image && pub.image.trim() !== "" ? pub.image : "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"} 
                                 alt={pub.title} 
                                 width={128}
                                 height={128}
                                 className="object-cover rounded-lg shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-1" 
+                                onError={(e) => {
+                                  console.log(`Failed to load image for ${pub.title}:`, pub.image);
+                                  e.currentTarget.src = "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80";
+                                }}
                               />
                               {/* Subtle overlay on hover */}
                               <div className="absolute inset-0 bg-carolina-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
