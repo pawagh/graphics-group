@@ -37,10 +37,10 @@ function AnimatedLabTitle() {
   }, [showFullName]);
   
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden w-full">
       <span 
         className={`animated-lab-title block transition-all duration-500 ease-in-out whitespace-nowrap ${
-          showFullName && isExpanding ? 'max-w-full opacity-100' : 'max-w-[4rem] opacity-100'
+          showFullName && isExpanding ? 'max-w-full opacity-100' : 'max-w-[2.5rem] sm:max-w-[3rem] md:max-w-[4rem] opacity-100'
         }`}
       >
         {showFullName ? "Visual Computing and Augmented Intelligence Lab" : "VCAIL"}
@@ -85,22 +85,22 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} bg-neutral-50 text-neutral-900 antialiased pt-20 font-sans`}>
         {/* Enhanced Header with sophisticated styling */}
-        <header className="fixed top-0 left-0 w-full h-20 bg-gradient-to-r from-carolina-blue via-carolina-blue to-unc-navy shadow-2xl flex items-center justify-between px-6 md:px-12 backdrop-blur-xl z-50 border-b border-white/10">
+        <header className="fixed top-0 left-0 w-full h-20 bg-gradient-to-r from-carolina-blue via-carolina-blue to-unc-navy shadow-2xl flex items-center justify-between px-4 md:px-6 lg:px-12 backdrop-blur-xl z-50 border-b border-white/10">
           {/* Enhanced Logo and Lab title */}
-          <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center gap-4 text-white no-underline hover:text-white transition-all duration-500 group">
+          <div className="flex items-center gap-2 md:gap-4 lg:gap-6 flex-1 min-w-0">
+            <Link href="/" className="flex items-center gap-2 md:gap-4 text-white no-underline hover:text-white transition-all duration-500 group flex-shrink-0">
               <div className="relative">
                 <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-150 transition-transform duration-500 -z-10" />
                 <Image
                   src="/logo.png"
                   alt="VCAIL Logo"
-                  width={48}
-                  height={48}
-                  className="object-contain rounded-full bg-white/90 p-2 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 border-2 border-white/20"
+                  width={40}
+                  height={40}
+                  className="md:w-12 md:h-12 object-contain rounded-full bg-white/90 p-1.5 md:p-2 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 border-2 border-white/20"
                 />
               </div>
-              <div className="header-title">
-                <div className="text-sm sm:text-base md:text-lg lg:text-lg font-bold">
+              <div className="header-title flex-1 min-w-0">
+                <div className="text-xs sm:text-sm md:text-base lg:text-lg font-bold overflow-hidden">
                   <AnimatedLabTitle />
                 </div>
               </div>
@@ -108,17 +108,17 @@ export default function RootLayout({
           </div>
           
           {/* Enhanced Navigation */}
-          <div className="relative">
+          <div className="relative flex-shrink-0">
             {/* Sophisticated mobile menu button */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-2xl text-white cursor-pointer lg:hidden hover:text-white transition-all duration-300 relative group p-2"
+              className="text-2xl text-white cursor-pointer lg:hidden hover:text-white transition-all duration-300 relative group p-2 ml-2"
             >
               <div className="absolute inset-0 bg-white/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300" />
               <div className="relative">
-                <div className={`w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
-                <div className={`w-6 h-0.5 bg-white mt-1.5 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-                <div className={`w-6 h-0.5 bg-white mt-1.5 transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+                <div className={`w-5 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
+                <div className={`w-5 h-0.5 bg-white mt-1 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+                <div className={`w-5 h-0.5 bg-white mt-1 transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
               </div>
             </button>
             
@@ -205,7 +205,7 @@ export default function RootLayout({
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="icon-hover spring-hover group">
                   <div className="relative">
                     <svg className="w-6 h-6 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/>
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/>
                     </svg>
                     <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-150 transition-transform duration-500 -z-10" />
                   </div>
