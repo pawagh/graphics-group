@@ -88,7 +88,7 @@ export default function RootLayout({
                 />
               </div>
               <div className="header-title">
-                <div className="text-xl lg:text-lg font-bold">
+                <div className="text-sm sm:text-base md:text-lg lg:text-lg font-bold">
                   <AnimatedLabTitle />
                 </div>
               </div>
