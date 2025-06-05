@@ -89,7 +89,7 @@ export default function Home() {
           <section className={`section-card hover-lift transition-all duration-1000 ${
             visibleSections.includes(0) ? 'scroll-reveal revealed' : 'scroll-reveal'
           }`}>
-            <div className="flex flex-col items-center gap-6 text-center">
+            <div className="flex flex-col items-center gap-6">
               <div className="flex-1">
                 <h2 className="section-title text-center text-reveal">ABOUT US</h2>
                 <p className="text-lg leading-relaxed text-neutral-600 font-medium max-w-3xl mx-auto">
@@ -115,12 +115,12 @@ export default function Home() {
                   alt="Beating bandwidth limits for large aperture broadband nano-optics" 
                   width={128}
                   height={128}
-                  className="object-cover rounded mb-4 transition-all duration-500 group-hover:scale-110 group-hover:rotate-2" 
+                  className="object-cover rounded mb-4 transition-all duration-500 group-hover:scale-110" 
                 />
                 <h3 className="text-xl font-bold mb-2 text-unc-navy text-center project-title transition-all duration-300 group-hover:text-dome-copper">
                   Beating bandwidth limits for large aperture broadband nano-optics
                 </h3>
-                <p className="text-neutral-700 text-center mb-2 flex-1 group-hover:text-neutral-800 transition-colors duration-300">
+                <p className="text-neutral-700 mb-2 flex-1 group-hover:text-neutral-800 transition-colors duration-300">
                   Breakthrough in nano-optics, overcoming bandwidth limits for large aperture broadband metalenses with revolutionary optical designs.
                 </p>
                 <a href="https://www.nature.com/articles/s41467-025-58208-4" target="_blank" className="link-hover font-semibold spring-hover">
@@ -135,12 +135,12 @@ export default function Home() {
                   alt="DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting" 
                   width={128}
                   height={128}
-                  className="object-cover rounded mb-4 transition-all duration-500 group-hover:scale-110 group-hover:rotate-2" 
+                  className="object-cover rounded mb-4 transition-all duration-500 group-hover:scale-110" 
                 />
                 <h3 className="text-xl font-bold mb-2 text-unc-navy text-center project-title transition-all duration-300 group-hover:text-dome-copper">
                   DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting
                 </h3>
-                <p className="text-neutral-700 text-center mb-2 flex-1 group-hover:text-neutral-800 transition-colors duration-300">
+                <p className="text-neutral-700 mb-2 flex-1 group-hover:text-neutral-800 transition-colors duration-300">
                   Novel 3D Gaussian Splatting technique for flexible depth-of-field control in computational photography applications.
                 </p>
                 <a href="https://arxiv.org/abs/2405.17351" target="_blank" className="link-hover font-semibold spring-hover">
@@ -155,12 +155,12 @@ export default function Home() {
                   alt="Event fields: Capturing light fields at high speed, resolution, and dynamic range" 
                   width={128}
                   height={128}
-                  className="object-cover rounded mb-4 transition-all duration-500 group-hover:scale-110 group-hover:rotate-2" 
+                  className="object-cover rounded mb-4 transition-all duration-500 group-hover:scale-110" 
                 />
                 <h3 className="text-xl font-bold mb-2 text-unc-navy text-center project-title transition-all duration-300 group-hover:text-dome-copper">
                   Event fields: Capturing light fields at high speed, resolution, and dynamic range
                 </h3>
-                <p className="text-neutral-700 text-center mb-2 flex-1 group-hover:text-neutral-800 transition-colors duration-300">
+                <p className="text-neutral-700 mb-2 flex-1 group-hover:text-neutral-800 transition-colors duration-300">
                   Pioneering event-based light field capture for high-speed, high-resolution, and high-dynamic-range imaging systems.
                 </p>
                 <a href="https://arxiv.org/abs/2412.06191" target="_blank" className="link-hover font-semibold spring-hover">

@@ -59,10 +59,9 @@ export default function People() {
       <div className="w-full bg-campus-sandstone backdrop-blur-sm border-t-4 py-3 mb-8">
         <div className="max-w-7xl mx-auto px-4 md:px-12">
           <h2 className="text-2xl font-bold text-dome-copper text-center mb-3">GROUP PHILOSOPHY</h2>
-          <p className="text-md text-center text-neutral-700 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-md text-neutral-700 max-w-4xl mx-auto leading-relaxed">
             Our group values curiosity, diversity, and impact-driven research that pushes the boundaries of what&apos;s possible in visual computing. 
-            Together, we bring expertise in optics, computer vision, machine learning, and human-computer interaction to solve 
-            real-world problems and shape the future of how humans interact with technology.
+            Together, we bring expertise in optics, computer vision, and machine learning.
           </p>
         </div>
       </div>
@@ -87,7 +86,7 @@ export default function People() {
                         />
                       </div>
                     </div>
-                    <div className="flex-1 text-center md:text-left">
+                    <div className="flex-1 md:text-left">
                       <h3 className="text-3xl font-bold text-unc-navy mb-3 group-hover:text-dome-copper transition-colors duration-300">
                         {assistantProfessor.name}
                       </h3>
@@ -155,7 +154,7 @@ export default function People() {
                         src={person.image} 
                         alt={person.name} 
                         fill
-                        className="object-cover transition-all duration-500 group-hover:scale-110 group-hover:rotate-2" 
+                        className="object-cover transition-all duration-500 group-hover:scale-110" 
                       />
                     </div>
                     {/* Floating badge for position */}

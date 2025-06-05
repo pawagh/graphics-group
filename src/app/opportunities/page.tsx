@@ -19,9 +19,9 @@ export default function OpportunitiesPage() {
       <div className="w-full bg-campus-sandstone backdrop-blur-sm border-t-4 py-3 mb-8">
         <div className="max-w-7xl mx-auto px-4 md:px-12">
           <h2 className="text-2xl font-bold text-dome-copper text-center mb-3">JOIN US</h2>
-          <p className="text-md text-center text-neutral-700 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-md text-neutral-700 max-w-4xl mx-auto leading-relaxed">
             Interested in joining our lab? We offer diverse research opportunities for undergraduate and graduate students, 
-            postdocs, and collaborators. Join us in pushing the boundaries of visual computing and augmented intelligence.
+            postdocs, and collaborators. Join us in pushing the boundaries of VCAIL.
           </p>
         </div>
       </div>
@@ -33,7 +33,7 @@ export default function OpportunitiesPage() {
           {/* Current openings */}
           <section className="section-card">
             <h2 className="section-title text-center">CURRENT OPENINGS</h2>
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto">
               <div className="bg-neutral-100 rounded-lg p-8 border border-neutral-200">
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 bg-unc-navy/10 rounded-full flex items-center justify-center">
@@ -54,7 +54,7 @@ export default function OpportunitiesPage() {
           {/* Contact section */}
           <section className="section-card">
             <h3 className="section-title text-center">CONTACT INFORMATION</h3>
-            <div className="max-w-2xl mx-auto text-center">
+            <div className="max-w-2xl mx-auto">
               <p className="text-lg text-neutral-600 mb-6">
                 Have questions about our research or opportunities? We&apos;d love to hear from you.
               </p>

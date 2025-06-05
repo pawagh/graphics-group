@@ -48,7 +48,7 @@ export default function Publications() {
       <div className="w-full bg-campus-sandstone backdrop-blur-sm border-t-4 py-3 mb-8">
         <div className="max-w-7xl mx-auto px-4 md:px-12">
           <h2 className="text-2xl font-bold text-dome-copper text-center mb-3">PUBLICATIONS</h2>
-          <p className="text-md text-center text-neutral-700 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-md text-neutral-700 max-w-4xl mx-auto leading-relaxed">
             Explore our cutting-edge research in visual computing and augmented intelligence. 
             Our publications span computational imaging, computer vision, AR/VR, nano-optics, and machine learning.
           </p>
@@ -97,7 +97,7 @@ export default function Publications() {
             </div>
             
             {/* Results count */}
-            <div className="mt-4 text-center">
+            <div className="mt-4">
               <p className="text-neutral-600">
                 Showing <span className="font-semibold text-unc-navy">{filteredPubs.length}</span> publications
               </p>
@@ -116,7 +116,7 @@ export default function Publications() {
                     {pubs.map((pub, idx) => (
                       <div 
                         key={pub.title + idx} 
-                        className="card p-6 group hover-lift magnetic-hover enhanced-shadow transition-all duration-500 stagger-item"
+                        className="p-6 group hover-lift magnetic-hover enhanced-shadow transition-all duration-500 stagger-item rounded-card bg-campus-sandstone-light border border-neutral-200"
                         style={{ animationDelay: `${idx * 0.1}s` }}
                       >
                         <div className="flex flex-col md:flex-row gap-6 items-start">
@@ -127,7 +127,7 @@ export default function Publications() {
                                 alt={pub.title} 
                                 width={128}
                                 height={128}
-                                className="object-cover rounded-lg shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-1" 
+                                className="object-cover rounded-lg shadow-md transition-all duration-500 group-hover:scale-110" 
                                 onError={(e) => {
                                   console.log(`Failed to load image for ${pub.title}:`, pub.image);
                                   e.currentTarget.src = "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80";

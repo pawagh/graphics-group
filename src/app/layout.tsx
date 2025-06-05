@@ -23,14 +23,14 @@ function AnimatedLabTitle() {
         setIsExpanding(true);
         setShowFullName(true);
         
-        // Start collapsing after 3 seconds (increased from 2 seconds)
+
         setTimeout(() => {
           setIsExpanding(false);
           // Wait for collapse animation to mostly complete, then switch text
           setTimeout(() => {
             setShowFullName(false);
           }, 400); // Switch text near the end of the collapse animation
-        }, 3000); // Changed from 2000ms to 3000ms
+        }, 5000); // Time until collapse
       }
     }, 4000);
     
@@ -59,7 +59,7 @@ export default function RootLayout({
 
   const navItems = [
     { label: "PEOPLE", href: "/people" },
-    { label: "COURSES", href: "/teaching" },
+    { label: "COURSES", href: "/courses" },
     { label: "PUBLICATIONS", href: "/publications" },
     { label: "OPPORTUNITIES", href: "/opportunities" },
   ];
@@ -97,7 +97,7 @@ export default function RootLayout({
                   alt="VCAIL Logo"
                   width={40}
                   height={40}
-                  className="md:w-12 md:h-12 object-contain rounded-full bg-white/90 p-1.5 md:p-2 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 border-2 border-white/20"
+                  className="md:w-12 md:h-12 object-contain rounded-full bg-white/90 p-1.5 md:p-2 shadow-lg transition-all duration-500 group-hover:scale-110 border-2 border-white/20"
                 />
               </div>
               <div className="header-title flex-1 min-w-0">
@@ -185,33 +185,6 @@ export default function RootLayout({
                 <p className="mb-1">Department of Computer Science</p>
               </div>
               
-              {/* Social links with enhanced interactions */}
-              <div className="flex gap-4 items-center">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="icon-hover spring-hover group">
-                  <div className="relative">
-                    <svg className="w-6 h-6 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195A4.92 4.92 0 0 0 16.616 3c-2.73 0-4.942 2.21-4.942 4.932 0 .386.045.763.127 1.124C7.728 8.807 4.1 6.884 1.671 3.965c-.423.722-.666 1.561-.666 2.475 0 1.708.87 3.216 2.188 4.099a4.904 4.904 0 0 1-2.237-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.209c9.057 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.636A9.936 9.936 0 0 0 24 4.557z"/>
-                    </svg>
-                    <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-150 transition-transform duration-500 -z-10" />
-                  </div>
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="icon-hover spring-hover group">
-                  <div className="relative">
-                    <svg className="w-6 h-6 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/>
-                    </svg>
-                    <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-150 transition-transform duration-500 -z-10" />
-                  </div>
-                </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="icon-hover spring-hover group">
-                  <div className="relative">
-                    <svg className="w-6 h-6 transition-all duration-300 group-hover:scale-125 group-hover:rotate-12" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/>
-                    </svg>
-                    <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-150 transition-transform duration-500 -z-10" />
-                  </div>
-                </a>
-              </div>
             </div>
             
             {/* Copyright */}

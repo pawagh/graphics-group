@@ -49,7 +49,7 @@ export default function VisualComputingSystems() {
           <li>Week 6: AI integration and system optimization</li>
           {/* Add more weeks as needed */}
         </ul>
-        <Link href="/teaching" className="text-dome-copper-600 hover:underline">Back to Teaching</Link>
+        <Link href="/courses" className="text-dome-copper-600 hover:underline">Back to Courses</Link>
       </div>
     </div>
   );

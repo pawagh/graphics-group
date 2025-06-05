@@ -22,6 +22,7 @@ export default {
         // Official UNC Secondary Brand Colors from https://identity.unc.edu/brand/color-palette/
         "basin-slate": "#4F758B", // Basin Slate (PMS 5405, Hex #4F758B, RGB 79, 117, 139)
         "campus-sandstone": "#F4E8DD", // Campus Sandstone (PMS 2309 at 50%, Hex #F4E8DD, RGB 244, 232, 221)
+        "campus-sandstone-light": "#F9F1EA", // Lighter version of Campus Sandstone
         "longleaf-pine": "#00594C", // Longleaf Pine (PMS 561, Hex #00594C, RGB 0, 89, 76)
         "azalea-pink": "#EF426F", // Azalea Pink (PMS 191, Hex #EF426F, RGB 239, 68, 111)
         "tile-teal": "#00A5AD", // Tile Teal (PMS 7466, Hex #00A5AD, RGB 0, 165, 173)
