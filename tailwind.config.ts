@@ -28,12 +28,12 @@ export default {
         "sunburst-yellow": "#FFD100", // Sunburst Yellow (PMS 109, Hex #FFD100, RGB 255, 209, 0)
         "davie-green": "#C4D600", // Davie Green (PMS 382, Hex #C4D600, RGB 196, 214, 0)
         
-        // Orange accent colors - using a UNC-appropriate orange tone for hover effects
-        "orange": "#FF6B35", // Custom orange for interactions (warm, accessible)
-        "orange-light": "#FF8C69",
-        "orange-dark": "#E5541C",
-        "orange-50": "#FFF4F0",
-        "orange-100": "#FFE4D6",
+        // Dome Copper accent colors - using UNC's Dome Copper for hover effects
+        "dome-copper": "#b87333", // UNC Dome Copper
+        "dome-copper-light": "#c98d4f",
+        "dome-copper-dark": "#a65919",
+        "dome-copper-50": "#f9f1eb",
+        "dome-copper-100": "#f3e3d7",
         
         // Neutral grays for UI elements
         "neutral-50": "#f9fafb",
@@ -48,7 +48,7 @@ export default {
         "neutral-900": "#111827",
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Poppins', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',

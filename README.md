@@ -14,3 +14,13 @@ Our lab focuses on:
 - **Interdisciplinary Projects:** Combining expertise from various fields to drive breakthroughs in research.
 
 We invite you to explore our website and learn more about our research activities, publications, and the team driving the VCAIL.
+
+## To Do
+make image zoom in on hover not tilt from everything
+make footer like on canva
+put images in highlights section
+add drop down bio in peoples section
+get rid of box in teaching page and courses heading
+make background of publicaitons boxes grey or sandstone
+left align all body text
+the sandstone color is #F4E8DD, dont hard code it just add a variable in globals and ref that
