@@ -1,7 +1,7 @@
 import { publications, Publication } from '../data';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
+import PublicationImage from '../../components/PublicationImage';
 
 export default async function PublicationDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -80,16 +80,12 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
             <div className="lg:col-span-1 flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-dome-copper/30 to-dome-copper/10 rounded-2xl transform rotate-3"></div>
-                <Image 
-                  src={publication.image && publication.image.trim() !== "" ? publication.image : "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80"} 
+                <PublicationImage 
+                  src={publication.image} 
                   alt={publication.title} 
                   width={300}
                   height={300}
                   className="relative object-cover rounded-2xl shadow-2xl border-4 border-white/20 backdrop-blur transition-transform duration-500 hover:scale-105" 
-                  onError={(e) => {
-                    console.log(`Failed to load image for ${publication.title}:`, publication.image);
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80";
-                  }}
                 />
               </div>
             </div>
