@@ -165,16 +165,16 @@ export default function RootLayout({
             {/* Background with UNC colors */}
             <div className="absolute inset-0 w-full h-full z-0">
               <Image
-                src="/unc_background.jpg"
-                alt="UNC Background"
+                src="/old_well.png"
+                alt="UNC Old Well"
                 fill
-                className="object-cover"
+                className="object-cover object-bottom scale-[1.2]"
                 style={{ pointerEvents: "none" }}
                 priority={false}
               />
             </div>
             {/* Carolina Blue overlay */}
-            <div className="absolute inset-0 bg-carolina-blue/60 z-0" />
+            <div className="absolute inset-0 bg-unc-navy/60 z-0" />
             
             {/* Footer content */}
             <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">

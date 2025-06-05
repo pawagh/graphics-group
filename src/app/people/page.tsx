@@ -2,14 +2,18 @@
 import '../animations.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function People() {
+  const [expandedPerson, setExpandedPerson] = useState<string | null>(null);
+
   const people = [
     {
       name: "Praneeth Chakravarthula",
       role: "Assistant Professor",
       image: "/praneeth.jpeg",
       bio: "Computational imaging, AR/VR, nano-optics, human-computer interaction",
+      description: "Dr. Chakravarthula leads research in computational imaging and visual computing. His work focuses on developing novel optical systems and algorithms for next-generation displays, cameras, and human-computer interaction. He has made significant contributions to the fields of holographic displays, computational cameras, and augmented reality.",
       email: "cpk@cs.unc.edu",
       website: "https://www.cs.unc.edu/~cpk/",
     },
@@ -18,30 +22,34 @@ export default function People() {
       role: "PhD Student",
       image: "/XiPeng.jpg",
       bio: "Acoustic fields, neural rendering, VR/AR audio",
+      description: "Xi's research focuses on the intersection of acoustic field synthesis and virtual reality. Their work explores novel methods for creating immersive audio experiences and developing more realistic sound propagation models for virtual environments.",
       email: "xipeng@cs.unc.edu",
-      website: "https://scholar.google.com/citations?user=example",
     },
     {
       name: "Zihao Zou",
       role: "PhD Student", 
       image: "/zihao.png",
       bio: "Event cameras, computational photography, computer vision",
+      description: "Zihao specializes in event-based vision and computational photography. Their research aims to push the boundaries of high-speed imaging and develop novel algorithms for processing event camera data in real-world applications.",
       email: "zihaozou@cs.unc.edu",
-      website: "https://scholar.google.com/citations?user=example",
     },
     {
       name: "Hengyu Lian",
       role: "PhD Student",
       image: "/Hengyu.jpeg", 
       bio: "Holography, computational optics, display technology",
+      description: "Hengyu's research centers on advancing holographic display technology. They work on developing novel algorithms and optical designs for next-generation 3D displays and computational imaging systems.",
       email: "Lianhy0@cs.unc.edu",
-      website: "https://scholar.google.com/citations?user=example",
     },
   ];
 
   // Separate assistant professor from other team members
   const assistantProfessor = people.find(person => person.role === "Assistant Professor");
   const otherTeamMembers = people.filter(person => person.role !== "Assistant Professor");
+
+  const toggleDescription = (name: string) => {
+    setExpandedPerson(expandedPerson === name ? null : name);
+  };
 
   return (
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
@@ -96,6 +104,25 @@ export default function People() {
                       <p className="text-lg text-neutral-600 mb-6 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300">
                         {assistantProfessor.bio}
                       </p>
+                      <button 
+                        onClick={() => toggleDescription(assistantProfessor.name)}
+                        className="text-unc-navy hover:text-dome-copper transition-colors duration-300 mb-4 flex items-center gap-2"
+                      >
+                        {expandedPerson === assistantProfessor.name ? 'Show Less' : 'Read More'}
+                        <svg 
+                          className={`w-4 h-4 transition-transform duration-300 ${expandedPerson === assistantProfessor.name ? 'rotate-180' : ''}`} 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      {expandedPerson === assistantProfessor.name && (
+                        <p className="text-neutral-600 mb-6 leading-relaxed animate-fade-in">
+                          {assistantProfessor.description}
+                        </p>
+                      )}
                       <div className="flex justify-center md:justify-start space-x-6">
                         {assistantProfessor.website && (
                           <a 
@@ -121,15 +148,6 @@ export default function People() {
                             </svg>
                           </a>
                         )}
-                        <Link 
-                          href="/publications" 
-                          className="text-unc-navy hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
-                          aria-label={`${assistantProfessor.name}'s publications`}
-                        >
-                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                          </svg>
-                        </Link>
                       </div>
                     </div>
                   </div>
@@ -171,20 +189,26 @@ export default function People() {
                   <p className="text-neutral-600 mb-4 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300">
                     {person.bio}
                   </p>
+                  <button 
+                    onClick={() => toggleDescription(person.name)}
+                    className="text-unc-navy hover:text-dome-copper transition-colors duration-300 mb-4 flex items-center gap-2 mx-auto"
+                  >
+                    {expandedPerson === person.name ? 'Show Less' : 'Read More'}
+                    <svg 
+                      className={`w-4 h-4 transition-transform duration-300 ${expandedPerson === person.name ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {expandedPerson === person.name && (
+                    <p className="text-neutral-600 mb-4 leading-relaxed animate-fade-in">
+                      {person.description}
+                    </p>
+                  )}
                   <div className="flex justify-center space-x-4 pt-4 border-t border-neutral-200 group-hover:border-unc-navy transition-colors duration-300">
-                    {person.website && (
-                      <a 
-                        href={person.website} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="text-unc-navy hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
-                        aria-label={`${person.name}'s website`}
-                      >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
-                        </svg>
-                      </a>
-                    )}
                     {person.email && (
                       <a 
                         href={`mailto:${person.email}`} 
@@ -196,21 +220,11 @@ export default function People() {
                         </svg>
                       </a>
                     )}
-                    <Link 
-                      href="/publications" 
-                      className="text-unc-navy hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
-                      aria-label={`${person.name}'s publications`}
-                    >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                      </svg>
-                    </Link>
                   </div>
                 </div>
               ))}
             </div>
           </section>
-
         </div>
       </div>
     </div>

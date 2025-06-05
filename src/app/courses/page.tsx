@@ -51,7 +51,7 @@ export default function Teaching() {
         <div className="space-y-10">
           
           {/* Courses section */}
-          <section className="section-card">
+          <section>
             <div className="space-y-8 max-w-4xl mx-auto">
               {courses.map((course, index) => (
                 <div 

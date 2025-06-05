@@ -14,10 +14,3 @@ Our lab focuses on:
 - **Interdisciplinary Projects:** Combining expertise from various fields to drive breakthroughs in research.
 
 We invite you to explore our website and learn more about our research activities, publications, and the team driving the VCAIL.
-
-## To Do
-make footer like on canva
-put images in highlights section
-add drop down bio in peoples section
-get rid of box in teaching page and courses heading
-make background of publicaitons boxes grey or sandstone
