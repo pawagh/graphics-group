@@ -1,14 +1,15 @@
 'use client'
 import Link from "next/link";
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { useState, useEffect } from "react";
 import "./globals.css";
 import "./animations.css";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ['300', '400', '500', '600', '700'],
+  variable: "--font-poppins",
 });
 
 function AnimatedLabTitle() {
@@ -43,7 +44,7 @@ function AnimatedLabTitle() {
           showFullName && isExpanding ? 'max-w-full opacity-100' : 'max-w-[2.5rem] sm:max-w-[3rem] md:max-w-[4rem] opacity-100'
         }`}
       >
-        {showFullName ? "Visual Computing and Augmented Intelligence Lab" : "VCAIL"}
+        {showFullName ? "VISUAL COMPUTING AND AUGMENTED INTELLIGENCE LAB" : "VCAIL"}
       </span>
     </div>
   );
@@ -58,7 +59,7 @@ export default function RootLayout({
 
   const navItems = [
     { label: "PEOPLE", href: "/people" },
-    { label: "TEACHING", href: "/teaching" },
+    { label: "COURSES", href: "/teaching" },
     { label: "PUBLICATIONS", href: "/publications" },
     { label: "OPPORTUNITIES", href: "/opportunities" },
   ];
@@ -83,9 +84,9 @@ export default function RootLayout({
         <meta name="twitter:description" content="Advancing research in computational imaging, computer vision, AR/VR, nano-optics, and AI-driven solutions at UNC Chapel Hill." />
         <meta name="twitter:image" content="/logo.png" />
       </head>
-      <body className={`${inter.variable} bg-neutral-50 text-neutral-900 antialiased pt-20 font-sans`}>
+      <body className={`${poppins.variable} bg-neutral-50 text-neutral-900 antialiased pt-20 font-sans`}>
         {/* Enhanced Header with sophisticated styling */}
-        <header className="fixed top-0 left-0 w-full h-20 bg-gradient-to-r from-carolina-blue via-carolina-blue to-unc-navy shadow-2xl flex items-center justify-between px-4 md:px-6 lg:px-12 backdrop-blur-xl z-50 border-b border-white/10">
+        <header className="fixed top-0 left-0 w-full h-20 bg-carolina-blue shadow-2xl flex items-center justify-between px-4 md:px-6 lg:px-12 backdrop-blur-xl z-50 border-b border-white/10">
           {/* Enhanced Logo and Lab title */}
           <div className="flex items-center gap-2 md:gap-4 lg:gap-6 flex-1 min-w-0">
             <Link href="/" className="flex items-center gap-2 md:gap-4 text-white no-underline hover:text-white transition-all duration-500 group flex-shrink-0">

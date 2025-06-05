@@ -18,9 +18,9 @@ export default function VisualComputingSystems() {
         </div>
       </div>
       <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-4xl mb-8">
-        <h2 className="text-2xl font-bold text-orange-700 mb-4">Course Description</h2>
+        <h2 className="text-2xl font-bold text-dome-copper-700 mb-4">Course Description</h2>
         <p className="mb-4 text-gray-700">This course explores the design and implementation of visual computing systems, including hardware, software, and applications in graphics, vision, and AR/VR. Topics include system architectures, real-time rendering, computational photography, display technologies, and the integration of AI in visual systems. Emphasis is on hands-on projects and understanding the end-to-end pipeline from sensors to displays.</p>
-        <h2 className="text-xl font-semibold text-orange-700 mt-6 mb-2">Topics Include</h2>
+        <h2 className="text-xl font-semibold text-dome-copper-700 mt-6 mb-2">Topics Include</h2>
         <ul className="list-disc ml-6 text-gray-700 mb-4">
           <li>System architectures for visual computing</li>
           <li>Real-time graphics and rendering</li>
@@ -31,14 +31,14 @@ export default function VisualComputingSystems() {
           <li>AI and machine learning in visual systems</li>
           <li>End-to-end system optimization</li>
         </ul>
-        <h2 className="text-xl font-semibold text-orange-700 mt-6 mb-2">Course Goals</h2>
+        <h2 className="text-xl font-semibold text-dome-copper-700 mt-6 mb-2">Course Goals</h2>
         <p className="mb-4 text-gray-700">Students will gain practical experience in building and analyzing visual computing systems, from image capture to display. The course covers both foundational theory and modern applications, preparing students for research or industry roles in graphics, vision, and AR/VR.</p>
-        <h2 className="text-xl font-semibold text-orange-700 mt-6 mb-2">Instructors</h2>
+        <h2 className="text-xl font-semibold text-dome-copper-700 mt-6 mb-2">Instructors</h2>
         <ul className="list-disc ml-6 text-gray-700 mb-4">
           <li>Praneeth Chakravarthula (Instructor)</li>
           {/* Add TAs or guest lecturers if available */}
         </ul>
-        <h2 className="text-xl font-semibold text-orange-700 mt-6 mb-2">Schedule & Syllabus</h2>
+        <h2 className="text-xl font-semibold text-dome-copper-700 mt-6 mb-2">Schedule & Syllabus</h2>
         <p className="mb-2 text-gray-700">Class meets in Fall 2025. Details and weekly topics will be posted here.</p>
         <ul className="list-disc ml-6 text-gray-700 mb-4">
           <li>Week 1: Introduction to visual computing systems</li>
@@ -49,7 +49,7 @@ export default function VisualComputingSystems() {
           <li>Week 6: AI integration and system optimization</li>
           {/* Add more weeks as needed */}
         </ul>
-        <Link href="/teaching" className="text-orange-600 hover:underline">Back to Teaching</Link>
+        <Link href="/teaching" className="text-dome-copper-600 hover:underline">Back to Teaching</Link>
       </div>
     </div>
   );

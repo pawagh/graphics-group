@@ -55,10 +55,10 @@ export default function People() {
         />
       </div>
 
-      {/* Group Philosophy - Orange translucent banner */}
-      <div className="w-full bg-orange/20 backdrop-blur-sm border-t-4 border-orange py-3 mb-8">
+      {/* Group Philosophy - Dome Copper translucent banner */}
+      <div className="w-full bg-campus-sandstone backdrop-blur-sm border-t-4 py-3 mb-8">
         <div className="max-w-7xl mx-auto px-4 md:px-12">
-          <h2 className="text-2xl font-bold text-orange text-center mb-3">GROUP PHILOSOPHY</h2>
+          <h2 className="text-2xl font-bold text-dome-copper text-center mb-3">GROUP PHILOSOPHY</h2>
           <p className="text-md text-center text-neutral-700 max-w-4xl mx-auto leading-relaxed">
             Our group values curiosity, diversity, and impact-driven research that pushes the boundaries of what&apos;s possible in visual computing. 
             Together, we bring expertise in optics, computer vision, machine learning, and human-computer interaction to solve 
@@ -78,7 +78,7 @@ export default function People() {
                 <div className="card p-8 group hover-lift magnetic-hover enhanced-shadow">
                   <div className="flex flex-col md:flex-row items-center gap-8">
                     <div className="flex-shrink-0">
-                      <div className="w-48 h-48 relative overflow-hidden rounded-full border-4 border-carolina-blue group-hover:border-orange transition-colors duration-500">
+                      <div className="w-48 h-48 relative overflow-hidden rounded-full border-4 border-unc-navy group-hover:border-dome-copper transition-colors duration-500">
                         <Image 
                           src={assistantProfessor.image} 
                           alt={assistantProfessor.name} 
@@ -88,10 +88,10 @@ export default function People() {
                       </div>
                     </div>
                     <div className="flex-1 text-center md:text-left">
-                      <h3 className="text-3xl font-bold text-unc-navy mb-3 group-hover:text-carolina-blue transition-colors duration-300">
+                      <h3 className="text-3xl font-bold text-unc-navy mb-3 group-hover:text-dome-copper transition-colors duration-300">
                         {assistantProfessor.name}
                       </h3>
-                      <p className="text-xl text-carolina-blue font-semibold mb-4 group-hover:text-orange transition-colors duration-300">
+                      <p className="text-xl text-unc-navy font-semibold mb-4 group-hover:text-dome-copper transition-colors duration-300">
                         {assistantProfessor.role}
                       </p>
                       <p className="text-lg text-neutral-600 mb-6 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300">
@@ -103,7 +103,7 @@ export default function People() {
                             href={assistantProfessor.website} 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="text-carolina-blue hover:text-orange transition-all duration-300 transform hover:scale-125 spring-hover"
+                            className="text-unc-navy hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
                             aria-label={`${assistantProfessor.name}'s website`}
                           >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,7 +114,7 @@ export default function People() {
                         {assistantProfessor.email && (
                           <a 
                             href={`mailto:${assistantProfessor.email}`} 
-                            className="text-carolina-blue hover:text-orange transition-all duration-300 transform hover:scale-125 spring-hover"
+                            className="text-unc-navy hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
                             aria-label={`Email ${assistantProfessor.name}`}
                           >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -124,7 +124,7 @@ export default function People() {
                         )}
                         <Link 
                           href="/publications" 
-                          className="text-carolina-blue hover:text-orange transition-all duration-300 transform hover:scale-125 spring-hover"
+                          className="text-unc-navy hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
                           aria-label={`${assistantProfessor.name}'s publications`}
                         >
                           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -150,7 +150,7 @@ export default function People() {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="mb-4 relative">
-                    <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden rounded-full border-4 border-carolina-blue group-hover:border-orange transition-colors duration-500">
+                    <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden rounded-full border-4 border-unc-navy group-hover:border-dome-copper transition-colors duration-500">
                       <Image 
                         src={person.image} 
                         alt={person.name} 
@@ -159,26 +159,26 @@ export default function People() {
                       />
                     </div>
                     {/* Floating badge for position */}
-                    <div className="absolute -top-2 -right-2 bg-carolina-blue text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-75">
+                    <div className="absolute -top-2 -right-2 bg-unc-navy text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-75">
                       {person.role}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-unc-navy mb-2 group-hover:text-carolina-blue transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-unc-navy mb-2 group-hover:text-dome-copper transition-colors duration-300">
                     {person.name}
                   </h3>
-                  <p className="text-carolina-blue font-semibold mb-3 group-hover:text-orange transition-colors duration-300">
+                  <p className="text-unc-navy font-semibold mb-3 group-hover:text-dome-copper transition-colors duration-300">
                     {person.role}
                   </p>
                   <p className="text-neutral-600 mb-4 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300">
                     {person.bio}
                   </p>
-                  <div className="flex justify-center space-x-4 pt-4 border-t border-neutral-200 group-hover:border-carolina-blue transition-colors duration-300">
+                  <div className="flex justify-center space-x-4 pt-4 border-t border-neutral-200 group-hover:border-unc-navy transition-colors duration-300">
                     {person.website && (
                       <a 
                         href={person.website} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="text-carolina-blue hover:text-orange transition-all duration-300 transform hover:scale-125 spring-hover"
+                        className="text-unc-navy hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
                         aria-label={`${person.name}'s website`}
                       >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -189,7 +189,7 @@ export default function People() {
                     {person.email && (
                       <a 
                         href={`mailto:${person.email}`} 
-                        className="text-carolina-blue hover:text-orange transition-all duration-300 transform hover:scale-125 spring-hover"
+                        className="text-unc-navy hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
                         aria-label={`Email ${person.name}`}
                       >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -199,7 +199,7 @@ export default function People() {
                     )}
                     <Link 
                       href="/publications" 
-                      className="text-carolina-blue hover:text-orange transition-all duration-300 transform hover:scale-125 spring-hover"
+                      className="text-unc-navy hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
                       aria-label={`${person.name}'s publications`}
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -14,14 +14,14 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
   return (
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900 min-h-screen">
       {/* Hero section with gradient background */}
-      <div className="relative bg-gradient-to-br from-carolina-blue via-unc-navy to-carolina-blue py-16 px-4 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-unc-navy via-unc-navy to-unc-navy py-16 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         
         {/* Back navigation */}
         <div className="relative z-10 max-w-6xl mx-auto mb-8">
           <Link 
             href="/publications" 
-            className="inline-flex items-center text-white hover:text-orange transition-colors duration-300 font-medium"
+            className="inline-flex items-center text-white hover:text-dome-copper transition-colors duration-300 font-medium"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -45,7 +45,7 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
                 {publication.tags.map((tag: string) => (
                   <span 
                     key={tag} 
-                    className="bg-white/20 backdrop-blur text-white px-4 py-2 rounded-full text-sm font-medium border border-white/30 hover:bg-orange/80 transition-colors duration-300"
+                    className="bg-white/20 backdrop-blur text-white px-4 py-2 rounded-full text-sm font-medium border border-white/30 hover:bg-dome-copper/80 transition-colors duration-300"
                   >
                     {tag}
                   </span>
@@ -59,9 +59,9 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
                     href={publication.link} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="btn-primary bg-white text-carolina-blue hover:bg-orange hover:text-white inline-flex items-center"
+                    className="btn-primary bg-white text-unc-navy hover:bg-dome-copper hover:text-white inline-flex items-center"
                   >
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 mr-3 text-unc-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                     View Full Publication
@@ -79,7 +79,7 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
             {/* Publication image */}
             <div className="lg:col-span-1 flex justify-center">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange/30 to-orange/10 rounded-2xl transform rotate-3"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-dome-copper/30 to-dome-copper/10 rounded-2xl transform rotate-3"></div>
                 <Image 
                   src={publication.image && publication.image.trim() !== "" ? publication.image : "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80"} 
                   alt={publication.title} 
@@ -108,7 +108,7 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
               {/* Abstract/Description */}
               <section className="section-card">
                 <h2 className="section-title flex items-center">
-                  <svg className="w-6 h-6 mr-3 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 mr-3 text-unc-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   Abstract
@@ -123,26 +123,26 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
               {/* Key Contributions */}
               <section className="section-card">
                 <h2 className="section-title flex items-center">
-                  <svg className="w-6 h-6 mr-3 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 mr-3 text-unc-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   Key Contributions
                 </h2>
                 <ul className="space-y-3 text-neutral-700">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-dome-copper rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span>Novel algorithmic approach that significantly improves performance metrics</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-dome-copper rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span>Comprehensive evaluation on multiple benchmark datasets</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-dome-copper rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span>Open-source implementation and reproducible results</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-orange rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-dome-copper rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span>Real-world applications and use cases demonstration</span>
                   </li>
                 </ul>
@@ -172,7 +172,7 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
                       {publication.tags.map((tag: string) => (
                         <span 
                           key={tag} 
-                          className="bg-carolina-blue text-white px-2 py-1 rounded text-xs"
+                          className="bg-unc-navy text-white px-2 py-1 rounded text-xs"
                         >
                           {tag}
                         </span>
@@ -191,30 +191,30 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
                       href={publication.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="block p-3 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-orange hover:bg-orange-50 transition-all duration-300 group"
+                      className="block p-3 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-dome-copper hover:bg-dome-copper-50 transition-all duration-300 group"
                     >
                       <div className="flex items-center">
-                        <svg className="w-5 h-5 text-carolina-blue group-hover:text-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 text-unc-navy group-hover:text-dome-copper mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-4-4m4 4l4-4m-4-8V2" />
                         </svg>
-                        <span className="font-medium text-neutral-800 group-hover:text-orange">PDF Download</span>
+                        <span className="font-medium text-neutral-800 group-hover:text-dome-copper">PDF Download</span>
                       </div>
                     </a>
                   )}
-                  <div className="block p-3 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-orange hover:bg-orange-50 transition-all duration-300 group cursor-pointer">
+                  <div className="block p-3 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-dome-copper hover:bg-dome-copper-50 transition-all duration-300 group cursor-pointer">
                     <div className="flex items-center">
-                      <svg className="w-5 h-5 text-carolina-blue group-hover:text-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-unc-navy group-hover:text-dome-copper mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                       </svg>
-                      <span className="font-medium text-neutral-800 group-hover:text-orange">Source Code</span>
+                      <span className="font-medium text-neutral-800 group-hover:text-dome-copper">Source Code</span>
                     </div>
                   </div>
-                  <div className="block p-3 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-orange hover:bg-orange-50 transition-all duration-300 group cursor-pointer">
+                  <div className="block p-3 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-dome-copper hover:bg-dome-copper-50 transition-all duration-300 group cursor-pointer">
                     <div className="flex items-center">
-                      <svg className="w-5 h-5 text-carolina-blue group-hover:text-orange mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-unc-navy group-hover:text-dome-copper mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 3v12a1 1 0 001 1h8a1 1 0 001-1V7M7 7h10M7 7L5 5m2 2v12" />
                       </svg>
-                      <span className="font-medium text-neutral-800 group-hover:text-orange">Supplemental Material</span>
+                      <span className="font-medium text-neutral-800 group-hover:text-dome-copper">Supplemental Material</span>
                     </div>
                   </div>
                 </div>
@@ -223,7 +223,7 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
               {/* Citation */}
               <div className="section-card">
                 <h3 className="section-title text-lg">Citation</h3>
-                <div className="bg-neutral-50 p-4 rounded-lg border-l-4 border-carolina-blue">
+                <div className="bg-neutral-50 p-4 rounded-lg border-l-4 border-unc-navy">
                   <pre className="text-xs text-neutral-700 font-mono whitespace-pre-wrap">
 {`@article{${publication.slug.replace(/-/g, '_')},
   title={${publication.title}},
@@ -233,7 +233,7 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
 }`}
                   </pre>
                 </div>
-                <button className="mt-3 text-sm text-carolina-blue hover:text-orange transition-colors duration-300 font-medium">
+                <button className="mt-3 text-sm text-unc-navy hover:text-dome-copper transition-colors duration-300 font-medium">
                   Copy Citation
                 </button>
               </div>

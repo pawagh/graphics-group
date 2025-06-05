@@ -44,10 +44,10 @@ export default function Publications() {
         />
       </div>
 
-      {/* Publications Philosophy - Orange translucent banner */}
-      <div className="w-full bg-orange/20 backdrop-blur-sm border-t-4 border-orange py-3 mb-8">
+      {/* Publications Philosophy - Dome Copper translucent banner */}
+      <div className="w-full bg-campus-sandstone backdrop-blur-sm border-t-4 py-3 mb-8">
         <div className="max-w-7xl mx-auto px-4 md:px-12">
-          <h2 className="text-2xl font-bold text-orange text-center mb-3">PUBLICATIONS</h2>
+          <h2 className="text-2xl font-bold text-dome-copper text-center mb-3">PUBLICATIONS</h2>
           <p className="text-md text-center text-neutral-700 max-w-4xl mx-auto leading-relaxed">
             Explore our cutting-edge research in visual computing and augmented intelligence. 
             Our publications span computational imaging, computer vision, AR/VR, nano-optics, and machine learning.
@@ -73,7 +73,7 @@ export default function Publications() {
                   placeholder="Search by title, author, or venue..."
                   value={search}
                   onChange={e => setSearch(e.target.value)}
-                  className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-carolina-blue focus:border-transparent transition-all duration-300"
+                  className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-unc-navy focus:border-transparent transition-all duration-300"
                 />
               </div>
 
@@ -86,7 +86,7 @@ export default function Publications() {
                   id="tag-filter"
                   value={selectedTag}
                   onChange={e => setSelectedTag(e.target.value)}
-                  className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-carolina-blue focus:border-transparent transition-all duration-300"
+                  className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-unc-navy focus:border-transparent transition-all duration-300"
                 >
                   <option value="All">All Categories</option>
                   {allTags.map(tag => (
@@ -99,7 +99,7 @@ export default function Publications() {
             {/* Results count */}
             <div className="mt-4 text-center">
               <p className="text-neutral-600">
-                Showing <span className="font-semibold text-carolina-blue">{filteredPubs.length}</span> publications
+                Showing <span className="font-semibold text-unc-navy">{filteredPubs.length}</span> publications
               </p>
             </div>
           </section>
@@ -109,7 +109,7 @@ export default function Publications() {
             {pubsByYear.map(({ year, pubs }) =>
               pubs.length > 0 ? (
                 <section key={year} className="section-card">
-                  <h2 className="text-3xl font-bold text-unc-navy mb-8 border-b-2 border-carolina-blue pb-4">
+                  <h2 className="text-3xl font-bold text-unc-navy mb-8 border-b-2 border-unc-navy pb-4">
                     {year}
                   </h2>
                   <div className="grid gap-8">
@@ -121,7 +121,7 @@ export default function Publications() {
                       >
                         <div className="flex flex-col md:flex-row gap-6 items-start">
                           <div className="flex-shrink-0 relative">
-                            <div className="relative overflow-hidden rounded-lg border-2 border-carolina-blue/20 group-hover:border-carolina-blue transition-colors duration-500">
+                            <div className="relative overflow-hidden rounded-lg border-2 border-unc-navy/20 group-hover:border-unc-navy transition-colors duration-500">
                               <Image 
                                 src={pub.image && pub.image.trim() !== "" ? pub.image : "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"} 
                                 alt={pub.title} 
@@ -134,7 +134,7 @@ export default function Publications() {
                                 }}
                               />
                               {/* Subtle overlay on hover */}
-                              <div className="absolute inset-0 bg-carolina-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
+                              <div className="absolute inset-0 bg-unc-navy/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
                             </div>
                             {/* Floating publication type badge */}
                             <div className="absolute -top-2 -left-2 bg-unc-navy text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-75">
@@ -142,13 +142,13 @@ export default function Publications() {
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-xl font-bold text-unc-navy mb-3 group-hover:text-carolina-blue transition-colors duration-300 leading-tight">
+                            <h3 className="text-xl font-bold text-unc-navy mb-3 group-hover:text-dome-copper transition-colors duration-300 leading-tight">
                               {pub.title}
                             </h3>
                             <p className="text-neutral-600 mb-2 group-hover:text-neutral-700 transition-colors duration-300 font-medium">
                               {pub.authors}
                             </p>
-                            <p className="text-carolina-blue font-semibold mb-4 group-hover:text-unc-navy transition-colors duration-300">
+                            <p className="text-unc-navy font-semibold mb-4 group-hover:text-dome-copper transition-colors duration-300">
                               {pub.meta}
                             </p>
                             <div className="flex flex-wrap gap-2 mb-4">
