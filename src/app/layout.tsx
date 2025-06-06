@@ -138,14 +138,9 @@ export default function RootLayout({
                         {item.label}
                       </span>
                       
-                      {/* Sophisticated hover background */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-lg" />
-                      
                       {/* Enhanced animated underline */}
                       <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-white to-white/80 group-hover:w-4/5 group-hover:left-[10%] transition-all duration-500 ease-out" />
                       
-                      {/* Subtle glow effect */}
-                      <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg blur-sm" />
                     </Link>
                   </li>
                 ))}
