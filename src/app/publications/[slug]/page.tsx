@@ -59,9 +59,9 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
                     href={publication.link} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="btn-primary bg-white text-unc-navy hover:bg-dome-copper hover:text-white inline-flex items-center"
+                    className="btn-primary bg-white text-carolina-blue hover:bg-dome-copper hover:text-white inline-flex items-center"
                   >
-                    <svg className="w-6 h-6 mr-3 text-unc-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-6 h-6 mr-3 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                     View Full Publication
@@ -104,7 +104,7 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
               {/* Abstract/Description */}
               <section className="section-card">
                 <h2 className="section-title flex items-center">
-                  <svg className="w-6 h-6 mr-3 text-unc-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 mr-3 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   Abstract
@@ -119,7 +119,7 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
               {/* Key Contributions */}
               <section className="section-card">
                 <h2 className="section-title flex items-center">
-                  <svg className="w-6 h-6 mr-3 text-unc-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 mr-3 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   Key Contributions
@@ -190,7 +190,7 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
                       className="block p-3 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-dome-copper hover:bg-dome-copper-50 transition-all duration-300 group"
                     >
                       <div className="flex items-center">
-                        <svg className="w-5 h-5 text-unc-navy group-hover:text-dome-copper mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 text-carolina-blue group-hover:text-dome-copper mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-4-4m4 4l4-4m-4-8V2" />
                         </svg>
                         <span className="font-medium text-neutral-800 group-hover:text-dome-copper">PDF Download</span>
@@ -199,7 +199,7 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
                   )}
                   <div className="block p-3 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-dome-copper hover:bg-dome-copper-50 transition-all duration-300 group cursor-pointer">
                     <div className="flex items-center">
-                      <svg className="w-5 h-5 text-unc-navy group-hover:text-dome-copper mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-carolina-blue group-hover:text-dome-copper mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                       </svg>
                       <span className="font-medium text-neutral-800 group-hover:text-dome-copper">Source Code</span>
@@ -207,7 +207,7 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
                   </div>
                   <div className="block p-3 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-dome-copper hover:bg-dome-copper-50 transition-all duration-300 group cursor-pointer">
                     <div className="flex items-center">
-                      <svg className="w-5 h-5 text-unc-navy group-hover:text-dome-copper mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-carolina-blue group-hover:text-dome-copper mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 3v12a1 1 0 001 1h8a1 1 0 001-1V7M7 7h10M7 7L5 5m2 2v12" />
                       </svg>
                       <span className="font-medium text-neutral-800 group-hover:text-dome-copper">Supplemental Material</span>
@@ -229,7 +229,7 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
 }`}
                   </pre>
                 </div>
-                <button className="mt-3 text-sm text-unc-navy hover:text-dome-copper transition-colors duration-300 font-medium">
+                <button className="mt-3 text-sm text-carolina-blue hover:text-dome-copper transition-colors duration-300 font-medium">
                   Copy Citation
                 </button>
               </div>

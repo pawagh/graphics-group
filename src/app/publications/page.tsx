@@ -99,7 +99,7 @@ export default function Publications() {
             {/* Results count */}
             <div className="mt-4">
               <p className="text-neutral-600">
-                Showing <span className="font-semibold text-unc-navy">{filteredPubs.length}</span> publications
+                Showing <span className="font-semibold text-carolina-blue">{filteredPubs.length}</span> publications
               </p>
             </div>
           </section>
@@ -109,14 +109,14 @@ export default function Publications() {
             {pubsByYear.map(({ year, pubs }) =>
               pubs.length > 0 ? (
                 <section key={year} className="section-card">
-                  <h2 className="text-3xl font-bold text-unc-navy mb-8 border-b-2 border-unc-navy pb-4">
+                  <h2 className="text-3xl font-bold text-carolina-blue mb-8 border-b-2 border-carolina-blue pb-4">
                     {year}
                   </h2>
                   <div className="grid gap-8">
                     {pubs.map((pub, idx) => (
                       <div 
                         key={pub.title + idx} 
-                        className="p-6 group hover-lift magnetic-hover enhanced-shadow transition-all duration-500 stagger-item rounded-card bg-campus-sandstone-light border border-neutral-200"
+                        className="p-6 group hover-lift magnetic-hover enhanced-shadow transition-all duration-500 stagger-item rounded-card border border-neutral-200"
                         style={{ animationDelay: `${idx * 0.1}s` }}
                       >
                         <div className="flex flex-col md:flex-row gap-6 items-start">
@@ -142,13 +142,13 @@ export default function Publications() {
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-xl font-bold text-unc-navy mb-3 group-hover:text-dome-copper transition-colors duration-300 leading-tight">
+                            <h3 className="text-xl font-bold text-carolina-blue mb-3 group-hover:text-dome-copper transition-colors duration-300 leading-tight">
                               {pub.title}
                             </h3>
                             <p className="text-neutral-600 mb-2 group-hover:text-neutral-700 transition-colors duration-300 font-medium">
                               {pub.authors}
                             </p>
-                            <p className="text-unc-navy font-semibold mb-4 group-hover:text-dome-copper transition-colors duration-300">
+                            <p className="text-carolina-blue font-semibold mb-4 group-hover:text-dome-copper transition-colors duration-300">
                               {pub.meta}
                             </p>
                             <div className="flex flex-wrap gap-2 mb-4">
