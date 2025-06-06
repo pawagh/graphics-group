@@ -94,10 +94,10 @@ export default function People() {
                       </div>
                     </div>
                     <div className="flex-1 md:text-left">
-                      <h3 className="text-3xl font-bold text-unc-navy mb-3 group-hover:text-dome-copper transition-colors duration-300">
+                      <h3 className="text-3xl font-bold text-carolina-blue mb-3 group-hover:text-dome-copper transition-colors duration-300">
                         {assistantProfessor.name}
                       </h3>
-                      <p className="text-xl text-unc-navy font-semibold mb-4 group-hover:text-dome-copper transition-colors duration-300">
+                      <p className="text-xl text-carolina-blue font-semibold mb-4 group-hover:text-dome-copper transition-colors duration-300">
                         {assistantProfessor.role}
                       </p>
                       <p className="text-lg text-neutral-600 mb-6 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300">
@@ -105,7 +105,7 @@ export default function People() {
                       </p>
                       <button 
                         onClick={() => toggleDescription(assistantProfessor.name)}
-                        className="text-unc-navy hover:text-dome-copper transition-colors duration-300 mb-4 flex items-center gap-2"
+                        className="text-carolina-blue hover:text-dome-copper transition-colors duration-300 mb-4 flex items-center gap-2"
                       >
                         {expandedPerson === assistantProfessor.name ? 'Show Less' : 'Read More'}
                         <svg 
@@ -128,7 +128,7 @@ export default function People() {
                             href={assistantProfessor.website} 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="text-unc-navy hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
+                            className="text-carolina-blue hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
                             aria-label={`${assistantProfessor.name}'s website`}
                           >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -139,7 +139,7 @@ export default function People() {
                         {assistantProfessor.email && (
                           <a 
                             href={`mailto:${assistantProfessor.email}`} 
-                            className="text-unc-navy hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
+                            className="text-carolina-blue hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
                             aria-label={`Email ${assistantProfessor.name}`}
                           >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,10 +179,10 @@ export default function People() {
                       {person.role}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-unc-navy mb-2 group-hover:text-dome-copper transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-carolina-blue mb-2 group-hover:text-dome-copper transition-colors duration-300">
                     {person.name}
                   </h3>
-                  <p className="text-unc-navy font-semibold mb-3 group-hover:text-dome-copper transition-colors duration-300">
+                  <p className="text-carolina-blue font-semibold mb-3 group-hover:text-dome-copper transition-colors duration-300">
                     {person.role}
                   </p>
                   <p className="text-neutral-600 mb-4 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300">
@@ -190,7 +190,7 @@ export default function People() {
                   </p>
                   <button 
                     onClick={() => toggleDescription(person.name)}
-                    className="text-unc-navy hover:text-dome-copper transition-colors duration-300 mb-4 flex items-center gap-2 mx-auto"
+                    className="text-carolina-blue hover:text-dome-copper transition-colors duration-300 mb-4 flex items-center gap-2 mx-auto"
                   >
                     {expandedPerson === person.name ? 'Show Less' : 'Read More'}
                     <svg 
@@ -211,7 +211,7 @@ export default function People() {
                     {person.email && (
                       <a 
                         href={`mailto:${person.email}`} 
-                        className="text-unc-navy hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
+                        className="text-carolina-blue hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
                         aria-label={`Email ${person.name}`}
                       >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

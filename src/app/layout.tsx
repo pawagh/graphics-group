@@ -168,7 +168,7 @@ export default function RootLayout({
                 src="/old_well.png"
                 alt="UNC Old Well"
                 fill
-                className="object-cover object-bottom scale-[1.2]"
+                className="object-cover object-bottom scale-[1.2] -translate-y-3"
                 style={{ pointerEvents: "none" }}
                 priority={false}
               />
