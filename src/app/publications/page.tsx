@@ -75,10 +75,10 @@ export default function Publications() {
               <input
                 id="search"
                 type="text"
-                placeholder={`Showing ${filteredPubs.length} publications`}
+                placeholder={`Showing ${filteredPubs.length} publications — search by author, title, venue, or keywords`}
                 value={search}
                 onChange={e => setSearch(e.target.value)}
-                className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-unc-navy focus:border-transparent transition-all duration-300 bg-transparent"
+                className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-0 focus:border-neutral-300 transition-all duration-300 bg-transparent"
               />
             </div>
 
@@ -163,7 +163,7 @@ export default function Publications() {
                             <p className="text-carolina-blue font-semibold mb-4 transition-colors duration-300 group-hover:text-dome-copper">
                               {pub.meta}
                             </p>
-                            <div className="flex gap-4">
+                            <div className="flex gap-4 md:hidden">
                               <a 
                                 href={pub.link} 
                                 target="_blank" 
@@ -171,7 +171,7 @@ export default function Publications() {
                                 className="link-hover font-semibold flex items-center gap-2"
                                 onClick={(e) => e.stopPropagation()}
                               >
-                                Read Paper
+                                Read More
                                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>

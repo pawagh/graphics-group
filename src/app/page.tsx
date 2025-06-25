@@ -240,14 +240,14 @@ export default function Home() {
                 
                 {/* Highlight 1 */}
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-72 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
                       src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                       alt="Computational Imaging Research" 
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105" 
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent rounded-lg" />
                     {/* Caption overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-3">
                       <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
@@ -259,14 +259,14 @@ export default function Home() {
 
                 {/* Highlight 2 */}
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-72 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
                       src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                       alt="Award-Winning Research" 
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105" 
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent rounded-lg" />
                     {/* Caption overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-3">
                       <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
@@ -278,14 +278,14 @@ export default function Home() {
 
                 {/* Highlight 3 */}
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-72 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
                       src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                       alt="AR/VR Innovation" 
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105" 
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent rounded-lg" />
                     {/* Caption overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-3">
                       <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
@@ -297,14 +297,14 @@ export default function Home() {
 
                 {/* Highlight 4 */}
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-72 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
                       src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                       alt="Machine Learning Applications" 
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105" 
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent rounded-lg" />
                     {/* Caption overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-3">
                       <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
@@ -316,14 +316,14 @@ export default function Home() {
 
                 {/* Highlight 5 */}
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-72 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
                       src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                       alt="Nano-optics Research" 
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105" 
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent rounded-lg" />
                     {/* Caption overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-3">
                       <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
