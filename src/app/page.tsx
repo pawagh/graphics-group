@@ -1,22 +1,10 @@
 'use client'
 import './animations.css';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+
 import Link from 'next/link';
 
 export default function Home() {
-  const [visibleSections, setVisibleSections] = useState<number[]>([]);
-
-  useEffect(() => {
-    // Stagger the visibility of sections for enhanced reveal
-    const timeouts = [0, 800, 1600, 2400].map((delay, index) =>
-      setTimeout(() => {
-        setVisibleSections(prev => [...prev, index]);
-      }, delay)
-    );
-
-    return () => timeouts.forEach(clearTimeout);
-  }, []);
 
   return (
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
@@ -87,9 +75,7 @@ export default function Home() {
         <div className="flex-2 space-y-16">
 
           {/* Enhanced About Us section */}
-          <section className={`section-card transition-all duration-1000 ${
-            visibleSections.includes(0) ? 'scroll-reveal revealed' : 'scroll-reveal'
-          }`}>
+          <section className="section-card">
             <div className="flex flex-col items-center gap-8">
               <div className="flex-1">
                 <h2 className="section-title text-center text-carolina-blue text-reveal mb-8">ABOUT US</h2>
@@ -103,9 +89,7 @@ export default function Home() {
           </section>
 
           {/* Enhanced Featured Projects section */}
-          <section className={`section-card transition-all duration-1000 delay-300 ${
-            visibleSections.includes(1) ? 'scroll-reveal revealed' : 'scroll-reveal'
-          }`}>
+          <section className="section-card">
             <h2 className="section-title text-center text-carolina-blue text-reveal mb-12">PROJECTS</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
               
@@ -163,7 +147,7 @@ export default function Home() {
           </section>
 
           {/* Recent Awards & News section */}
-          <section className={`section-card transition-all duration-1000 delay-600 ${visibleSections.includes(2) ? 'scroll-reveal revealed' : 'scroll-reveal'}`}>
+          <section className="section-card">
             <h2 className="section-title text-center text-carolina-blue text-reveal mb-12">RECENT AWARDS & NEWS</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-20 max-w-5xl mx-auto">
               <ul className="list-disc list-inside space-y-4 text-neutral-700 text-lg">

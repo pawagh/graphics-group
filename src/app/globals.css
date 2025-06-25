@@ -142,16 +142,25 @@ select:focus {
 
 /* Button styles */
 .btn-primary {
-  @apply bg-white text-carolina-blue border-2 border-carolina-blue font-medium px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105;
+  @apply bg-white text-carolina-blue border-2 border-carolina-blue font-medium px-6 py-3 rounded-lg transition-all duration-300;
+  box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
   background: linear-gradient(135deg, #13294B 0%, #13294B 100%);
-  box-shadow: 0 8px 24px rgba(19, 41, 75, 0.4);
+  box-shadow: 0 20px 40px -10px rgba(19, 41, 75, 0.5), 0 15px 25px -5px rgba(0, 0, 0, 0.2);
+  @apply text-white;
 }
 
 .btn-secondary {
-  @apply bg-white text-unc-navy border-2 border-unc-navy font-medium px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105;
+  @apply bg-white text-unc-navy border-2 border-unc-navy font-medium px-6 py-3 rounded-lg transition-all duration-300;
+  box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #13294B 0%, #13294B 100%);
+  box-shadow: 0 20px 40px -10px rgba(19, 41, 75, 0.5), 0 15px 25px -5px rgba(0, 0, 0, 0.2);
+  @apply text-white border-unc-navy;
 }
 
 /* Link styles */
@@ -246,8 +255,8 @@ select:focus {
 
 .project-card:hover {
   @apply shadow-card-hover transform -translate-y-2;
-  background: linear-gradient(135deg, rgba(229, 231, 235, 0.9) 0%, rgba(243, 244, 246, 0.95) 100%);
-  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15), 0 8px 16px -4px rgba(75, 156, 211, 0.1);
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(241, 245, 249, 0.95) 100%);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 20px 20px -10px rgba(0, 0, 0, 0.15);
 }
 
 .project-card:hover .project-title {
@@ -410,6 +419,21 @@ h1, h2, h3, h4, h5, h6 {
 /* Enhanced card hover effects */
 .enhanced-card {
   @apply transition-all duration-500 transform hover:-translate-y-2;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.enhanced-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 20px 20px -10px rgba(0, 0, 0, 0.15);
+}
+
+/* Consistent card hover style for all cards */
+.card-hover-standard {
+  @apply transition-all duration-500 transform hover:-translate-y-2;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover-standard:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 20px 20px -10px rgba(0, 0, 0, 0.15);
 }
 
 /* Enhanced text hover effects */
@@ -424,7 +448,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Enhanced button hover effects */
 .button-hover {
-  @apply transition-all duration-300 transform hover:scale-105;
+  @apply transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+}
+
+/* Link hover effects with shadow */
+.link-hover {
+  @apply transition-all duration-300 hover:text-dome-copper transform hover:scale-105;
+}
+
+.link-hover:hover {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Enhanced gradient backgrounds */

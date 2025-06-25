@@ -114,10 +114,22 @@ export default function Publications() {
                   </h2>
                   <div className="grid gap-8">
                     {pubs.map((pub, idx) => (
-                      <div 
-                        key={pub.title + idx}
-                        className="group transition-all duration-300 stagger-item mb-4 bg-white border border-neutral-200 rounded-lg p-6 hover:shadow-lg cursor-pointer"
-                        style={{ animationDelay: `${idx * 0.1}s` }}
+                                              <div 
+                          key={pub.title + idx}
+                          className="group transition-all duration-300 stagger-item mb-4 bg-white border border-neutral-200 rounded-lg p-6 cursor-pointer transform hover:-translate-y-3"
+                          style={{
+                            boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+                            transition: 'all 0.3s ease',
+                            animationDelay: `${idx * 0.1}s`
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 20px 20px -10px rgba(0, 0, 0, 0.15)';
+                            e.currentTarget.style.backgroundColor = '#f8fafc';
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)';
+                            e.currentTarget.style.backgroundColor = '#ffffff';
+                          }}
                         onClick={() => window.location.href = `/publications/${pub.slug}`}
                       >
                         <div className="flex flex-col md:flex-row gap-6 items-start">
