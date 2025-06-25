@@ -124,7 +124,7 @@ export default function Home() {
                       </h3>
                     </div>
                     {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                    <div className="absolute inset-0 bg-unc-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
                       <p className="text-white text-center text-sm">
                         Latest advances in computational imaging techniques, pushing the boundaries of optical systems and image reconstruction algorithms.
                       </p>
@@ -149,7 +149,7 @@ export default function Home() {
                       </h3>
                     </div>
                     {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                    <div className="absolute inset-0 bg-unc-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
                       <p className="text-white text-center text-sm">
                         Recognition for outstanding contributions to visual computing and augmented intelligence research at top-tier conferences.
                       </p>
@@ -174,7 +174,7 @@ export default function Home() {
                       </h3>
                     </div>
                     {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                    <div className="absolute inset-0 bg-unc-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
                       <p className="text-white text-center text-sm">
                         Pioneering augmented and virtual reality technologies for next-generation immersive experiences and applications.
                       </p>
@@ -199,7 +199,7 @@ export default function Home() {
                       </h3>
                     </div>
                     {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                    <div className="absolute inset-0 bg-unc-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
                       <p className="text-white text-center text-sm">
                         Advanced machine learning algorithms powering intelligent visual computing systems and automated analysis.
                       </p>
@@ -224,7 +224,7 @@ export default function Home() {
                       </h3>
                     </div>
                     {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                    <div className="absolute inset-0 bg-unc-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
                       <p className="text-white text-center text-sm">
                         Cutting-edge research in nano-scale optical structures and metamaterials for advanced photonic applications.
                       </p>
@@ -249,7 +249,7 @@ export default function Home() {
                       </h3>
                     </div>
                     {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                    <div className="absolute inset-0 bg-unc-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
                       <p className="text-white text-center text-sm">
                         Interdisciplinary partnerships fostering innovation across visual computing, optics, and artificial intelligence domains.
                       </p>
@@ -336,7 +336,7 @@ export default function Home() {
                       </h3>
                     </div>
                     {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                    <div className="absolute inset-0 bg-unc-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
                       <p className="text-white text-center text-sm">
                         Breakthrough in nano-optics, overcoming bandwidth limits for large aperture broadband metalenses with revolutionary optical designs.
                       </p>
@@ -363,7 +363,7 @@ export default function Home() {
                       </h3>
                     </div>
                     {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                    <div className="absolute inset-0 bg-unc-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
                       <p className="text-white text-center text-sm">
                         Novel 3D Gaussian Splatting technique for flexible depth-of-field control in computational photography applications.
                       </p>
@@ -390,7 +390,7 @@ export default function Home() {
                       </h3>
                     </div>
                     {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                    <div className="absolute inset-0 bg-unc-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
                       <p className="text-white text-center text-sm">
                         Pioneering event-based light field capture for high-speed, high-resolution, and high-dynamic-range imaging systems.
                       </p>
@@ -417,7 +417,7 @@ export default function Home() {
                       </h3>
                     </div>
                     {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                    <div className="absolute inset-0 bg-unc-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
                       <p className="text-white text-center text-sm">
                         Cutting-edge machine learning algorithms for enhanced visual computing and intelligent systems.
                       </p>
@@ -444,7 +444,7 @@ export default function Home() {
                       </h3>
                     </div>
                     {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                    <div className="absolute inset-0 bg-unc-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
                       <p className="text-white text-center text-sm">
                         Revolutionary optical computing architectures for next-generation visual processing systems.
                       </p>
@@ -471,7 +471,7 @@ export default function Home() {
                       </h3>
                     </div>
                     {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                    <div className="absolute inset-0 bg-unc-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
                       <p className="text-white text-center text-sm">
                         Breakthrough augmented and virtual reality technologies for immersive experiences.
                       </p>
