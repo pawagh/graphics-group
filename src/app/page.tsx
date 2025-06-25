@@ -75,7 +75,7 @@ export default function Home() {
         <div className="flex-2 space-y-16">
 
           {/* Enhanced About Us section */}
-          <section className="section-card">
+          <section className="section-card unc-shadow-hover">
             <div className="flex flex-col items-center gap-8">
               <div className="flex-1">
                 <h2 className="section-title text-center text-carolina-blue text-reveal mb-8">ABOUT US</h2>
@@ -89,77 +89,146 @@ export default function Home() {
           </section>
 
           {/* Enhanced Featured Projects section */}
-          <section className="section-card">
+          <section className="section-card unc-shadow-hover">
             <h2 className="section-title text-center text-carolina-blue text-reveal mb-12">PROJECTS</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
               
               {/* Project 1 with enhanced interactions */}
-              <Link href="https://www.nature.com/articles/s41467-025-58208-4" target="_blank" className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer block">
-                <Image 
-                  src="https://www.cs.unc.edu/~cpk/data/thumbnails/1cm-metalens.PNG" 
-                  alt="Beating bandwidth limits for large aperture broadband nano-optics" 
-                  width={128}
-                  height={128}
-                  className="object-cover rounded mb-6 transition-transform duration-300 group-hover:scale-105" 
-                />
-                <h3 className="text-xl font-bold mb-4 text-carolina-blue text-center project-title transition-all duration-300">
+              <Link href="https://www.nature.com/articles/s41467-025-58208-4" target="_blank" className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer block unc-shadow-hover transform hover:scale-105 flex flex-col h-full"
+                style={{
+                  boxShadow: '0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1)',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 20px 40px -8px rgba(19, 41, 75, 0.4), 0 15px 25px -5px rgba(19, 41, 75, 0.3), 0 8px 15px -3px rgba(19, 41, 75, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1)';
+                }}
+              >
+                <div className="w-32 h-32 mx-auto mb-6 relative overflow-hidden rounded">
+                  <Image 
+                    src="https://www.cs.unc.edu/~cpk/data/thumbnails/1cm-metalens.PNG" 
+                    alt="Beating bandwidth limits for large aperture broadband nano-optics" 
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110" 
+                  />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-carolina-blue text-center project-title transition-all duration-300 group-hover:text-unc-navy group-hover:scale-105 min-h-[4rem] flex items-center justify-center">
                   Beating bandwidth limits for large aperture broadband nano-optics
                 </h3>
-                <p className="text-neutral-700 mb-2 flex-1 transition-colors duration-300">
+                <p className="text-neutral-700 mb-2 flex-1 transition-all duration-300 group-hover:text-unc-navy group-hover:scale-102 text-center">
                   Breakthrough in nano-optics, overcoming bandwidth limits for large aperture broadband metalenses with revolutionary optical designs.
                 </p>
               </Link>
 
               {/* Project 2 with enhanced interactions */}
-              <Link href="https://arxiv.org/abs/2405.17351" target="_blank" className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer block">
-                <Image 
-                  src="https://www.cs.unc.edu/~cpk/data/thumbnails/dof-gs.PNG" 
-                  alt="DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting" 
-                  width={128}
-                  height={128}
-                  className="object-cover rounded mb-6 transition-transform duration-300 group-hover:scale-105" 
-                />
-                <h3 className="text-xl font-bold mb-4 text-carolina-blue text-center project-title transition-all duration-300">
+              <Link href="https://arxiv.org/abs/2405.17351" target="_blank" className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer block unc-shadow-hover transform hover:scale-105 flex flex-col h-full"
+                style={{
+                  boxShadow: '0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1)',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 20px 40px -8px rgba(19, 41, 75, 0.4), 0 15px 25px -5px rgba(19, 41, 75, 0.3), 0 8px 15px -3px rgba(19, 41, 75, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1)';
+                }}
+              >
+                <div className="w-32 h-32 mx-auto mb-6 relative overflow-hidden rounded">
+                  <Image 
+                    src="https://www.cs.unc.edu/~cpk/data/thumbnails/dof-gs.PNG" 
+                    alt="DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting" 
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110" 
+                  />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-carolina-blue text-center project-title transition-all duration-300 group-hover:text-unc-navy group-hover:scale-105 min-h-[4rem] flex items-center justify-center">
                   DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting
                 </h3>
-                <p className="text-neutral-700 mb-2 flex-1 transition-colors duration-300">
+                <p className="text-neutral-700 mb-2 flex-1 transition-all duration-300 group-hover:text-unc-navy group-hover:scale-102 text-center">
                   Novel 3D Gaussian Splatting technique for flexible depth-of-field control in computational photography applications.
                 </p>
               </Link>
 
               {/* Project 3 with enhanced interactions */}
-              <Link href="https://arxiv.org/abs/2412.06191" target="_blank" className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer block">
-                <Image 
-                  src="https://www.cs.unc.edu/~cpk/data/thumbnails/eventfield.png" 
-                  alt="Event fields: Capturing light fields at high speed, resolution, and dynamic range" 
-                  width={128}
-                  height={128}
-                  className="object-cover rounded mb-6 transition-transform duration-300 group-hover:scale-105" 
-                />
-                <h3 className="text-xl font-bold mb-4 text-carolina-blue text-center project-title transition-all duration-300">
+              <Link href="https://arxiv.org/abs/2412.06191" target="_blank" className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer block unc-shadow-hover transform hover:scale-105 flex flex-col h-full"
+                style={{
+                  boxShadow: '0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1)',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 20px 40px -8px rgba(19, 41, 75, 0.4), 0 15px 25px -5px rgba(19, 41, 75, 0.3), 0 8px 15px -3px rgba(19, 41, 75, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1)';
+                }}
+              >
+                <div className="w-32 h-32 mx-auto mb-6 relative overflow-hidden rounded">
+                  <Image 
+                    src="https://www.cs.unc.edu/~cpk/data/thumbnails/eventfield.png" 
+                    alt="Event fields: Capturing light fields at high speed, resolution, and dynamic range" 
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110" 
+                  />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-carolina-blue text-center project-title transition-all duration-300 group-hover:text-unc-navy group-hover:scale-105 min-h-[4rem] flex items-center justify-center">
                   Event fields: Capturing light fields at high speed, resolution, and dynamic range
                 </h3>
-                <p className="text-neutral-700 mb-2 flex-1 transition-colors duration-300">
+                <p className="text-neutral-700 mb-2 flex-1 transition-all duration-300 group-hover:text-unc-navy group-hover:scale-102 text-center">
                   Pioneering event-based light field capture for high-speed, high-resolution, and high-dynamic-range imaging systems.
                 </p>
               </Link>
             </div>
           </section>
 
-          {/* Recent Awards & News section */}
-          <section className="section-card">
-            <h2 className="section-title text-center text-carolina-blue text-reveal mb-12">RECENT AWARDS & NEWS</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-20 max-w-5xl mx-auto">
-              <ul className="list-disc list-inside space-y-4 text-neutral-700 text-lg">
-                <li><span className="font-semibold text-carolina-blue">Best Paper Award</span> at GMCV & WACV 2025 for &ldquo;FlatTrack: Eye-tracking with ultra-thin lensless cameras&rdquo;</li>
-                <li><span className="font-semibold text-carolina-blue">CVPR 2025</span>: &ldquo;DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting&rdquo; accepted</li>
-                <li><span className="font-semibold text-carolina-blue">Nature Communications 2025</span>: &ldquo;Beating bandwidth limits for large aperture broadband nano-optics&rdquo; published</li>
-              </ul>
-              <ul className="list-disc list-inside space-y-4 text-neutral-700 text-lg">
-                <li><span className="font-semibold text-carolina-blue">Science Advances 2024</span>: &ldquo;Spatially Varying Nanophotonic Neural Networks&rdquo; published</li>
-                <li><span className="font-semibold text-carolina-blue">Best Paper Award</span> at OmniCV & CVPR 2024 for &ldquo;Cross-Domain Synthetic-to-Real In-the-Wild Depth and Normal Estimation&rdquo;</li>
-                <li><span className="font-semibold text-carolina-blue">SIGGRAPH Asia 2024</span>: &ldquo;End-to-End Hybrid Refractive-Diffractive Lens Design&rdquo; accepted</li>
-              </ul>
+          {/* Highlights section */}
+          <section className="section-card unc-shadow-hover">
+            <h2 className="section-title text-center text-carolina-blue text-reveal mb-12">HIGHLIGHTS</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              
+              {/* Highlight 1 */}
+              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover">
+                <div className="relative h-80 overflow-hidden">
+                  <Image 
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    alt="Computational Imaging Research" 
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/60 via-transparent to-transparent" />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-xl font-bold text-carolina-blue mb-2 group-hover:text-dome-copper transition-colors duration-300">
+                    Computational Imaging Breakthroughs
+                  </h3>
+                  <p className="text-neutral-600 text-sm group-hover:text-neutral-700 transition-colors duration-300">
+                    Pioneering next-generation imaging systems and nanophotonic neural networks.
+                  </p>
+                </div>
+              </div>
+
+              {/* Highlight 2 */}
+              <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover">
+                <div className="relative h-80 overflow-hidden">
+                  <Image 
+                    src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    alt="Award-Winning Research" 
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/60 via-transparent to-transparent" />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-xl font-bold text-carolina-blue mb-2 group-hover:text-dome-copper transition-colors duration-300">
+                    Award-Winning Research
+                  </h3>
+                  <p className="text-neutral-600 text-sm group-hover:text-neutral-700 transition-colors duration-300">
+                    Recognition at top venues including Best Paper Awards and Nature publications.
+                  </p>
+                </div>
+              </div>
+
             </div>
           </section>
 

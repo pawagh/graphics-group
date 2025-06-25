@@ -56,7 +56,7 @@ export default function Teaching() {
               {courses.map((course, index) => (
                                   <div 
                     key={course.title} 
-                    className="bg-white rounded-lg p-8 transition-all duration-500 stagger-item group transform hover:-translate-y-3 border-t-4 border-t-unc-navy hover:border-t-dome-copper"
+                    className="bg-white rounded-lg p-8 transition-all duration-500 stagger-item group transform hover:-translate-y-3 border-t-4 border-t-unc-navy hover:border-t-dome-copper unc-shadow-hover"
                     style={{
                       boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
                       transition: 'all 0.5s ease',
