@@ -112,11 +112,11 @@ export default function Publications() {
                   <h2 className="text-3xl font-bold text-carolina-blue mb-8 border-b-2 border-carolina-blue pb-4">
                     {year}
                   </h2>
-                  <div className="grid gap-8">
+                  <div className="grid gap-4">
                     {pubs.map((pub, idx) => (
                                               <div 
                           key={pub.title + idx}
-                          className="group transition-all duration-300 stagger-item mb-4 bg-white border border-neutral-200 rounded-lg p-6 cursor-pointer transform hover:-translate-y-3"
+                          className="group transition-all duration-300 stagger-item mb-2 bg-white border border-neutral-200 rounded-lg p-6 cursor-pointer transform hover:-translate-y-3"
                           style={{
                             boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
                             transition: 'all 0.3s ease',
