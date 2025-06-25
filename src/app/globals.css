@@ -499,3 +499,9 @@ h1, h2, h3, h4, h5, h6 {
 .section-title {
   @apply text-2xl font-bold text-carolina-blue mb-4;
 }
+
+/* UNC blue shadow on hover for main content cards */
+.unc-shadow-hover:hover {
+  box-shadow: 0 15px 35px -5px rgba(75, 156, 211, 0.3), 0 10px 20px -3px rgba(75, 156, 211, 0.2), 0 5px 10px -2px rgba(75, 156, 211, 0.15) !important;
+  transition: box-shadow 0.3s ease !important;
+}

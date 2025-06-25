@@ -116,7 +116,7 @@ export default function Publications() {
                     {pubs.map((pub, idx) => (
                                               <div 
                           key={pub.title + idx}
-                          className="group transition-all duration-300 stagger-item mb-2 bg-white border border-neutral-200 rounded-lg p-6 cursor-pointer transform hover:-translate-y-3"
+                          className="group transition-all duration-300 stagger-item mb-2 bg-white border border-neutral-200 rounded-lg p-6 md:cursor-pointer transform hover:-translate-y-3 unc-shadow-hover"
                           style={{
                             boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
                             transition: 'all 0.3s ease',
@@ -130,7 +130,12 @@ export default function Publications() {
                             e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)';
                             e.currentTarget.style.backgroundColor = '#ffffff';
                           }}
-                        onClick={() => window.location.href = `/publications/${pub.slug}`}
+                        onClick={() => {
+                          // Only make div clickable on desktop (md and up)
+                          if (window.innerWidth >= 768) {
+                            window.location.href = `/publications/${pub.slug}`;
+                          }
+                        }}
                       >
                         <div className="flex flex-col md:flex-row gap-6 items-start">
                           <div className="flex-shrink-0 relative">
