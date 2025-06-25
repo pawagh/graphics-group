@@ -160,7 +160,13 @@ export default function Publications() {
                             <p className="text-neutral-600 mb-2 transition-colors duration-300 font-medium">
                               {pub.authors}
                             </p>
-                            <p className="text-carolina-blue font-semibold mb-4 transition-colors duration-300 group-hover:text-dome-copper">
+                            <p className={`font-semibold mb-4 transition-colors duration-300 group-hover:text-dome-copper ${
+                              pub.meta.toLowerCase().includes('best paper') || 
+                              pub.meta.toLowerCase().includes('award') || 
+                              pub.meta.toLowerCase().includes('honorable mention')
+                                ? 'text-dome-copper' 
+                                : 'text-carolina-blue'
+                            }`}>
                               {pub.meta}
                             </p>
                             <div className="flex gap-4 md:hidden">
