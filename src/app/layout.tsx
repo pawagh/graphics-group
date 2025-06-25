@@ -299,7 +299,7 @@ export default function RootLayout({
             </div>
             
             {/* Copyright */}
-            <div className="relative z-10 text-center mt-8 pt-6 border-t border-white/30">
+            <div className="relative z-10 text-center mt-8 pt-4 border-t border-white/30">
               <p className="text-xs opacity-75">© 2025 Visual Computing and Augmented Intelligence Lab, UNC Chapel Hill</p>
             </div>
           </footer>
