@@ -34,7 +34,21 @@ export default function OpportunitiesPage() {
           <section className="section-card">
             <h2 className="section-title text-center">CURRENT OPENINGS</h2>
             <div className="max-w-4xl mx-auto">
-              <div className="bg-neutral-100 rounded-lg p-8 border border-neutral-200">
+              <div 
+                className="bg-white rounded-lg p-8 border border-neutral-200 transition-all duration-500 transform hover:-translate-y-3"
+                style={{
+                  boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+                  transition: 'all 0.5s ease'
+                }}
+                                 onMouseEnter={(e) => {
+                   e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 20px 20px -10px rgba(0, 0, 0, 0.15)';
+                   e.currentTarget.style.backgroundColor = '#f8fafc';
+                 }}
+                 onMouseLeave={(e) => {
+                   e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)';
+                   e.currentTarget.style.backgroundColor = '#ffffff';
+                 }}
+              >
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 bg-unc-navy/10 rounded-full flex items-center justify-center">
                     <svg className="w-8 h-8 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">

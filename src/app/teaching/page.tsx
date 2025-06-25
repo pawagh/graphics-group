@@ -55,12 +55,31 @@ export default function Teaching() {
             <h3 className="section-title text-center">COURSES</h3>
             <div className="space-y-8 max-w-4xl mx-auto">
               {courses.map((course, index) => (
-                <div 
-                  key={course.title} 
-                  className="card group p-8 enhanced-shadow transition-all duration-500 stagger-item"
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                                  <div 
+                    key={course.title} 
+                    className="bg-white rounded-lg p-8 transition-all duration-500 stagger-item group transform hover:-translate-y-3"
+                    style={{
+                      boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+                      transition: 'all 0.5s ease',
+                      animationDelay: `${index * 0.2}s`
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 20px 20px -10px rgba(0, 0, 0, 0.15)';
+                      e.currentTarget.style.backgroundColor = '#f8fafc';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)';
+                      e.currentTarget.style.backgroundColor = '#ffffff';
+                    }}
                 >
                   <div className="flex flex-col items-start space-y-6">
+                    {/* Thin Colored Banner */}
+                    <div className={`w-full h-2 rounded-full transition-all duration-300 ${
+                      course.color === 'carolina-blue' ? 'bg-carolina-blue group-hover:bg-dome-copper' : 
+                      course.color === 'unc-navy' ? 'bg-unc-navy group-hover:bg-dome-copper' : 
+                      'bg-carolina-blue group-hover:bg-dome-copper'
+                    }`} />
+                    
                     <div className="flex-1 text-center md:text-left w-full">
                       <h3 className="text-2xl font-bold text-unc-navy mb-3 transition-colors duration-300">
                         {course.title}

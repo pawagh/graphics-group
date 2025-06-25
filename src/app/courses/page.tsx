@@ -35,7 +35,7 @@ export default function Teaching() {
         />
       </div>
 
-      {/* Teaching Philosophy - Dome Copper translucent banner */}
+      {/* Course Philosophy - Campus Sandstone translucent banner */}
       <div className="w-full bg-campus-sandstone backdrop-blur-sm border-t-4 py-3 mb-8">
         <div className="max-w-7xl mx-auto px-4 md:px-12">
           <h2 className="text-2xl font-bold text-dome-copper text-center mb-3">COURSES</h2>
@@ -54,10 +54,22 @@ export default function Teaching() {
           <section>
             <div className="space-y-8 max-w-4xl mx-auto">
               {courses.map((course, index) => (
-                <div 
-                  key={course.title} 
-                  className="bg-white rounded-lg p-8 enhanced-shadow transition-all duration-500 stagger-item group"
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                                  <div 
+                    key={course.title} 
+                    className="bg-white rounded-lg p-8 transition-all duration-500 stagger-item group transform hover:-translate-y-3 border-t-4 border-t-unc-navy hover:border-t-dome-copper"
+                    style={{
+                      boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+                      transition: 'all 0.5s ease',
+                      animationDelay: `${index * 0.2}s`
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 20px 20px -10px rgba(0, 0, 0, 0.15)';
+                      e.currentTarget.style.backgroundColor = '#f8fafc';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)';
+                      e.currentTarget.style.backgroundColor = '#ffffff';
+                    }}
                 >
                   <div className="flex flex-col items-start space-y-6">
                     <div className="flex-1 md:text-left w-full">
@@ -73,7 +85,7 @@ export default function Teaching() {
                       <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <Link 
                           href={course.link} 
-                          className="btn-primary inline-flex items-center justify-center gap-2 spring-hover"
+                          className="btn-primary inline-flex items-center justify-center gap-2"
                         >
                           Course Details
                           <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
