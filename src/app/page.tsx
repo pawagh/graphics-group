@@ -94,7 +94,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
               
               {/* Project 1 with enhanced interactions */}
-              <Link href="https://www.nature.com/articles/s41467-025-58208-4" target="_blank" className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer block unc-shadow-hover transform hover:scale-105 flex flex-col h-full"
+              <div className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 unc-shadow-hover transform hover:scale-105 flex flex-col h-full md:cursor-pointer"
                 style={{
                   boxShadow: '0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1)',
                   transition: 'all 0.3s ease'
@@ -104,6 +104,11 @@ export default function Home() {
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.boxShadow = '0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1)';
+                }}
+                onClick={() => {
+                  if (window.innerWidth >= 768) {
+                    window.open('https://www.nature.com/articles/s41467-025-58208-4', '_blank');
+                  }
                 }}
               >
                 <div className="w-32 h-32 mx-auto mb-6 relative overflow-hidden rounded">
@@ -117,13 +122,24 @@ export default function Home() {
                 <h3 className="text-xl font-bold mb-4 text-carolina-blue text-center project-title transition-all duration-300 group-hover:text-unc-navy group-hover:scale-105 min-h-[4rem] flex items-center justify-center">
                   Beating bandwidth limits for large aperture broadband nano-optics
                 </h3>
-                <p className="text-neutral-700 mb-2 flex-1 transition-all duration-300 group-hover:text-unc-navy group-hover:scale-102 text-center">
+                <p className="text-neutral-700 mb-4 flex-1 transition-all duration-300 group-hover:text-unc-navy group-hover:scale-102 text-center">
                   Breakthrough in nano-optics, overcoming bandwidth limits for large aperture broadband metalenses with revolutionary optical designs.
                 </p>
-              </Link>
+                {/* Mobile-only Read More button */}
+                <div className="md:hidden flex justify-center">
+                  <a 
+                    href="https://www.nature.com/articles/s41467-025-58208-4" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-white text-carolina-blue border-2 border-carolina-blue font-medium px-3 py-1 rounded-lg transition-all duration-300 text-sm hover:bg-carolina-blue hover:text-white"
+                  >
+                    Read More
+                  </a>
+                </div>
+              </div>
 
               {/* Project 2 with enhanced interactions */}
-              <Link href="https://arxiv.org/abs/2405.17351" target="_blank" className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer block unc-shadow-hover transform hover:scale-105 flex flex-col h-full"
+              <div className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 unc-shadow-hover transform hover:scale-105 flex flex-col h-full md:cursor-pointer"
                 style={{
                   boxShadow: '0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1)',
                   transition: 'all 0.3s ease'
@@ -133,6 +149,11 @@ export default function Home() {
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.boxShadow = '0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1)';
+                }}
+                onClick={() => {
+                  if (window.innerWidth >= 768) {
+                    window.open('https://arxiv.org/abs/2405.17351', '_blank');
+                  }
                 }}
               >
                 <div className="w-32 h-32 mx-auto mb-6 relative overflow-hidden rounded">
@@ -146,13 +167,24 @@ export default function Home() {
                 <h3 className="text-xl font-bold mb-4 text-carolina-blue text-center project-title transition-all duration-300 group-hover:text-unc-navy group-hover:scale-105 min-h-[4rem] flex items-center justify-center">
                   DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting
                 </h3>
-                <p className="text-neutral-700 mb-2 flex-1 transition-all duration-300 group-hover:text-unc-navy group-hover:scale-102 text-center">
+                <p className="text-neutral-700 mb-4 flex-1 transition-all duration-300 group-hover:text-unc-navy group-hover:scale-102 text-center">
                   Novel 3D Gaussian Splatting technique for flexible depth-of-field control in computational photography applications.
                 </p>
-              </Link>
+                {/* Mobile-only Read More button */}
+                <div className="md:hidden flex justify-center">
+                  <a 
+                    href="https://arxiv.org/abs/2405.17351" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-white text-carolina-blue border-2 border-carolina-blue font-medium px-3 py-1 rounded-lg transition-all duration-300 text-sm hover:bg-carolina-blue hover:text-white"
+                  >
+                    Read More
+                  </a>
+                </div>
+              </div>
 
               {/* Project 3 with enhanced interactions */}
-              <Link href="https://arxiv.org/abs/2412.06191" target="_blank" className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer block unc-shadow-hover transform hover:scale-105 flex flex-col h-full"
+              <div className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 unc-shadow-hover transform hover:scale-105 flex flex-col h-full md:cursor-pointer"
                 style={{
                   boxShadow: '0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1)',
                   transition: 'all 0.3s ease'
@@ -162,6 +194,11 @@ export default function Home() {
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.boxShadow = '0 8px 20px -5px rgba(0, 0, 0, 0.15), 0 6px 10px -5px rgba(0, 0, 0, 0.1)';
+                }}
+                onClick={() => {
+                  if (window.innerWidth >= 768) {
+                    window.open('https://arxiv.org/abs/2412.06191', '_blank');
+                  }
                 }}
               >
                 <div className="w-32 h-32 mx-auto mb-6 relative overflow-hidden rounded">
@@ -175,10 +212,21 @@ export default function Home() {
                 <h3 className="text-xl font-bold mb-4 text-carolina-blue text-center project-title transition-all duration-300 group-hover:text-unc-navy group-hover:scale-105 min-h-[4rem] flex items-center justify-center">
                   Event fields: Capturing light fields at high speed, resolution, and dynamic range
                 </h3>
-                <p className="text-neutral-700 mb-2 flex-1 transition-all duration-300 group-hover:text-unc-navy group-hover:scale-102 text-center">
+                <p className="text-neutral-700 mb-4 flex-1 transition-all duration-300 group-hover:text-unc-navy group-hover:scale-102 text-center">
                   Pioneering event-based light field capture for high-speed, high-resolution, and high-dynamic-range imaging systems.
                 </p>
-              </Link>
+                {/* Mobile-only Read More button */}
+                <div className="md:hidden flex justify-center">
+                  <a 
+                    href="https://arxiv.org/abs/2412.06191" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-white text-carolina-blue border-2 border-carolina-blue font-medium px-3 py-1 rounded-lg transition-all duration-300 text-sm hover:bg-carolina-blue hover:text-white"
+                  >
+                    Read More
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -192,106 +240,96 @@ export default function Home() {
                 
                 {/* Highlight 1 */}
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden">
                     <Image 
                       src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                       alt="Computational Imaging Research" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/60 via-transparent to-transparent" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-bold text-carolina-blue mb-2 group-hover:text-unc-navy transition-colors duration-300">
-                      Computational Imaging Breakthroughs
-                    </h3>
-                    <p className="text-neutral-600 text-sm group-hover:text-neutral-700 transition-colors duration-300">
-                      Pioneering next-generation imaging systems and nanophotonic neural networks.
-                    </p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent" />
+                    {/* Caption overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
+                        Computational Imaging Breakthroughs
+                      </h3>
+                    </div>
                   </div>
                 </div>
 
                 {/* Highlight 2 */}
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden">
                     <Image 
                       src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                       alt="Award-Winning Research" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/60 via-transparent to-transparent" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-bold text-carolina-blue mb-2 group-hover:text-unc-navy transition-colors duration-300">
-                      Award-Winning Research
-                    </h3>
-                    <p className="text-neutral-600 text-sm group-hover:text-neutral-700 transition-colors duration-300">
-                      Recognition at top venues including Best Paper Awards and Nature publications.
-                    </p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent" />
+                    {/* Caption overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
+                        Award-Winning Research
+                      </h3>
+                    </div>
                   </div>
                 </div>
 
                 {/* Highlight 3 */}
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden">
                     <Image 
                       src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                       alt="AR/VR Innovation" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/60 via-transparent to-transparent" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-bold text-carolina-blue mb-2 group-hover:text-unc-navy transition-colors duration-300">
-                      AR/VR Innovation
-                    </h3>
-                    <p className="text-neutral-600 text-sm group-hover:text-neutral-700 transition-colors duration-300">
-                      Advanced augmented and virtual reality systems with novel display technologies.
-                    </p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent" />
+                    {/* Caption overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
+                        AR/VR Innovation
+                      </h3>
+                    </div>
                   </div>
                 </div>
 
                 {/* Highlight 4 */}
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden">
                     <Image 
                       src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                       alt="Machine Learning Applications" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/60 via-transparent to-transparent" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-bold text-carolina-blue mb-2 group-hover:text-unc-navy transition-colors duration-300">
-                      AI-Driven Solutions
-                    </h3>
-                    <p className="text-neutral-600 text-sm group-hover:text-neutral-700 transition-colors duration-300">
-                      Machine learning applications in computer vision and augmented intelligence.
-                    </p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent" />
+                    {/* Caption overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
+                        AI-Driven Solutions
+                      </h3>
+                    </div>
                   </div>
                 </div>
 
                 {/* Highlight 5 */}
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden">
                     <Image 
                       src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                       alt="Nano-optics Research" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/60 via-transparent to-transparent" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-bold text-carolina-blue mb-2 group-hover:text-unc-navy transition-colors duration-300">
-                      Nano-optics Research
-                    </h3>
-                    <p className="text-neutral-600 text-sm group-hover:text-neutral-700 transition-colors duration-300">
-                      Revolutionary metalenses and broadband nano-optical devices for next-gen systems.
-                    </p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent" />
+                    {/* Caption overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
+                        Nano-optics Research
+                      </h3>
+                    </div>
                   </div>
                 </div>
 
