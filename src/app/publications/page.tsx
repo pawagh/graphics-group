@@ -188,18 +188,28 @@ export default function Publications() {
                             <h3 className="text-xl font-bold text-carolina-blue mb-3 transition-colors duration-300 leading-tight">
                               {pub.title}
                             </h3>
-                            <p className="text-neutral-600 mb-2 transition-colors duration-300 font-medium">
-                              {pub.authors}
-                            </p>
-                            <p className={`font-semibold mb-4 transition-colors duration-300 ${
+                            <p className={`mb-2 transition-colors duration-300 font-medium ${
                               pub.meta.toLowerCase().includes('best paper') || 
                               pub.meta.toLowerCase().includes('award') || 
                               pub.meta.toLowerCase().includes('honorable mention')
-                                ? 'text-carolina-blue group-hover:text-carolina-blue' 
+                                ? 'text-neutral-600 group-hover:text-unc-navy'
+                                : 'text-neutral-600'
+                            }`}>
+                              {pub.authors}
+                            </p>
+                            <div className={`font-semibold mb-4 transition-colors duration-300 ${
+                              pub.meta.toLowerCase().includes('best paper') || 
+                              pub.meta.toLowerCase().includes('award') || 
+                              pub.meta.toLowerCase().includes('honorable mention')
+                                ? 'text-carolina-blue group-hover:text-unc-navy' 
                                 : 'text-carolina-blue group-hover:text-dome-copper'
                             }`}>
-                              {pub.meta}
-                            </p>
+                              {pub.meta.split(',').map((part, index) => (
+                                <div key={index} className="leading-tight">
+                                  {part.trim()}
+                                </div>
+                              ))}
+                            </div>
                             <div className="flex gap-4 md:hidden">
                               <a 
                                 href={pub.link} 
