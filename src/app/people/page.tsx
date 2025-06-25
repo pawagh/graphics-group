@@ -23,6 +23,7 @@ export default function People() {
       bio: "Acoustic fields, neural rendering, VR/AR audio",
       description: "Xi's research focuses on the intersection of acoustic field synthesis and virtual reality. Their work explores novel methods for creating immersive audio experiences and developing more realistic sound propagation models for virtual environments.",
       email: "xipeng@cs.unc.edu",
+      website: "https://example.com/xipeng",
     },
     {
       name: "Zihao Zou",
@@ -31,6 +32,7 @@ export default function People() {
       bio: "Event cameras, computational photography, computer vision",
       description: "Zihao specializes in event-based vision and computational photography. Their research aims to push the boundaries of high-speed imaging and develop novel algorithms for processing event camera data in real-world applications.",
       email: "zihaozou@cs.unc.edu",
+      website: "https://example.com/zihaozou",
     },
     {
       name: "Hengyu Lian",
@@ -39,6 +41,7 @@ export default function People() {
       bio: "Holography, computational optics, display technology",
       description: "Hengyu's research centers on advancing holographic display technology. They work on developing novel algorithms and optical designs for next-generation 3D displays and computational imaging systems.",
       email: "Lianhy0@cs.unc.edu",
+      website: "https://example.com/hengyulian",
     },
   ];
 
@@ -81,54 +84,52 @@ export default function People() {
           {assistantProfessor && (
             <section className="section-card">
               <div className="max-w-4xl mx-auto">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 p-8 group hover:bg-slate-50 unc-shadow-hover">
-                  <div className="flex flex-col md:flex-row items-center gap-8">
-                    <div className="flex-shrink-0">
-                      <div className="w-48 h-48 relative overflow-hidden rounded-full transition-colors duration-500">
-                        <Image 
-                          src={assistantProfessor.image} 
-                          alt={assistantProfessor.name} 
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-105" 
-                        />
-                        </div>
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  <div className="flex-shrink-0">
+                    <div className="w-48 h-48 relative overflow-hidden rounded-full">
+                      <Image 
+                        src={assistantProfessor.image} 
+                        alt={assistantProfessor.name} 
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105" 
+                      />
                     </div>
-                    <div className="flex-1 md:text-left">
-                      <h3 className="text-3xl font-bold text-carolina-blue mb-3 transition-colors duration-300">
-                        {assistantProfessor.name}
-                      </h3>
-                      <p className="text-xl text-carolina-blue font-semibold mb-4 transition-colors duration-300">
-                        {assistantProfessor.role}
-                      </p>
-                      <p className="text-lg text-neutral-600 mb-6 leading-relaxed transition-colors duration-300">
-                        {assistantProfessor.bio}
-                      </p>
-                      <div className="flex justify-center md:justify-start space-x-6">
-                        {assistantProfessor.website && (
-                          <a 
-                            href={assistantProfessor.website} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="text-carolina-blue transition-all duration-300 transform hover:scale-125 spring-hover"
-                            aria-label={`${assistantProfessor.name}'s website`}
-                          >
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                          </a>
-                        )}
-                        {assistantProfessor.email && (
-                          <a 
-                            href={`mailto:${assistantProfessor.email}`} 
-                            className="text-carolina-blue transition-all duration-300 transform hover:scale-125 spring-hover"
-                            aria-label={`Email ${assistantProfessor.name}`}
-                          >
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
-                          </a>
-                        )}
-                        </div>
+                  </div>
+                  <div className="flex-1 md:text-left">
+                    <h3 className="text-3xl font-bold text-carolina-blue mb-3 transition-colors duration-300">
+                      {assistantProfessor.name}
+                    </h3>
+                    <p className="text-xl text-carolina-blue font-semibold mb-4 transition-colors duration-300 group-hover:text-dome-copper">
+                      {assistantProfessor.role}
+                    </p>
+                    <p className="text-lg text-neutral-600 mb-6 leading-relaxed transition-colors duration-300">
+                      {assistantProfessor.bio}
+                    </p>
+                    <div className="flex justify-center md:justify-start space-x-6">
+                      {assistantProfessor.website && (
+                        <a 
+                          href={assistantProfessor.website} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-carolina-blue transition-all duration-300 transform hover:scale-125 spring-hover"
+                          aria-label={`${assistantProfessor.name}'s website`}
+                        >
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      )}
+                      {assistantProfessor.email && (
+                        <a 
+                          href={`mailto:${assistantProfessor.email}`} 
+                          className="text-carolina-blue transition-all duration-300 transform hover:scale-125 spring-hover"
+                          aria-label={`Email ${assistantProfessor.name}`}
+                        >
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          </svg>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -159,7 +160,7 @@ export default function People() {
                   <h3 className="text-xl font-bold text-carolina-blue mb-2 transition-colors duration-300 text-center">
                     {person.name}
                   </h3>
-                  <p className="text-carolina-blue font-semibold mb-3 transition-colors duration-300 text-center">
+                  <p className="text-carolina-blue font-semibold mb-3 transition-colors duration-300 text-center group-hover:text-dome-copper">
                     {person.role}
                   </p>
                   <p className="text-neutral-600 mb-4 leading-relaxed transition-colors duration-300 text-left">
@@ -185,6 +186,19 @@ export default function People() {
                     </p>
                   )}
                   <div className="flex justify-start space-x-4 pt-4 border-t border-neutral-200 transition-colors duration-300">
+                    {person.website && (
+                      <a 
+                        href={person.website} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-carolina-blue transition-all duration-300 transform hover:scale-125 spring-hover"
+                        aria-label={`${person.name}'s website`}
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    )}
                     {person.email && (
                       <a 
                         href={`mailto:${person.email}`} 
@@ -202,7 +216,7 @@ export default function People() {
             </div>
           </section>
         </div>
-            </div>
-        </div>
-    );
+      </div>
+    </div>
+  );
 }
