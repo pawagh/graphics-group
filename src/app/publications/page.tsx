@@ -197,18 +197,31 @@ export default function Publications() {
                             }`}>
                               {pub.authors}
                             </p>
-                            <div className={`font-semibold mb-4 transition-colors duration-300 ${
-                              pub.meta.toLowerCase().includes('best paper') || 
-                              pub.meta.toLowerCase().includes('award') || 
-                              pub.meta.toLowerCase().includes('honorable mention')
-                                ? 'text-carolina-blue group-hover:text-unc-navy' 
-                                : 'text-carolina-blue group-hover:text-dome-copper'
-                            }`}>
-                              {pub.meta.split(',').map((part, index) => (
-                                <div key={index} className="leading-tight">
-                                  {part.trim()}
-                                </div>
-                              ))}
+                            <div className="font-semibold mb-4 transition-colors duration-300">
+                              {pub.meta.split(',').map((part, index) => {
+                                const trimmedPart = part.trim();
+                                const isAwardPart = trimmedPart.toLowerCase().includes('best paper') || 
+                                                   trimmedPart.toLowerCase().includes('award') || 
+                                                   trimmedPart.toLowerCase().includes('honorable mention');
+                                const isAwardPaper = pub.meta.toLowerCase().includes('best paper') || 
+                                                    pub.meta.toLowerCase().includes('award') || 
+                                                    pub.meta.toLowerCase().includes('honorable mention');
+                                
+                                return (
+                                  <div 
+                                    key={index} 
+                                    className={`leading-tight ${index > 0 ? 'mt-1' : ''} ${
+                                      isAwardPaper && isAwardPart 
+                                        ? 'text-carolina-blue group-hover:text-unc-navy'
+                                        : isAwardPaper 
+                                          ? 'text-carolina-blue group-hover:text-carolina-blue'
+                                          : 'text-carolina-blue group-hover:text-dome-copper'
+                                    }`}
+                                  >
+                                    {trimmedPart}
+                                  </div>
+                                );
+                              })}
                             </div>
                             <div className="flex gap-4 md:hidden">
                               <a 
