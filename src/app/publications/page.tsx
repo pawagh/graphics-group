@@ -19,13 +19,29 @@ export default function Publications() {
     )))
   );
 
+  // Add Award Winning Papers as a special category
+  const specialCategories = ['Award Winning Papers'];
+
 
 
   const [selectedTag, setSelectedTag] = useState<string>('All');
   const [search, setSearch] = useState<string>('');
 
   const filteredPubs = publications.filter(pub => {
-    const matchesTag = selectedTag === 'All' || pub.tags.includes(selectedTag);
+    let matchesTag;
+    
+    if (selectedTag === 'All') {
+      matchesTag = true;
+    } else if (selectedTag === 'Award Winning Papers') {
+      // Check if publication has awards in meta field
+      const metaLower = pub.meta.toLowerCase();
+      matchesTag = metaLower.includes('best paper') || 
+                   metaLower.includes('award') || 
+                   metaLower.includes('honorable mention');
+    } else {
+      matchesTag = pub.tags.includes(selectedTag);
+    }
+    
     const matchesSearch =
       pub.title.toLowerCase().includes(search.toLowerCase()) ||
       pub.authors.toLowerCase().includes(search.toLowerCase()) ||
@@ -94,6 +110,9 @@ export default function Publications() {
                 className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-unc-navy focus:border-transparent transition-all duration-300 bg-transparent"
               >
                 <option value="All">All Categories</option>
+                {specialCategories.map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
                 {allTags.map(tag => (
                   <option key={tag} value={tag}>{tag}</option>
                 ))}
@@ -116,7 +135,13 @@ export default function Publications() {
                     {pubs.map((pub, idx) => (
                                               <div 
                           key={pub.title + idx}
-                          className="group transition-all duration-300 stagger-item mb-2 bg-white border border-neutral-200 rounded-lg p-6 md:cursor-pointer transform hover:-translate-y-3 unc-shadow-hover"
+                          className={`group transition-all duration-300 stagger-item mb-2 border border-neutral-200 rounded-lg p-6 md:cursor-pointer transform hover:-translate-y-3 unc-shadow-hover ${
+                            pub.meta.toLowerCase().includes('best paper') || 
+                            pub.meta.toLowerCase().includes('award') || 
+                            pub.meta.toLowerCase().includes('honorable mention')
+                              ? 'bg-campus-sandstone border-dome-copper'
+                              : 'bg-white'
+                          }`}
                           style={{
                             boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
                             transition: 'all 0.3s ease',
@@ -124,11 +149,17 @@ export default function Publications() {
                           }}
                           onMouseEnter={(e) => {
                             e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 20px 20px -10px rgba(0, 0, 0, 0.15)';
-                            e.currentTarget.style.backgroundColor = '#f8fafc';
+                            const isAward = pub.meta.toLowerCase().includes('best paper') || 
+                                          pub.meta.toLowerCase().includes('award') || 
+                                          pub.meta.toLowerCase().includes('honorable mention');
+                            e.currentTarget.style.backgroundColor = isAward ? '#F4E8DD' : '#f8fafc';
                           }}
                           onMouseLeave={(e) => {
                             e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)';
-                            e.currentTarget.style.backgroundColor = '#ffffff';
+                            const isAward = pub.meta.toLowerCase().includes('best paper') || 
+                                          pub.meta.toLowerCase().includes('award') || 
+                                          pub.meta.toLowerCase().includes('honorable mention');
+                            e.currentTarget.style.backgroundColor = isAward ? '#F4E8DD' : '#ffffff';
                           }}
                         onClick={() => {
                           // Only make div clickable on desktop (md and up)
@@ -160,12 +191,12 @@ export default function Publications() {
                             <p className="text-neutral-600 mb-2 transition-colors duration-300 font-medium">
                               {pub.authors}
                             </p>
-                            <p className={`font-semibold mb-4 transition-colors duration-300 group-hover:text-dome-copper ${
+                            <p className={`font-semibold mb-4 transition-colors duration-300 ${
                               pub.meta.toLowerCase().includes('best paper') || 
                               pub.meta.toLowerCase().includes('award') || 
                               pub.meta.toLowerCase().includes('honorable mention')
-                                ? 'text-dome-copper' 
-                                : 'text-carolina-blue'
+                                ? 'text-carolina-blue group-hover:text-carolina-blue' 
+                                : 'text-carolina-blue group-hover:text-dome-copper'
                             }`}>
                               {pub.meta}
                             </p>
