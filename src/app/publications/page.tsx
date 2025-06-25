@@ -7,13 +7,21 @@ import Image from 'next/image';
 import '../animations.css';
 
 export default function Publications() {
-  // Extract years and tags
+  // Extract years and tags - simplified categories
   const years = Array.from(
     new Set(publications.flatMap(pub => pub.tags.filter(tag => /^\d{4}$/.test(tag))))
   ).sort((a, b) => b.localeCompare(a));
+
+  // Simplified categories - only keep main research areas
+  const mainCategories = ['Conference', 'Journal', 'Workshop', 'ArXiv'];
   const allTags = Array.from(
-    new Set(publications.flatMap(pub => pub.tags.filter(tag => !/^\d{4}$/.test(tag))))
+    new Set(publications.flatMap(pub => pub.tags.filter(tag => 
+      !(/^\d{4}$/.test(tag)) && mainCategories.includes(tag)
+    )))
   );
+
+  // Combine categories and years for filter options
+  const filterOptions = [...allTags, ...years];
 
   const [selectedTag, setSelectedTag] = useState<string>('All');
   const [search, setSearch] = useState<string>('');
@@ -69,7 +77,7 @@ export default function Publications() {
               <input
                 id="search"
                 type="text"
-                placeholder="Search by title, author, or venue..."
+                placeholder={`Showing ${filteredPubs.length} publications`}
                 value={search}
                 onChange={e => setSearch(e.target.value)}
                 className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-unc-navy focus:border-transparent transition-all duration-300 bg-transparent"
@@ -91,14 +99,11 @@ export default function Publications() {
                 {allTags.map(tag => (
                   <option key={tag} value={tag}>{tag}</option>
                 ))}
+                {years.map(year => (
+                  <option key={year} value={year}>{year}</option>
+                ))}
               </select>
             </div>
-          </div>
-          {/* Results count */}
-          <div className="mt-2 mb-8">
-            <p className="text-neutral-600">
-              Showing <span className="font-semibold text-carolina-blue">{filteredPubs.length}</span> publications
-            </p>
           </div>
 
           {/* Publications by year */}
@@ -112,30 +117,25 @@ export default function Publications() {
                   <div className="grid gap-8">
                     {pubs.map((pub, idx) => (
                       <div 
-                        key={pub.title + idx} 
-                        className="group transition-all duration-300 stagger-item mb-8" 
-                        style={{ animationDelay: `${idx * 0.1}s`, padding: '0' }}
+                        key={pub.title + idx}
+                        className="group transition-all duration-300 stagger-item mb-4 bg-white border border-neutral-200 rounded-lg p-6 hover:shadow-lg cursor-pointer"
+                        style={{ animationDelay: `${idx * 0.1}s` }}
+                        onClick={() => window.location.href = `/publications/${pub.slug}`}
                       >
                         <div className="flex flex-col md:flex-row gap-6 items-start">
                           <div className="flex-shrink-0 relative">
-                            <div className="relative overflow-hidden rounded-lg border-2 border-unc-navy/20 group-hover:border-unc-navy transition-colors duration-500">
+                            <div className="relative overflow-hidden rounded-lg border-2 border-unc-navy/20 transition-colors duration-500">
                               <Image 
                                 src={pub.image && pub.image.trim() !== "" ? pub.image : "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"} 
                                 alt={pub.title} 
                                 width={128}
                                 height={128}
-                                className="object-cover rounded-lg shadow-md transition-all duration-500 group-hover:scale-110" 
+                                className="object-cover rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105" 
                                 onError={(e) => {
                                   console.log(`Failed to load image for ${pub.title}:`, pub.image);
                                   e.currentTarget.src = "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80";
                                 }}
                               />
-                              {/* Subtle overlay on hover */}
-                              <div className="absolute inset-0 bg-unc-navy/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
-                            </div>
-                            {/* Floating publication type badge */}
-                            <div className="absolute -top-2 -left-2 bg-unc-navy text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-75">
-                              {pub.tags[0]}
                             </div>
                           </div>
                           <div className="flex-1">
@@ -145,40 +145,22 @@ export default function Publications() {
                             <p className="text-neutral-600 mb-2 transition-colors duration-300 font-medium">
                               {pub.authors}
                             </p>
-                            <p className="text-carolina-blue font-semibold mb-4 transition-colors duration-300">
+                            <p className="text-carolina-blue font-semibold mb-4 transition-colors duration-300 group-hover:text-dome-copper">
                               {pub.meta}
                             </p>
-                            <div className="flex flex-wrap gap-2 mb-4">
-                              {pub.tags.map((tag) => (
-                                <span 
-                                  key={tag} 
-                                  className="px-3 py-1 bg-carolina-blue/10 text-carolina-blue text-sm rounded-full border border-carolina-blue/20 transition-all duration-300 spring-hover"
-                                >
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
                             <div className="flex gap-4">
                               <a 
                                 href={pub.link} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                className="link-hover font-semibold spring-hover flex items-center gap-2"
+                                className="link-hover font-semibold flex items-center gap-2"
+                                onClick={(e) => e.stopPropagation()}
                               >
                                 Read Paper
                                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
                               </a>
-                              <Link 
-                                href={`/publications/${pub.slug}`} 
-                                className="text-neutral-600 hover:text-carolina-blue transition-colors duration-300 font-medium spring-hover flex items-center gap-2"
-                              >
-                                View Details
-                                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </svg>
-                              </Link>
                             </div>
                           </div>
                         </div>

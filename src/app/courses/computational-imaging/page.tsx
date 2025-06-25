@@ -18,9 +18,9 @@ export default function ComputationalImaging() {
         </div>
       </div>
       <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-4xl mb-8">
-        <h2 className="text-2xl font-bold text-blue-800 mb-4">Course Description</h2>
+        <h2 className="text-2xl font-bold text-carolina-blue mb-4">Course Description</h2>
         <p className="mb-4 text-gray-700">Computational imaging systems have a wide range of applications in consumer electronics, scientific imaging, HCI, medical imaging, microscopy, and remote sensing. This course covers digital photography, image processing, convolutional neural networks for imaging, denoising, deconvolution, single pixel imaging, inverse problems, wave optics, and end-to-end optimization of optics and imaging processing. Emphasis is on applied image processing and solving inverse problems using classic algorithms, formal optimization, and modern AI techniques.</p>
-        <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">Topics Include</h2>
+        <h2 className="text-xl font-semibold text-carolina-blue mt-6 mb-2">Topics Include</h2>
         <ul className="list-disc ml-6 text-gray-700 mb-4">
           <li>Human visual perception</li>
           <li>Digital cameras and ISPs</li>
@@ -33,14 +33,14 @@ export default function ComputationalImaging() {
           <li>Wave optics</li>
           <li>End-to-end optimization of optics and image processing</li>
         </ul>
-        <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">Course Goals</h2>
+        <h2 className="text-xl font-semibold text-carolina-blue mt-6 mb-2">Course Goals</h2>
         <p className="mb-4 text-gray-700">Students will learn about computational imaging methods and applications with a focus on solving inverse problems in imaging, such as denoising, deconvolution, and single-pixel imaging. The course covers classic algorithms, modern data-driven approaches using CNNs, and proximal gradient methods. Assignments require programming and image processing in Python.</p>
-        <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">Instructors</h2>
+        <h2 className="text-xl font-semibold text-carolina-blue mt-6 mb-2">Instructors</h2>
         <ul className="list-disc ml-6 text-gray-700 mb-4">
           <li>Praneeth Chakravarthula (Instructor)</li>
           {/* Add TAs or guest lecturers if available */}
         </ul>
-        <h2 className="text-xl font-semibold text-blue-700 mt-6 mb-2">Schedule & Syllabus</h2>
+        <h2 className="text-xl font-semibold text-carolina-blue mt-6 mb-2">Schedule & Syllabus</h2>
         <p className="mb-2 text-gray-700">Class meets in Spring 2026. Details and weekly topics will be posted here.</p>
         <ul className="list-disc ml-6 text-gray-700 mb-4">
           <li>Week 1: Introduction and course overview</li>
@@ -51,7 +51,7 @@ export default function ComputationalImaging() {
           <li>Week 6: Optimization and end-to-end systems</li>
           {/* Add more weeks as needed */}
         </ul>
-        <Link href="/courses" className="text-blue-600 hover:underline">Back to Courses</Link>
+        <Link href="/courses" className="text-carolina-blue hover:underline">Back to Courses</Link>
       </div>
     </div>
   );

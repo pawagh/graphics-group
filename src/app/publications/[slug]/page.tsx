@@ -14,11 +14,11 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
   return (
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900 min-h-screen">
       {/* Hero section with gradient background */}
-      <div className="relative bg-gradient-to-br from-unc-navy via-unc-navy to-unc-navy py-16 px-4 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-unc-navy via-unc-navy to-unc-navy py-8 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         
         {/* Back navigation */}
-        <div className="relative z-10 max-w-6xl mx-auto mb-8">
+        <div className="relative z-10 max-w-6xl mx-auto mb-6">
           <Link 
             href="/publications" 
             className="inline-flex items-center text-white hover:text-dome-copper transition-colors duration-300 font-medium"
@@ -32,43 +32,31 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
         
         {/* Publication header */}
         <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
             <div className="lg:col-span-2">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
                 {publication.title}
               </h1>
-              <p className="text-xl text-blue-100 mb-4 font-medium">{publication.authors}</p>
-              <p className="text-lg text-blue-200 mb-6 italic">{publication.meta}</p>
-              
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-6">
-          {publication.tags.map((tag: string) => (
-                  <span 
-                    key={tag} 
-                    className="bg-white/20 backdrop-blur text-white px-4 py-2 rounded-full text-sm font-medium border border-white/30 hover:bg-dome-copper/80 transition-colors duration-300"
-                  >
-                    {tag}
-                  </span>
-          ))}
-        </div>
+              <p className="text-lg text-blue-100 mb-3 font-medium">{publication.authors}</p>
+              <p className="text-base text-blue-200 mb-4 italic">{publication.meta}</p>
               
               {/* Action buttons */}
-              <div className="flex flex-wrap gap-4">
-        {publication.link && (
+              <div className="flex flex-wrap gap-3">
+                {publication.link && (
                   <a 
                     href={publication.link} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="btn-primary bg-white text-carolina-blue hover:bg-dome-copper hover:text-white inline-flex items-center"
                   >
-                    <svg className="w-6 h-6 mr-3 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 mr-2 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
-            View Full Publication
-          </a>
-        )}
+                    View Full Publication
+                  </a>
+                )}
                 <button className="btn-secondary bg-white/10 text-white border-white/30 hover:bg-white/20 inline-flex items-center">
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
                   </svg>
                   Share
@@ -83,8 +71,8 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
                 <PublicationImage 
                   src={publication.image} 
                   alt={publication.title} 
-                  width={300}
-                  height={300}
+                  width={250}
+                  height={250}
                   className="relative object-cover rounded-2xl shadow-2xl border-4 border-white/20 backdrop-blur transition-transform duration-500 hover:scale-105" 
                 />
               </div>
@@ -150,6 +138,24 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
           <div className="lg:col-span-1">
             <div className="space-y-6">
               
+              {/* Citation - Moved to top */}
+              <div className="section-card">
+                <h3 className="section-title text-lg">Citation</h3>
+                <div className="bg-neutral-50 p-3 rounded-lg border-l-4 border-unc-navy">
+                  <pre className="text-xs text-neutral-700 font-mono whitespace-pre-wrap break-words overflow-x-auto">
+{`@article{${publication.slug.replace(/-/g, '_')},
+  title={${publication.title}},
+  author={${publication.authors}},
+  journal={${publication.meta}},
+  year={2025}
+}`}
+                  </pre>
+                </div>
+                <button className="mt-2 text-sm text-carolina-blue hover:text-dome-copper transition-colors duration-300 font-medium">
+                  Copy Citation
+                </button>
+              </div>
+              
               {/* Publication Info */}
               <div className="section-card">
                 <h3 className="section-title text-lg">Publication Details</h3>
@@ -161,19 +167,6 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
                   <div>
                     <span className="font-semibold text-neutral-600">Published:</span>
                     <p className="text-neutral-800">{publication.meta}</p>
-                  </div>
-                  <div>
-                    <span className="font-semibold text-neutral-600">Categories:</span>
-                    <div className="flex flex-wrap gap-1 mt-1">
-                      {publication.tags.map((tag: string) => (
-                        <span 
-                          key={tag} 
-                          className="bg-unc-navy text-white px-2 py-1 rounded text-xs"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </div>
@@ -214,24 +207,6 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Citation */}
-              <div className="section-card">
-                <h3 className="section-title text-lg">Citation</h3>
-                <div className="bg-neutral-50 p-4 rounded-lg border-l-4 border-unc-navy">
-                  <pre className="text-xs text-neutral-700 font-mono whitespace-pre-wrap">
-{`@article{${publication.slug.replace(/-/g, '_')},
-  title={${publication.title}},
-  author={${publication.authors}},
-  journal={${publication.meta}},
-  year={2025}
-}`}
-                  </pre>
-                </div>
-                <button className="mt-3 text-sm text-carolina-blue hover:text-dome-copper transition-colors duration-300 font-medium">
-                  Copy Citation
-                </button>
               </div>
             </div>
           </div>

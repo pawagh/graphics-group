@@ -57,7 +57,7 @@ export default function Teaching() {
               {courses.map((course, index) => (
                 <div 
                   key={course.title} 
-                  className="card group p-8 hover-lift magnetic-hover enhanced-shadow transition-all duration-500 stagger-item"
+                  className="card group p-8 enhanced-shadow transition-all duration-500 stagger-item"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <div className="flex flex-col items-start space-y-6">

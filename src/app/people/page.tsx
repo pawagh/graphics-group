@@ -81,15 +81,15 @@ export default function People() {
           {assistantProfessor && (
             <section className="section-card">
               <div className="max-w-4xl mx-auto">
-                <div className="card p-8 group enhanced-shadow hover:shadow-2xl transition-shadow duration-300">
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 group">
                   <div className="flex flex-col md:flex-row items-center gap-8">
                     <div className="flex-shrink-0">
-                      <div className="w-48 h-48 relative overflow-hidden rounded-full border-4 border-unc-navy transition-colors duration-500">
+                      <div className="w-48 h-48 relative overflow-hidden rounded-full border-2 border-unc-navy transition-colors duration-500">
                         <Image 
                           src={assistantProfessor.image} 
                           alt={assistantProfessor.name} 
                           fill
-                          className="object-cover transition-all duration-500" 
+                          className="object-cover transition-transform duration-300 group-hover:scale-105" 
                         />
                         </div>
                     </div>
@@ -103,25 +103,6 @@ export default function People() {
                       <p className="text-lg text-neutral-600 mb-6 leading-relaxed transition-colors duration-300">
                         {assistantProfessor.bio}
                       </p>
-                      <button 
-                        onClick={() => toggleDescription(assistantProfessor.name)}
-                        className="text-carolina-blue transition-colors duration-300 mb-4 flex items-center gap-2"
-                      >
-                        {expandedPerson === assistantProfessor.name ? 'Show Less' : 'Read More'}
-                        <svg 
-                          className={`w-4 h-4 transition-transform duration-300 ${expandedPerson === assistantProfessor.name ? 'rotate-180' : ''}`} 
-                          fill="none" 
-                          stroke="currentColor" 
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                      {expandedPerson === assistantProfessor.name && (
-                        <p className="text-neutral-600 mb-6 leading-relaxed animate-fade-in">
-                          {assistantProfessor.description}
-                        </p>
-                      )}
                       <div className="flex justify-center md:justify-start space-x-6">
                         {assistantProfessor.website && (
                           <a 
@@ -132,7 +113,7 @@ export default function People() {
                             aria-label={`${assistantProfessor.name}'s website`}
                           >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                             </svg>
                           </a>
                         )}
@@ -162,37 +143,33 @@ export default function People() {
               {otherTeamMembers.map((person, index) => (
                 <div 
                   key={person.name} 
-                  className={`card p-6 text-center group enhanced-shadow hover:shadow-2xl transition-shadow duration-300 stagger-item`}
+                  className={`bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 group stagger-item`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="mb-4 relative">
-                    <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden rounded-full border-4 border-unc-navy transition-colors duration-500">
+                    <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden rounded-full border-2 border-unc-navy transition-colors duration-500">
                       <Image 
                         src={person.image} 
                         alt={person.name} 
                         fill
-                        className="object-cover transition-all duration-500" 
+                        className="object-cover transition-transform duration-300 group-hover:scale-105" 
                       />
                     </div>
-                    {/* Floating badge for position */}
-                    <div className="absolute -top-2 -right-2 bg-unc-navy text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-100 scale-75">
-                      {person.role}
-                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-carolina-blue mb-2 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-carolina-blue mb-2 transition-colors duration-300 text-center">
                     {person.name}
                   </h3>
-                  <p className="text-carolina-blue font-semibold mb-3 transition-colors duration-300">
+                  <p className="text-carolina-blue font-semibold mb-3 transition-colors duration-300 text-center">
                     {person.role}
                   </p>
-                  <p className="text-neutral-600 mb-4 leading-relaxed transition-colors duration-300">
+                  <p className="text-neutral-600 mb-4 leading-relaxed transition-colors duration-300 text-left">
                     {person.bio}
                   </p>
                   <button 
                     onClick={() => toggleDescription(person.name)}
-                    className="text-carolina-blue transition-colors duration-300 mb-4 flex items-center gap-2 mx-auto"
+                    className="text-carolina-blue transition-colors duration-300 mb-4 flex items-center gap-2"
                   >
-                    {expandedPerson === person.name ? 'Show Less' : 'Read More'}
+                    {expandedPerson === person.name ? 'Hide Bio' : 'Short Bio'}
                     <svg 
                       className={`w-4 h-4 transition-transform duration-300 ${expandedPerson === person.name ? 'rotate-180' : ''}`} 
                       fill="none" 
@@ -203,11 +180,11 @@ export default function People() {
                     </svg>
                   </button>
                   {expandedPerson === person.name && (
-                    <p className="text-neutral-600 mb-4 leading-relaxed animate-fade-in">
+                    <p className="text-neutral-600 mb-4 leading-relaxed animate-fade-in text-left">
                       {person.description}
                     </p>
                   )}
-                  <div className="flex justify-center space-x-4 pt-4 border-t border-neutral-200 group-hover:border-unc-navy transition-colors duration-300">
+                  <div className="flex justify-start space-x-4 pt-4 border-t border-neutral-200 transition-colors duration-300">
                     {person.email && (
                       <a 
                         href={`mailto:${person.email}`} 
@@ -219,7 +196,7 @@ export default function People() {
                         </svg>
                       </a>
                     )}
-                </div>
+                  </div>
                 </div>
               ))}
             </div>
