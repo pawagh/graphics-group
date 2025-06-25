@@ -149,9 +149,9 @@ export default function RootLayout({
                       {/* Enhanced animated underline */}
                       <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-white to-white/80 group-hover:w-4/5 group-hover:left-[10%] transition-all duration-500 ease-out" />
                       
-                      {/* Active page indicator - navy blue bar on bottom */}
+                      {/* Active page indicator - white bar on bottom */}
                       {isActive(item.href) && (
-                        <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-unc-navy via-unc-navy to-unc-navy/80 shadow-lg rounded-t-md" />
+                        <div className="absolute bottom-0 left-[10%] w-4/5 h-0.5 bg-gradient-to-r from-white to-white/80" />
                       )}
                     </Link>
                   </li>
