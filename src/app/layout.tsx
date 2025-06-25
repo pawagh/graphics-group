@@ -242,9 +242,9 @@ export default function RootLayout({
             <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="text-center md:text-left">
                 <h2 className="text-lg font-bold mb-2">Visual Computing and Augmented Intelligence Lab</h2>
+                <p className="mb-1">Department of Computer Science</p>
                 <p className="mb-1">University of North Carolina at Chapel Hill</p>
                 <p className="mb-1">Email: <a href="mailto:cpk@cs.unc.edu" className="underline text-white hover:text-white transition-colors duration-300">cpk@cs.unc.edu</a></p>
-                <p className="mb-1">Department of Computer Science</p>
               </div>
               
               {/* Social Media Links */}
