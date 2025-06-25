@@ -57,7 +57,35 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const pathname = usePathname();
+
+  useEffect(() => {
+    let lastScrollY = 0;
+    
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Always show navbar at the top of the page
+      if (currentScrollY < 100) {
+        console.log('Near top - showing navbar');
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down - hide navbar
+        console.log('Scrolling down - hiding navbar');
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - show navbar
+        console.log('Scrolling up - showing navbar');
+        setIsVisible(true);
+      }
+      
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []); // Empty dependency array
 
   const navItems = [
     { label: "PEOPLE", href: "/people" },
@@ -94,7 +122,12 @@ export default function RootLayout({
       </head>
       <body className={`${poppins.variable} bg-neutral-50 text-neutral-900 antialiased pt-20 font-sans`}>
         {/* Enhanced Header with sophisticated styling */}
-        <header className="fixed top-0 left-0 w-full h-20 bg-carolina-blue shadow-2xl flex items-center justify-between px-4 md:px-6 lg:px-12 backdrop-blur-xl z-50 border-b border-white/10">
+        <header 
+          className="fixed top-0 left-0 w-full h-20 bg-carolina-blue shadow-2xl flex items-center justify-between px-4 md:px-6 lg:px-12 backdrop-blur-xl z-50 border-b border-white/10 transition-transform duration-300 ease-in-out"
+          style={{
+            transform: isVisible ? 'translateY(0)' : 'translateY(-100%)'
+          }}
+        >
           {/* Enhanced Logo and Lab title */}
           <div className="flex items-center gap-2 md:gap-4 lg:gap-6 flex-1 min-w-0">
             <Link href="/" className="flex items-center gap-2 md:gap-4 text-white no-underline hover:text-white transition-all duration-500 group flex-1 min-w-0">
