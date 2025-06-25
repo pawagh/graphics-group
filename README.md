@@ -14,3 +14,13 @@ Our lab focuses on:
 - **Interdisciplinary Projects:** Combining expertise from various fields to drive breakthroughs in research.
 
 We invite you to explore our website and learn more about our research activities, publications, and the team driving the VCAIL.
+
+## TO DO
+- on featured projects in home page dont change text color on hover
+- use warm tone just for the thin banner 
+- make highlights section into news 
+- make featured projects link to actual project page
+- remove hover effects on people tab
+- make effect on hover consistent (zoom)
+- change links in people tab
+- make search on projects not have background
