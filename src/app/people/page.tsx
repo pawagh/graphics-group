@@ -84,7 +84,7 @@ export default function People() {
                 <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 p-8 group hover:bg-slate-50 unc-shadow-hover">
                   <div className="flex flex-col md:flex-row items-center gap-8">
                     <div className="flex-shrink-0">
-                      <div className="w-48 h-48 relative overflow-hidden rounded-full border-2 border-unc-navy transition-colors duration-500">
+                      <div className="w-48 h-48 relative overflow-hidden rounded-full transition-colors duration-500">
                         <Image 
                           src={assistantProfessor.image} 
                           alt={assistantProfessor.name} 
@@ -147,7 +147,7 @@ export default function People() {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="mb-4 relative">
-                    <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden rounded-full border-2 border-unc-navy transition-colors duration-500">
+                    <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden rounded-full transition-colors duration-500">
                       <Image 
                         src={person.image} 
                         alt={person.name} 
