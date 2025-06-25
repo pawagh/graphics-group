@@ -167,14 +167,14 @@ export default function Home() {
             <h2 className="section-title text-center text-carolina-blue text-reveal mb-12">RECENT AWARDS & NEWS</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-20 max-w-5xl mx-auto">
               <ul className="list-disc list-inside space-y-4 text-neutral-700 text-lg">
-                <li><span className="font-semibold text-carolina-blue">Best Paper Award</span> at GMCV & WACV 2025 for "FlatTrack: Eye-tracking with ultra-thin lensless cameras"</li>
-                <li><span className="font-semibold text-carolina-blue">CVPR 2025</span>: "DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting" accepted</li>
-                <li><span className="font-semibold text-carolina-blue">Nature Communications 2025</span>: "Beating bandwidth limits for large aperture broadband nano-optics" published</li>
+                <li><span className="font-semibold text-carolina-blue">Best Paper Award</span> at GMCV & WACV 2025 for &ldquo;FlatTrack: Eye-tracking with ultra-thin lensless cameras&rdquo;</li>
+                <li><span className="font-semibold text-carolina-blue">CVPR 2025</span>: &ldquo;DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting&rdquo; accepted</li>
+                <li><span className="font-semibold text-carolina-blue">Nature Communications 2025</span>: &ldquo;Beating bandwidth limits for large aperture broadband nano-optics&rdquo; published</li>
               </ul>
               <ul className="list-disc list-inside space-y-4 text-neutral-700 text-lg">
-                <li><span className="font-semibold text-carolina-blue">Science Advances 2024</span>: "Spatially Varying Nanophotonic Neural Networks" published</li>
-                <li><span className="font-semibold text-carolina-blue">Best Paper Award</span> at OmniCV & CVPR 2024 for "Cross-Domain Synthetic-to-Real In-the-Wild Depth and Normal Estimation"</li>
-                <li><span className="font-semibold text-carolina-blue">SIGGRAPH Asia 2024</span>: "End-to-End Hybrid Refractive-Diffractive Lens Design" accepted</li>
+                <li><span className="font-semibold text-carolina-blue">Science Advances 2024</span>: &ldquo;Spatially Varying Nanophotonic Neural Networks&rdquo; published</li>
+                <li><span className="font-semibold text-carolina-blue">Best Paper Award</span> at OmniCV & CVPR 2024 for &ldquo;Cross-Domain Synthetic-to-Real In-the-Wild Depth and Normal Estimation&rdquo;</li>
+                <li><span className="font-semibold text-carolina-blue">SIGGRAPH Asia 2024</span>: &ldquo;End-to-End Hybrid Refractive-Diffractive Lens Design&rdquo; accepted</li>
               </ul>
             </div>
           </section>

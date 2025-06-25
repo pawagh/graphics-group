@@ -2,7 +2,6 @@
 
 import { publications } from './data';
 import React, { useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import '../animations.css';
 
@@ -20,8 +19,7 @@ export default function Publications() {
     )))
   );
 
-  // Combine categories and years for filter options
-  const filterOptions = [...allTags, ...years];
+
 
   const [selectedTag, setSelectedTag] = useState<string>('All');
   const [search, setSearch] = useState<string>('');
