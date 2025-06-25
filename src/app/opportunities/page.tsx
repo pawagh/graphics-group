@@ -16,7 +16,7 @@ export default function OpportunitiesPage() {
       </div>
 
       {/* Join Us Philosophy - Dome Copper translucent banner */}
-      <div className="w-full bg-campus-sandstone backdrop-blur-sm border-t-4 py-3 mb-8">
+      <div className="w-full bg-campus-sandstone backdrop-blur-sm py-3 mb-8">
         <div className="max-w-7xl mx-auto px-4 md:px-12">
           <h2 className="text-2xl font-bold text-dome-copper text-center mb-3">JOIN US</h2>
           <p className="text-md text-neutral-700 max-w-4xl mx-auto leading-relaxed">

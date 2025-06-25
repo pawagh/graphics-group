@@ -40,6 +40,11 @@ body {
   font-feature-settings: 'cv11', 'ss01';
   font-variant-numeric: tabular-nums;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Smooth scrolling */
