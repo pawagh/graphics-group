@@ -199,7 +199,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/60 via-transparent to-transparent" />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-xl font-bold text-carolina-blue mb-2 group-hover:text-dome-copper transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-carolina-blue mb-2 group-hover:text-unc-navy transition-colors duration-300">
                     Computational Imaging Breakthroughs
                   </h3>
                   <p className="text-neutral-600 text-sm group-hover:text-neutral-700 transition-colors duration-300">
@@ -220,7 +220,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/60 via-transparent to-transparent" />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-xl font-bold text-carolina-blue mb-2 group-hover:text-dome-copper transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-carolina-blue mb-2 group-hover:text-unc-navy transition-colors duration-300">
                     Award-Winning Research
                   </h3>
                   <p className="text-neutral-600 text-sm group-hover:text-neutral-700 transition-colors duration-300">
