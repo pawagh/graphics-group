@@ -60,49 +60,46 @@ export default function Publications() {
         <div className="space-y-10">
           
           {/* Search and filter section */}
-          <section className="section-card">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              {/* Search Bar */}
-              <div className="flex-1">
-                <label htmlFor="search" className="block text-sm font-medium text-neutral-700 mb-2">
-                  Search Publications
-                </label>
-                <input
-                  id="search"
-                  type="text"
-                  placeholder="Search by title, author, or venue..."
-                  value={search}
-                  onChange={e => setSearch(e.target.value)}
-                  className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-unc-navy focus:border-transparent transition-all duration-300"
-                />
-              </div>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+            {/* Search Bar */}
+            <div className="flex-1">
+              <label htmlFor="search" className="block text-sm font-medium text-neutral-700 mb-2">
+                Search Publications
+              </label>
+              <input
+                id="search"
+                type="text"
+                placeholder="Search by title, author, or venue..."
+                value={search}
+                onChange={e => setSearch(e.target.value)}
+                className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-unc-navy focus:border-transparent transition-all duration-300 bg-transparent"
+              />
+            </div>
 
-              {/* Tag Filter */}
-              <div className="md:w-1/4">
-                <label htmlFor="tag-filter" className="block text-sm font-medium text-neutral-700 mb-2">
-                  Filter by Category
-                </label>
-                <select
-                  id="tag-filter"
-                  value={selectedTag}
-                  onChange={e => setSelectedTag(e.target.value)}
-                  className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-unc-navy focus:border-transparent transition-all duration-300"
-                >
-                  <option value="All">All Categories</option>
-                  {allTags.map(tag => (
-                    <option key={tag} value={tag}>{tag}</option>
-                  ))}
-                </select>
-              </div>
+            {/* Tag Filter */}
+            <div className="md:w-1/4">
+              <label htmlFor="tag-filter" className="block text-sm font-medium text-neutral-700 mb-2">
+                Filter by Category
+              </label>
+              <select
+                id="tag-filter"
+                value={selectedTag}
+                onChange={e => setSelectedTag(e.target.value)}
+                className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-unc-navy focus:border-transparent transition-all duration-300 bg-transparent"
+              >
+                <option value="All">All Categories</option>
+                {allTags.map(tag => (
+                  <option key={tag} value={tag}>{tag}</option>
+                ))}
+              </select>
             </div>
-            
-            {/* Results count */}
-            <div className="mt-4">
-              <p className="text-neutral-600">
-                Showing <span className="font-semibold text-carolina-blue">{filteredPubs.length}</span> publications
-              </p>
-            </div>
-          </section>
+          </div>
+          {/* Results count */}
+          <div className="mt-2 mb-8">
+            <p className="text-neutral-600">
+              Showing <span className="font-semibold text-carolina-blue">{filteredPubs.length}</span> publications
+            </p>
+          </div>
 
           {/* Publications by year */}
           <div className="space-y-12">
@@ -116,8 +113,8 @@ export default function Publications() {
                     {pubs.map((pub, idx) => (
                       <div 
                         key={pub.title + idx} 
-                        className="p-6 group hover-lift magnetic-hover enhanced-shadow transition-all duration-500 stagger-item rounded-card border border-neutral-200"
-                        style={{ animationDelay: `${idx * 0.1}s` }}
+                        className="group transition-all duration-300 stagger-item mb-8" 
+                        style={{ animationDelay: `${idx * 0.1}s`, padding: '0' }}
                       >
                         <div className="flex flex-col md:flex-row gap-6 items-start">
                           <div className="flex-shrink-0 relative">
@@ -142,20 +139,20 @@ export default function Publications() {
                             </div>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-xl font-bold text-carolina-blue mb-3 group-hover:text-dome-copper transition-colors duration-300 leading-tight">
+                            <h3 className="text-xl font-bold text-carolina-blue mb-3 transition-colors duration-300 leading-tight">
                               {pub.title}
                             </h3>
-                            <p className="text-neutral-600 mb-2 group-hover:text-neutral-700 transition-colors duration-300 font-medium">
+                            <p className="text-neutral-600 mb-2 transition-colors duration-300 font-medium">
                               {pub.authors}
                             </p>
-                            <p className="text-carolina-blue font-semibold mb-4 group-hover:text-dome-copper transition-colors duration-300">
+                            <p className="text-carolina-blue font-semibold mb-4 transition-colors duration-300">
                               {pub.meta}
                             </p>
                             <div className="flex flex-wrap gap-2 mb-4">
                               {pub.tags.map((tag) => (
                                 <span 
                                   key={tag} 
-                                  className="px-3 py-1 bg-carolina-blue/10 text-carolina-blue text-sm rounded-full border border-carolina-blue/20 group-hover:bg-carolina-blue group-hover:text-white transition-all duration-300 spring-hover"
+                                  className="px-3 py-1 bg-carolina-blue/10 text-carolina-blue text-sm rounded-full border border-carolina-blue/20 transition-all duration-300 spring-hover"
                                 >
                                   {tag}
                                 </span>

@@ -42,19 +42,19 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
               
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-6">
-                {publication.tags.map((tag: string) => (
+          {publication.tags.map((tag: string) => (
                   <span 
                     key={tag} 
                     className="bg-white/20 backdrop-blur text-white px-4 py-2 rounded-full text-sm font-medium border border-white/30 hover:bg-dome-copper/80 transition-colors duration-300"
                   >
                     {tag}
                   </span>
-                ))}
-              </div>
+          ))}
+        </div>
               
               {/* Action buttons */}
               <div className="flex flex-wrap gap-4">
-                {publication.link && (
+        {publication.link && (
                   <a 
                     href={publication.link} 
                     target="_blank" 
@@ -64,9 +64,9 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
                     <svg className="w-6 h-6 mr-3 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
-                    View Full Publication
-                  </a>
-                )}
+            View Full Publication
+          </a>
+        )}
                 <button className="btn-secondary bg-white/10 text-white border-white/30 hover:bg-white/20 inline-flex items-center">
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />

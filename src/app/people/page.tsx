@@ -50,10 +50,10 @@ export default function People() {
     setExpandedPerson(expandedPerson === name ? null : name);
   };
 
-  return (
+    return (
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
       {/* Hero banner section */}
-      <div className="w-full h-64 md:h-80 relative mb-8">
+            <div className="w-full h-64 md:h-80 relative mb-8">
         <Image 
           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" 
           alt="Research team collaboration" 
@@ -70,8 +70,8 @@ export default function People() {
             Our group values curiosity, diversity, and impact-driven research that pushes the boundaries of what&apos;s possible in visual computing. 
             Together, we bring expertise in optics, computer vision, and machine learning.
           </p>
-        </div>
-      </div>
+                </div>
+            </div>
 
       {/* Main content */}
       <div className="content-container">
@@ -81,31 +81,31 @@ export default function People() {
           {assistantProfessor && (
             <section className="section-card">
               <div className="max-w-4xl mx-auto">
-                <div className="card p-8 group hover-lift magnetic-hover enhanced-shadow">
+                <div className="card p-8 group enhanced-shadow hover:shadow-2xl transition-shadow duration-300">
                   <div className="flex flex-col md:flex-row items-center gap-8">
                     <div className="flex-shrink-0">
-                      <div className="w-48 h-48 relative overflow-hidden rounded-full border-4 border-unc-navy group-hover:border-dome-copper transition-colors duration-500">
+                      <div className="w-48 h-48 relative overflow-hidden rounded-full border-4 border-unc-navy transition-colors duration-500">
                         <Image 
                           src={assistantProfessor.image} 
                           alt={assistantProfessor.name} 
                           fill
-                          className="object-cover transition-all duration-500 group-hover:scale-110" 
+                          className="object-cover transition-all duration-500" 
                         />
-                      </div>
+                        </div>
                     </div>
                     <div className="flex-1 md:text-left">
-                      <h3 className="text-3xl font-bold text-carolina-blue mb-3 group-hover:text-dome-copper transition-colors duration-300">
+                      <h3 className="text-3xl font-bold text-carolina-blue mb-3 transition-colors duration-300">
                         {assistantProfessor.name}
                       </h3>
-                      <p className="text-xl text-carolina-blue font-semibold mb-4 group-hover:text-dome-copper transition-colors duration-300">
+                      <p className="text-xl text-carolina-blue font-semibold mb-4 transition-colors duration-300">
                         {assistantProfessor.role}
                       </p>
-                      <p className="text-lg text-neutral-600 mb-6 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300">
+                      <p className="text-lg text-neutral-600 mb-6 leading-relaxed transition-colors duration-300">
                         {assistantProfessor.bio}
                       </p>
                       <button 
                         onClick={() => toggleDescription(assistantProfessor.name)}
-                        className="text-carolina-blue hover:text-dome-copper transition-colors duration-300 mb-4 flex items-center gap-2"
+                        className="text-carolina-blue transition-colors duration-300 mb-4 flex items-center gap-2"
                       >
                         {expandedPerson === assistantProfessor.name ? 'Show Less' : 'Read More'}
                         <svg 
@@ -128,7 +128,7 @@ export default function People() {
                             href={assistantProfessor.website} 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="text-carolina-blue hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
+                            className="text-carolina-blue transition-all duration-300 transform hover:scale-125 spring-hover"
                             aria-label={`${assistantProfessor.name}'s website`}
                           >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -139,7 +139,7 @@ export default function People() {
                         {assistantProfessor.email && (
                           <a 
                             href={`mailto:${assistantProfessor.email}`} 
-                            className="text-carolina-blue hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
+                            className="text-carolina-blue transition-all duration-300 transform hover:scale-125 spring-hover"
                             aria-label={`Email ${assistantProfessor.name}`}
                           >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -147,7 +147,7 @@ export default function People() {
                             </svg>
                           </a>
                         )}
-                      </div>
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -162,16 +162,16 @@ export default function People() {
               {otherTeamMembers.map((person, index) => (
                 <div 
                   key={person.name} 
-                  className={`card p-6 text-center group hover-lift magnetic-hover enhanced-shadow stagger-item`}
+                  className={`card p-6 text-center group enhanced-shadow hover:shadow-2xl transition-shadow duration-300 stagger-item`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="mb-4 relative">
-                    <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden rounded-full border-4 border-unc-navy group-hover:border-dome-copper transition-colors duration-500">
+                    <div className="w-32 h-32 mx-auto mb-4 relative overflow-hidden rounded-full border-4 border-unc-navy transition-colors duration-500">
                       <Image 
                         src={person.image} 
                         alt={person.name} 
                         fill
-                        className="object-cover transition-all duration-500 group-hover:scale-110" 
+                        className="object-cover transition-all duration-500" 
                       />
                     </div>
                     {/* Floating badge for position */}
@@ -179,18 +179,18 @@ export default function People() {
                       {person.role}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-carolina-blue mb-2 group-hover:text-dome-copper transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-carolina-blue mb-2 transition-colors duration-300">
                     {person.name}
                   </h3>
-                  <p className="text-carolina-blue font-semibold mb-3 group-hover:text-dome-copper transition-colors duration-300">
+                  <p className="text-carolina-blue font-semibold mb-3 transition-colors duration-300">
                     {person.role}
                   </p>
-                  <p className="text-neutral-600 mb-4 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300">
+                  <p className="text-neutral-600 mb-4 leading-relaxed transition-colors duration-300">
                     {person.bio}
                   </p>
                   <button 
                     onClick={() => toggleDescription(person.name)}
-                    className="text-carolina-blue hover:text-dome-copper transition-colors duration-300 mb-4 flex items-center gap-2 mx-auto"
+                    className="text-carolina-blue transition-colors duration-300 mb-4 flex items-center gap-2 mx-auto"
                   >
                     {expandedPerson === person.name ? 'Show Less' : 'Read More'}
                     <svg 
@@ -211,7 +211,7 @@ export default function People() {
                     {person.email && (
                       <a 
                         href={`mailto:${person.email}`} 
-                        className="text-carolina-blue hover:text-dome-copper transition-all duration-300 transform hover:scale-125 spring-hover"
+                        className="text-carolina-blue transition-all duration-300 transform hover:scale-125 spring-hover"
                         aria-label={`Email ${person.name}`}
                       >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -219,13 +219,13 @@ export default function People() {
                         </svg>
                       </a>
                     )}
-                  </div>
+                </div>
                 </div>
               ))}
             </div>
           </section>
         </div>
-      </div>
-    </div>
-  );
+            </div>
+        </div>
+    );
 }

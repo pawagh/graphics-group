@@ -93,7 +93,7 @@ export default function Home() {
               <div className="flex-1">
                 <h2 className="section-title text-center text-carolina-blue text-reveal">ABOUT US</h2>
                 <p className="text-lg leading-relaxed text-neutral-600 font-medium max-w-3xl mx-auto">
-                  Welcome to the <span className="font-bold text-carolina-blue hover:text-dome-copper transition-colors duration-300">Visual Computing and Augmented Intelligence Lab</span> at UNC Chapel Hill. 
+                  Welcome to the <span className="font-bold text-carolina-blue transition-colors duration-300">Visual Computing and Augmented Intelligence Lab</span> at UNC Chapel Hill. 
                   Our team is dedicated to advancing research in computational imaging, visual perception, and AI-driven solutions. 
                   We collaborate across disciplines to create transformative technologies that redefine the future of visual computing.
                 </p>
@@ -117,13 +117,13 @@ export default function Home() {
                   height={128}
                   className="object-cover rounded mb-4 transition-all duration-500 group-hover:scale-110" 
                 />
-                <h3 className="text-xl font-bold mb-2 text-carolina-blue text-center project-title transition-all duration-300 group-hover:text-dome-copper">
+                <h3 className="text-xl font-bold mb-2 text-carolina-blue text-center project-title transition-all duration-300">
                   Beating bandwidth limits for large aperture broadband nano-optics
                 </h3>
-                <p className="text-neutral-700 mb-2 flex-1 group-hover:text-neutral-800 transition-colors duration-300">
+                <p className="text-neutral-700 mb-2 flex-1 transition-colors duration-300">
                   Breakthrough in nano-optics, overcoming bandwidth limits for large aperture broadband metalenses with revolutionary optical designs.
                 </p>
-                <a href="https://www.nature.com/articles/s41467-025-58208-4" target="_blank" className="link-hover font-semibold spring-hover">
+                <a href="https://www.nature.com/articles/s41467-025-58208-4" target="_blank" className="link-hover font-semibold">
                   Read more →
                 </a>
               </div>
@@ -137,13 +137,13 @@ export default function Home() {
                   height={128}
                   className="object-cover rounded mb-4 transition-all duration-500 group-hover:scale-110" 
                 />
-                <h3 className="text-xl font-bold mb-2 text-carolina-blue text-center project-title transition-all duration-300 group-hover:text-dome-copper">
+                <h3 className="text-xl font-bold mb-2 text-carolina-blue text-center project-title transition-all duration-300">
                   DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting
                 </h3>
-                <p className="text-neutral-700 mb-2 flex-1 group-hover:text-neutral-800 transition-colors duration-300">
+                <p className="text-neutral-700 mb-2 flex-1 transition-colors duration-300">
                   Novel 3D Gaussian Splatting technique for flexible depth-of-field control in computational photography applications.
                 </p>
-                <a href="https://arxiv.org/abs/2405.17351" target="_blank" className="link-hover font-semibold spring-hover">
+                <a href="https://arxiv.org/abs/2405.17351" target="_blank" className="link-hover font-semibold">
                   Read more →
                 </a>
               </div>
@@ -157,13 +157,13 @@ export default function Home() {
                   height={128}
                   className="object-cover rounded mb-4 transition-all duration-500 group-hover:scale-110" 
                 />
-                <h3 className="text-xl font-bold mb-2 text-carolina-blue text-center project-title transition-all duration-300 group-hover:text-dome-copper">
+                <h3 className="text-xl font-bold mb-2 text-carolina-blue text-center project-title transition-all duration-300">
                   Event fields: Capturing light fields at high speed, resolution, and dynamic range
                 </h3>
-                <p className="text-neutral-700 mb-2 flex-1 group-hover:text-neutral-800 transition-colors duration-300">
+                <p className="text-neutral-700 mb-2 flex-1 transition-colors duration-300">
                   Pioneering event-based light field capture for high-speed, high-resolution, and high-dynamic-range imaging systems.
                 </p>
-                <a href="https://arxiv.org/abs/2412.06191" target="_blank" className="link-hover font-semibold spring-hover">
+                <a href="https://arxiv.org/abs/2412.06191" target="_blank" className="link-hover font-semibold">
                   Read more →
                 </a>
               </div>
@@ -174,7 +174,7 @@ export default function Home() {
           <section className={`section-card hover-lift transition-all duration-1000 delay-600 ${
             visibleSections.includes(2) ? 'scroll-reveal revealed' : 'scroll-reveal'
           }`}>
-            <h2 className="section-title text-center text-carolina-blue text-reveal">HIGHLIGHTS</h2>
+            <h2 className="section-title text-center text-carolina-blue text-reveal">NEWS</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
               
               {/* Highlight 1 */}
@@ -187,7 +187,7 @@ export default function Home() {
                     height={300}
                     className="w-full object-cover rounded-lg mb-4 transition-transform duration-500 group-hover:scale-105"
                   />
-                  <p className="text-center text-neutral-700 group-hover:text-carolina-blue transition-colors duration-300">
+                  <p className="text-center text-neutral-700 transition-colors duration-300">
                     Breakthrough in nano-optics: Large aperture broadband metalenses for next-generation optical systems
                   </p>
                 </a>
@@ -203,7 +203,7 @@ export default function Home() {
                     height={300}
                     className="w-full object-cover rounded-lg mb-4 transition-transform duration-500 group-hover:scale-105"
                   />
-                  <p className="text-center text-neutral-700 group-hover:text-carolina-blue transition-colors duration-300">
+                  <p className="text-center text-neutral-700 transition-colors duration-300">
                     Event fields: Revolutionary approach to capturing light fields with unprecedented capabilities
                   </p>
                 </a>

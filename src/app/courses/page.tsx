@@ -61,10 +61,10 @@ export default function Teaching() {
                 >
                   <div className="flex flex-col items-start space-y-6">
                     <div className="flex-1 md:text-left w-full">
-                      <h3 className="text-2xl font-bold text-unc-navy mb-3 group-hover:text-carolina-blue transition-colors duration-300">
+                      <h3 className="text-2xl font-bold text-unc-navy mb-3">
                         {course.title}
                       </h3>
-                      <p className="text-carolina-blue font-semibold mb-2 group-hover:text-unc-navy transition-colors duration-300">
+                      <p className="text-carolina-blue font-semibold mb-2">
                         {course.semester}
                       </p>
                       <p className="text-neutral-600 mb-6 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300 text-lg">
@@ -80,9 +80,6 @@ export default function Teaching() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
                         </Link>
-                        <button className="btn-secondary spring-hover">
-                          View Syllabus
-                        </button>
                       </div>
                     </div>
                   </div>

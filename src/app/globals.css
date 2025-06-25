@@ -156,12 +156,14 @@ select:focus {
 
 /* Link styles */
 .link-primary {
-  @apply text-carolina-blue hover:text-dome-copper transition-colors duration-300;
+  @apply text-carolina-blue transition-colors duration-300;
+  /* Removed hover:text-dome-copper to prevent color change on hover */
 }
 
 /* Navigation styles */
 .nav-link {
-  @apply text-white hover:text-white/80 transition-colors duration-300;
+  @apply text-white transition-colors duration-300;
+  /* Removed hover:text-white/80 to prevent color change on hover */
 }
 
 /* Enhanced Navigation Styles */
@@ -249,7 +251,7 @@ select:focus {
 }
 
 .project-card:hover .project-title {
-  @apply text-unc-navy;
+  /* Removed @apply text-unc-navy to prevent color change on hover */
 }
 
 /* Enhanced banner images */
@@ -414,7 +416,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-hover:hover {
-  @apply text-unc-navy transform scale-110;
+  @apply transform scale-110;
+  /* Removed text-unc-navy to prevent color change on hover */
 }
 
 /* Enhanced button hover effects */
