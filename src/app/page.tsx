@@ -2,6 +2,7 @@
 import './animations.css';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const [visibleSections, setVisibleSections] = useState<number[]>([]);
@@ -83,15 +84,15 @@ export default function Home() {
 
       {/* Main content container */}
       <div className="content-container">
-        <div className="flex-2 space-y-10">
+        <div className="flex-2 space-y-16">
 
           {/* Enhanced About Us section */}
-          <section className={`section-card hover-lift transition-all duration-1000 ${
+          <section className={`section-card transition-all duration-1000 ${
             visibleSections.includes(0) ? 'scroll-reveal revealed' : 'scroll-reveal'
           }`}>
-            <div className="flex flex-col items-center gap-6">
+            <div className="flex flex-col items-center gap-8">
               <div className="flex-1">
-                <h2 className="section-title text-center text-carolina-blue text-reveal">ABOUT US</h2>
+                <h2 className="section-title text-center text-carolina-blue text-reveal mb-8">ABOUT US</h2>
                 <p className="text-lg leading-relaxed text-neutral-600 font-medium max-w-3xl mx-auto">
                   Welcome to the <span className="font-bold text-carolina-blue transition-colors duration-300">Visual Computing and Augmented Intelligence Lab</span> at UNC Chapel Hill. 
                   Our team is dedicated to advancing research in computational imaging, visual perception, and AI-driven solutions. 
@@ -102,112 +103,79 @@ export default function Home() {
           </section>
 
           {/* Enhanced Featured Projects section */}
-          <section className={`section-card hover-lift transition-all duration-1000 delay-300 ${
+          <section className={`section-card transition-all duration-1000 delay-300 ${
             visibleSections.includes(1) ? 'scroll-reveal revealed' : 'scroll-reveal'
           }`}>
-            <h2 className="section-title text-center text-carolina-blue text-reveal">PROJECTS</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
+            <h2 className="section-title text-center text-carolina-blue text-reveal mb-12">PROJECTS</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
               
               {/* Project 1 with enhanced interactions */}
-              <div className="project-card group magnetic-hover stagger-item enhanced-shadow">
+              <Link href="https://www.nature.com/articles/s41467-025-58208-4" target="_blank" className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer block">
                 <Image 
                   src="https://www.cs.unc.edu/~cpk/data/thumbnails/1cm-metalens.PNG" 
                   alt="Beating bandwidth limits for large aperture broadband nano-optics" 
                   width={128}
                   height={128}
-                  className="object-cover rounded mb-4 transition-all duration-500 group-hover:scale-110" 
+                  className="object-cover rounded mb-6 transition-transform duration-300 group-hover:scale-105" 
                 />
-                <h3 className="text-xl font-bold mb-2 text-carolina-blue text-center project-title transition-all duration-300">
+                <h3 className="text-xl font-bold mb-4 text-carolina-blue text-center project-title transition-all duration-300">
                   Beating bandwidth limits for large aperture broadband nano-optics
                 </h3>
                 <p className="text-neutral-700 mb-2 flex-1 transition-colors duration-300">
                   Breakthrough in nano-optics, overcoming bandwidth limits for large aperture broadband metalenses with revolutionary optical designs.
                 </p>
-                <a href="https://www.nature.com/articles/s41467-025-58208-4" target="_blank" className="link-hover font-semibold">
-                  Read more →
-                </a>
-              </div>
+              </Link>
 
               {/* Project 2 with enhanced interactions */}
-              <div className="project-card group magnetic-hover stagger-item enhanced-shadow">
+              <Link href="https://arxiv.org/abs/2405.17351" target="_blank" className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer block">
                 <Image 
                   src="https://www.cs.unc.edu/~cpk/data/thumbnails/dof-gs.PNG" 
                   alt="DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting" 
                   width={128}
                   height={128}
-                  className="object-cover rounded mb-4 transition-all duration-500 group-hover:scale-110" 
+                  className="object-cover rounded mb-6 transition-transform duration-300 group-hover:scale-105" 
                 />
-                <h3 className="text-xl font-bold mb-2 text-carolina-blue text-center project-title transition-all duration-300">
+                <h3 className="text-xl font-bold mb-4 text-carolina-blue text-center project-title transition-all duration-300">
                   DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting
                 </h3>
                 <p className="text-neutral-700 mb-2 flex-1 transition-colors duration-300">
                   Novel 3D Gaussian Splatting technique for flexible depth-of-field control in computational photography applications.
                 </p>
-                <a href="https://arxiv.org/abs/2405.17351" target="_blank" className="link-hover font-semibold">
-                  Read more →
-                </a>
-              </div>
+              </Link>
 
               {/* Project 3 with enhanced interactions */}
-              <div className="project-card group magnetic-hover stagger-item enhanced-shadow">
+              <Link href="https://arxiv.org/abs/2412.06191" target="_blank" className="project-card group stagger-item shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer block">
                 <Image 
                   src="https://www.cs.unc.edu/~cpk/data/thumbnails/eventfield.png" 
                   alt="Event fields: Capturing light fields at high speed, resolution, and dynamic range" 
                   width={128}
                   height={128}
-                  className="object-cover rounded mb-4 transition-all duration-500 group-hover:scale-110" 
+                  className="object-cover rounded mb-6 transition-transform duration-300 group-hover:scale-105" 
                 />
-                <h3 className="text-xl font-bold mb-2 text-carolina-blue text-center project-title transition-all duration-300">
+                <h3 className="text-xl font-bold mb-4 text-carolina-blue text-center project-title transition-all duration-300">
                   Event fields: Capturing light fields at high speed, resolution, and dynamic range
                 </h3>
                 <p className="text-neutral-700 mb-2 flex-1 transition-colors duration-300">
                   Pioneering event-based light field capture for high-speed, high-resolution, and high-dynamic-range imaging systems.
                 </p>
-                <a href="https://arxiv.org/abs/2412.06191" target="_blank" className="link-hover font-semibold">
-                  Read more →
-                </a>
-              </div>
+              </Link>
             </div>
           </section>
 
-          {/* Enhanced Highlights section */}
-          <section className={`section-card hover-lift transition-all duration-1000 delay-600 ${
-            visibleSections.includes(2) ? 'scroll-reveal revealed' : 'scroll-reveal'
-          }`}>
-            <h2 className="section-title text-center text-carolina-blue text-reveal">NEWS</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
-              
-              {/* Highlight 1 */}
-              <div className="project-card group magnetic-hover enhanced-shadow">
-                <a href="https://www.nature.com/articles/s41467-025-58208-4" target="_blank" className="block">
-                  <Image 
-                    src="https://www.cs.unc.edu/~cpk/data/thumbnails/1cm-metalens.PNG"
-                    alt="Large aperture broadband nano-optics"
-                    width={400}
-                    height={300}
-                    className="w-full object-cover rounded-lg mb-4 transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <p className="text-center text-neutral-700 transition-colors duration-300">
-                    Breakthrough in nano-optics: Large aperture broadband metalenses for next-generation optical systems
-                  </p>
-                </a>
-              </div>
-
-              {/* Highlight 2 */}
-              <div className="project-card group magnetic-hover enhanced-shadow">
-                <a href="https://arxiv.org/abs/2412.06191" target="_blank" className="block">
-                  <Image 
-                    src="https://www.cs.unc.edu/~cpk/data/thumbnails/eventfield.png"
-                    alt="Event fields research"
-                    width={400}
-                    height={300}
-                    className="w-full object-cover rounded-lg mb-4 transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <p className="text-center text-neutral-700 transition-colors duration-300">
-                    Event fields: Revolutionary approach to capturing light fields with unprecedented capabilities
-                  </p>
-                </a>
-              </div>
+          {/* Recent Awards & News section */}
+          <section className={`section-card transition-all duration-1000 delay-600 ${visibleSections.includes(2) ? 'scroll-reveal revealed' : 'scroll-reveal'}`}>
+            <h2 className="section-title text-center text-carolina-blue text-reveal mb-12">RECENT AWARDS & NEWS</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-20 max-w-5xl mx-auto">
+              <ul className="list-disc list-inside space-y-4 text-neutral-700 text-lg">
+                <li><span className="font-semibold text-carolina-blue">Best Paper Award</span> at GMCV & WACV 2025 for "FlatTrack: Eye-tracking with ultra-thin lensless cameras"</li>
+                <li><span className="font-semibold text-carolina-blue">CVPR 2025</span>: "DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting" accepted</li>
+                <li><span className="font-semibold text-carolina-blue">Nature Communications 2025</span>: "Beating bandwidth limits for large aperture broadband nano-optics" published</li>
+              </ul>
+              <ul className="list-disc list-inside space-y-4 text-neutral-700 text-lg">
+                <li><span className="font-semibold text-carolina-blue">Science Advances 2024</span>: "Spatially Varying Nanophotonic Neural Networks" published</li>
+                <li><span className="font-semibold text-carolina-blue">Best Paper Award</span> at OmniCV & CVPR 2024 for "Cross-Domain Synthetic-to-Real In-the-Wild Depth and Normal Estimation"</li>
+                <li><span className="font-semibold text-carolina-blue">SIGGRAPH Asia 2024</span>: "End-to-End Hybrid Refractive-Diffractive Lens Design" accepted</li>
+              </ul>
             </div>
           </section>
 

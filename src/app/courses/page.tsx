@@ -56,15 +56,15 @@ export default function Teaching() {
               {courses.map((course, index) => (
                 <div 
                   key={course.title} 
-                  className="card group p-8 hover-lift magnetic-hover enhanced-shadow transition-all duration-500 stagger-item"
+                  className="bg-white rounded-lg p-8 enhanced-shadow transition-all duration-500 stagger-item group"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <div className="flex flex-col items-start space-y-6">
                     <div className="flex-1 md:text-left w-full">
-                      <h3 className="text-2xl font-bold text-unc-navy mb-3">
+                      <h3 className="text-2xl font-bold text-carolina-blue mb-3">
                         {course.title}
                       </h3>
-                      <p className="text-carolina-blue font-semibold mb-2">
+                      <p className="text-carolina-blue font-semibold mb-2 group-hover:text-dome-copper transition-colors duration-300">
                         {course.semester}
                       </p>
                       <p className="text-neutral-600 mb-6 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300 text-lg">
