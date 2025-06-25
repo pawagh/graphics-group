@@ -81,6 +81,26 @@ html {
   background: var(--unc-navy);
 }
 
+/* Hide scrollbar for highlights section */
+#highlights-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+#highlights-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for projects section */
+#projects-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+#projects-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Focus styles */
 *:focus {
   outline: 2px solid var(--unc-navy);

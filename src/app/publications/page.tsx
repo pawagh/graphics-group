@@ -51,22 +51,11 @@ export default function Publications() {
         />
       </div>
 
-      {/* Publications Philosophy - Dome Copper translucent banner */}
+      {/* Publications Philosophy - Campus Sandstone translucent banner */}
       <div className="w-full bg-campus-sandstone backdrop-blur-sm py-3 mb-8">
         <div className="max-w-7xl mx-auto px-4 md:px-12">
-          <div className="flex justify-between items-center mb-3">
-            <h2 className="text-2xl font-bold text-dome-copper">PUBLICATIONS</h2>
-            <Link 
-              href="/publications" 
-              className="bg-white text-dome-copper border-2 border-dome-copper font-medium px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-2 text-sm hover:bg-dome-copper hover:text-white"
-            >
-              Export List
-              <svg className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </Link>
-          </div>
-          <p className="text-md text-neutral-700 max-w-4xl leading-relaxed">
+          <h2 className="text-2xl font-bold text-dome-copper text-center mb-3">PUBLICATIONS</h2>
+          <p className="text-md text-neutral-700 max-w-4xl mx-auto leading-relaxed">
             Explore our cutting-edge research in visual computing and augmented intelligence. 
             Our publications span computational imaging, computer vision, AR/VR, nano-optics, and machine learning.
           </p>
