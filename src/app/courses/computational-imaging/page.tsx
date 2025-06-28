@@ -44,7 +44,7 @@ export default function ComputationalImaging() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4">
         {/* Mobile Navigation Header */}
         <div className="lg:hidden mb-6">
           <div className="bg-white rounded-lg shadow-md border border-neutral-200 p-4">
@@ -129,7 +129,7 @@ export default function ComputationalImaging() {
 
           {/* Main Content */}
           <div className="flex-1 bg-white rounded-lg shadow-md border border-neutral-200">
-            <div className="p-8">
+            <div className="p-4 sm:p-6 lg:p-8">
             
             {/* Description Section */}
             <section id="description" className="mb-12">

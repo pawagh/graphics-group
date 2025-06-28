@@ -90,11 +90,11 @@ export default function Home() {
 
           {/* Highlights section */}
           <section className="section-card unc-shadow-hover">
-            <div className="relative flex justify-center items-baseline mb-6">
-              <h2 className="section-title text-center text-carolina-blue text-reveal">LATEST NEWS</h2>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
+              <h2 className="section-title text-center sm:text-left text-carolina-blue text-reveal">LATEST NEWS</h2>
               <Link 
                 href="/publications" 
-                className="absolute right-0 bg-white text-carolina-blue border-2 border-carolina-blue font-medium px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-2 text-sm hover:bg-unc-navy hover:text-white hover:border-unc-navy"
+                className="bg-white text-carolina-blue border-2 border-carolina-blue font-medium px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-2 text-sm hover:bg-unc-navy hover:text-white hover:border-unc-navy self-center sm:self-auto"
               >
                 View All
                 <svg className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -294,8 +294,6 @@ export default function Home() {
               {/* Right fade only */}
               <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-neutral-50 to-transparent pointer-events-none"></div>
             </div>
-
-
 
           </section>
 
@@ -518,8 +516,6 @@ export default function Home() {
             </div>
 
           </section>
-
-
 
         </div>
       </div>
