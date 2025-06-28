@@ -164,8 +164,8 @@ export default function VisualComputingSystems() {
                 <div>
                   <h3 className="text-lg font-semibold text-carolina-blue mb-3">Textbooks & References</h3>
                   <ul className="space-y-3 text-neutral-700">
-                    <li className="border-l-4 border-carolina-blue pl-4">
-                      <strong>Primary:</strong> Hennessy & Patterson, "Computer Architecture: A Quantitative Approach" (6th Ed.)
+                                         <li className="border-l-4 border-carolina-blue pl-4">
+                       <strong>Primary:</strong> Hennessy &amp; Patterson, &ldquo;Computer Architecture: A Quantitative Approach&rdquo; (6th Ed.)
                     </li>
                     <li className="border-l-4 border-neutral-300 pl-4">
                       <strong>Reference:</strong> Real-Time Rendering (4th Ed.) by Akenine-Möller et al.
