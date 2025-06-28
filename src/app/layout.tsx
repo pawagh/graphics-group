@@ -243,6 +243,16 @@ export default function RootLayout({
               <div className="text-center md:text-left">
                 <h2 className="text-lg font-bold mb-2">Visual Computing and Augmented Intelligence Lab</h2>
                 <p className="mb-1">Department of Computer Science</p>
+                <p className="mb-1">
+                  <a 
+                    href="https://maps.google.com/?q=Sitterson+Hall,+UNC+Chapel+Hill,+NC" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="underline text-white hover:text-carolina-blue transition-colors duration-300"
+                  >
+                    Sitterson 205
+                  </a>
+                </p>
                 <p className="mb-1">University of North Carolina at Chapel Hill</p>
                 <p className="mb-1">Email: <a href="mailto:cpk@cs.unc.edu" className="underline text-white hover:text-white transition-colors duration-300">cpk@cs.unc.edu</a></p>
               </div>
@@ -299,7 +309,7 @@ export default function RootLayout({
             </div>
             
             {/* Copyright */}
-            <div className="relative z-10 text-center mt-8 pt-4 border-t border-white/30">
+            <div className="relative z-10 text-center mt-6 pt-4 border-t border-white/30">
               <p className="text-xs opacity-75">© 2025 Visual Computing and Augmented Intelligence Lab, UNC Chapel Hill</p>
             </div>
           </footer>
