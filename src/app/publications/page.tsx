@@ -4,6 +4,7 @@ import { publications } from './data';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import '../animations.css';
+import Link from 'next/link';
 
 export default function Publications() {
   // Extract years and tags - simplified categories
@@ -217,15 +218,22 @@ export default function Publications() {
                                 );
                               })}
                             </div>
-                            <div className="flex gap-4 md:hidden">
+                            <div className="flex flex-col gap-3 md:hidden">
+                              <Link 
+                                href={`/publications/${pub.slug}`}
+                                className="bg-carolina-blue text-white px-4 py-2 rounded-lg font-medium text-center transition-colors duration-300 hover:bg-unc-navy"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                View Details
+                              </Link>
                               <a 
                                 href={pub.link} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                className="link-hover font-semibold flex items-center gap-2"
+                                className="link-hover font-semibold flex items-center justify-center gap-2 text-sm text-neutral-600"
                                 onClick={(e) => e.stopPropagation()}
                               >
-                                Read More
+                                External Publication
                                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>

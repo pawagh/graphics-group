@@ -6,6 +6,7 @@ import '../../animations.css';
 
 export default function ComputationalImaging() {
   const [activeSection, setActiveSection] = useState('description');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -43,42 +44,92 @@ export default function ComputationalImaging() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 flex gap-8">
-        {/* Left Sidebar Navigation */}
-        <div className="w-64 flex-shrink-0">
-          <div className="sticky top-24 bg-white rounded-lg shadow-md border border-neutral-200">
-            <div className="p-4 border-b border-neutral-200">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Mobile Navigation Header */}
+        <div className="lg:hidden mb-6">
+          <div className="bg-white rounded-lg shadow-md border border-neutral-200 p-4">
+            <div className="flex items-center justify-between">
               <h3 className="font-bold text-carolina-blue text-lg">COMP 590</h3>
-            </div>
-            <nav className="p-2">
-              {navigationItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`w-full text-left px-4 py-3 rounded-md transition-all duration-200 text-sm font-medium ${
-                    activeSection === item.id
-                      ? 'bg-carolina-blue text-white'
-                      : 'text-neutral-700 hover:bg-neutral-100 hover:text-carolina-blue'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </nav>
-            <div className="p-4 border-t border-neutral-200">
-              <Link 
-                href="/courses" 
-                className="text-carolina-blue hover:text-unc-navy text-sm font-medium transition-colors duration-200"
+              <button
+                onClick={() => setSidebarOpen(!sidebarOpen)}
+                className="p-2 text-carolina-blue hover:bg-neutral-100 rounded-md transition-colors duration-200"
               >
-                ← Back to Courses
-              </Link>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
             </div>
+            
+            {/* Mobile Navigation Menu */}
+            {sidebarOpen && (
+              <div className="mt-4 pt-4 border-t border-neutral-200">
+                <nav className="space-y-2">
+                  {navigationItems.map((item) => (
+                    <button
+                      key={item.id}
+                      onClick={() => {
+                        scrollToSection(item.id);
+                        setSidebarOpen(false);
+                      }}
+                      className={`w-full text-left px-4 py-3 rounded-md transition-all duration-200 text-sm font-medium ${
+                        activeSection === item.id
+                          ? 'bg-carolina-blue text-white'
+                          : 'text-neutral-700 hover:bg-neutral-100 hover:text-carolina-blue'
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </nav>
+                <div className="mt-4 pt-4 border-t border-neutral-200">
+                  <Link 
+                    href="/courses" 
+                    className="text-carolina-blue hover:text-unc-navy text-sm font-medium transition-colors duration-200"
+                  >
+                    ← Back to Courses
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
-        {/* Main Content */}
-        <div className="flex-1 bg-white rounded-lg shadow-md border border-neutral-200">
-          <div className="p-8">
+        <div className="flex gap-8">
+          {/* Desktop Sidebar Navigation */}
+          <div className="hidden lg:block w-64 flex-shrink-0">
+            <div className="sticky top-24 bg-white rounded-lg shadow-md border border-neutral-200">
+              <div className="p-4 border-b border-neutral-200">
+                <h3 className="font-bold text-carolina-blue text-lg">COMP 590</h3>
+              </div>
+              <nav className="p-2">
+                {navigationItems.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`w-full text-left px-4 py-3 rounded-md transition-all duration-200 text-sm font-medium ${
+                      activeSection === item.id
+                        ? 'bg-carolina-blue text-white'
+                        : 'text-neutral-700 hover:bg-neutral-100 hover:text-carolina-blue'
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </nav>
+              <div className="p-4 border-t border-neutral-200">
+                <Link 
+                  href="/courses" 
+                  className="text-carolina-blue hover:text-unc-navy text-sm font-medium transition-colors duration-200"
+                >
+                  ← Back to Courses
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Main Content */}
+          <div className="flex-1 bg-white rounded-lg shadow-md border border-neutral-200">
+            <div className="p-8">
             
             {/* Description Section */}
             <section id="description" className="mb-12">
@@ -347,6 +398,7 @@ export default function ComputationalImaging() {
               </div>
             </section>
 
+            </div>
           </div>
         </div>
       </div>
