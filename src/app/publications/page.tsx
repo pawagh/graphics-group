@@ -170,7 +170,7 @@ export default function Publications() {
                       >
                         <div className="flex flex-col md:flex-row gap-6 items-start">
                           <div className="flex-shrink-0 relative">
-                            <div className="relative overflow-hidden rounded-lg border-2 border-unc-navy/20 transition-colors duration-500">
+                            <div className="relative overflow-hidden rounded-lg border-2 border-dome-copper/20 transition-colors duration-500">
                               <Image 
                                 src={pub.image && pub.image.trim() !== "" ? pub.image : "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"} 
                                 alt={pub.title} 
@@ -188,13 +188,7 @@ export default function Publications() {
                             <h3 className="text-xl font-bold text-carolina-blue mb-3 transition-colors duration-300 leading-tight">
                               {pub.title}
                             </h3>
-                            <p className={`mb-2 transition-colors duration-300 font-medium ${
-                              pub.meta.toLowerCase().includes('best paper') || 
-                              pub.meta.toLowerCase().includes('award') || 
-                              pub.meta.toLowerCase().includes('honorable mention')
-                                ? 'text-neutral-600 group-hover:text-unc-navy'
-                                : 'text-neutral-600'
-                            }`}>
+                            <p className="mb-2 transition-colors duration-300 font-medium text-neutral-600">
                               {pub.authors}
                             </p>
                             <div className="font-semibold mb-4 transition-colors duration-300">
@@ -212,7 +206,7 @@ export default function Publications() {
                                     key={index} 
                                     className={`leading-tight ${index > 0 ? 'mt-1' : ''} ${
                                       isAwardPaper && isAwardPart 
-                                        ? 'text-carolina-blue group-hover:text-unc-navy'
+                                        ? 'text-carolina-blue group-hover:text-azalea-pink'
                                         : isAwardPaper 
                                           ? 'text-carolina-blue group-hover:text-carolina-blue'
                                           : 'text-carolina-blue group-hover:text-dome-copper'

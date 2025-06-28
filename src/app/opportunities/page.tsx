@@ -1,8 +1,10 @@
 'use client'
 import '../animations.css';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function OpportunitiesPage() {
+  const [activeTab, setActiveTab] = useState('undergrad');
   return (
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
       {/* Hero banner section */}
@@ -30,74 +32,166 @@ export default function OpportunitiesPage() {
       <div className="content-container">
         <div className="space-y-10">
           
-          {/* Current openings */}
+          {/* Opportunities Tabs */}
           <section className="section-card">
-            <h2 className="section-title text-center">CURRENT OPENINGS</h2>
-            <div className="max-w-4xl mx-auto">
-              <div 
-                className="bg-white rounded-lg p-8 border border-neutral-200 transition-all duration-500 transform hover:-translate-y-3"
-                style={{
-                  boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
-                  transition: 'all 0.5s ease'
-                }}
-                                 onMouseEnter={(e) => {
-                   e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 20px 20px -10px rgba(0, 0, 0, 0.15)';
-                   e.currentTarget.style.backgroundColor = '#f8fafc';
-                 }}
-                 onMouseLeave={(e) => {
-                   e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)';
-                   e.currentTarget.style.backgroundColor = '#ffffff';
-                 }}
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-unc-navy/10 rounded-full flex items-center justify-center">
-                    <svg className="w-8 h-8 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0H8m8 0v2a2 2 0 002 2V8a2 2 0 00-2-2z" />
-                    </svg>
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-carolina-blue mb-3">No Current Openings</h3>
-                <p className="text-neutral-600 leading-relaxed">
-                  We don&apos;t have any open positions at the moment, but we&apos;re always interested in connecting with talented researchers. 
-                  Please feel free to reach out if you&apos;re interested in future opportunities or potential collaborations.
-        </p>
+            <h2 className="section-title text-center">OPPORTUNITIES</h2>
+            
+            {/* Tab Navigation */}
+            <div className="flex justify-center mb-8">
+              <div className="flex bg-neutral-100 rounded-lg p-1">
+                <button
+                  onClick={() => setActiveTab('undergrad')}
+                  className={`px-6 py-3 rounded-md font-semibold transition-all duration-300 ${
+                    activeTab === 'undergrad'
+                      ? 'bg-carolina-blue text-white'
+                      : 'text-neutral-600 hover:text-carolina-blue'
+                  }`}
+                >
+                  Undergraduate
+                </button>
+                <button
+                  onClick={() => setActiveTab('grad')}
+                  className={`px-6 py-3 rounded-md font-semibold transition-all duration-300 ${
+                    activeTab === 'grad'
+                      ? 'bg-carolina-blue text-white'
+                      : 'text-neutral-600 hover:text-carolina-blue'
+                  }`}
+                >
+                  Graduate
+                </button>
+                <button
+                  onClick={() => setActiveTab('postdoc')}
+                  className={`px-6 py-3 rounded-md font-semibold transition-all duration-300 ${
+                    activeTab === 'postdoc'
+                      ? 'bg-carolina-blue text-white'
+                      : 'text-neutral-600 hover:text-carolina-blue'
+                  }`}
+                >
+                  Postdoc
+                </button>
               </div>
             </div>
-          </section>
 
-          {/* Contact section */}
-          <section className="section-card">
-            <h3 className="section-title text-center">CONTACT INFORMATION</h3>
-            <div className="max-w-2xl mx-auto">
-              <p className="text-lg text-neutral-600 mb-6">
-                Have questions about our research or opportunities? We&apos;d love to hear from you.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-unc-navy rounded-full flex items-center justify-center mx-auto mb-3 transition-colors duration-300">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
+            {/* Tab Content */}
+            <div className="max-w-4xl mx-auto">
+              {/* Undergraduate Tab */}
+              {activeTab === 'undergrad' && (
+                <div className="bg-white rounded-lg p-8 border border-neutral-200" style={{ boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)' }}>
+                  <div className="flex justify-center mb-4">
+                    <div className="w-16 h-16 bg-carolina-blue/10 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                    </div>
                   </div>
-                  <h4 className="font-semibold text-carolina-blue">Email</h4>
-                  <a href="mailto:cpk@cs.unc.edu" className="link-hover">cpk@cs.unc.edu</a>
+                  <h3 className="text-xl font-semibold text-carolina-blue mb-4 text-center">Undergraduate Research Opportunities</h3>
+                  <div className="space-y-4 text-neutral-600 leading-relaxed">
+                    <p>
+                      We welcome motivated undergraduate students to join our research team and gain hands-on experience in visual computing and augmented intelligence.
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-6 mt-6">
+                      <div>
+                        <h4 className="font-semibold text-carolina-blue mb-2">Research Areas</h4>
+                        <ul className="space-y-1 text-sm">
+                          <li>• Computational Imaging</li>
+                          <li>• Computer Vision</li>
+                          <li>• AR/VR Systems</li>
+                          <li>• Machine Learning</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-carolina-blue mb-2">What You'll Gain</h4>
+                        <ul className="space-y-1 text-sm">
+                          <li>• Research experience</li>
+                          <li>• Technical skills</li>
+                          <li>• Publication opportunities</li>
+                          <li>• Graduate school preparation</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-unc-navy rounded-full flex items-center justify-center mx-auto mb-3 transition-colors duration-300">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-          </div>
-                  <h4 className="font-semibold text-carolina-blue">Location</h4>
-                  <p className="text-neutral-600">Sitterson 205<br />UNC Chapel Hill</p>
-          </div>
-          </div>
-          </div>
-          </section>
+              )}
 
+              {/* Graduate Tab */}
+              {activeTab === 'grad' && (
+                <div className="bg-white rounded-lg p-8 border border-neutral-200" style={{ boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)' }}>
+                  <div className="flex justify-center mb-4">
+                    <div className="w-16 h-16 bg-carolina-blue/10 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold text-carolina-blue mb-4 text-center">Graduate Student Positions</h3>
+                  <div className="space-y-4 text-neutral-600 leading-relaxed">
+                    <p>
+                      We are looking for exceptional graduate students (MS and PhD) to conduct cutting-edge research in visual computing and augmented intelligence.
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-6 mt-6">
+                      <div>
+                        <h4 className="font-semibold text-carolina-blue mb-2">PhD Focus Areas</h4>
+                        <ul className="space-y-1 text-sm">
+                          <li>• Novel imaging systems</li>
+                          <li>• AR/VR optics</li>
+                          <li>• Computational photography</li>
+                          <li>• AI-driven vision systems</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-carolina-blue mb-2">Ideal Candidates</h4>
+                        <ul className="space-y-1 text-sm">
+                          <li>• Strong programming skills</li>
+                          <li>• Mathematics/Physics background</li>
+                          <li>• Research experience preferred</li>
+                          <li>• Passion for innovation</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Postdoc Tab */}
+              {activeTab === 'postdoc' && (
+                <div className="bg-white rounded-lg p-8 border border-neutral-200" style={{ boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)' }}>
+                  <div className="flex justify-center mb-4">
+                    <div className="w-16 h-16 bg-carolina-blue/10 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0H8m8 0v2a2 2 0 002 2V8a2 2 0 00-2-2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold text-carolina-blue mb-4 text-center">Postdoctoral Research Positions</h3>
+                  <div className="space-y-4 text-neutral-600 leading-relaxed">
+                    <p>
+                      We offer postdoctoral positions for researchers interested in pushing the boundaries of visual computing and developing next-generation augmented intelligence systems.
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-6 mt-6">
+                      <div>
+                        <h4 className="font-semibold text-carolina-blue mb-2">Research Opportunities</h4>
+                        <ul className="space-y-1 text-sm">
+                          <li>• Independent research projects</li>
+                          <li>• Collaborative initiatives</li>
+                          <li>• Industry partnerships</li>
+                          <li>• Grant writing opportunities</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-carolina-blue mb-2">Requirements</h4>
+                        <ul className="space-y-1 text-sm">
+                          <li>• PhD in related field</li>
+                          <li>• Strong publication record</li>
+                          <li>• Expertise in relevant areas</li>
+                          <li>• Leadership potential</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </section>
 
         </div>
       </div>
