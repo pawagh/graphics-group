@@ -100,7 +100,7 @@ export default function OpportunitiesPage() {
                         </ul>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-carolina-blue mb-2">What You'll Gain</h4>
+                        <h4 className="font-semibold text-carolina-blue mb-2">What You&apos;ll Gain</h4>
                         <ul className="space-y-1 text-sm">
                           <li>• Research experience</li>
                           <li>• Technical skills</li>

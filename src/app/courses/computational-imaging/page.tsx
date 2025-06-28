@@ -164,11 +164,11 @@ export default function ComputationalImaging() {
                 <div>
                   <h3 className="text-lg font-semibold text-carolina-blue mb-3">Textbooks & References</h3>
                   <ul className="space-y-3 text-neutral-700">
-                    <li className="border-l-4 border-carolina-blue pl-4">
-                      <strong>Primary:</strong> Szeliski, "Computer Vision: Algorithms and Applications" (2nd Ed.)
-                    </li>
-                    <li className="border-l-4 border-neutral-300 pl-4">
-                      <strong>Reference:</strong> Gonzalez & Woods, "Digital Image Processing" (4th Ed.)
+                                         <li className="border-l-4 border-carolina-blue pl-4">
+                       <strong>Primary:</strong> Szeliski, &ldquo;Computer Vision: Algorithms and Applications&rdquo; (2nd Ed.)
+                     </li>
+                     <li className="border-l-4 border-neutral-300 pl-4">
+                       <strong>Reference:</strong> Gonzalez &amp; Woods, &ldquo;Digital Image Processing&rdquo; (4th Ed.)
                     </li>
                     <li className="border-l-4 border-neutral-300 pl-4">
                       <strong>Reference:</strong> Selected research papers (provided on Canvas)
