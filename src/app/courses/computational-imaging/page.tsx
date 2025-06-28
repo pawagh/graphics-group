@@ -44,7 +44,7 @@ export default function ComputationalImaging() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-2 sm:px-4">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 overflow-x-hidden">
         {/* Mobile Navigation Header */}
         <div className="lg:hidden mb-6">
           <div className="bg-white rounded-lg shadow-md border border-neutral-200 p-4">
@@ -94,7 +94,7 @@ export default function ComputationalImaging() {
           </div>
         </div>
 
-        <div className="flex gap-8">
+        <div className="flex lg:gap-8">
           {/* Desktop Sidebar Navigation */}
           <div className="hidden lg:block w-64 flex-shrink-0">
             <div className="sticky top-24 bg-white rounded-lg shadow-md border border-neutral-200">
