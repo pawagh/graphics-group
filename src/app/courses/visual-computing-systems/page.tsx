@@ -44,7 +44,7 @@ export default function VisualComputingSystems() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 overflow-x-hidden">
+      <div className="w-full max-w-7xl mx-auto px-2 sm:px-4">
         {/* Mobile Navigation Header */}
         <div className="lg:hidden mb-6">
           <div className="bg-white rounded-lg shadow-md border border-neutral-200 p-4">
@@ -94,7 +94,7 @@ export default function VisualComputingSystems() {
           </div>
         </div>
 
-        <div className="flex lg:gap-8">
+        <div className="w-full lg:flex lg:gap-8">
           {/* Desktop Sidebar Navigation */}
           <div className="hidden lg:block w-64 flex-shrink-0">
             <div className="sticky top-24 bg-white rounded-lg shadow-md border border-neutral-200">
@@ -128,8 +128,8 @@ export default function VisualComputingSystems() {
           </div>
 
           {/* Main Content */}
-          <div className="flex-1 bg-white rounded-lg shadow-md border border-neutral-200">
-            <div className="p-4 sm:p-6 lg:p-8">
+          <div className="w-full lg:flex-1 min-w-0 bg-white rounded-lg shadow-md border border-neutral-200">
+            <div className="p-3 sm:p-4 lg:p-8 break-words">
               
               {/* Description Section */}
               <section id="description" className="mb-12">
