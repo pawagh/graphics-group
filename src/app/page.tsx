@@ -269,7 +269,8 @@ export default function Home() {
                   if (typeof document !== 'undefined') {
                     const container = document.getElementById('highlights-scroll');
                     if (container) {
-                      container.scrollBy({ left: -400, behavior: 'smooth' });
+                      // Scroll by exactly one card width (320px) + gap (24px) = 344px
+                      container.scrollBy({ left: -344, behavior: 'smooth' });
                     }
                   }
                 }}
@@ -286,7 +287,8 @@ export default function Home() {
                   if (typeof document !== 'undefined') {
                     const container = document.getElementById('highlights-scroll');
                     if (container) {
-                      container.scrollBy({ left: 400, behavior: 'smooth' });
+                      // Scroll by exactly one card width (320px) + gap (24px) = 344px
+                      container.scrollBy({ left: 344, behavior: 'smooth' });
                     }
                   }
                 }}
@@ -558,7 +560,8 @@ export default function Home() {
                   if (typeof document !== 'undefined') {
                     const container = document.getElementById('projects-scroll');
                     if (container) {
-                      container.scrollBy({ left: -400, behavior: 'smooth' });
+                      // Scroll by exactly one card width (320px) + gap (24px) = 344px
+                      container.scrollBy({ left: -344, behavior: 'smooth' });
                     }
                   }
                 }}
@@ -575,7 +578,8 @@ export default function Home() {
                   if (typeof document !== 'undefined') {
                     const container = document.getElementById('projects-scroll');
                     if (container) {
-                      container.scrollBy({ left: 400, behavior: 'smooth' });
+                      // Scroll by exactly one card width (320px) + gap (24px) = 344px
+                      container.scrollBy({ left: 344, behavior: 'smooth' });
                     }
                   }
                 }}
