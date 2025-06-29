@@ -269,8 +269,17 @@ export default function Home() {
                   if (typeof document !== 'undefined') {
                     const container = document.getElementById('highlights-scroll');
                     if (container) {
-                      // Scroll by exactly one card width (320px) + gap (24px) = 344px
-                      container.scrollBy({ left: -344, behavior: 'smooth' });
+                      const scrollAmount = 344; // Card width (320px) + gap (24px)
+                      const currentScroll = container.scrollLeft;
+                      const newScroll = currentScroll - scrollAmount;
+                      
+                      // If we're at or near the beginning, loop to the end
+                      if (newScroll <= 0) {
+                        const maxScroll = container.scrollWidth - container.clientWidth;
+                        container.scrollTo({ left: maxScroll, behavior: 'smooth' });
+                      } else {
+                        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                      }
                     }
                   }
                 }}
@@ -287,8 +296,16 @@ export default function Home() {
                   if (typeof document !== 'undefined') {
                     const container = document.getElementById('highlights-scroll');
                     if (container) {
-                      // Scroll by exactly one card width (320px) + gap (24px) = 344px
-                      container.scrollBy({ left: 344, behavior: 'smooth' });
+                      const scrollAmount = 344; // Card width (320px) + gap (24px)
+                      const currentScroll = container.scrollLeft;
+                      const maxScroll = container.scrollWidth - container.clientWidth;
+                      
+                      // If we're already at or very close to the end (within 10px), loop to the beginning
+                      if (currentScroll >= maxScroll - 10) {
+                        container.scrollTo({ left: 0, behavior: 'smooth' });
+                      } else {
+                        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                      }
                     }
                   }
                 }}
@@ -560,8 +577,17 @@ export default function Home() {
                   if (typeof document !== 'undefined') {
                     const container = document.getElementById('projects-scroll');
                     if (container) {
-                      // Scroll by exactly one card width (320px) + gap (24px) = 344px
-                      container.scrollBy({ left: -344, behavior: 'smooth' });
+                      const scrollAmount = 344; // Card width (320px) + gap (24px)
+                      const currentScroll = container.scrollLeft;
+                      const newScroll = currentScroll - scrollAmount;
+                      
+                      // If we're at or near the beginning, loop to the end
+                      if (newScroll <= 0) {
+                        const maxScroll = container.scrollWidth - container.clientWidth;
+                        container.scrollTo({ left: maxScroll, behavior: 'smooth' });
+                      } else {
+                        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                      }
                     }
                   }
                 }}
@@ -578,8 +604,16 @@ export default function Home() {
                   if (typeof document !== 'undefined') {
                     const container = document.getElementById('projects-scroll');
                     if (container) {
-                      // Scroll by exactly one card width (320px) + gap (24px) = 344px
-                      container.scrollBy({ left: 344, behavior: 'smooth' });
+                      const scrollAmount = 344; // Card width (320px) + gap (24px)
+                      const currentScroll = container.scrollLeft;
+                      const maxScroll = container.scrollWidth - container.clientWidth;
+                      
+                      // If we're already at or very close to the end (within 10px), loop to the beginning
+                      if (currentScroll >= maxScroll - 10) {
+                        container.scrollTo({ left: 0, behavior: 'smooth' });
+                      } else {
+                        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                      }
                     }
                   }
                 }}
