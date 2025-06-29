@@ -90,17 +90,19 @@ export default function Home() {
 
           {/* Highlights section */}
           <section className="section-card unc-shadow-hover">
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
-              <h2 className="section-title text-center sm:text-left text-carolina-blue text-reveal">LATEST NEWS</h2>
-              <Link 
-                href="/publications" 
-                className="bg-white text-carolina-blue border-2 border-carolina-blue font-medium px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-2 text-sm hover:bg-unc-navy hover:text-white hover:border-unc-navy self-center sm:self-auto"
-              >
-                View All
-                <svg className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+            <div className="relative mb-6">
+              <h2 className="section-title text-center text-carolina-blue text-reveal mb-4 sm:mb-0">LATEST NEWS</h2>
+              <div className="flex justify-center sm:block">
+                <Link 
+                  href="/publications" 
+                  className="bg-white text-carolina-blue border-2 border-carolina-blue font-medium px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-2 text-sm hover:bg-unc-navy hover:text-white hover:border-unc-navy sm:absolute sm:right-0 sm:top-0"
+                >
+                  View All
+                  <svg className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
             </div>
             
             {/* Horizontal scroll container */}
@@ -263,9 +265,11 @@ export default function Home() {
               {/* Navigation buttons */}
               <button 
                 onClick={() => {
-                  const container = document.getElementById('highlights-scroll');
-                  if (container) {
-                    container.scrollBy({ left: -400, behavior: 'smooth' });
+                  if (typeof document !== 'undefined') {
+                    const container = document.getElementById('highlights-scroll');
+                    if (container) {
+                      container.scrollBy({ left: -400, behavior: 'smooth' });
+                    }
                   }
                 }}
                 className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-unc-navy p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-10 backdrop-blur-sm"
@@ -278,9 +282,11 @@ export default function Home() {
               
               <button 
                 onClick={() => {
-                  const container = document.getElementById('highlights-scroll');
-                  if (container) {
-                    container.scrollBy({ left: 400, behavior: 'smooth' });
+                  if (typeof document !== 'undefined') {
+                    const container = document.getElementById('highlights-scroll');
+                    if (container) {
+                      container.scrollBy({ left: 400, behavior: 'smooth' });
+                    }
                   }
                 }}
                 className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-unc-navy p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-10 backdrop-blur-sm"
@@ -299,17 +305,19 @@ export default function Home() {
 
           {/* Enhanced Featured Projects section */}
           <section className="section-card unc-shadow-hover">
-            <div className="relative flex justify-center items-baseline mb-6">
-              <h2 className="section-title text-center text-carolina-blue text-reveal">FEATURED PUBLICATIONS</h2>
-              <Link 
-                href="/publications" 
-                className="absolute right-0 bg-white text-carolina-blue border-2 border-carolina-blue font-medium px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-2 text-sm hover:bg-unc-navy hover:text-white hover:border-unc-navy"
-              >
-                View All
-                <svg className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+            <div className="relative mb-6">
+              <h2 className="section-title text-center text-carolina-blue text-reveal mb-4 sm:mb-0">FEATURED PUBLICATIONS</h2>
+              <div className="flex justify-center sm:block">
+                <Link 
+                  href="/publications" 
+                  className="bg-white text-carolina-blue border-2 border-carolina-blue font-medium px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-2 text-sm hover:bg-unc-navy hover:text-white hover:border-unc-navy sm:absolute sm:right-0 sm:top-0"
+                >
+                  View All
+                  <svg className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
             </div>
             
             {/* Horizontal scroll container */}
@@ -483,9 +491,11 @@ export default function Home() {
               {/* Navigation buttons */}
               <button 
                 onClick={() => {
-                  const container = document.getElementById('projects-scroll');
-                  if (container) {
-                    container.scrollBy({ left: -400, behavior: 'smooth' });
+                  if (typeof document !== 'undefined') {
+                    const container = document.getElementById('projects-scroll');
+                    if (container) {
+                      container.scrollBy({ left: -400, behavior: 'smooth' });
+                    }
                   }
                 }}
                 className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-unc-navy p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-10 backdrop-blur-sm"
@@ -498,9 +508,11 @@ export default function Home() {
               
               <button 
                 onClick={() => {
-                  const container = document.getElementById('projects-scroll');
-                  if (container) {
-                    container.scrollBy({ left: 400, behavior: 'smooth' });
+                  if (typeof document !== 'undefined') {
+                    const container = document.getElementById('projects-scroll');
+                    if (container) {
+                      container.scrollBy({ left: 400, behavior: 'smooth' });
+                    }
                   }
                 }}
                 className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-unc-navy p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-10 backdrop-blur-sm"

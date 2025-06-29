@@ -1,3 +1,5 @@
+'use client';
+
 import { publications, Publication } from '../data';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -41,64 +43,57 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
               <p className="text-base text-blue-100 mb-2 font-medium">{publication.authors}</p>
               <p className="text-sm text-blue-200 mb-4 italic">{publication.meta}</p>
               
-              {/* Publication details in banner */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                {/* Citation */}
-                <div className="bg-white/10 backdrop-blur rounded-lg p-4 border border-white/20">
-                  <h3 className="text-sm font-semibold text-white mb-2">Citation</h3>
-                  <div className="bg-black/20 p-2 rounded text-xs text-blue-100 font-mono">
-                    <div className="truncate">{publication.slug.replace(/-/g, '_')}_2025</div>
-                  </div>
-                  <button className="mt-2 text-xs text-blue-200 hover:text-white transition-colors duration-300 font-medium">
-                    Copy Citation
-                  </button>
-                </div>
-                
-                {/* Resources */}
-                <div className="bg-white/10 backdrop-blur rounded-lg p-4 border border-white/20">
-                  <h3 className="text-sm font-semibold text-white mb-2">Resources</h3>
-                  <div className="space-y-1">
-                    {publication.link && (
-                      <a 
-                        href={publication.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="block text-xs text-blue-200 hover:text-white transition-colors duration-300"
-                      >
-                        • PDF Download
-                      </a>
-                    )}
-                    <div className="text-xs text-blue-200 hover:text-white transition-colors duration-300 cursor-pointer">
-                      • Source Code
-                    </div>
-                    <div className="text-xs text-blue-200 hover:text-white transition-colors duration-300 cursor-pointer">
-                      • Supplemental
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Action buttons */}
-                <div className="flex flex-col gap-2">
-                  {publication.link && (
-                    <a 
-                      href={publication.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="bg-white text-carolina-blue hover:bg-dome-copper hover:text-white inline-flex items-center justify-center px-3 py-2 rounded-lg font-medium text-sm transition-colors duration-300"
-                    >
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                      View Publication
-                    </a>
-                  )}
-                  <button className="bg-white/10 text-white border border-white/30 hover:bg-white/20 inline-flex items-center justify-center px-3 py-2 rounded-lg font-medium text-sm transition-colors duration-300">
-                    <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+              {/* Action buttons */}
+              <div className="flex flex-wrap gap-3 mb-6">
+                {/* Paper button */}
+                {publication.link && (
+                  <a 
+                    href={publication.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="bg-white text-carolina-blue hover:bg-dome-copper hover:text-white inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-300 shadow-lg"
+                  >
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
-                    Share
-                  </button>
-                </div>
+                    Paper
+                  </a>
+                )}
+                
+                {/* Supplemental button */}
+                <button className="bg-white/10 text-white border border-white/30 hover:bg-white/20 inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-300 shadow-lg">
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                  </svg>
+                  Suppl
+                </button>
+                
+                {/* Code button */}
+                <button className="bg-white/10 text-white border border-white/30 hover:bg-white/20 inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-300 shadow-lg">
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                  Code
+                </button>
+                
+                {/* BibTeX button */}
+                <button 
+                  className="bg-white/10 text-white border border-white/30 hover:bg-white/20 inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-300 shadow-lg"
+                  onClick={() => {
+                    const citation = `@article{${publication.slug.replace(/-/g, '_')},
+  title={${publication.title}},
+  author={${publication.authors}},
+  journal={${publication.meta}},
+  year={2025}
+}`;
+                    navigator.clipboard.writeText(citation);
+                  }}
+                >
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                  Bib
+                </button>
               </div>
             </div>
             
@@ -166,28 +161,7 @@ export default async function PublicationDetail({ params }: { params: Promise<{ 
             </ul>
           </section>
 
-          {/* Full Citation - Expanded version */}
-          <section className="section-card">
-            <h2 className="text-lg font-bold text-carolina-blue mb-4 flex items-center">
-              <svg className="w-5 h-5 mr-2 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-              </svg>
-              Citation
-            </h2>
-            <div className="bg-neutral-50 p-4 rounded-lg border-l-4 border-unc-navy">
-              <pre className="text-xs text-neutral-700 font-mono whitespace-pre-wrap break-words overflow-x-auto">
-{`@article{${publication.slug.replace(/-/g, '_')},
-  title={${publication.title}},
-  author={${publication.authors}},
-  journal={${publication.meta}},
-  year={2025}
-}`}
-              </pre>
-            </div>
-            <button className="mt-3 text-sm text-carolina-blue hover:text-dome-copper transition-colors duration-300 font-medium">
-              Copy Citation
-            </button>
-          </section>
+
         </div>
       </div>
     </div>
