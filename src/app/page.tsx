@@ -1,10 +1,11 @@
 'use client'
 import './animations.css';
 import Image from 'next/image';
-
 import Link from 'next/link';
 
+
 export default function Home() {
+
 
   return (
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
@@ -324,10 +325,8 @@ export default function Home() {
             <div className="relative">
               <div id="projects-scroll" className="flex gap-6 overflow-x-auto pb-4 scroll-smooth" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                 
-                {/* Publication 1 */}
-                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80 cursor-pointer"
-                  onClick={() => window.open('https://www.nature.com/articles/s41467-025-58208-4', '_blank')}
-                >
+                                                  {/* Publication 1 */}
+                <Link href="/publications/beating-bandwidth-limits-for-large-aperture-broadband-nano-optics" className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80 cursor-pointer hidden md:block">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
                       src="https://www.cs.unc.edu/~cpk/data/thumbnails/1cm-metalens.PNG" 
@@ -349,12 +348,35 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Link>
+                
+                {/* Mobile version - to project page */}
+                <Link href="/publications/beating-bandwidth-limits-for-large-aperture-broadband-nano-optics" className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80 cursor-pointer md:hidden">
+                  <div className="relative h-72 overflow-hidden rounded-lg">
+                    <Image 
+                      src="https://www.cs.unc.edu/~cpk/data/thumbnails/1cm-metalens.PNG" 
+                      alt="Beating bandwidth limits for large aperture broadband nano-optics" 
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent rounded-lg" />
+                    {/* Caption overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
+                        Beating bandwidth limits for large aperture broadband nano-optics
+                      </h3>
+                    </div>
+                    {/* Hover overlay with description */}
+                    <div className="absolute inset-0 bg-unc-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                      <p className="text-white text-center text-sm">
+                        Breakthrough in nano-optics, overcoming bandwidth limits for large aperture broadband metalenses with revolutionary optical designs.
+                      </p>
+                    </div>
+                  </div>
+                </Link>
 
-                {/* Publication 2 */}
-                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80 cursor-pointer"
-                  onClick={() => window.open('https://arxiv.org/abs/2405.17351', '_blank')}
-                >
+                                                  {/* Publication 2 */}
+                <Link href="/publications/dof-gs-adjustable-depth-of-field-3d-gaussian-splatting-for-post-capture-refocusing-defocus-rendering-and-blur-removal" className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80 cursor-pointer hidden md:block">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
                       src="https://www.cs.unc.edu/~cpk/data/thumbnails/dof-gs.PNG" 
@@ -376,12 +398,35 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Link>
+                
+                {/* Mobile version - to project page */}
+                <Link href="/publications/dof-gs-adjustable-depth-of-field-3d-gaussian-splatting-for-post-capture-refocusing-defocus-rendering-and-blur-removal" className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80 cursor-pointer md:hidden">
+                  <div className="relative h-72 overflow-hidden rounded-lg">
+                    <Image 
+                      src="https://www.cs.unc.edu/~cpk/data/thumbnails/dof-gs.PNG" 
+                      alt="DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting" 
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent rounded-lg" />
+                    {/* Caption overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
+                        DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting
+                      </h3>
+                    </div>
+                    {/* Hover overlay with description */}
+                    <div className="absolute inset-0 bg-unc-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                      <p className="text-white text-center text-sm">
+                        Novel 3D Gaussian Splatting technique for flexible depth-of-field control in computational photography applications.
+                      </p>
+                    </div>
+                  </div>
+                </Link>
 
-                {/* Publication 3 */}
-                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80 cursor-pointer"
-                  onClick={() => window.open('https://arxiv.org/abs/2412.06191', '_blank')}
-                >
+                                                  {/* Publication 3 */}
+                <Link href="/publications/event-fields-capturing-light-fields-at-high-speed-resolution-and-dynamic-range" className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80 cursor-pointer hidden md:block">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
                       src="https://www.cs.unc.edu/~cpk/data/thumbnails/eventfield.png" 
@@ -403,12 +448,35 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Link>
+                
+                {/* Mobile version - to project page */}
+                <Link href="/publications/event-fields-capturing-light-fields-at-high-speed-resolution-and-dynamic-range" className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80 cursor-pointer md:hidden">
+                  <div className="relative h-72 overflow-hidden rounded-lg">
+                    <Image 
+                      src="https://www.cs.unc.edu/~cpk/data/thumbnails/eventfield.png" 
+                      alt="Event fields: Capturing light fields at high speed, resolution, and dynamic range" 
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent rounded-lg" />
+                    {/* Caption overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
+                        Event fields: Capturing light fields at high speed, resolution, and dynamic range
+                      </h3>
+                    </div>
+                    {/* Hover overlay with description */}
+                    <div className="absolute inset-0 bg-unc-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                      <p className="text-white text-center text-sm">
+                        Pioneering event-based light field capture for high-speed, high-resolution, and high-dynamic-range imaging systems.
+                      </p>
+                    </div>
+                  </div>
+                </Link>
 
                 {/* Publication 4 */}
-                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80 cursor-pointer"
-                  onClick={() => window.open('#', '_blank')}
-                >
+                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
                       src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -433,9 +501,7 @@ export default function Home() {
                 </div>
 
                 {/* Publication 5 */}
-                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80 cursor-pointer"
-                  onClick={() => window.open('#', '_blank')}
-                >
+                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
                       src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -460,9 +526,7 @@ export default function Home() {
                 </div>
 
                 {/* Publication 6 */}
-                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80 cursor-pointer"
-                  onClick={() => window.open('#', '_blank')}
-                >
+                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
                       src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
