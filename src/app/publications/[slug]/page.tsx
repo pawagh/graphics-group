@@ -1,13 +1,59 @@
 'use client';
 
-import { publications, Publication } from '../data';
+import { useState, useEffect, useCallback } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import PublicationImage from '../../components/PublicationImage';
+import { Publication } from '@/lib/publications';
 
-export default async function PublicationDetail({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const publication = publications.find((pub: Publication) => pub.slug === slug);
+export default function PublicationDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const [publication, setPublication] = useState<Publication | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [slug, setSlug] = useState<string>('');
+
+  useEffect(() => {
+    const getParams = async () => {
+      const resolvedParams = await params;
+      setSlug(resolvedParams.slug);
+    };
+    getParams();
+  }, [params]);
+
+  const fetchPublication = useCallback(async () => {
+    try {
+      const response = await fetch(`/api/publications`);
+      if (response.ok) {
+        const publications = await response.json();
+        const pub = publications.find((p: Publication) => p.slug === slug);
+        if (pub) {
+          setPublication(pub);
+        } else {
+          notFound();
+        }
+      }
+    } catch (error) {
+      console.error('Error fetching publication:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [slug]);
+
+  useEffect(() => {
+    if (slug) {
+      fetchPublication();
+    }
+  }, [slug, fetchPublication]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-carolina-blue mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading publication...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!publication) {
     notFound();

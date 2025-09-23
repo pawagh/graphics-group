@@ -1,12 +1,35 @@
 'use client'
 
-import { publications } from './data';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import '../animations.css';
 import Link from 'next/link';
+import { Publication } from '@/lib/publications';
 
 export default function Publications() {
+  const [publications, setPublications] = useState<Publication[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [selectedTag, setSelectedTag] = useState<string>('All');
+  const [search, setSearch] = useState<string>('');
+
+  useEffect(() => {
+    fetchPublications();
+  }, []);
+
+  const fetchPublications = async () => {
+    try {
+      const response = await fetch('/api/publications');
+      if (response.ok) {
+        const data = await response.json();
+        setPublications(data);
+      }
+    } catch (error) {
+      console.error('Error fetching publications:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   // Extract years and tags - simplified categories
   const years = Array.from(
     new Set(publications.flatMap(pub => pub.tags.filter(tag => /^\d{4}$/.test(tag))))
@@ -22,11 +45,6 @@ export default function Publications() {
 
   // Add Award Winning Papers as a special category
   const specialCategories = ['Award Winning Papers'];
-
-
-
-  const [selectedTag, setSelectedTag] = useState<string>('All');
-  const [search, setSearch] = useState<string>('');
 
   const filteredPubs = publications.filter(pub => {
     let matchesTag;
@@ -54,6 +72,17 @@ export default function Publications() {
     year,
     pubs: filteredPubs.filter(pub => pub.tags.includes(year)),
   }));
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-carolina-blue mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading publications...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">

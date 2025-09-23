@@ -6,20 +6,20 @@ import Image from 'next/image';
 export default function Teaching() {
   const courses = [
     {
+      title: "Visual Computing Systems", 
+      semester: "Fall 2025",
+      description: "A graduate-level seminar exploring recent advances in visual computing systems, with a strong emphasis on computational imaging. Topics include light transport modeling, computational imaging tasks and sensors, opto-electronic system design, and inverse problems in imaging.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      link: "/courses/visual-computing-systems",
+      color: "unc-navy"
+    },
+    {
       title: "Computational Imaging",
-      semester: "Spring 2026",
+      semester: "Spring 2025",
       description: "An introduction to computational imaging, covering optics, sensors, algorithms, and modern techniques for image formation and analysis.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       link: "/courses/computational-imaging",
       color: "carolina-blue"
-    },
-    {
-      title: "Visual Computing Systems", 
-      semester: "Fall 2025",
-      description: "A course on the design and implementation of visual computing systems, including hardware, software, and applications in graphics, vision, and AR/VR.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      link: "/courses/visual-computing-systems",
-      color: "unc-navy"
     }
   ];
 

@@ -93,6 +93,7 @@ export default function RootLayout({
     { label: "COURSES", href: "/courses" },
     { label: "PUBLICATIONS", href: "/publications" },
     { label: "OPPORTUNITIES", href: "/opportunities" },
+    { label: "ADMIN", href: "/admin", isAdmin: true },
   ];
 
   const isActive = (href: string) => {
@@ -146,7 +147,7 @@ export default function RootLayout({
                   alt="VCAIL Logo"
                   width={40}
                   height={40}
-                  className="md:w-12 md:h-12 object-contain rounded-full bg-white/90 p-1.5 md:p-2 shadow-lg transition-all duration-500 group-hover:scale-110 border-2 border-white/20"
+                  className="md:w-12 md:h-12 lg:w-14 lg:h-14 object-contain rounded-full shadow-lg transition-all duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="header-title flex-1 min-w-0">
@@ -179,11 +180,15 @@ export default function RootLayout({
                   <li key={item.href} className="relative">
                     <Link 
                       href={item.href} 
-                      className="nav-link-enhanced group block relative overflow-hidden" 
+                      className={`nav-link-enhanced group block relative overflow-hidden ${
+                        item.isAdmin ? 'opacity-60 hover:opacity-100' : ''
+                      }`}
                       onClick={() => setMenuOpen(false)}
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
-                      <span className="relative z-10 block px-4 py-3 lg:px-3 lg:py-2 text-white font-bold text-lg lg:text-base tracking-wide transition-all duration-300 group-hover:text-white">
+                      <span className={`relative z-10 block px-4 py-3 lg:px-3 lg:py-2 text-white font-bold text-lg lg:text-base tracking-wide transition-all duration-300 group-hover:text-white ${
+                        item.isAdmin ? 'text-xs lg:text-xs opacity-75' : ''
+                      }`}>
                         {item.label}
                       </span>
                       
