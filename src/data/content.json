@@ -4,18 +4,7 @@
     "labName": "Visual Computing and Augmented Intelligence Lab",
     "contactEmail": "cpk@cs.unc.edu",
     "heroTitle": "VISUAL COMPUTING AND AUGMENTED INTELLIGENCE LAB",
-    "heroSubtitle": "Advancing the frontiers of computational imaging, AR/VR, and augmented intelligence",
-    "footer": {
-      "address": "Sitterson 205",
-      "university": "University of North Carolina at Chapel Hill",
-      "email": "cpk@cs.unc.edu",
-      "socialLinks": {
-        "twitter": "https://x.com/unc_vcail",
-        "linkedin": "https://www.linkedin.com/company/unc-vcail",
-        "instagram": "https://www.instagram.com/unc_vcail",
-        "github": "https://github.com/unc-vcail"
-      }
-    }
+    "heroSubtitle": "Advancing the frontiers of computational imaging, AR/VR, and augmented intelligence"
   },
   "footer": {
     "address": "Sitterson 205",

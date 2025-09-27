@@ -1,15 +1,32 @@
 'use client';
 import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo, useCallback, lazy, Suspense } from 'react';
 import Image from 'next/image';
-import ContentEditor from '@/components/admin/ContentEditor';
-import PublicationManager from '@/components/admin/PublicationManager';
+
+// Lazy load heavy components to improve initial load time
+const ContentEditor = lazy(() => import('@/components/admin/ContentEditor'));
+const PublicationManager = lazy(() => import('@/components/admin/PublicationManager'));
 
 export default function AdminDashboard() {
   const { user, logout, isLoading } = useAuth();
   const router = useRouter();
   const [activeSection, setActiveSection] = useState('overview');
+
+  // Move hooks before any conditional returns
+  const menuItems = useMemo(() => [
+    { id: 'overview', label: 'Overview', icon: '📊' },
+    { id: 'content', label: 'Edit Content', icon: '✏️' },
+    { id: 'people', label: 'Manage People', icon: '👥' },
+    { id: 'publications', label: 'Publications', icon: '📚' },
+    { id: 'courses', label: 'Courses', icon: '🎓' },
+    { id: 'settings', label: 'Settings', icon: '⚙️' },
+  ], []);
+
+  const handleLogout = useCallback(() => {
+    logout();
+    router.push('/admin/login');
+  }, [logout, router]);
 
   useEffect(() => {
     if (!isLoading && !user) {
@@ -32,19 +49,12 @@ export default function AdminDashboard() {
     return null;
   }
 
-  const menuItems = [
-    { id: 'overview', label: 'Overview', icon: '📊' },
-    { id: 'content', label: 'Edit Content', icon: '✏️' },
-    { id: 'people', label: 'Manage People', icon: '👥' },
-    { id: 'publications', label: 'Publications', icon: '📚' },
-    { id: 'courses', label: 'Courses', icon: '🎓' },
-    { id: 'settings', label: 'Settings', icon: '⚙️' },
-  ];
-
-  const handleLogout = () => {
-    logout();
-    router.push('/admin/login');
-  };
+  // Loading component for lazy-loaded sections
+  const SectionLoader = () => (
+    <div className="flex items-center justify-center p-8">
+      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-carolina-blue"></div>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -133,7 +143,9 @@ export default function AdminDashboard() {
           {activeSection === 'content' && (
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Edit Website Content</h2>
-              <ContentEditor />
+              <Suspense fallback={<SectionLoader />}>
+                <ContentEditor />
+              </Suspense>
             </div>
           )}
 
@@ -206,7 +218,9 @@ export default function AdminDashboard() {
           {activeSection === 'publications' && (
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Manage Publications</h2>
-              <PublicationManager />
+              <Suspense fallback={<SectionLoader />}>
+                <PublicationManager />
+              </Suspense>
             </div>
           )}
 
