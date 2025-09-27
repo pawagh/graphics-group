@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { WebsiteContent } from '@/lib/content';
 
 interface ContentEditorProps {
@@ -30,25 +30,57 @@ export default function ContentEditor({ onSave }: ContentEditorProps) {
     }
   };
 
-  const handleSave = async (section: string, updates: Record<string, string | object>) => {
+  // Debounced update function (for future use)
+  const debouncedUpdate = useCallback((field: string, value: string) => {
+    // Future implementation for auto-save functionality
+    console.log('Field updated:', field, value);
+  }, []);
+
+  const handleSave = async (section: string, updates: Record<string, string | Record<string, unknown>>) => {
     setIsSaving(true);
     setSaveMessage('');
     
     try {
-      const response = await fetch('/api/content/homepage', {
+      let endpoint = '/api/content/homepage';
+      let payload = updates;
+
+      // Handle different section types with correct data structure
+      if (section === 'footer') {
+        endpoint = '/api/content';
+        payload = { footer: updates };
+      } else if (section === 'meta') {
+        endpoint = '/api/content';
+        payload = { meta: updates };
+      } else if (section === 'homepage') {
+        endpoint = '/api/content/homepage';
+        payload = updates;
+      }
+
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(updates),
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
         setSaveMessage('✅ Changes saved successfully!');
-        setContent(prev => prev ? {
-          ...prev,
-          homepage: { ...prev.homepage, ...updates }
-        } : prev);
+        
+        // Update local state based on section
+        setContent(prev => {
+          if (!prev) return prev;
+          
+          if (section === 'homepage') {
+            return { ...prev, homepage: { ...prev.homepage, ...updates } };
+          } else if (section === 'footer') {
+            return { ...prev, footer: { ...prev.footer, ...updates } };
+          } else if (section === 'meta') {
+            return { ...prev, meta: { ...prev.meta, ...updates } };
+          }
+          return prev;
+        });
+        
         onSave?.();
       } else {
         setSaveMessage('❌ Failed to save changes');
@@ -61,6 +93,15 @@ export default function ContentEditor({ onSave }: ContentEditorProps) {
       setTimeout(() => setSaveMessage(''), 3000);
     }
   };
+
+  // Remove debounce function as it's not being used properly
+  // const debounce = <T extends (...args: unknown[]) => void>(func: T, delay: number) => {
+  //   let timeoutId: NodeJS.Timeout;
+  //   return (...args: Parameters<T>) => {
+  //     clearTimeout(timeoutId);
+  //     timeoutId = setTimeout(() => func(...args), delay);
+  //   };
+  // };
 
   if (isLoading) {
     return (
@@ -99,10 +140,14 @@ export default function ContentEditor({ onSave }: ContentEditorProps) {
             <input
               type="text"
               value={content.homepage.labName}
-              onChange={(e) => setContent(prev => prev ? {
-                ...prev,
-                homepage: { ...prev.homepage, labName: e.target.value }
-              } : prev)}
+              onChange={(e) => {
+                const value = e.target.value;
+                setContent(prev => prev ? {
+                  ...prev,
+                  homepage: { ...prev.homepage, labName: value }
+                } : prev);
+                debouncedUpdate('homepage.labName', value);
+              }}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-carolina-blue focus:border-carolina-blue"
             />
           </div>
@@ -247,7 +292,7 @@ export default function ContentEditor({ onSave }: ContentEditorProps) {
 
         <div className="mt-4">
           <button
-            onClick={() => handleSave('footer', { footer: content.footer })}
+            onClick={() => handleSave('footer', content.footer)}
             disabled={isSaving}
             className="bg-carolina-blue hover:bg-unc-navy text-white px-6 py-2 rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
@@ -306,7 +351,7 @@ export default function ContentEditor({ onSave }: ContentEditorProps) {
           </div>
 
           <button
-            onClick={() => handleSave('meta', { meta: content.meta })}
+            onClick={() => handleSave('meta', content.meta)}
             disabled={isSaving}
             className="bg-carolina-blue hover:bg-unc-navy text-white px-6 py-2 rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >

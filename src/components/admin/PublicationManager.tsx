@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, memo } from 'react';
 import { Publication } from '@/lib/publications';
 
 interface PublicationFormData {
@@ -15,7 +15,7 @@ interface PublicationManagerProps {
   onSave?: () => void;
 }
 
-export default function PublicationManager({ onSave }: PublicationManagerProps) {
+const PublicationManager = memo(function PublicationManager({ onSave }: PublicationManagerProps) {
   const [publications, setPublications] = useState<Publication[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isEditing, setIsEditing] = useState(false);
@@ -33,11 +33,7 @@ export default function PublicationManager({ onSave }: PublicationManagerProps) 
     tags: []
   });
 
-  useEffect(() => {
-    fetchPublications();
-  }, []);
-
-  const fetchPublications = async () => {
+  const fetchPublications = useCallback(async () => {
     try {
       const response = await fetch('/api/publications');
       if (response.ok) {
@@ -49,9 +45,13 @@ export default function PublicationManager({ onSave }: PublicationManagerProps) 
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
 
-  const handleAddNew = () => {
+  useEffect(() => {
+    fetchPublications();
+  }, [fetchPublications]);
+
+  const handleAddNew = useCallback(() => {
     setFormData({
       title: '',
       authors: '',
@@ -63,9 +63,9 @@ export default function PublicationManager({ onSave }: PublicationManagerProps) 
     setEditingPublication(null);
     setIsEditing(false);
     setShowForm(true);
-  };
+  }, []);
 
-  const handleEdit = (publication: Publication) => {
+  const handleEdit = useCallback((publication: Publication) => {
     setFormData({
       title: publication.title,
       authors: publication.authors,
@@ -77,9 +77,9 @@ export default function PublicationManager({ onSave }: PublicationManagerProps) 
     setEditingPublication(publication);
     setIsEditing(true);
     setShowForm(true);
-  };
+  }, []);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     setSaveMessage('');
 
@@ -100,7 +100,7 @@ export default function PublicationManager({ onSave }: PublicationManagerProps) 
       if (response.ok) {
         setSaveMessage(`✅ Publication ${isEditing ? 'updated' : 'added'} successfully!`);
         setShowForm(false);
-        fetchPublications();
+        await fetchPublications();
         onSave?.();
       } else {
         const error = await response.json();
@@ -112,9 +112,9 @@ export default function PublicationManager({ onSave }: PublicationManagerProps) 
     }
 
     setTimeout(() => setSaveMessage(''), 3000);
-  };
+  }, [isEditing, editingPublication?.slug, formData, fetchPublications, onSave]);
 
-  const handleDelete = async (slug: string) => {
+  const handleDelete = useCallback(async (slug: string) => {
     try {
       const response = await fetch('/api/publications', {
         method: 'DELETE',
@@ -126,7 +126,7 @@ export default function PublicationManager({ onSave }: PublicationManagerProps) 
 
       if (response.ok) {
         setSaveMessage('✅ Publication deleted successfully!');
-        fetchPublications();
+        await fetchPublications();
         onSave?.();
       } else {
         setSaveMessage('❌ Failed to delete publication');
@@ -138,12 +138,12 @@ export default function PublicationManager({ onSave }: PublicationManagerProps) 
 
     setDeleteConfirm(null);
     setTimeout(() => setSaveMessage(''), 3000);
-  };
+  }, [fetchPublications, onSave]);
 
-  const handleTagsChange = (tagsString: string) => {
+  const handleTagsChange = useCallback((tagsString: string) => {
     const tags = tagsString.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0);
     setFormData(prev => ({ ...prev, tags }));
-  };
+  }, []);
 
   if (isLoading) {
     return (
@@ -391,4 +391,6 @@ export default function PublicationManager({ onSave }: PublicationManagerProps) 
       )}
     </div>
   );
-}
+});
+
+export default PublicationManager;

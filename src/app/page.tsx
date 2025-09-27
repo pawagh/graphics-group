@@ -95,7 +95,7 @@ export default function Home() {
               <h2 className="section-title text-center text-carolina-blue text-reveal mb-4 sm:mb-0">LATEST NEWS</h2>
               <div className="flex justify-center sm:block">
                 <Link 
-                  href="/publications" 
+                  href="/news" 
                   className="bg-white text-carolina-blue border-2 border-carolina-blue font-medium px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-2 text-sm hover:bg-unc-navy hover:text-white hover:border-unc-navy sm:absolute sm:right-0 sm:top-0"
                 >
                   View All

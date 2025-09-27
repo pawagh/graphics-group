@@ -92,6 +92,7 @@ export default function RootLayout({
     { label: "PEOPLE", href: "/people" },
     { label: "COURSES", href: "/courses" },
     { label: "PUBLICATIONS", href: "/publications" },
+    { label: "NEWS", href: "/news" },
     { label: "OPPORTUNITIES", href: "/opportunities" },
     { label: "ADMIN", href: "/admin", isAdmin: true },
   ];
