@@ -94,7 +94,6 @@ export default function RootLayout({
     { label: "PUBLICATIONS", href: "/publications" },
     { label: "NEWS", href: "/news" },
     { label: "OPPORTUNITIES", href: "/opportunities" },
-    { label: "ADMIN", href: "/admin", isAdmin: true },
   ];
 
   const isActive = (href: string) => {
@@ -181,15 +180,11 @@ export default function RootLayout({
                   <li key={item.href} className="relative">
                     <Link 
                       href={item.href} 
-                      className={`nav-link-enhanced group block relative overflow-hidden ${
-                        item.isAdmin ? 'opacity-60 hover:opacity-100' : ''
-                      }`}
+                      className="nav-link-enhanced group block relative overflow-hidden"
                       onClick={() => setMenuOpen(false)}
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
-                      <span className={`relative z-10 block px-4 py-3 lg:px-3 lg:py-2 text-white font-bold text-lg lg:text-base tracking-wide transition-all duration-300 group-hover:text-white ${
-                        item.isAdmin ? 'text-xs lg:text-xs opacity-75' : ''
-                      }`}>
+                      <span className="relative z-10 block px-4 py-3 lg:px-3 lg:py-2 text-white font-bold text-lg lg:text-base tracking-wide transition-all duration-300 group-hover:text-white">
                         {item.label}
                       </span>
                       
@@ -316,7 +311,15 @@ export default function RootLayout({
             
             {/* Copyright */}
             <div className="relative z-10 text-center mt-6 pt-4 border-t border-white/30">
-              <p className="text-xs opacity-75">© 2025 Visual Computing and Augmented Intelligence Lab, UNC Chapel Hill</p>
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
+                <p className="text-xs opacity-75">© 2025 Visual Computing and Augmented Intelligence Lab, UNC Chapel Hill</p>
+                <Link 
+                  href="/admin" 
+                  className="text-xs opacity-60 hover:opacity-100 hover:text-carolina-blue transition-all duration-300 underline"
+                >
+                  Admin
+                </Link>
+              </div>
             </div>
           </footer>
         </div>
