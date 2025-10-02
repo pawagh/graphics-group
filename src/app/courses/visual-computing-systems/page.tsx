@@ -106,7 +106,7 @@ export default function VisualComputingSystems() {
                 </nav>
                 <div className="mt-4 pt-4 border-t border-neutral-200">
                   <Link 
-                    href="/courses" 
+                    href="/teaching" 
                     className="text-carolina-blue hover:text-unc-navy text-sm font-medium transition-colors duration-200"
                   >
                     ← Back to Courses
@@ -141,7 +141,7 @@ export default function VisualComputingSystems() {
               </nav>
               <div className="p-4 border-t border-neutral-200">
                 <Link 
-                  href="/courses" 
+                  href="/teaching" 
                   className="text-carolina-blue hover:text-unc-navy text-sm font-medium transition-colors duration-200"
                 >
                   ← Back to Courses

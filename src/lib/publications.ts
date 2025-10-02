@@ -23,13 +23,38 @@ function generateSlug(title: string): string {
 
 export async function getPublications(): Promise<Publication[]> {
   try {
-    // Check if JSON file exists, if not, migrate from data.ts
+    // Ensure JSON store exists, migrate if missing
     if (!fs.existsSync(PUBLICATIONS_FILE_PATH)) {
       await migratePublicationsData();
     }
-    
-    const fileContent = fs.readFileSync(PUBLICATIONS_FILE_PATH, 'utf-8');
-    return JSON.parse(fileContent);
+
+    // Load publications from JSON
+    const jsonContent = fs.readFileSync(PUBLICATIONS_FILE_PATH, 'utf-8');
+    const jsonPublications: Publication[] = JSON.parse(jsonContent);
+
+    // Also load publications from static data.ts, then merge unique by slug
+    let staticPublications: Publication[] = [];
+    try {
+      const mod = await import('@/app/publications/data');
+      staticPublications = (mod.publications ?? []) as Publication[];
+    } catch (_) {
+      staticPublications = [];
+    }
+
+    const slugToPublication = new Map<string, Publication>();
+    // Prefer JSON (newer, editable) entries; then fill with static
+    for (const p of jsonPublications) slugToPublication.set(p.slug, p);
+    for (const p of staticPublications) if (!slugToPublication.has(p.slug)) slugToPublication.set(p.slug, p);
+
+    // Return newest-first ordering by year in tags if present; otherwise keep insertion
+    const merged = Array.from(slugToPublication.values());
+    merged.sort((a, b) => {
+      const yearA = (a.tags.find(t => /^\d{4}$/.test(t)) ?? '0000');
+      const yearB = (b.tags.find(t => /^\d{4}$/.test(t)) ?? '0000');
+      if (yearA !== yearB) return yearB.localeCompare(yearA);
+      return 0;
+    });
+    return merged;
   } catch (error) {
     console.error('Error reading publications:', error);
     return [];
