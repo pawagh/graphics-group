@@ -37,7 +37,7 @@ export async function getPublications(): Promise<Publication[]> {
     try {
       const mod = await import('@/app/publications/data');
       staticPublications = (mod.publications ?? []) as Publication[];
-    } catch (_) {
+    } catch {
       staticPublications = [];
     }
 
