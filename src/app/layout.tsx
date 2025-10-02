@@ -89,11 +89,11 @@ export default function RootLayout({
   }, []); // Empty dependency array
 
   const navItems = [
-    { label: "PEOPLE", href: "/people" },
-    { label: "COURSES", href: "/courses" },
+    { label: "TEAM", href: "/team" },
+    { label: "TEACHING", href: "/teaching" },
     { label: "PUBLICATIONS", href: "/publications" },
     { label: "NEWS", href: "/news" },
-    { label: "OPPORTUNITIES", href: "/opportunities" },
+    { label: "JOIN US", href: "/join-us" },
   ];
 
   const isActive = (href: string) => {

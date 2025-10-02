@@ -2,6 +2,18 @@ import { NextRequest, NextResponse } from 'next/server';
 import { verifyAdminTokenEdge } from '@/lib/auth';
 
 export async function middleware(request: NextRequest) {
+  // Public redirects for renamed sections
+  if (request.nextUrl.pathname === '/team') {
+    return NextResponse.redirect(new URL('/people', request.url));
+  }
+  if (request.nextUrl.pathname === '/join-us') {
+    return NextResponse.redirect(new URL('/opportunities', request.url));
+  }
+  // Keep teaching as first-class route; also support legacy /courses
+  if (request.nextUrl.pathname === '/courses') {
+    return NextResponse.redirect(new URL('/teaching', request.url));
+  }
+
   // Protect admin routes
   if (request.nextUrl.pathname.startsWith('/admin')) {
     // Allow access to login page
@@ -34,5 +46,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*']
+  matcher: ['/admin/:path*', '/team', '/join-us', '/courses']
 };
