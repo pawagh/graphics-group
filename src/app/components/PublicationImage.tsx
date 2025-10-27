@@ -11,7 +11,7 @@ interface PublicationImageProps {
 }
 
 export default function PublicationImage({ src, alt, width, height, className }: PublicationImageProps) {
-  const fallbackImage = "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80";
+  const fallbackImage = "/lab-photos/lab-work-09.jpg";
 
   return (
     <Image 

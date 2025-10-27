@@ -12,19 +12,19 @@ export default function Home() {
       {/* Enhanced Hero image carousel with parallax effect */}
       <div className="w-full h-[60vh] relative overflow-hidden bg-gradient-to-br from-unc-navy to-unc-navy">
         {[
-          "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80", // Modern technology/computing
-          "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80", // Computational imaging/holography
-          "https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80", // Advanced optics/nano-technology
-          "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80"  // AI and neural networks
+          "/lab-photos/group-photo-01.jpg", // Group photo
+          "/lab-photos/lab-work-15.jpg", // Lab work
+          "/lab-photos/group-photo-02.jpg", // Group photo
+          "/lab-photos/lab-work-20.jpg"  // Lab work
         ].map((src, index, arr) => {
           const total = arr.length;
           const duration = 20; // Slower, more elegant timing
           const delay = (index * duration) / total;
           const altTexts = [
-            "Modern Computing and Technology Research",
-            "Computational Imaging and Holography", 
-            "Advanced Optics and Nano-technology",
-            "AI and Neural Network Systems"
+            "Visual Computing Lab Team",
+            "Research in Progress", 
+            "Lab Collaboration",
+            "Cutting-Edge Research"
           ];
           return (
             <Image
@@ -114,7 +114,7 @@ export default function Home() {
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
-                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                      src="/lab-photos/lab-work-10.jpg" 
                       alt="Computational Imaging Research" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
@@ -140,7 +140,7 @@ export default function Home() {
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
-                      src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                      src="/lab-photos/group-photo-03.jpg" 
                       alt="Award-Winning Research" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
@@ -165,7 +165,7 @@ export default function Home() {
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
-                      src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                      src="/lab-photos/lab-work-18.jpg" 
                       alt="AR/VR Innovation" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
@@ -190,7 +190,7 @@ export default function Home() {
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
-                      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                      src="/lab-photos/lab-work-25.jpg" 
                       alt="Machine Learning Applications" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
@@ -215,7 +215,7 @@ export default function Home() {
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                      src="/lab-photos/lab-work-30.jpg" 
                       alt="Nano-optics Research" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
@@ -240,7 +240,7 @@ export default function Home() {
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
-                      src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                      src="/lab-photos/group-photo-04.jpg" 
                       alt="Research Collaboration" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
@@ -498,7 +498,7 @@ export default function Home() {
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
-                      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                      src="/lab-photos/lab-work-12.jpg" 
                       alt="Advanced Machine Learning Research" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
@@ -523,7 +523,7 @@ export default function Home() {
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                      src="/lab-photos/lab-work-22.jpg" 
                       alt="Optical Computing Systems" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
@@ -548,7 +548,7 @@ export default function Home() {
                 <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
                   <div className="relative h-72 overflow-hidden rounded-lg">
                     <Image 
-                      src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                      src="/lab-photos/lab-work-28.jpg" 
                       alt="AR/VR Innovation" 
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
