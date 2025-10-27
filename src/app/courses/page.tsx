@@ -9,7 +9,7 @@ export default function Teaching() {
       title: "Visual Computing Systems", 
       semester: "Fall 2025",
       description: "A graduate-level seminar exploring recent advances in visual computing systems, with a strong emphasis on computational imaging. Topics include light transport modeling, computational imaging tasks and sensors, opto-electronic system design, and inverse problems in imaging.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/lab-photos/lab-work-19.jpg",
       link: "/courses/visual-computing-systems",
       color: "unc-navy"
     },
@@ -17,7 +17,7 @@ export default function Teaching() {
       title: "Computational Imaging",
       semester: "Spring 2025",
       description: "An introduction to computational imaging, covering optics, sensors, algorithms, and modern techniques for image formation and analysis.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/lab-photos/lab-work-32.jpg",
       link: "/courses/computational-imaging",
       color: "carolina-blue"
     }
@@ -28,7 +28,7 @@ export default function Teaching() {
       {/* Hero banner section */}
       <div className="w-full h-64 md:h-80 relative mb-8">
         <Image 
-          src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" 
+          src="/lab-photos/lab-work-11.jpg" 
           alt="Modern university classroom" 
           fill
           className="object-cover object-center rounded-b-lg shadow-md" 

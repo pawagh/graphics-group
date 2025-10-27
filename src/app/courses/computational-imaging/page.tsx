@@ -30,7 +30,7 @@ export default function ComputationalImaging() {
       {/* Hero Section */}
       <div className="w-full h-48 md:h-64 relative mb-8">
         <Image 
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" 
+          src="/lab-photos/lab-work-32.jpg" 
           alt="Computational Imaging and Optics" 
           fill
           className="object-cover object-center" 

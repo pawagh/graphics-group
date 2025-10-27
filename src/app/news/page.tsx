@@ -11,7 +11,7 @@ export default function News() {
       excerpt:
         'Our team announces a significant breakthrough in computational imaging, paving the way for higher fidelity and efficiency in real-world systems.',
       image:
-        'https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=2069&auto=format&fit=crop',
+        '/lab-photos/lab-work-14.jpg',
       href: '#',
     },
     {
@@ -20,7 +20,7 @@ export default function News() {
       excerpt:
         'We are excited to welcome a new cohort of PhD students joining projects across AR/VR, vision, and nano-optics.',
       image:
-        'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2032&auto=format&fit=crop',
+        '/lab-photos/group-photo-02.jpg',
       href: '#',
     },
     {
@@ -29,7 +29,7 @@ export default function News() {
       excerpt:
         'VCAIL researchers received a best paper recognition at a premier venue for their work on multimodal perception.',
       image:
-        'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2069&auto=format&fit=crop',
+        '/lab-photos/lab-work-24.jpg',
       href: '#',
     },
   ];
@@ -39,7 +39,7 @@ export default function News() {
       {/* Hero banner section */}
       <div className="w-full h-64 md:h-80 relative mb-8">
         <Image 
-          src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" 
+          src="/lab-photos/lab-work-08.jpg" 
           alt="Latest research news and updates" 
           fill
           className="object-cover object-center rounded-b-lg shadow-md" 

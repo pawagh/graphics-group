@@ -89,7 +89,7 @@ export default function Publications() {
       {/* Hero banner section */}
       <div className="w-full h-64 md:h-80 relative mb-8">
         <Image 
-          src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" 
+          src="/lab-photos/lab-work-23.jpg" 
           alt="Research and academic publications" 
           fill
           className="object-cover object-center rounded-b-lg shadow-md" 
@@ -202,14 +202,14 @@ export default function Publications() {
                           <div className="flex-shrink-0 relative">
                             <div className="relative overflow-hidden rounded-lg border-2 border-dome-copper/20 transition-colors duration-500">
                               <Image 
-                                src={pub.image && pub.image.trim() !== "" ? pub.image : "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80"} 
+                                src={pub.image && pub.image.trim() !== "" ? pub.image : "/lab-photos/lab-work-09.jpg"} 
                                 alt={pub.title} 
                                 width={128}
                                 height={128}
                                 className="object-cover rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105" 
                                 onError={(e) => {
                                   console.log(`Failed to load image for ${pub.title}:`, pub.image);
-                                  e.currentTarget.src = "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&h=256&q=80";
+                                  e.currentTarget.src = "/lab-photos/lab-work-09.jpg";
                                 }}
                               />
                             </div>

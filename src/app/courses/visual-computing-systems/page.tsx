@@ -53,7 +53,7 @@ export default function VisualComputingSystems() {
       {/* Hero Section */}
       <div className="w-full h-48 md:h-64 relative mb-8">
         <Image 
-          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80" 
+          src="/lab-photos/lab-work-19.jpg" 
           alt="Visual Computing and Technology Systems" 
           fill
           className="object-cover object-center" 
