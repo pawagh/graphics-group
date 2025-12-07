@@ -13,13 +13,6 @@ export async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname === '/courses') {
     return NextResponse.redirect(new URL('/teaching', request.url));
   }
-  // External redirects
-  if (request.nextUrl.pathname === '/unicorn') {
-    return NextResponse.redirect('https://computationalsciences.org/unicorn', 308);
-  }
-  if (request.nextUrl.pathname === '/metahdr') {
-    return NextResponse.redirect('https://computationalsciences.org/metahdr', 308);
-  }
 
   // Protect admin routes
   if (request.nextUrl.pathname.startsWith('/admin')) {
@@ -53,5 +46,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*', '/team', '/join-us', '/courses', '/unicorn', '/metahdr']
+  matcher: ['/admin/:path*', '/team', '/join-us', '/courses']
 };
