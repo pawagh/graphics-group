@@ -61,5 +61,23 @@
     "image": "https://www.cs.unc.edu/~cpk/data/thumbnails/flat-track.PNG",
     "link": "https://arxiv.org/abs/2501.15450",
     "tags": ["Conference", "WACV", "2025"]
+  },
+  {
+    "title": "Unicorn",
+    "slug": "unicorn",
+    "authors": "Visual Computing and Augmented Intelligence Lab",
+    "meta": "Project",
+    "image": "",
+    "link": "",
+    "tags": ["Project"]
+  },
+  {
+    "title": "MetaHDR",
+    "slug": "metahdr",
+    "authors": "Visual Computing and Augmented Intelligence Lab",
+    "meta": "Project",
+    "image": "",
+    "link": "",
+    "tags": ["Project"]
   }
 ]
