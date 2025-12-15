@@ -74,11 +74,7 @@ export default function Teaching() {
                 >
                   <div className="flex flex-col items-start space-y-6">
                     {/* Thin Colored Banner */}
-                    <div className={`w-full h-2 rounded-full transition-all duration-300 ${
-                      course.color === 'carolina-blue' ? 'bg-carolina-blue group-hover:bg-dome-copper' : 
-                      course.color === 'unc-navy' ? 'bg-unc-navy group-hover:bg-dome-copper' : 
-                      'bg-carolina-blue group-hover:bg-dome-copper'
-                    }`} />
+                    <div className="w-full h-1 rounded-full bg-carolina-blue group-hover:bg-dome-copper transition-all duration-300" />
                     
                     <div className="flex-1 text-center md:text-left w-full">
                       <h3 className="text-2xl font-bold text-unc-navy mb-3 transition-colors duration-300">

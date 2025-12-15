@@ -13,6 +13,11 @@ export async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname === '/courses') {
     return NextResponse.redirect(new URL('/teaching', request.url));
   }
+  // Redirect /courses/* to /teaching/*
+  if (request.nextUrl.pathname.startsWith('/courses/')) {
+    const path = request.nextUrl.pathname.replace('/courses/', '/teaching/');
+    return NextResponse.redirect(new URL(path, request.url));
+  }
 
   // Protect admin routes
   if (request.nextUrl.pathname.startsWith('/admin')) {
@@ -46,5 +51,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*', '/team', '/join-us', '/courses']
+  matcher: ['/admin/:path*', '/team', '/join-us', '/courses', '/courses/:path*']
 };
