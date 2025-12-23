@@ -166,7 +166,7 @@ export default function AdminDashboard() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-center gap-4">
                         <Image
-                          src="/praneeth.jpeg"
+                          src="/people/praneeth.jpeg"
                           alt="Praneeth Chakravarthula"
                           width={48}
                           height={48}
@@ -189,7 +189,7 @@ export default function AdminDashboard() {
                     <div className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-center gap-4">
                         <Image
-                          src="/XiPeng.jpg"
+                          src="/people/xipeng.jpg"
                           alt="Xi Peng"
                           width={48}
                           height={48}
