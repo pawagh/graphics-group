@@ -12,7 +12,7 @@ export default function Home() {
       {/* Enhanced Hero image carousel with parallax effect */}
       <div className="w-full h-[60vh] relative overflow-hidden bg-gradient-to-br from-unc-navy to-unc-navy">
         {[
-          "/lab-photos/group-photo-01.jpg", // Group photo
+          "/lab-photos/group-photo-03.jpg", // Group photo
           "/lab-photos/lab-work-15.jpg", // Lab work
           "/lab-photos/group-photo-02.jpg", // Group photo
           "/lab-photos/lab-work-20.jpg"  // Lab work

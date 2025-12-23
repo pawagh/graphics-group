@@ -58,7 +58,7 @@ export default function People() {
       {/* Hero banner section */}
             <div className="w-full h-64 md:h-80 relative mb-8">
         <Image 
-          src="/lab-photos/group-photo-05.jpg" 
+          src="/lab-photos/group-photo-04.jpg" 
           alt="Research team collaboration" 
           fill
           className="object-cover object-center rounded-b-lg shadow-md" 
