@@ -200,13 +200,13 @@ export default function Publications() {
                       >
                         <div className="flex flex-col md:flex-row gap-6 items-start">
                           <div className="flex-shrink-0 relative">
-                            <div className="relative overflow-hidden rounded-lg border-2 border-dome-copper/20 transition-colors duration-500">
+                            <div className="relative w-32 h-32 overflow-hidden rounded-lg border-2 border-dome-copper/20 transition-colors duration-500">
                               <Image 
                                 src={pub.image && pub.image.trim() !== "" ? pub.image : "/lab-photos/lab-work-09.jpg"} 
                                 alt={pub.title} 
                                 width={128}
                                 height={128}
-                                className="object-cover rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105" 
+                                className="object-cover w-full h-full rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105" 
                                 onError={(e) => {
                                   console.log(`Failed to load image for ${pub.title}:`, pub.image);
                                   e.currentTarget.src = "/lab-photos/lab-work-09.jpg";
