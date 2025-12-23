@@ -10,7 +10,7 @@ export default function People() {
     {
       name: "Praneeth Chakravarthula",
       role: "Assistant Professor",
-      image: "/praneeth.jpeg",
+      image: "/people/praneeth.jpeg",
       bio: "Computational imaging, AR/VR, nano-optics, human-computer interaction",
       description: "Dr. Chakravarthula leads research in computational imaging and visual computing. His work focuses on developing novel optical systems and algorithms for next-generation displays, cameras, and human-computer interaction. He has made significant contributions to the fields of holographic displays, computational cameras, and augmented reality.",
       email: "cpk@cs.unc.edu",
@@ -19,7 +19,7 @@ export default function People() {
     {
       name: "Xi Peng",
       role: "PhD Student",
-      image: "/XiPeng.jpg",
+      image: "/people/xipeng.jpg",
       bio: "Acoustic fields, neural rendering, VR/AR audio",
       description: "Xi's research focuses on the intersection of acoustic field synthesis and virtual reality. Their work explores novel methods for creating immersive audio experiences and developing more realistic sound propagation models for virtual environments.",
       email: "xipeng@cs.unc.edu",
@@ -28,7 +28,7 @@ export default function People() {
     {
       name: "Zihao Zou",
       role: "PhD Student", 
-      image: "/zihao.png",
+      image: "/people/zihao.png",
       bio: "Event cameras, computational photography, computer vision",
       description: "Zihao specializes in event-based vision and computational photography. Their research aims to push the boundaries of high-speed imaging and develop novel algorithms for processing event camera data in real-world applications.",
       email: "zihaozou@cs.unc.edu",
@@ -37,7 +37,7 @@ export default function People() {
     {
       name: "Hengyu Lian",
       role: "PhD Student",
-      image: "/Hengyu.jpeg", 
+      image: "/people/hengyu.jpeg", 
       bio: "Holography, computational optics, display technology",
       description: "Hengyu's research centers on advancing holographic display technology. They work on developing novel algorithms and optical designs for next-generation 3D displays and computational imaging systems.",
       email: "Lianhy0@cs.unc.edu",

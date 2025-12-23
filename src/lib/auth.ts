@@ -85,7 +85,7 @@ export function verifyAdminToken(token: string): AdminUser | null {
   }
 }
 
-// Edge Runtime compatible JWT verification for middleware
+// Edge Runtime compatible JWT verification for proxy
 export async function verifyAdminTokenEdge(token: string): Promise<AdminUser | null> {
   try {
     // Simple JWT parsing without crypto verification for Edge Runtime

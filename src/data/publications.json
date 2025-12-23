@@ -4,7 +4,7 @@
     "slug": "beating-bandwidth-limits-for-large-aperture-broadband-nano-optics",
     "authors": "Johannes E Fröch*, Praneeth Chakravarthula*, Jipeng Sun, Ethan Tseng, Shane Colburn, Alan Zhan, Forrest Miller, Anna Wirth-Singh, Quentin AA Tanguy, Zheyi Han, Karl F Böhringer, Felix Heide, Arka Majumdar",
     "meta": "Nature Communications 2025",
-    "image": "https://www.cs.unc.edu/~cpk/data/thumbnails/1cm-metalens.PNG",
+    "image": "/publication-photos/1cm-metalens.PNG",
     "link": "https://www.nature.com/articles/s41467-025-58208-4",
     "tags": ["Journal", "Nature Communications", "2025"]
   },
@@ -13,7 +13,7 @@
     "slug": "dof-gs-adjustable-depth-of-field-3d-gaussian-splatting-for-post-capture-refocusing-defocus-rendering-and-blur-removal",
     "authors": "Yujie Wang, Baoquan Chen*, Praneeth Chakravarthula*",
     "meta": "CVPR 2025",
-    "image": "https://www.cs.unc.edu/~cpk/data/thumbnails/dof-gs.PNG",
+    "image": "/publication-photos/dof-gs.PNG",
     "link": "https://arxiv.org/abs/2405.17351",
     "tags": ["Conference", "CVPR", "2025"]
   },
@@ -22,7 +22,7 @@
     "slug": "event-fields-capturing-light-fields-at-high-speed-resolution-and-dynamic-range",
     "authors": "Ziyuan Qu, Zihao Zou, Vivek Boominathan, Praneeth Chakravarthula, Adithya Pediredla",
     "meta": "CVPR 2025",
-    "image": "https://www.cs.unc.edu/~cpk/data/thumbnails/eventfield.png",
+    "image": "/publication-photos/eventfield.png",
     "link": "https://arxiv.org/abs/2412.06191",
     "tags": ["Conference", "CVPR", "2025"]
   },
@@ -31,7 +31,7 @@
     "slug": "present-and-future-of-everyday-use-augmented-reality-eyeglasses",
     "authors": "Praneeth Chakravarthula",
     "meta": "IEEE Computer Graphics and Applications 2025",
-    "image": "https://www.cs.unc.edu/~cpk/data/thumbnails/diss-impact.PNG",
+    "image": "/publication-photos/diss-impact.PNG",
     "link": "https://www.cs.unc.edu/~cpk/data/papers/IEEE_Dissertation_Impact.pdf",
     "tags": ["Journal", "IEEE CG&A", "2025"]
   },
@@ -40,7 +40,7 @@
     "slug": "multimodal-neural-acoustic-fields-for-immersive-virtual-reality-and-telepresence",
     "authors": "Guansen Tong, Jonathan Leung, Haosheng Shi, Liujie Zheng, Shengze Wang, Xi Peng, Grace Fei, Praneeth Chakravarthula",
     "meta": "Best Paper Honorable Mention, IEEE VR (TVCG) 2025",
-    "image": "https://www.cs.unc.edu/~cpk/data/thumbnails/neural-acoustic-fields.PNG",
+    "image": "/publication-photos/neural-acoustic-fields.PNG",
     "link": "https://www.cs.unc.edu/~cpk/data/papers/Neural_acoustic_fields.pdf",
     "tags": ["Conference", "IEEE VR", "2025"]
   },
@@ -49,7 +49,7 @@
     "slug": "perceptually-guided-acoustic-foveation",
     "authors": "Xi Peng, Kenneth Chen, Iran Roman, Juan Pablo Bello, Qi Sun*, Praneeth Chakravarthula*",
     "meta": "IEEE VR 2025",
-    "image": "https://www.cs.unc.edu/~cpk/data/thumbnails/acoustic-foveation.PNG",
+    "image": "/publication-photos/acoustic-foveation.PNG",
     "link": "https://www.cs.unc.edu/~cpk/data/papers/Perceptually_Guided_Acoustic_Foveation.pdf",
     "tags": ["Conference", "IEEE VR", "2025"]
   },
@@ -58,7 +58,7 @@
     "slug": "flattrack-eye-tracking-with-ultra-thin-lensless-cameras",
     "authors": "Purvam Jain, Althaf M. Nazar, Salman S. Khan, Kaushik Mitra, Praneeth Chakravarthula",
     "meta": "Best Paper Award, GMCV & WACV 2025",
-    "image": "https://www.cs.unc.edu/~cpk/data/thumbnails/flat-track.PNG",
+    "image": "/publication-photos/flat-track.PNG",
     "link": "https://arxiv.org/abs/2501.15450",
     "tags": ["Conference", "WACV", "2025"]
   },

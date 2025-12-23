@@ -4,35 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function News() {
-  const articles = [
-    {
-      title: 'Lab achieves milestone in computational imaging',
-      date: 'Sep 15, 2025',
-      excerpt:
-        'Our team announces a significant breakthrough in computational imaging, paving the way for higher fidelity and efficiency in real-world systems.',
-      image:
-        '/lab-photos/lab-work-14.jpg',
-      href: '#',
-    },
-    {
-      title: 'VCAIL welcomes new PhD students',
-      date: 'Aug 28, 2025',
-      excerpt:
-        'We are excited to welcome a new cohort of PhD students joining projects across AR/VR, vision, and nano-optics.',
-      image:
-        '/lab-photos/group-photo-02.jpg',
-      href: '#',
-    },
-    {
-      title: 'Faculty recognized with best paper award',
-      date: 'Jul 10, 2025',
-      excerpt:
-        'VCAIL researchers received a best paper recognition at a premier venue for their work on multimodal perception.',
-      image:
-        '/lab-photos/lab-work-24.jpg',
-      href: '#',
-    },
-  ];
+  const articles: Array<{
+    title: string;
+    date: string;
+    excerpt: string;
+    image: string;
+    href: string;
+  }> = [];
 
   return (
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
@@ -68,42 +46,48 @@ export default function News() {
             </div>
 
             {/* One-column News List */}
-            <div className="grid grid-cols-1 gap-6">
-              {articles.map((article, index) => (
-                <article
-                  key={index}
-                  className="group transition-all duration-300 stagger-item bg-white border border-neutral-200 rounded-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 unc-shadow-hover"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {article.image && (
-                    <div className="w-full h-56 relative mb-4 overflow-hidden rounded-lg">
-                      <Image
-                        src={article.image}
-                        alt={article.title}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
+            {articles.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-neutral-500 text-lg">No news items at this time.</p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 gap-6">
+                {articles.map((article, index) => (
+                  <article
+                    key={index}
+                    className="group transition-all duration-300 stagger-item bg-white border border-neutral-200 rounded-lg p-6 hover:shadow-2xl transform hover:-translate-y-2 unc-shadow-hover"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {article.image && (
+                      <div className="w-full h-56 relative mb-4 overflow-hidden rounded-lg">
+                        <Image
+                          src={article.image}
+                          alt={article.title}
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
+                    )}
+                    <div className="text-sm text-neutral-500 mb-2">{article.date}</div>
+                    <h3 className="text-xl font-semibold text-carolina-blue mb-2 group-hover:text-unc-navy transition-colors duration-300">
+                      {article.title}
+                    </h3>
+                    <p className="text-neutral-700 mb-4">{article.excerpt}</p>
+                    <div>
+                      <Link
+                        href={article.href}
+                        className="inline-flex items-center gap-2 bg-carolina-blue text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:bg-unc-navy"
+                      >
+                        Read more
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
                     </div>
-                  )}
-                  <div className="text-sm text-neutral-500 mb-2">{article.date}</div>
-                  <h3 className="text-xl font-semibold text-carolina-blue mb-2 group-hover:text-unc-navy transition-colors duration-300">
-                    {article.title}
-                  </h3>
-                  <p className="text-neutral-700 mb-4">{article.excerpt}</p>
-                  <div>
-                    <Link
-                      href={article.href}
-                      className="inline-flex items-center gap-2 bg-carolina-blue text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:bg-unc-navy"
-                    >
-                      Read more
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
+                  </article>
+                ))}
+              </div>
+            )}
           </section>
 
         </div>

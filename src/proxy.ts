@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyAdminTokenEdge } from '@/lib/auth';
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   // Public redirects for renamed sections
   if (request.nextUrl.pathname === '/team') {
     return NextResponse.redirect(new URL('/people', request.url));
@@ -53,3 +53,4 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: ['/admin/:path*', '/team', '/join-us', '/courses', '/courses/:path*']
 };
+
