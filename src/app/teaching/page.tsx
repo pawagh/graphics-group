@@ -6,9 +6,10 @@ import Image from 'next/image';
 export default function Teaching() {
   const courses = [
     {
-      title: "Computational Imaging",
+      title: "Advanced Visual Computing: Physics-Informed AI",
       semester: "Spring 2026",
-      description: "An introduction to computational imaging, covering optics, sensors, algorithms, and modern techniques for image formation and analysis.",
+      code: "COMP 790-175",
+      description: "A graduate-level seminar exploring recent advances in visual computing systems, with emphasis on physics-inspired AI, neural rendering, implicit representations, and diffractive neural networks.",
       image: "/lab-photos/lab-work-32.jpg",
       link: "/teaching/computational-imaging",
       color: "carolina-blue"
@@ -81,7 +82,7 @@ export default function Teaching() {
                         {course.title}
                       </h3>
                       <p className="text-carolina-blue font-semibold mb-2 transition-colors duration-300">
-                        {course.semester}
+                        {'code' in course && <span className="text-dome-copper">{course.code} • </span>}{course.semester}
                       </p>
                       <p className="text-neutral-600 mb-6 leading-relaxed transition-colors duration-300 text-lg">
                         {course.description}
