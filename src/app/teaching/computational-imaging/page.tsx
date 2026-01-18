@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import '../../animations.css';
@@ -7,14 +7,7 @@ import '../../animations.css';
 export default function AdvancedVisualComputing() {
   const [activeSection, setActiveSection] = useState('description');
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  const scrollToSection = (sectionId: string) => {
-    setActiveSection(sectionId);
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const isScrollingRef = useRef(false);
 
   const navigationItems = [
     { id: 'description', label: 'Description' },
@@ -26,6 +19,59 @@ export default function AdvancedVisualComputing() {
     { id: 'project', label: 'Final Project' },
     { id: 'policies', label: 'Policies' }
   ];
+
+  const scrollToSection = (sectionId: string) => {
+    isScrollingRef.current = true;
+    setActiveSection(sectionId);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      // Reset the flag after scroll animation completes
+      setTimeout(() => {
+        isScrollingRef.current = false;
+      }, 1000);
+    }
+  };
+
+  // Scroll spy effect - updates active section based on scroll position
+  useEffect(() => {
+    const sectionIds = navigationItems.map(item => item.id);
+    
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      // Don't update if user clicked a nav item (smooth scrolling in progress)
+      if (isScrollingRef.current) return;
+      
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px', // Triggers when section is in upper portion of viewport
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sectionIds.forEach(id => {
+      const element = document.getElementById(id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      sectionIds.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, []);
 
   const scheduleData = [
     { week: '1', date: 'Jan 7, Wed', topic: 'Introduction and fast forward', section: 'Foundations' },
