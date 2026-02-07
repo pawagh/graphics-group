@@ -1,0 +1,372 @@
+[
+  {
+    "name": "Anselmo Lastra",
+    "currentPosition": "Professor, UNC Chapel Hill",
+    "webpage": "https://lastra.web.unc.edu/home-page/",
+    "category": "faculty"
+  },
+  {
+    "name": "Greg Welch",
+    "currentPosition": "Florida Hospital Endowed Chair in Healthcare Simulation, University of Central Florida",
+    "webpage": "https://www.ist.ucf.edu/Contact/StaffDirectory/GregoryWelch.aspx",
+    "category": "faculty"
+  },
+  {
+    "name": "Herman Towles",
+    "currentPosition": "Senior Research Associate",
+    "category": "staff"
+  },
+  {
+    "name": "Gregory Abram",
+    "graduationYear": "1986",
+    "currentPosition": "Research Scientist, Texas Advanced Computing Center",
+    "webpage": "https://www.tacc.utexas.edu/about/directory/gregory-abram",
+    "category": "phd"
+  },
+  {
+    "name": "Jeremy Ackerman",
+    "graduationYear": "2002",
+    "currentPosition": "Associate Professor, Emory University",
+    "webpage": "https://med.emory.edu/directory/profile/?u=JDACKER",
+    "category": "phd"
+  },
+  {
+    "name": "Michael Bajura",
+    "graduationYear": "1997",
+    "currentPosition": "Research Staff Member, IDA",
+    "category": "phd"
+  },
+  {
+    "name": "Gary Bishop",
+    "graduationYear": "1984",
+    "currentPosition": "Professor, UNC Chapel Hill",
+    "webpage": "https://www.cs.unc.edu/~gb/",
+    "category": "phd"
+  },
+  {
+    "name": "Alex Blate",
+    "graduationYear": "2019",
+    "currentPosition": "Chief Innovator, Aura Technologies",
+    "category": "phd"
+  },
+  {
+    "name": "Young-Woon Cha",
+    "graduationYear": "2013",
+    "webpage": "https://sites.google.com/site/youngwooncha/",
+    "category": "phd"
+  },
+  {
+    "name": "Rohan Chabra",
+    "graduationYear": "2014",
+    "webpage": "http://cs.unc.edu/~rohanc/",
+    "category": "phd"
+  },
+  {
+    "name": "Renjie Chen",
+    "graduationYear": "2015",
+    "currentPosition": "Professor, University of Science and Technology of China",
+    "webpage": "http://staff.ustc.edu.cn/~renjiec/",
+    "category": "phd"
+  },
+  {
+    "name": "Wei-Chao Chen",
+    "graduationYear": "2002",
+    "currentPosition": "Co-Founder and Chairman, Skywatch Innovation Inc.",
+    "webpage": "https://www.cs.unc.edu/~ciao/",
+    "category": "phd"
+  },
+  {
+    "name": "Mingsong Dou",
+    "graduationYear": "2015",
+    "currentPosition": "perceptiveIO Inc.",
+    "webpage": "http://www.cs.unc.edu/~doums/",
+    "category": "phd"
+  },
+  {
+    "name": "David Dunn",
+    "graduationYear": "2019",
+    "currentPosition": "Disney Research - Los Angeles",
+    "webpage": "http://www.qenops.com/",
+    "category": "phd"
+  },
+  {
+    "name": "David Ellsworth",
+    "graduationYear": "1996",
+    "currentPosition": "Senior Research Scientist, NASA Ames Research Center",
+    "category": "phd"
+  },
+  {
+    "name": "Cedric Fleury",
+    "graduationYear": "2014",
+    "currentPosition": "Assistant Professor, Université Paris-Sud",
+    "webpage": "https://www.lri.fr/~cfleury/",
+    "category": "phd"
+  },
+  {
+    "name": "Michael Giordano",
+    "graduationYear": "2019",
+    "currentPosition": "Quantitative UX Researcher, Facebook",
+    "category": "phd"
+  },
+  {
+    "name": "Gentaro Hirota",
+    "graduationYear": "2002",
+    "currentPosition": "Engineer, NVIDIA",
+    "category": "phd"
+  },
+  {
+    "name": "Victoria Interrante",
+    "graduationYear": "1996",
+    "currentPosition": "Professor, University of Minnesota",
+    "webpage": "http://www-users.cs.umn.edu/~interran/",
+    "category": "phd"
+  },
+  {
+    "name": "Tyler Johnson",
+    "graduationYear": "2009",
+    "currentPosition": "Principal Software Engineer, Scalable Display Technologies",
+    "webpage": "http://www.tmjohns.com/index.html",
+    "category": "phd"
+  },
+  {
+    "name": "Scott Larsen",
+    "graduationYear": "2008",
+    "currentPosition": "Senior Technical Asset, Qualtrics",
+    "category": "phd"
+  },
+  {
+    "name": "Marc Levoy",
+    "graduationYear": "1989",
+    "currentPosition": "Distinguished Engineer, Google Research",
+    "webpage": "https://en.wikipedia.org/wiki/Marc_Levoy",
+    "category": "phd"
+  },
+  {
+    "name": "Peter Lincoln",
+    "graduationYear": "2017",
+    "currentPosition": "Google",
+    "webpage": "http://cs.unc.edu/~plincoln/",
+    "category": "phd"
+  },
+  {
+    "name": "Mark Livingston",
+    "graduationYear": "1998",
+    "currentPosition": "Head, Virtual Environments and Visualization Section, Naval Research Laboratory",
+    "webpage": "https://www.nrl.navy.mil/itd/imda/research/5581",
+    "category": "phd"
+  },
+  {
+    "name": "Andrew Maimone",
+    "graduationYear": "2015",
+    "currentPosition": "Research Scientist, Facebook Reality Labs",
+    "category": "phd"
+  },
+  {
+    "name": "Steven Molnar",
+    "graduationYear": "1991",
+    "currentPosition": "NVIDIA",
+    "webpage": "http://www.cs.unc.edu/~molnar/",
+    "category": "phd"
+  },
+  {
+    "name": "Andrew Nashel",
+    "graduationYear": "2010",
+    "currentPosition": "Software Engineer, Cisco Systems",
+    "webpage": "http://nashel.org/",
+    "category": "phd"
+  },
+  {
+    "name": "Ulrich Neumann",
+    "graduationYear": "1993",
+    "currentPosition": "Professor of Computer Science and ECE, USC",
+    "webpage": "http://graphics.usc.edu/cgit/un.html",
+    "category": "phd"
+  },
+  {
+    "name": "Ryutarou Ohbuchi",
+    "graduationYear": "1994",
+    "currentPosition": "Professor, University of Yamanashi, Japan",
+    "webpage": "http://www.kki.yamanashi.ac.jp/~ohbuchi/",
+    "category": "phd"
+  },
+  {
+    "name": "Akshay Paruchuri",
+    "currentPosition": "UNC Chapel Hill",
+    "webpage": "https://www.cs.unc.edu/~akshaypa/",
+    "category": "phd"
+  },
+  {
+    "name": "Tabitha Peck",
+    "graduationYear": "2010",
+    "currentPosition": "Assistant Professor, Davidson College",
+    "webpage": "https://www.davidson.edu/academics/mathematics-and-computer-science/faculty-and-staff/tabitha-peck",
+    "category": "phd"
+  },
+  {
+    "name": "Ramesh Raskar",
+    "graduationYear": "2002",
+    "currentPosition": "Associate Professor, MIT",
+    "webpage": "http://web.media.mit.edu/~raskar/",
+    "category": "phd"
+  },
+  {
+    "name": "Kishore Rathinavel",
+    "graduationYear": "2013",
+    "webpage": "https://sites.google.com/site/kishorerathinavel/",
+    "category": "phd"
+  },
+  {
+    "name": "Michael H. Rosenthal",
+    "graduationYear": "2005",
+    "currentPosition": "Assistant Professor, Dana-Farber Cancer Institute / Harvard Cancer Center",
+    "webpage": "https://www.dfhcc.harvard.edu/insider/member-detail/member/michael-h-rosenthal-md-phd/",
+    "category": "phd"
+  },
+  {
+    "name": "Gregory Turk",
+    "graduationYear": "1992",
+    "currentPosition": "Professor, Georgia Tech",
+    "webpage": "http://www.cc.gatech.edu/~turk/",
+    "category": "phd"
+  },
+  {
+    "name": "Jih-Fang Wang",
+    "graduationYear": "1990",
+    "currentPosition": "Unisys",
+    "webpage": "http://cs.unc.edu/~wang/",
+    "category": "phd"
+  },
+  {
+    "name": "Feng Zheng",
+    "graduationYear": "2015",
+    "currentPosition": "Magic Leap",
+    "webpage": "http://www.cs.unc.edu/~zhengf/",
+    "category": "phd"
+  },
+  {
+    "name": "Austin Hale",
+    "currentPosition": "",
+    "webpage": "https://austinbhale.com/",
+    "category": "masters"
+  },
+  {
+    "name": "Hao Jiang",
+    "currentPosition": "",
+    "category": "masters"
+  },
+  {
+    "name": "Howard (Han) Jiang",
+    "graduationYear": "2023",
+    "category": "masters"
+  },
+  {
+    "name": "Hyounghun Kim",
+    "currentPosition": "",
+    "category": "masters"
+  },
+  {
+    "name": "Michael Giordano",
+    "graduationYear": "2019",
+    "currentPosition": "Quantitative UX Researcher, Facebook",
+    "category": "masters"
+  },
+  {
+    "name": "Nick Rewkowski",
+    "currentPosition": "",
+    "webpage": "https://www.nickvr.me/home",
+    "category": "masters"
+  },
+  {
+    "name": "Husam Shaik",
+    "graduationYear": "2022",
+    "category": "masters"
+  },
+  {
+    "name": "Hanpeng Wang",
+    "currentPosition": "",
+    "category": "masters"
+  },
+  {
+    "name": "Justin Wilson",
+    "graduationYear": "2016",
+    "webpage": "http://www.cs.unc.edu/~wilson/",
+    "category": "masters"
+  },
+  {
+    "name": "Will Berner",
+    "category": "undergrad"
+  },
+  {
+    "name": "Yang Chen",
+    "category": "undergrad"
+  },
+  {
+    "name": "Zhongrui Chen",
+    "graduationYear": "2022",
+    "currentPosition": "PhD student at UNC",
+    "webpage": "https://www.cs.unc.edu/~jcpwfloi/",
+    "category": "undergrad"
+  },
+  {
+    "name": "Fan Feng",
+    "category": "undergrad"
+  },
+  {
+    "name": "Joel Jacob",
+    "category": "undergrad"
+  },
+  {
+    "name": "Federico Menozzi",
+    "graduationYear": "2016",
+    "currentPosition": "BS Honors Thesis, UNC; MS Student",
+    "category": "undergrad"
+  },
+  {
+    "name": "Helen Zihe Qin",
+    "graduationYear": "2019",
+    "currentPosition": "Google",
+    "category": "undergrad"
+  },
+  {
+    "name": "Vijay Rajkumar",
+    "graduationYear": "2016",
+    "currentPosition": "BS Honors Thesis; Duke University Grad Student in Media",
+    "category": "undergrad"
+  },
+  {
+    "name": "Nolan Scobie",
+    "webpage": "https://nolanscobie.com",
+    "category": "undergrad"
+  },
+  {
+    "name": "Paul Song",
+    "category": "undergrad"
+  },
+  {
+    "name": "Evan Sun",
+    "graduationYear": "2022",
+    "category": "undergrad"
+  },
+  {
+    "name": "Yujie Tao",
+    "webpage": "https://yujietao.me/",
+    "category": "undergrad"
+  },
+  {
+    "name": "Jiyao Wang",
+    "category": "undergrad"
+  },
+  {
+    "name": "Ziheng Wang",
+    "category": "undergrad"
+  },
+  {
+    "name": "David Siqing Xu",
+    "graduationYear": "2016",
+    "category": "undergrad"
+  },
+  {
+    "name": "Irene Zhan",
+    "category": "undergrad"
+  }
+]

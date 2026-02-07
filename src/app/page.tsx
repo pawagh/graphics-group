@@ -12,27 +12,21 @@ export default function Home() {
       {/* Enhanced Hero image carousel with parallax effect */}
       <div className="w-full h-[60vh] relative overflow-hidden bg-gradient-to-br from-unc-navy to-unc-navy">
         {[
-          "/lab-photos/group-photo-03.jpg", // Group photo
-          "/lab-photos/lab-work-15.jpg", // Lab work
-          "/lab-photos/group-photo-02.jpg", // Group photo
-          "/lab-photos/lab-work-20.jpg"  // Lab work
-        ].map((src, index, arr) => {
+          { src: "/lab-photos/group-photo-03.jpg", alt: "Visual Computing Lab Team", isGroup: true },
+          { src: "/lab-photos/lab-work-15.jpg", alt: "Research in Progress", isGroup: false },
+          { src: "/lab-photos/group-photo-02.jpg", alt: "Lab Collaboration", isGroup: true },
+          { src: "/lab-photos/lab-work-20.jpg", alt: "Cutting-Edge Research", isGroup: false },
+        ].map((img, index, arr) => {
           const total = arr.length;
           const duration = 20; // Slower, more elegant timing
           const delay = (index * duration) / total;
-          const altTexts = [
-            "Visual Computing Lab Team",
-            "Research in Progress", 
-            "Lab Collaboration",
-            "Cutting-Edge Research"
-          ];
           return (
             <Image
               key={index}
-              src={src}
-              alt={altTexts[index]}
+              src={img.src}
+              alt={img.alt}
               fill
-              className={`absolute object-cover fade-image-enhanced ${index === 0 ? 'first-image-enhanced' : ''}`}
+              className={`absolute object-cover ${img.isGroup ? 'object-top' : 'object-center'} fade-image-enhanced ${index === 0 ? 'first-image-enhanced' : ''}`}
               style={{ 
                 animationDelay: `${delay}s`,
                 animationDuration: `${duration}s`
@@ -81,9 +75,12 @@ export default function Home() {
               <div className="flex-1">
                 <h2 className="section-title text-center text-carolina-blue text-reveal mb-8">ABOUT US</h2>
                 <p className="text-lg leading-relaxed text-neutral-600 font-medium max-w-3xl mx-auto">
-                  Welcome to the <span className="font-bold text-carolina-blue transition-colors duration-300">Visual Computing and Augmented Intelligence Lab</span> at UNC Chapel Hill. 
-                  Our team is dedicated to advancing research in computational imaging, visual perception, and AI-driven solutions. 
-                  We collaborate across disciplines to create transformative technologies that redefine the future of visual computing.
+                  Welcome to the <span className="font-bold text-carolina-blue transition-colors duration-300">Visual Computing and Augmented Intelligence Lab</span> at UNC Chapel Hill.
+                  We&apos;ve been around UNC Computer Science since 1978, with research such as Telepresence, Virtual Reality, Pixel-Planes, Head &amp; Body Trackers, 3D Ultrasound Displays, Office of the Future, Being-There Centre (with ETH Zurich and NTU Singapore) &mdash; see <Link href="/past-research" className="text-carolina-blue underline hover:text-unc-navy transition-colors duration-300">past research</Link>.
+                </p>
+                <p className="text-lg leading-relaxed text-neutral-600 font-medium max-w-3xl mx-auto mt-4">
+                  Currently our team is dedicated to advancing research in computational imaging, visual perception, and AI-driven solutions. 
+                  We collaborate across disciplines to develop pioneering technologies that shape the future of visual computing.
                 </p>
               </div>
             </div>
@@ -326,7 +323,7 @@ export default function Home() {
           {/* Enhanced Featured Projects section */}
           <section className="section-card unc-shadow-hover">
             <div className="relative mb-6">
-              <h2 className="section-title text-center text-carolina-blue text-reveal mb-4 sm:mb-0">FEATURED PUBLICATIONS</h2>
+              <h2 className="section-title text-center text-carolina-blue text-reveal mb-4 sm:mb-0">RECENT PUBLICATIONS</h2>
               <div className="flex justify-center sm:block">
                 <Link 
                   href="/publications" 
