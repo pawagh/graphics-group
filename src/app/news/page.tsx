@@ -2,15 +2,13 @@
 import '../animations.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import newsArticlesData from '@/data/news.json';
+import type { NewsArticle } from '@/types/data';
+
+const newsArticles = newsArticlesData as NewsArticle[];
 
 export default function News() {
-  const articles: Array<{
-    title: string;
-    date: string;
-    excerpt: string;
-    image: string;
-    href: string;
-  }> = [];
+  const articles = newsArticles;
 
   return (
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">

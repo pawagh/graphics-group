@@ -9,7 +9,7 @@ const RESERVED_ROUTES = [
   'people',
   'opportunities',
   'teaching',
-  'courses',
+  'past-research',
   'news',
 ];
 

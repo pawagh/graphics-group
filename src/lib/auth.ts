@@ -23,28 +23,16 @@ const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret-change-in-producti
 
 export async function validateAdminCredentials(email: string, password: string): Promise<AdminUser | null> {
   try {
-    console.log('Validating credentials for:', email);
-    console.log('Expected email:', ADMIN_CREDENTIALS.email);
-    console.log('Email match:', email === ADMIN_CREDENTIALS.email);
-    
     if (email !== ADMIN_CREDENTIALS.email) {
-      console.log('Email mismatch, returning null');
       return null;
     }
 
-    console.log('Comparing password with hash...');
-    console.log('Password:', password);
-    console.log('Hash:', ADMIN_CREDENTIALS.passwordHash);
-    
     const isValid = await bcrypt.compare(password, ADMIN_CREDENTIALS.passwordHash);
-    console.log('Password validation result:', isValid);
     
     if (!isValid) {
-      console.log('Password invalid, returning null');
       return null;
     }
 
-    console.log('Authentication successful');
     return {
       id: ADMIN_CREDENTIALS.id,
       email: ADMIN_CREDENTIALS.email,

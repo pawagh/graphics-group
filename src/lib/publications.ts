@@ -23,38 +23,18 @@ function generateSlug(title: string): string {
 
 export async function getPublications(): Promise<Publication[]> {
   try {
-    // Ensure JSON store exists, migrate if missing
-    if (!fs.existsSync(PUBLICATIONS_FILE_PATH)) {
-      await migratePublicationsData();
-    }
-
-    // Load publications from JSON
     const jsonContent = fs.readFileSync(PUBLICATIONS_FILE_PATH, 'utf-8');
-    const jsonPublications: Publication[] = JSON.parse(jsonContent);
+    const publications: Publication[] = JSON.parse(jsonContent);
 
-    // Also load publications from static data.ts, then merge unique by slug
-    let staticPublications: Publication[] = [];
-    try {
-      const mod = await import('@/app/publications/data');
-      staticPublications = (mod.publications ?? []) as Publication[];
-    } catch {
-      staticPublications = [];
-    }
-
-    const slugToPublication = new Map<string, Publication>();
-    // Prefer JSON (newer, editable) entries; then fill with static
-    for (const p of jsonPublications) slugToPublication.set(p.slug, p);
-    for (const p of staticPublications) if (!slugToPublication.has(p.slug)) slugToPublication.set(p.slug, p);
-
-    // Return newest-first ordering by year in tags if present; otherwise keep insertion
-    const merged = Array.from(slugToPublication.values());
-    merged.sort((a, b) => {
-      const yearA = (a.tags.find(t => /^\d{4}$/.test(t)) ?? '0000');
-      const yearB = (b.tags.find(t => /^\d{4}$/.test(t)) ?? '0000');
+    // Sort newest-first by year tag
+    publications.sort((a, b) => {
+      const yearA = a.tags.find(t => /^\d{4}$/.test(t)) ?? '0000';
+      const yearB = b.tags.find(t => /^\d{4}$/.test(t)) ?? '0000';
       if (yearA !== yearB) return yearB.localeCompare(yearA);
       return 0;
     });
-    return merged;
+
+    return publications;
   } catch (error) {
     console.error('Error reading publications:', error);
     return [];
@@ -136,25 +116,5 @@ export async function getPublicationBySlug(slug: string): Promise<Publication | 
   } catch (error) {
     console.error('Error finding publication by slug:', error);
     return null;
-  }
-}
-
-// Migration function to move from data.ts to JSON file
-async function migratePublicationsData(): Promise<void> {
-  try {
-    // Import the existing publications data
-    const { publications } = await import('@/app/publications/data');
-    
-    // Ensure data directory exists
-    const dataDir = path.dirname(PUBLICATIONS_FILE_PATH);
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
-    }
-    
-    // Write to JSON file
-    fs.writeFileSync(PUBLICATIONS_FILE_PATH, JSON.stringify(publications, null, 2));
-    console.log('Publications data migrated successfully');
-  } catch (error) {
-    console.error('Error migrating publications data:', error);
   }
 }
