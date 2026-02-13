@@ -9,6 +9,8 @@ export interface Publication {
   image: string;
   link: string;
   tags: string[];
+  summary?: string;
+  project?: string; // slug of past-research project
 }
 
 const PUBLICATIONS_FILE_PATH = path.join(process.cwd(), 'src/data/publications.json');
