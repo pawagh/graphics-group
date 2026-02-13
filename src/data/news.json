@@ -1,38 +1,56 @@
 [
   {
-    "title": "Placeholder: 2017 News Item 3",
-    "date": "2017-12-01",
-    "excerpt": "Description of a notable event or achievement from 2017. Replace this with actual content from the telepresence site.",
-    "href": "#"
+    "title": "Varifocal Membrane AR Wins Digital Content Expo of Japan Prize at SIGGRAPH 2017",
+    "date": "2017-08-10",
+    "excerpt": "David Dunn, Cary Tippets, Kent Torell, Petr Kellnhofer, Kaan Akşit, Piotr Didyk, Karol Myszkowski, David Luebke, and Henry Fuchs won the Digital Content Expo of Japan Prize at SIGGRAPH 2017 Emerging Technologies for their work on Varifocal displays.",
+    "href": "https://telepresence.web.unc.edu/2017/08/membrane-ar-wins-dcaj-award-at-siggraph-e-tech-2017/"
   },
   {
-    "title": "Placeholder: 2017 News Item 2",
-    "date": "2017-06-01",
-    "excerpt": "Description of a notable event or achievement from 2017. Replace this with actual content from the telepresence site.",
-    "href": "#"
+    "title": "i3D 2017: 2nd Place Paper and 3rd Place Presentation",
+    "date": "2017-04-29",
+    "excerpt": "At the i3D 2017 Conference in San Francisco, the 2nd place paper and 3rd place presentation was awarded for Scene-Adaptive High Dynamic Range Display for Low Latency Display (Peter Lincoln, Alex Blate, Montek Singh, Andrei State, Mary C. Whitton, Turner Whitted).",
+    "href": "https://telepresence.web.unc.edu/2017/04/i3d-2017-2nd-place-paper-and-3rd-place-presentation/"
   },
   {
-    "title": "Placeholder: 2017 News Item 1",
-    "date": "2017-01-15",
-    "excerpt": "Description of a notable event or achievement from 2017. Replace this with actual content from the telepresence site.",
-    "href": "#"
+    "title": "Best Paper Award at IEEE VR 2017",
+    "date": "2017-04-19",
+    "excerpt": "At IEEE VR 2017 in Los Angeles, the best paper was awarded to Wide Field of View Varifocal Near-Eye Display using See-Through Deformable Membrane Mirrors (David Dunn, Cary Tippets, Kent Torell, Petr Kellnhofer, Kaan Aksit, and colleagues).",
+    "href": "https://telepresence.web.unc.edu/2017/04/best-paper-award-at-ieee-vr-2017/"
   },
   {
-    "title": "Placeholder: 2016 News Item 3",
-    "date": "2016-12-01",
-    "excerpt": "Description of a notable event or achievement from 2016. Replace this with actual content from the telepresence site.",
-    "href": "#"
+    "title": "GVR Research Featured in RoadToVR",
+    "date": "2017-01-27",
+    "excerpt": "Researchers Demonstrate 100° Dynamic Focus AR Display With Membrane Mirrors — Ben Lang's article on RoadToVR highlights our achievement of a wide field of view in an AR headset.",
+    "href": "https://telepresence.web.unc.edu/2017/01/gvr-research-featured-in-roadtovr-com-article/"
   },
   {
-    "title": "Placeholder: 2016 News Item 2",
-    "date": "2016-06-01",
-    "excerpt": "Description of a notable event or achievement from 2016. Replace this with actual content from the telepresence site.",
-    "href": "#"
+    "title": "GVR Papers to Appear at IEEE VR and TVCG 2017",
+    "date": "2017-01-28",
+    "excerpt": "Several papers accepted to IEEE Virtual Reality 2017 in Los Angeles, including Wide Field of View Varifocal Near-Eye Display using See-Through Deformable Membrane Mirrors.",
+    "href": "https://telepresence.web.unc.edu/2017/01/gvr-papers-to-appear-at-ieee-vr-and-tvcg-2017/"
   },
   {
-    "title": "Placeholder: 2016 News Item 1",
-    "date": "2016-01-15",
-    "excerpt": "Description of a notable event or achievement from 2016. Replace this with actual content from the telepresence site.",
-    "href": "#"
+    "title": "GVR Papers Accepted to I3D 2017",
+    "date": "2016-12-16",
+    "excerpt": "Papers accepted to ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games (I3D 2017) in San Francisco, including Scene-Adaptive High Dynamic Range Display for Low Latency Augmented Reality.",
+    "href": "https://telepresence.web.unc.edu/2016/12/gvr-papers-to-appear-at-i3d-2017/"
+  },
+  {
+    "title": "Long Lasting Impact Paper Awards",
+    "date": "2016-12-16",
+    "excerpt": "Awards presented for Spatially augmented reality (IWAR98) by Ramesh Raskar, Greg Welch, and Henry Fuchs, and Dynamic shader lamps: Painting on movable objects (ISAR2001) by Deepak Bandyopadhyay, Ramesh Raskar, and Henry Fuchs.",
+    "href": "https://telepresence.web.unc.edu/2016/12/"
+  },
+  {
+    "title": "Henry Fuchs Keynote at Eurographics 2016",
+    "date": "2016-05-10",
+    "excerpt": "Dr. Henry Fuchs, Federico Gil Distinguished Professor of Computer Science at UNC Chapel Hill, delivered a keynote presentation at Eurographics 2016 in Lisbon, Portugal.",
+    "href": "https://telepresence.web.unc.edu/2016/12/fuchs-keynote-at-eurographics-2016/"
+  },
+  {
+    "title": "Best Paper Award at IEEE VR 2016",
+    "date": "2016-03-23",
+    "excerpt": "At IEEE VR 2016 in Greenville, SC, the best paper was awarded to From Motion to Photons in 80 Microseconds: Towards Minimal Latency for Virtual and Augmented Reality (Peter Lincoln, Alex Blate, Montek Singh, Turner Whitted, Andrei State, Henry Fuchs).",
+    "href": "https://telepresence.web.unc.edu/2016/12/best-paper-award-at-ieee-vr-2016/"
   }
 ]

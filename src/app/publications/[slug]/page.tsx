@@ -164,49 +164,20 @@ export default function PublicationDetail({ params }: { params: Promise<{ slug: 
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="space-y-6">
           
-          {/* Abstract/Description */}
-          <section className="section-card">
-            <h2 className="text-lg font-bold text-carolina-blue mb-4 flex items-center">
-              <svg className="w-5 h-5 mr-2 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              Abstract
-            </h2>
-            <p className="text-neutral-700 leading-relaxed text-base">
-              This groundbreaking research presents novel approaches and methodologies in the field of visual computing and augmented intelligence. 
-              The work demonstrates significant advances in computational techniques while addressing real-world applications and challenges 
-              in the intersection of computer vision, machine learning, and human-computer interaction.
-            </p>
-          </section>
-
-          {/* Key Contributions */}
-          <section className="section-card">
-            <h2 className="text-lg font-bold text-carolina-blue mb-4 flex items-center">
-              <svg className="w-5 h-5 mr-2 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              Key Contributions
-            </h2>
-            <ul className="space-y-2 text-neutral-700 text-sm">
-              <li className="flex items-start">
-                <div className="w-2 h-2 bg-dome-copper rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                <span>Novel algorithmic approach that significantly improves performance metrics</span>
-              </li>
-              <li className="flex items-start">
-                <div className="w-2 h-2 bg-dome-copper rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                <span>Comprehensive evaluation on multiple benchmark datasets</span>
-              </li>
-              <li className="flex items-start">
-                <div className="w-2 h-2 bg-dome-copper rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                <span>Open-source implementation and reproducible results</span>
-              </li>
-              <li className="flex items-start">
-                <div className="w-2 h-2 bg-dome-copper rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
-                <span>Real-world applications and use cases demonstration</span>
-              </li>
-            </ul>
-          </section>
-
+          {/* Key contributions summary (when available) */}
+          {publication.summary && (
+            <section className="section-card">
+              <h2 className="text-lg font-bold text-carolina-blue mb-4 flex items-center">
+                <svg className="w-5 h-5 mr-2 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Key Contributions
+              </h2>
+              <p className="text-neutral-700 leading-relaxed text-base">
+                {publication.summary}
+              </p>
+            </section>
+          )}
 
         </div>
       </div>

@@ -312,15 +312,7 @@ export default function RootLayout({
             
             {/* Copyright */}
             <div className="relative z-10 text-center mt-6 pt-4 border-t border-white/30">
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
-                <p className="text-xs opacity-75">© 2025 Visual Computing and Augmented Intelligence Lab, UNC Chapel Hill</p>
-                <Link 
-                  href="/admin" 
-                  className="text-xs opacity-60 hover:opacity-100 hover:text-carolina-blue transition-all duration-300 underline"
-                >
-                  Admin
-                </Link>
-              </div>
+              <p className="text-xs opacity-75">© 2025 Visual Computing and Augmented Intelligence Lab, UNC Chapel Hill</p>
             </div>
           </footer>
         </div>

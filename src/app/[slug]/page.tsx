@@ -3,7 +3,6 @@ import { getPublicationBySlug } from '@/lib/publications';
 
 // List of reserved routes that should not be treated as publication slugs
 const RESERVED_ROUTES = [
-  'admin',
   'api',
   'publications',
   'people',

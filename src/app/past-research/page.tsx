@@ -2,10 +2,20 @@
 import '../animations.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import pastResearchProjects from '@/data/past-research.json';
 import type { PastResearchProject } from '@/types/data';
+import type { Publication } from '@/lib/publications';
 
 export default function PastResearch() {
+  const [publications, setPublications] = useState<Publication[]>([]);
+
+  useEffect(() => {
+    fetch('/api/publications')
+      .then((r) => r.ok ? r.json() : [])
+      .then(setPublications)
+      .catch(() => {});
+  }, []);
   return (
     <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
       {/* Hero banner section */}
@@ -87,6 +97,20 @@ export default function PastResearch() {
                     <p className="text-neutral-600 text-sm leading-relaxed mb-4">
                       {project.description}
                     </p>
+                    {publications.filter((p) => p.project === project.slug).length > 0 && (
+                      <div className="mb-4">
+                        <p className="text-xs font-semibold text-unc-navy uppercase tracking-wide mb-2">Linked publications</p>
+                        <ul className="space-y-1">
+                          {publications.filter((p) => p.project === project.slug).map((pub) => (
+                            <li key={pub.slug}>
+                              <Link href={`/publications/${pub.slug}`} className="text-carolina-blue text-sm hover:text-unc-navy hover:underline">
+                                {pub.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                     {project.externalLink && (
                       <a
                         href={project.externalLink}
