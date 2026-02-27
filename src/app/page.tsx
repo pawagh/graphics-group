@@ -2,7 +2,12 @@
 import './animations.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import newsArticlesData from '@/data/news.json';
+import type { NewsArticle } from '@/types/data';
 
+const newsArticles = (newsArticlesData as NewsArticle[]).sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+).slice(0, 6);
 
 export default function Home() {
 
@@ -26,7 +31,7 @@ export default function Home() {
               src={img.src}
               alt={img.alt}
               fill
-              className={`absolute object-cover ${img.isGroup ? 'object-top' : 'object-center'} fade-image-enhanced ${index === 0 ? 'first-image-enhanced' : ''}`}
+              className={`absolute object-cover ${img.isGroup ? 'object-[center_25%]' : 'object-center'} fade-image-enhanced ${index === 0 ? 'first-image-enhanced' : ''}`}
               style={{ 
                 animationDelay: `${delay}s`,
                 animationDuration: `${duration}s`
@@ -80,7 +85,7 @@ export default function Home() {
                 </p>
                 <p className="text-lg leading-relaxed text-neutral-600 font-medium max-w-3xl mx-auto mt-4">
                   Currently our team is dedicated to advancing research in computational imaging, visual perception, and AI-driven solutions. 
-                  We collaborate across disciplines to develop pioneering technologies that shape the future of visual computing.
+                  We collaborate across disciplines to create impactful technologies that advance the future of visual computing.
                 </p>
               </div>
             </div>
@@ -106,158 +111,42 @@ export default function Home() {
             {/* Horizontal scroll container */}
             <div className="relative">
               <div id="highlights-scroll" className="flex gap-6 overflow-x-auto pb-4 scroll-smooth" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-                
-                {/* Highlight 1 */}
-                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-72 overflow-hidden rounded-lg">
-                    <Image 
-                      src="/lab-photos/lab-work-10.jpg" 
-                      alt="Computational Imaging Research" 
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
-                    />
-                    {/* Progressive fade around title for better readability */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/80 via-unc-navy/40 via-30% to-transparent rounded-lg" />
-                    {/* Caption overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-3">
-                      <h3 className="text-sm font-bold text-white mb-1 transition-colors duration-300">
-                        Computational Imaging Breakthroughs
-                      </h3>
-                    </div>
-                    {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
-                      <p className="text-white text-center text-sm">
-                        Latest advances in computational imaging techniques, pushing the boundaries of optical systems and image reconstruction algorithms.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Highlight 2 */}
-                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-72 overflow-hidden rounded-lg">
-                    <Image 
-                      src="/lab-photos/group-photo-03.jpg" 
-                      alt="Award-Winning Research" 
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent rounded-lg" />
-                    {/* Caption overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-3">
-                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
-                        Award-Winning Research
-                      </h3>
-                    </div>
-                    {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
-                      <p className="text-white text-center text-sm">
-                        Recognition for outstanding contributions to visual computing and augmented intelligence research at top-tier conferences.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Highlight 3 */}
-                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-72 overflow-hidden rounded-lg">
-                    <Image 
-                      src="/lab-photos/lab-work-18.jpg" 
-                      alt="AR/VR Innovation" 
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent rounded-lg" />
-                    {/* Caption overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-3">
-                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
-                        AR/VR Innovation
-                      </h3>
-                    </div>
-                    {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
-                      <p className="text-white text-center text-sm">
-                        Pioneering augmented and virtual reality technologies for next-generation immersive experiences and applications.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Highlight 4 */}
-                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-72 overflow-hidden rounded-lg">
-                    <Image 
-                      src="/lab-photos/lab-work-25.jpg" 
-                      alt="Machine Learning Applications" 
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent rounded-lg" />
-                    {/* Caption overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-3">
-                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
-                        AI-Driven Solutions
-                      </h3>
-                    </div>
-                    {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
-                      <p className="text-white text-center text-sm">
-                        Advanced machine learning algorithms powering intelligent visual computing systems and automated analysis.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Highlight 5 */}
-                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-72 overflow-hidden rounded-lg">
-                    <Image 
-                      src="/lab-photos/lab-work-30.jpg" 
-                      alt="Nano-optics Research" 
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent rounded-lg" />
-                    {/* Caption overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-3">
-                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
-                        Nano-optics Research
-                      </h3>
-                    </div>
-                    {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
-                      <p className="text-white text-center text-sm">
-                        Cutting-edge research in nano-scale optical structures and metamaterials for advanced photonic applications.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Highlight 6 */}
-                <div className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80">
-                  <div className="relative h-72 overflow-hidden rounded-lg">
-                    <Image 
-                      src="/lab-photos/group-photo-04.jpg" 
-                      alt="Research Collaboration" 
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg" 
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/70 via-transparent to-transparent rounded-lg" />
-                    {/* Caption overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-3">
-                      <h3 className="text-sm font-bold text-white mb-1 group-hover:text-unc-navy transition-colors duration-300">
-                        Research Collaboration
-                      </h3>
-                    </div>
-                    {/* Hover overlay with description */}
-                    <div className="absolute inset-0 bg-unc-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
-                      <p className="text-white text-center text-sm">
-                        Interdisciplinary partnerships fostering innovation across visual computing, optics, and artificial intelligence domains.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
+                {newsArticles.length === 0 ? (
+                  <p className="text-neutral-500 py-8">No news items at this time.</p>
+                ) : (
+                  newsArticles.map((article, index) => (
+                    <a
+                      key={index}
+                      href={article.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden unc-shadow-hover flex-shrink-0 w-80 block"
+                    >
+                      <div className="relative h-72 overflow-hidden rounded-lg bg-gradient-to-br from-carolina-blue/20 to-unc-navy/20">
+                        {article.image ? (
+                          <Image
+                            src={article.image}
+                            alt={article.title}
+                            fill
+                            className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg"
+                          />
+                        ) : (
+                          <div className="absolute inset-0 bg-gradient-to-br from-carolina-blue/30 to-unc-navy/40 rounded-lg" />
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-unc-navy/90 via-unc-navy/40 to-transparent rounded-lg" />
+                        <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                          <span className="text-xs opacity-90">{article.date}</span>
+                          <h3 className="text-sm font-bold mt-1 line-clamp-2 group-hover:text-carolina-blue transition-colors duration-300">
+                            {article.title}
+                          </h3>
+                          <p className="text-xs opacity-90 mt-2 line-clamp-3">
+                            {article.excerpt}
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  ))
+                )}
               </div>
               
               {/* Navigation buttons */}

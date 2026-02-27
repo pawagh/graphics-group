@@ -5,6 +5,8 @@ export interface Alumnus {
   graduationYear?: string;
   currentPosition?: string;
   webpage?: string;
+  linkedin?: string;
+  wikipedia?: string;
   category: "faculty" | "staff" | "phd" | "masters" | "undergrad";
 }
 

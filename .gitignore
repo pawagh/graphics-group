@@ -22,6 +22,7 @@
 .DS_Store
 *.pem
 TODO.md
+IMPLEMENTATION_REPORT.md
 
 # debug
 npm-debug.log*
