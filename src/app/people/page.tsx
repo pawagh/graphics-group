@@ -14,9 +14,9 @@ export default function People() {
   const professors = activeMembers.filter(
     (p) => p.role.includes("Professor")
   );
-  const otherTeamMembers = activeMembers.filter(
-    (p) => !p.role.includes("Professor")
-  );
+  const otherTeamMembers = activeMembers
+    .filter((p) => !p.role.includes("Professor"))
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   const toggleDescription = (name: string) => {
     setExpandedPerson(expandedPerson === name ? null : name);
@@ -194,7 +194,9 @@ export default function People() {
 
             <div className="max-w-5xl mx-auto space-y-8">
               {alumniCategories.map((cat) => {
-                const members = alumni.filter((a) => a.category === cat.key);
+                const members = (alumni as Alumnus[])
+                  .filter((a) => a.category === cat.key)
+                  .sort((a, b) => a.name.localeCompare(b.name));
                 if (members.length === 0) return null;
                 return (
                   <div key={cat.key}>
@@ -203,7 +205,7 @@ export default function People() {
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
                       {members.map((alum) => (
-                        <div key={`${alum.name}-${alum.category}`} className="flex items-baseline gap-2 py-1">
+                        <div key={`${alum.name}-${alum.category}`} className="flex items-baseline gap-2 py-1 flex-wrap">
                           {alum.webpage ? (
                             <a
                               href={alum.webpage}
@@ -215,6 +217,36 @@ export default function People() {
                             </a>
                           ) : (
                             <span className="font-medium text-neutral-800">{alum.name}</span>
+                          )}
+                          {(alum.linkedin || alum.wikipedia) && (
+                            <span className="flex items-center gap-1.5">
+                              {alum.linkedin && (
+                                <a
+                                  href={alum.linkedin}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-carolina-blue hover:text-unc-navy transition-colors"
+                                  aria-label={`${alum.name} LinkedIn`}
+                                >
+                                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                  </svg>
+                                </a>
+                              )}
+                              {alum.wikipedia && (
+                                <a
+                                  href={alum.wikipedia}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-carolina-blue hover:text-unc-navy transition-colors"
+                                  aria-label={`${alum.name} Wikipedia`}
+                                >
+                                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm2.057 16.386c-.36.196-.644.345-.993.495-.35.15-.744.3-1.193.45-.45.15-.918.255-1.405.315-.486.06-.963.09-1.431.09-.495 0-.945-.045-1.35-.135-.405-.09-.765-.225-1.08-.405-.315-.18-.585-.42-.81-.72-.225-.3-.405-.675-.54-1.125L6.75 6.6H8.4l.9 4.95.855-4.95h1.575l.855 4.95.9-4.95h1.65L12.6 13.05c.045.18.09.345.135.495.045.15.09.27.135.36.09.18.21.345.36.495.15.15.33.27.54.36.21.09.465.135.765.135.315 0 .615-.045.9-.135.285-.09.54-.21.765-.36l.585 1.275z"/>
+                                  </svg>
+                                </a>
+                              )}
+                            </span>
                           )}
                           {alum.graduationYear && (
                             <span className="text-xs text-neutral-400">({alum.graduationYear})</span>
