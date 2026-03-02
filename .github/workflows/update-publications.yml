@@ -1,0 +1,85 @@
+name: Update Publications
+
+on:
+  # Run on the 1st of every month at 9am UTC
+  schedule:
+    - cron: '0 9 1 * *'
+
+  # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
+    inputs:
+      force_resummary:
+        description: 'Re-run AI summarization on all papers (even existing ones)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+      start_year:
+        description: 'Only fetch papers from this year onwards (leave blank for default)'
+        required: false
+        default: ''
+
+jobs:
+  update-publications:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    permissions:
+      contents: write  # Required to commit changes back
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scraper/requirements.txt
+
+      - name: Install Python dependencies
+        working-directory: ./scraper
+        run: pip install -r requirements.txt
+
+      - name: Run publication pipeline
+        working-directory: ./scraper
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          S2_API_KEY: ${{ secrets.S2_API_KEY }}
+          FORCE_RESUMMARY: ${{ github.event.inputs.force_resummary || 'false' }}
+        run: |
+          # Prevent int("") crash by only exporting if an input was provided
+          if [ -n "${{ github.event.inputs.start_year }}" ]; then
+            export START_YEAR_OVERRIDE="${{ github.event.inputs.start_year }}"
+          fi
+          python pipeline.py
+
+      - name: Check for changes
+        id: changes
+        run: |
+          # Use git status to catch both modified AND newly downloaded/untracked files
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Add JSON, new PDFs, and new Thumbnails (force-add since they're gitignored)
+          git add src/data/publications.json
+          git add -f public/papers/ public/publication-photos/ || true
+          
+          git commit -m "chore: update publications [skip ci]"
+          git push
+        
+      - name: No changes found
+        if: steps.changes.outputs.has_changes != 'true'
+        run: echo "No new publications found, nothing to commit."

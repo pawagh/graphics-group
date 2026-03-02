@@ -126,11 +126,12 @@ export default function PublicationDetail({ params }: { params: Promise<{ slug: 
                 <button 
                   className="bg-white/10 text-white border border-white/30 hover:bg-white/20 inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-300 shadow-lg"
                   onClick={() => {
+                    const yearTag = publication.tags.find(t => /^\d{4}$/.test(t)) || '';
                     const citation = `@article{${publication.slug.replace(/-/g, '_')},
   title={${publication.title}},
   author={${publication.authors}},
   journal={${publication.meta}},
-  year={2025}
+  year={${yearTag}}
 }`;
                     navigator.clipboard.writeText(citation);
                   }}
@@ -164,20 +165,50 @@ export default function PublicationDetail({ params }: { params: Promise<{ slug: 
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="space-y-6">
           
-          {/* Key contributions summary (when available) */}
+          {/* Summary */}
           {publication.summary && (
             <section className="section-card">
               <h2 className="text-lg font-bold text-carolina-blue mb-4 flex items-center">
                 <svg className="w-5 h-5 mr-2 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                Key Contributions
+                Summary
               </h2>
               <p className="text-neutral-700 leading-relaxed text-base">
                 {publication.summary}
               </p>
             </section>
           )}
+
+          {/* Key Contributions */}
+          {publication.keyContributions && publication.keyContributions.length > 0 && (
+            <section className="section-card">
+              <h2 className="text-lg font-bold text-carolina-blue mb-4 flex items-center">
+                <svg className="w-5 h-5 mr-2 text-carolina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Key Contributions
+              </h2>
+              <ul className="space-y-2 text-neutral-700 text-sm">
+                {publication.keyContributions.map((contribution, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <div className="w-2 h-2 bg-dome-copper rounded-full mt-1.5 mr-3 flex-shrink-0"></div>
+                    <span>{contribution}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {/* Fallback when no AI analysis is available */}
+          {!publication.summary && !publication.keyContributions?.length && (
+            <section className="section-card">
+              <p className="text-neutral-500 text-sm italic">
+                Detailed summary and key contributions will be available after the next scraper run with AI analysis enabled.
+              </p>
+            </section>
+          )}
+
 
         </div>
       </div>

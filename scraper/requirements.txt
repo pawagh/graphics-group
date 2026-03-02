@@ -1,0 +1,11 @@
+scholarly>=1.7.0
+free-proxy>=1.1.0
+
+# HTTP requests
+requests>=2.31.0
+
+# Environment management
+python-dotenv>=1.0.0
+
+PyMuPDF>=1.24.0
+Pillow>=10.0.0
