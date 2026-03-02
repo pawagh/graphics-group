@@ -1,21 +1,28 @@
 import fs from 'fs';
 import path from 'path';
 
+/**
+ * Publication interface for VCAIL website.
+ * The scraper outputs data matching this exact schema.
+ */
 export interface Publication {
   title: string;
   slug: string;
-  authors: string;
-  meta: string;
-  image: string;
-  link: string;
-  tags: string[];
-  summary?: string;
-  project?: string; // slug of past-research project
+  authors: string;       // Comma-separated author names
+  meta: string;          // e.g., "CVPR 2025" or "Best Paper Award, SIGGRAPH 2024"
+  image: string;         // Path to thumbnail image
+  link: string;          // Primary link (paper URL, arXiv, DOI, etc.)
+  tags: string[];        // ["Conference", "CVPR", "2025"] for filtering
+  summary?: string;      // AI-generated or manually written 1-2 sentence summary
+  keyContributions?: string[];  // AI-generated list of 3-5 key contributions
+  project?: string;      // Slug of related past-research project
 }
 
 const PUBLICATIONS_FILE_PATH = path.join(process.cwd(), 'src/data/publications.json');
 
-// Helper function to generate slug from title
+/**
+ * Generate URL-friendly slug from title
+ */
 function generateSlug(title: string): string {
   return title
     .toLowerCase()
@@ -23,6 +30,9 @@ function generateSlug(title: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
+/**
+ * Get all publications, sorted by year (newest first)
+ */
 export async function getPublications(): Promise<Publication[]> {
   try {
     const jsonContent = fs.readFileSync(PUBLICATIONS_FILE_PATH, 'utf-8');
@@ -41,6 +51,85 @@ export async function getPublications(): Promise<Publication[]> {
     console.error('Error reading publications:', error);
     return [];
   }
+}
+
+/**
+ * Get publications grouped by year
+ */
+export async function getPublicationsByYear(): Promise<Record<string, Publication[]>> {
+  const publications = await getPublications();
+  const grouped: Record<string, Publication[]> = {};
+  
+  for (const pub of publications) {
+    const year = pub.tags.find(t => /^\d{4}$/.test(t)) || 'Unknown';
+    if (!grouped[year]) {
+      grouped[year] = [];
+    }
+    grouped[year].push(pub);
+  }
+  
+  return grouped;
+}
+
+/**
+ * Get award-winning publications
+ */
+export async function getAwardPublications(): Promise<Publication[]> {
+  const publications = await getPublications();
+  return publications.filter(p => {
+    const metaLower = p.meta.toLowerCase();
+    return metaLower.includes('best paper') || 
+           metaLower.includes('award') || 
+           metaLower.includes('honorable mention');
+  });
+}
+
+/**
+ * Search publications by query string
+ */
+export async function searchPublications(query: string): Promise<Publication[]> {
+  const publications = await getPublications();
+  const queryLower = query.toLowerCase();
+  
+  return publications.filter(pub => {
+    return (
+      pub.title.toLowerCase().includes(queryLower) ||
+      pub.authors.toLowerCase().includes(queryLower) ||
+      pub.meta.toLowerCase().includes(queryLower) ||
+      pub.summary?.toLowerCase().includes(queryLower) ||
+      pub.tags.some(t => t.toLowerCase().includes(queryLower))
+    );
+  });
+}
+
+/**
+ * Get publication statistics
+ */
+export async function getPublicationStats(): Promise<{
+  total: number;
+  byYear: Record<string, number>;
+  withSummary: number;
+  awards: number;
+}> {
+  const publications = await getPublications();
+  
+  const byYear: Record<string, number> = {};
+  let withSummary = 0;
+  let awards = 0;
+  
+  for (const pub of publications) {
+    const year = pub.tags.find(t => /^\d{4}$/.test(t)) || 'Unknown';
+    byYear[year] = (byYear[year] || 0) + 1;
+    
+    if (pub.summary && pub.summary.trim()) withSummary++;
+    
+    const metaLower = pub.meta.toLowerCase();
+    if (metaLower.includes('best paper') || metaLower.includes('award') || metaLower.includes('honorable mention')) {
+      awards++;
+    }
+  }
+  
+  return { total: publications.length, byYear, withSummary, awards };
 }
 
 export async function addPublication(publicationData: Omit<Publication, 'slug'>): Promise<Publication | null> {
