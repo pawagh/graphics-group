@@ -1,0 +1,49 @@
+{
+  "lab": {
+    "name": "Graphics and Virtual Reality Group",
+    "shortName": "Graphics & VR Group",
+    "university": "UNC Chapel Hill",
+    "department": "Department of Computer Science",
+    "description": "The Graphics and Virtual Reality group has been around since 1978 at UNC Chapel Hill, under various names: Pixel-Planes, Tracker, Ultrasound, Office of the Future, as part of BeingThere Centre, and others. Our research encompasses 3D scene acquisition & reconstruction, 3D tracking, fast rendering hardware and algorithms, autostereoscopic 3D displays, head-mounted and other near-eye displays, telepresence, and medical applications.",
+    "logoPath": "/images/lab-logo.png",
+    "contactEmail": "fuchs@cs.unc.edu"
+  },
+  "pi": {
+    "name": "Henry Fuchs",
+    "title": "Federico Gil Distinguished Professor",
+    "email": "fuchs@cs.unc.edu",
+    "photoPath": "/images/people/henry-fuchs.jpg",
+    "bio": "",
+    "website": "https://henryfuchs.web.unc.edu/",
+    "googleScholar": ""
+  },
+  "deployment": {
+    "siteUrl": "https://telepresence.web.unc.edu",
+    "vercelProjectName": "graphics-vr-group"
+  },
+  "semanticScholar": {
+    "authorIds": [
+      { "name": "Henry Fuchs", "id": "145472944", "startYear": 1975 },
+      { "name": "Praneeth Chakravarthula", "id": "51151674", "startYear": 2014 },
+      { "name": "Adrian Ilie", "id": "2044671", "startYear": 2002 },
+      { "name": "Andrei State", "id": "144379239", "startYear": 1994 },
+      { "name": "Jade Kandel", "id": "2215952216", "startYear": 2020 },
+      { "name": "Ashley Neall", "id": "2296783777", "startYear": 2023 },
+      { "name": "Qian Zhang", "id": "2308022912", "startYear": 2020 },
+      { "name": "Pranav Wagh", "id": "2280805939", "startYear": 2023 }
+    ],
+    "defaultStartYear": 2014
+  },
+  "social": {
+    "twitter": "",
+    "github": "",
+    "googleScholar": ""
+  },
+  "theme": {
+    "primaryColor": "#4B9CD3",
+    "navyColor": "#13294B",
+    "accentColor": "#7BAFD4",
+    "lightGray": "#F8F8F8",
+    "white": "#FFFFFF"
+  }
+}
