@@ -1,85 +1,39 @@
 name: Update Publications
 
 on:
-  # Run on the 1st of every month at 9am UTC
   schedule:
-    - cron: '0 9 1 * *'
+    - cron: '0 0 1 */2 *'  # Every 2 months
+  workflow_dispatch: {}
 
-  # Allow manual trigger from GitHub Actions tab
-  workflow_dispatch:
-    inputs:
-      force_resummary:
-        description: 'Re-run AI summarization on all papers (even existing ones)'
-        required: false
-        default: 'false'
-        type: choice
-        options:
-          - 'false'
-          - 'true'
-      start_year:
-        description: 'Only fetch papers from this year onwards (leave blank for default)'
-        required: false
-        default: ''
+permissions:
+  contents: write
 
 jobs:
-  update-publications:
+  update:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
-
-    permissions:
-      contents: write  # Required to commit changes back
-
+    timeout-minutes: 30
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: '3.11'
-          cache: 'pip'
-          cache-dependency-path: scraper/requirements.txt
+          node-version: '20'
+          cache: 'npm'
 
-      - name: Install Python dependencies
-        working-directory: ./scraper
-        run: pip install -r requirements.txt
+      - run: npm ci
 
-      - name: Run publication pipeline
-        working-directory: ./scraper
+      - name: Fetch and enrich publications
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          S2_API_KEY: ${{ secrets.S2_API_KEY }}
-          FORCE_RESUMMARY: ${{ github.event.inputs.force_resummary || 'false' }}
-        run: |
-          # Prevent int("") crash by only exporting if an input was provided
-          if [ -n "${{ github.event.inputs.start_year }}" ]; then
-            export START_YEAR_OVERRIDE="${{ github.event.inputs.start_year }}"
-          fi
-          python pipeline.py
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+        run: npx tsx scripts/update-publications.ts
 
-      - name: Check for changes
-        id: changes
-        run: |
-          # Use git status to catch both modified AND newly downloaded/untracked files
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Commit and push changes
-        if: steps.changes.outputs.has_changes == 'true'
+      - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Add JSON, new PDFs, and new Thumbnails (force-add since they're gitignored)
-          git add src/data/publications.json
-          git add -f public/papers/ public/publication-photos/ || true
-          
-          git commit -m "chore: update publications [skip ci]"
+          git add data/publications.json public/papers/
+          git diff --staged --quiet || git commit -m "chore(publications): auto-update $(date +'%Y-%m-%d')"
           git push
-        
-      - name: No changes found
-        if: steps.changes.outputs.has_changes != 'true'
-        run: echo "No new publications found, nothing to commit."
