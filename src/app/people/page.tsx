@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getPeopleByRole } from '@/lib/data';
 import type { Person } from '@/lib/types';
 
@@ -11,12 +12,33 @@ const ROLE_ORDER: Array<{ key: string; label: string }> = [
   { key: 'alumni', label: 'Alumni' },
 ];
 
+function PersonPhoto({ person, size = 64 }: { person: Person; size?: number }) {
+  if (person.photoPath) {
+    return (
+      <Image
+        src={person.photoPath}
+        alt={person.name}
+        width={size}
+        height={size}
+        className="rounded-full object-cover flex-shrink-0"
+        style={{ width: size, height: size }}
+      />
+    );
+  }
+  return (
+    <div
+      className="rounded-full bg-[var(--unc-blue)] flex items-center justify-center text-white font-bold flex-shrink-0"
+      style={{ width: size, height: size, fontSize: size * 0.35 }}
+    >
+      {person.name.split(' ').map(n => n[0]).join('')}
+    </div>
+  );
+}
+
 function PersonCard({ person }: { person: Person }) {
   return (
     <div className="card p-5 flex gap-4">
-      <div className="w-16 h-16 rounded-full bg-[var(--unc-navy)] flex items-center justify-center text-white font-bold flex-shrink-0">
-        {person.name.split(' ').map(n => n[0]).join('')}
-      </div>
+      <PersonPhoto person={person} size={64} />
       <div className="min-w-0">
         <h3 className="font-semibold" style={{ color: 'var(--text-primary)' }}>{person.name}</h3>
         <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{person.title}</p>

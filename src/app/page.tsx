@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { config } from '@/lib/config';
 import { getNews, getPublications, getPeople } from '@/lib/data';
 
@@ -12,7 +13,7 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-[var(--unc-navy)] text-white py-20 sm:py-28">
+      <section className="bg-[var(--unc-blue)] text-white py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             {config.lab.name}
@@ -24,7 +25,7 @@ export default function HomePage() {
             {config.lab.description}
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/research" className="inline-block bg-[var(--unc-blue)] hover:bg-[#3a8bc2] text-white font-medium px-6 py-3 rounded-lg transition-colors">
+            <Link href="/research" className="inline-block bg-[var(--unc-navy)] hover:bg-[#1a3a5c] text-white font-medium px-6 py-3 rounded-lg transition-colors">
               Our Research
             </Link>
             <Link href="/publications" className="inline-block border border-white/30 hover:bg-white/10 text-white font-medium px-6 py-3 rounded-lg transition-colors">
@@ -41,9 +42,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {faculty.map(person => (
               <div key={person.id} className="card p-6 flex flex-col items-center text-center">
-                <div className="w-24 h-24 rounded-full bg-[var(--unc-navy)] flex items-center justify-center text-white text-2xl font-bold mb-4">
-                  {person.name.split(' ').map(n => n[0]).join('')}
-                </div>
+                {person.photoPath ? (
+                  <Image src={person.photoPath} alt={person.name} width={96} height={96} className="w-24 h-24 rounded-full object-cover mb-4" />
+                ) : (
+                  <div className="w-24 h-24 rounded-full bg-[var(--unc-blue)] flex items-center justify-center text-white text-2xl font-bold mb-4">
+                    {person.name.split(' ').map(n => n[0]).join('')}
+                  </div>
+                )}
                 <h3 className="font-semibold text-lg" style={{ color: 'var(--text-primary)' }}>{person.name}</h3>
                 <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>{person.title}</p>
                 {person.website && (
