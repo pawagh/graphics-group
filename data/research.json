@@ -1,0 +1,192 @@
+[
+  {
+    "id": "desktop-3d-telepresence",
+    "title": "Desktop 3D Telepresence",
+    "description": "Bringing Telepresence to Every Desk — developing systems for real-time 3D telepresence using commodity RGBD cameras.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": true,
+    "order": 0
+  },
+  {
+    "id": "egocentric-body-pose-tracking",
+    "title": "Egocentric Body Pose Tracking",
+    "description": "Mobile, egocentric human body motion reconstruction using eyeglasses-mounted cameras and body-worn inertial sensors.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "eye-tracking-with-3d-pupil-localization",
+    "title": "Eye Tracking with 3D Pupil Localization",
+    "description": "3D pupil localization and gaze tracking based on anatomical eye models and neural refraction correction for AR/VR displays.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "holographic-near-eye-display",
+    "title": "Holographic Near-Eye Display",
+    "description": "Computing high-quality phase-only holograms for near-eye holographic displays with applications in AR eyeglasses.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": true,
+    "order": 3
+  },
+  {
+    "id": "novel-view-rendering-using-neural-networks",
+    "title": "Novel View Rendering using Neural Networks",
+    "description": "Learning generalizable radiance fields for human performance rendering and novel view synthesis.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": true,
+    "order": 4
+  },
+  {
+    "id": "dynamic-focus-augmented-reality-display",
+    "title": "Dynamic Focus Augmented Reality Display",
+    "description": "Addresses fundamental limitations of near eye displays including limited field of view, low angular resolution, and fixed accommodative state. Proposes hybrid hardware using see-through deformable membrane mirrors to provide wide FOV and accommodative cues, addressing Vergence-Accommodation Conflict.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 5
+  },
+  {
+    "id": "immersive-learning-from-3d-reconstruction",
+    "title": "Immersive Learning from 3D Reconstruction",
+    "description": "Investigates 3D reconstruction of room-sized dynamic scenes with higher quality and fidelity. Enables immersive learning of rare situations through post-event, annotated virtual reality experiences for emergency medical procedures.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 6
+  },
+  {
+    "id": "low-latency-display",
+    "title": "Low Latency Display",
+    "description": "Developing low latency tracking and display system for ultra-low latency, optical see-through augmented reality head mounted displays. Runs at high frame rate and performs in-display corrections.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 7
+  },
+  {
+    "id": "pinlight-display",
+    "title": "Pinlight Display",
+    "description": "Novel optical see-through augmented reality display offering wide field of view and compact eyeglasses form factor. Prototype demonstrates 110° diagonal field of view.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 8
+  },
+  {
+    "id": "office-of-the-future",
+    "title": "Office of the Future",
+    "description": "Unified application of computer vision and computer graphics combining panoramic image display, tiled display systems, image-based modeling, and immersive environments for 3D tele-immersion capabilities.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 9
+  },
+  {
+    "id": "3d-telepresence-for-medical-consultation",
+    "title": "3D Telepresence for Medical Consultation",
+    "description": "Develops permanent, portable, handheld 3D telepresence technologies for remote medical consultations. Addresses real time acquisition, novel view generation, network variability, and 3D depth cues.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 10
+  },
+  {
+    "id": "wall-to-wall-telepresence",
+    "title": "Wall-to-Wall Telepresence",
+    "description": "Enabled visualization of large 3D models on multi-screen 2D display for telepresence. Experimented with reconstructed models and dense datasets.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 11
+  },
+  {
+    "id": "multi-view-teleconferencing",
+    "title": "Multi-view Teleconferencing",
+    "description": "Two-site teleconferencing system supporting multiple people per site while maintaining gaze awareness. Provides unique views of remote sites to each local participant.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 12
+  },
+  {
+    "id": "ultrasound-medical-augmented-reality",
+    "title": "Ultrasound/Medical Augmented Reality",
+    "description": "Develops system allowing physicians to see inside patients using augmented reality. Combines ultrasound echography, laparoscopic range imaging, video see-through HMD, and graphics.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 13
+  },
+  {
+    "id": "pixel-planes-pixelflow",
+    "title": "Pixel-Planes & PixelFlow",
+    "description": "Explores computer architectures for 3D graphics since 1980. Focuses on image-based rendering with goal of high-performance graphics engine using images as principal rendering primitive.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 14
+  },
+  {
+    "id": "3d-laparoscopic-visualization",
+    "title": "3D Laparoscopic Visualization",
+    "description": "Three-dimensional visualization system for laparoscopic surgical procedures. Uses 3D visualization, depth extraction, six degree-of-freedom tracking to display merged real and synthetic images.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 15
+  },
+  {
+    "id": "wide-area-tracking",
+    "title": "Wide-Area Tracking",
+    "description": "Develops wide-area systems for 6D tracking of heads, limbs, and hand-held devices. Provides precise position and orientation information for head-mounted displays.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 16
+  },
+  {
+    "id": "image-based-rendering",
+    "title": "Image-Based Rendering",
+    "description": "Investigates alternative approach representing complex 3D environments with image sets containing depth information. Develops algorithms to produce new images from viewpoints not in original image set.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 17
+  },
+  {
+    "id": "telecollaboration",
+    "title": "Telecollaboration",
+    "description": "Multi-site, multi-disciplinary project developing distributed collaborative design environment. Includes shared virtual environment software, collaborative VR, and interaction tools.",
+    "imagePath": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 18
+  }
+]

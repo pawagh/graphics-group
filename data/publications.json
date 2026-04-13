@@ -1,0 +1,1240 @@
+[
+  {
+    "id": "chakravarthula-2025-present",
+    "title": "Present and Future of Everyday-Use Augmented Reality Eyeglasses",
+    "authors": [
+      "Praneeth Chakravarthula"
+    ],
+    "year": 2025,
+    "venue": "IEEE CVTG 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10964495",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@misc{chakravarthula_2025_present,\n  title     = {Present and Future of Everyday-Use Augmented Reality Eyeglasses},\n  author    = {Praneeth Chakravarthula},\n  howpublished = {IEEE CVTG 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Conference"
+    ],
+    "featured": false
+  },
+  {
+    "id": "tong-2025-multimodal",
+    "title": "Multimodal Neural Acoustic Fields for Immersive Mixed Reality",
+    "authors": [
+      "Guaneen Tong",
+      "Johnathan Chi-Ho Leung",
+      "Xi Peng",
+      "Haosheng Shi",
+      "Liujie Zheng",
+      "Shengze Wang",
+      "Arryn Carlos O'Brien",
+      "Ashley Paula-Ann Neall",
+      "Grace Fei",
+      "Martim Gaspar",
+      "Praneeth Chakravarthula"
+    ],
+    "year": 2025,
+    "venue": "IEEE TVCG 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10938352",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@misc{tong_2025_multimodal,\n  title     = {Multimodal Neural Acoustic Fields for Immersive Mixed Reality},\n  author    = {Guaneen Tong and Johnathan Chi-Ho Leung and Xi Peng and Haosheng Shi and Liujie Zheng and Shengze Wang and Arryn Carlos O'Brien and Ashley Paula-Ann Neall and Grace Fei and Martim Gaspar and Praneeth Chakravarthula},\n  howpublished = {IEEE TVCG 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Journal",
+      "IEEE TVCG"
+    ],
+    "featured": false
+  },
+  {
+    "id": "wang-2025-dofgs",
+    "title": "DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting for Post-Capture Refocusing, Defocus Rendering and Blur Removal",
+    "authors": [
+      "Yujie Wang",
+      "Praneeth Chakravarthula",
+      "Baoquan Chen"
+    ],
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_DOF-GS_Adjustable_Depth-of-Field_3D_Gaussian_Splatting_for_Post-Capture_Refocusing_Defocus_CVPR_2025_paper.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{wang_2025_dofgs,\n  title     = {DOF-GS: Adjustable Depth-of-Field 3D Gaussian Splatting for Post-Capture Refocusing, Defocus Rendering and Blur Removal},\n  author    = {Yujie Wang and Praneeth Chakravarthula and Baoquan Chen},\n  booktitle = {CVPR 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Conference",
+      "CVPR"
+    ],
+    "featured": true
+  },
+  {
+    "id": "qu-2025-event",
+    "title": "Event Fields: Capturing Light Fields at High Speed, Resolution, and Dynamic Range",
+    "authors": [
+      "Ziyuan Qu",
+      "Zihao Zou",
+      "Vivek Boominathan",
+      "Praneeth Chakravarthula",
+      "Adithya Pediredla"
+    ],
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://openaccess.thecvf.com/content/CVPR2025/papers/Qu_Event_Fields_Capturing_Light_Fields_at_High_Speed_Resolution_and_CVPR_2025_paper.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{qu_2025_event,\n  title     = {Event Fields: Capturing Light Fields at High Speed, Resolution, and Dynamic Range},\n  author    = {Ziyuan Qu and Zihao Zou and Vivek Boominathan and Praneeth Chakravarthula and Adithya Pediredla},\n  booktitle = {CVPR 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Conference",
+      "CVPR"
+    ],
+    "featured": true
+  },
+  {
+    "id": "peng-2025-perceptuallyguided",
+    "title": "Perceptually-Guided Acoustic Foveation",
+    "authors": [
+      "Xi Peng",
+      "Kenneth Chen",
+      "Iran Roman",
+      "Juan Pablo Bello",
+      "Qi Sun",
+      "Praneeth Chakravarthula"
+    ],
+    "year": 2025,
+    "venue": "IEEE VR 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://www.cs.unc.edu/~cpk/data/papers/Perceptually_Guided_Acoustic_Foveation.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{peng_2025_perceptuallyguided,\n  title     = {Perceptually-Guided Acoustic Foveation},\n  author    = {Xi Peng and Kenneth Chen and Iran Roman and Juan Pablo Bello and Qi Sun and Praneeth Chakravarthula},\n  booktitle = {IEEE VR 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Conference",
+      "IEEE VR"
+    ],
+    "featured": false
+  },
+  {
+    "id": "jain-2025-flattrack",
+    "title": "FlatTrack: Eye-Tracking with Ultra-Thin Lensless Cameras",
+    "authors": [
+      "Purvam Jain",
+      "Althaf M. Nazar",
+      "Salman Siddique Khan",
+      "Kaushik Mitra",
+      "Praneeth Chakravarthula"
+    ],
+    "year": 2025,
+    "venue": "WACV Workshops 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{jain_2025_flattrack,\n  title     = {FlatTrack: Eye-Tracking with Ultra-Thin Lensless Cameras},\n  author    = {Purvam Jain and Althaf M. Nazar and Salman Siddique Khan and Kaushik Mitra and Praneeth Chakravarthula},\n  booktitle = {WACV Workshops 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Conference",
+      "WACV"
+    ],
+    "featured": false
+  },
+  {
+    "id": "qi-2025-my3dgen",
+    "title": "My3DGen: A Scalable Personalized 3D Generative Model",
+    "authors": [
+      "Luchao Qi",
+      "Jiaye Wu",
+      "Annie N. Wang",
+      "Shengze Wang",
+      "Roni Sengupta"
+    ],
+    "year": 2025,
+    "venue": "WACV 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://openaccess.thecvf.com/content/WACV2025/papers/Qi_My3DGen_A_Scalable_Personalized_3D_Generative_Model_WACV_2025_paper.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{qi_2025_my3dgen,\n  title     = {My3DGen: A Scalable Personalized 3D Generative Model},\n  author    = {Luchao Qi and Jiaye Wu and Annie N. Wang and Shengze Wang and Roni Sengupta},\n  booktitle = {WACV 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Conference",
+      "WACV"
+    ],
+    "featured": false
+  },
+  {
+    "id": "qu-2025-holozip",
+    "title": "HoloZip: High Hologram Compression via Latent-of-Latent Coding",
+    "authors": [
+      "Huaizhi Qu",
+      "Yujie Wang",
+      "Ruichen Zhang",
+      "Hengyu Lian",
+      "Mufan Qiu",
+      "Samarjit Chakraborty",
+      "Henry Fuchs",
+      "Tianlong Chen",
+      "Praneeth Chakravarthula"
+    ],
+    "year": 2025,
+    "venue": "ICCP 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11143849",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{qu_2025_holozip,\n  title     = {HoloZip: High Hologram Compression via Latent-of-Latent Coding},\n  author    = {Huaizhi Qu and Yujie Wang and Ruichen Zhang and Hengyu Lian and Mufan Qiu and Samarjit Chakraborty and Henry Fuchs and Tianlong Chen and Praneeth Chakravarthula},\n  booktitle = {ICCP 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Conference",
+      "ICCP"
+    ],
+    "featured": false
+  },
+  {
+    "id": "wang-2025-blade",
+    "title": "BLADE: Single-view Body Mesh Estimation through Accurate Depth Estimation",
+    "authors": [
+      "Shengze Wang",
+      "Jiefeng Li",
+      "Tianye Li",
+      "Ye Yuan",
+      "Henry Fuchs",
+      "Koki Nagano",
+      "Shalini De Mello",
+      "Michael Stengel"
+    ],
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://arxiv.org/pdf/2412.08640",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{wang_2025_blade,\n  title     = {BLADE: Single-view Body Mesh Estimation through Accurate Depth Estimation},\n  author    = {Shengze Wang and Jiefeng Li and Tianye Li and Ye Yuan and Henry Fuchs and Koki Nagano and Shalini De Mello and Michael Stengel},\n  booktitle = {CVPR 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Conference",
+      "CVPR"
+    ],
+    "featured": true
+  },
+  {
+    "id": "wang-2025-coherent",
+    "title": "Coherent 3D Portrait Video Reconstruction via Triplane Fusion",
+    "authors": [
+      "Shengze Wang",
+      "Xueting Li",
+      "Chao Liu",
+      "Matthew A. Chan",
+      "Michael Stengel",
+      "Henry Fuchs",
+      "Shalini De Mello",
+      "Koki Nagano"
+    ],
+    "year": 2025,
+    "venue": "CVPR 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Coherent_3D_Portrait_Video_Reconstruction_via_Triplane_Fusion_CVPR_2025_paper.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{wang_2025_coherent,\n  title     = {Coherent 3D Portrait Video Reconstruction via Triplane Fusion},\n  author    = {Shengze Wang and Xueting Li and Chao Liu and Matthew A. Chan and Michael Stengel and Henry Fuchs and Shalini De Mello and Koki Nagano},\n  booktitle = {CVPR 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Conference",
+      "CVPR"
+    ],
+    "featured": false
+  },
+  {
+    "id": "paruchuri-2025-egotrigger",
+    "title": "EgoTrigger: Toward Audio-Driven Image Capture for Human Memory Enhancement in All-Day Energy-Efficient Smart Glasses",
+    "authors": [
+      "Akshay Paruchuri",
+      "Sinan Hersek",
+      "Lavisha Aggarwal",
+      "Qiao Yang",
+      "Xin Liu",
+      "Achin Kulshrestha",
+      "Andrea Colaco",
+      "Henry Fuchs",
+      "Ishan Chatterjee"
+    ],
+    "year": 2025,
+    "venue": "IEEE TVCG 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://arxiv.org/pdf/2508.01915",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@misc{paruchuri_2025_egotrigger,\n  title     = {EgoTrigger: Toward Audio-Driven Image Capture for Human Memory Enhancement in All-Day Energy-Efficient Smart Glasses},\n  author    = {Akshay Paruchuri and Sinan Hersek and Lavisha Aggarwal and Qiao Yang and Xin Liu and Achin Kulshrestha and Andrea Colaco and Henry Fuchs and Ishan Chatterjee},\n  howpublished = {IEEE TVCG 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Journal",
+      "IEEE TVCG"
+    ],
+    "featured": false
+  },
+  {
+    "id": "wang-2025-view",
+    "title": "Learning View Synthesis for Desktop Telepresence With Few RGBD Cameras",
+    "authors": [
+      "Shengze Wang",
+      "Ziheng Wang",
+      "Ryan Schmelzle",
+      "Liujie Zheng",
+      "Youngjoong Kwon",
+      "Roni Sengupta",
+      "Henry Fuchs"
+    ],
+    "year": 2025,
+    "venue": "IEEE TVCG 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10557509",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@misc{wang_2025_view,\n  title     = {Learning View Synthesis for Desktop Telepresence With Few RGBD Cameras},\n  author    = {Shengze Wang and Ziheng Wang and Ryan Schmelzle and Liujie Zheng and Youngjoong Kwon and Roni Sengupta and Henry Fuchs},\n  howpublished = {IEEE TVCG 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Journal",
+      "IEEE TVCG"
+    ],
+    "featured": false
+  },
+  {
+    "id": "xia-2025-expanded",
+    "title": "Towards an Expanded Eyebox for a Wide-Field-of-View Augmented Reality Near-eye Pinlight Display with 3D Pupil Localization",
+    "authors": [
+      "Xinxing Xia",
+      "Zheye Yu",
+      "Dongyu Qiu",
+      "Andrei State",
+      "Tat-Jen Cham",
+      "Frank Guan",
+      "Henry Fuchs"
+    ],
+    "year": 2025,
+    "venue": "VR Workshops 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10972738",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{xia_2025_expanded,\n  title     = {Towards an Expanded Eyebox for a Wide-Field-of-View Augmented Reality Near-eye Pinlight Display with 3D Pupil Localization},\n  author    = {Xinxing Xia and Zheye Yu and Dongyu Qiu and Andrei State and Tat-Jen Cham and Frank Guan and Henry Fuchs},\n  booktitle = {VR Workshops 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Conference"
+    ],
+    "featured": false
+  },
+  {
+    "id": "kandel-2025-investigating",
+    "title": "Investigating Encoding and Perspective for Augmented Reality Motion Guidance",
+    "authors": [
+      "Jade Kandel",
+      "Sriya Kasumarthi",
+      "Spiros Tsalikis",
+      "Chelsea Duppen",
+      "Daniel Szafir",
+      "Michael Lewek",
+      "Henry Fuchs",
+      "Danielle Szafir"
+    ],
+    "year": 2025,
+    "venue": "ISMAR 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://arxiv.org/pdf/2510.00407",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{kandel_2025_investigating,\n  title     = {Investigating Encoding and Perspective for Augmented Reality Motion Guidance},\n  author    = {Jade Kandel and Sriya Kasumarthi and Spiros Tsalikis and Chelsea Duppen and Daniel Szafir and Michael Lewek and Henry Fuchs and Danielle Szafir},\n  booktitle = {ISMAR 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Conference",
+      "ISMAR"
+    ],
+    "featured": false
+  },
+  {
+    "id": "xia-2025-dynamic",
+    "title": "Dynamic Eyebox Steering for Improved Pinlight AR Near-eye Displays",
+    "authors": [
+      "Xinxing Xia",
+      "Zheye Yu",
+      "Dongyu Qiu",
+      "Andrei State",
+      "Tat-Jen Cham",
+      "Frank Guan",
+      "Henry Fuchs"
+    ],
+    "year": 2025,
+    "venue": "ISMAR 2025",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://ieeexplore.ieee.org/document/11192782",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{xia_2025_dynamic,\n  title     = {Dynamic Eyebox Steering for Improved Pinlight AR Near-eye Displays},\n  author    = {Xinxing Xia and Zheye Yu and Dongyu Qiu and Andrei State and Tat-Jen Cham and Frank Guan and Henry Fuchs},\n  booktitle = {ISMAR 2025},\n  year      = {2025}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2025",
+      "Conference",
+      "ISMAR"
+    ],
+    "featured": false
+  },
+  {
+    "id": "kandel-2024-pdinsighter",
+    "title": "PD-Insighter: A Visual Analytics System to Monitor Daily Actions for Parkinson's Disease Treatment",
+    "authors": [
+      "Jade Kandel",
+      "Chelsea Duppen",
+      "Qian Zhang",
+      "Howard Jiang",
+      "Angelos Angelopoulos",
+      "Ashley Paula-Ann Neall",
+      "Pranav Wagh",
+      "Daniel Szafir",
+      "Henry Fuchs",
+      "Michael Lewek",
+      "Danielle Albers Szafir"
+    ],
+    "year": 2024,
+    "venue": "CHI 2024",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://dl.acm.org/doi/pdf/10.1145/3613904.3642215",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{kandel_2024_pdinsighter,\n  title     = {PD-Insighter: A Visual Analytics System to Monitor Daily Actions for Parkinson's Disease Treatment},\n  author    = {Jade Kandel and Chelsea Duppen and Qian Zhang and Howard Jiang and Angelos Angelopoulos and Ashley Paula-Ann Neall and Pranav Wagh and Daniel Szafir and Henry Fuchs and Michael Lewek and Danielle Albers Szafir},\n  booktitle = {CHI 2024},\n  year      = {2024}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2024",
+      "Conference",
+      "CHI"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tseng-2024-tendue",
+    "title": "Neural Étendue Expander for Ultra-Wide-Angle High-Fidelity Holographic Display",
+    "authors": [
+      "Ethan Tseng",
+      "Seung-Hwan Baek",
+      "Grace Kuo",
+      "Nathan Matsuda",
+      "Andrew Maimone",
+      "Praneeth Chakravarthula",
+      "Qiang Fu",
+      "Wolfgang Heidrich",
+      "Douglas Lanman",
+      "Felix Heide"
+    ],
+    "year": 2024,
+    "venue": "Nature Communications 2024",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://arxiv.org/pdf/2109.08123.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@article{tseng_2024_tendue,\n  title     = {Neural Étendue Expander for Ultra-Wide-Angle High-Fidelity Holographic Display},\n  author    = {Ethan Tseng and Seung-Hwan Baek and Grace Kuo and Nathan Matsuda and Andrew Maimone and Praneeth Chakravarthula and Qiang Fu and Wolfgang Heidrich and Douglas Lanman and Felix Heide},\n  journal = {Nature Communications 2024},\n  year      = {2024}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2024",
+      "Journal",
+      "Nature"
+    ],
+    "featured": false
+  },
+  {
+    "id": "wang-2023-bringing",
+    "title": "Bringing Telepresence to Every Desk",
+    "authors": [
+      "Shengze Wang",
+      "Ziheng Wang",
+      "Ryan Schmelzle",
+      "Liujie Zheng",
+      "YoungJoong Kwon",
+      "Soumyadip Sengupta",
+      "Henry Fuchs"
+    ],
+    "year": 2023,
+    "venue": "arXiv 2023",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://arxiv.org/pdf/2304.01197.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@misc{wang_2023_bringing,\n  title     = {Bringing Telepresence to Every Desk},\n  author    = {Shengze Wang and Ziheng Wang and Ryan Schmelzle and Liujie Zheng and YoungJoong Kwon and Soumyadip Sengupta and Henry Fuchs},\n  howpublished = {arXiv 2023},\n  year      = {2023}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2023",
+      "ArXiv"
+    ],
+    "featured": false
+  },
+  {
+    "id": "kwon-2023-imagebased",
+    "title": "Neural Image-based Avatars: Generalizable Radiance Fields for Human Avatar Modeling",
+    "authors": [
+      "Youngjoong Kwon",
+      "Dahun Kim",
+      "Duygu Ceylan",
+      "Henry Fuchs"
+    ],
+    "year": 2023,
+    "venue": "ICLR 2023",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://arxiv.org/pdf/2304.04897.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{kwon_2023_imagebased,\n  title     = {Neural Image-based Avatars: Generalizable Radiance Fields for Human Avatar Modeling},\n  author    = {Youngjoong Kwon and Dahun Kim and Duygu Ceylan and Henry Fuchs},\n  booktitle = {ICLR 2023},\n  year      = {2023}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2023",
+      "Conference",
+      "ICLR"
+    ],
+    "featured": false
+  },
+  {
+    "id": "kwon-2023-deliffas",
+    "title": "DELIFFAS: Deformable Light Fields for Fast Avatar Synthesis",
+    "authors": [
+      "Youngjoong Kwon",
+      "Lingjie Liu",
+      "Henry Fuchs",
+      "Marc Habermann",
+      "Christian Theobalt"
+    ],
+    "year": 2023,
+    "venue": "NeurIPS 2023",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://arxiv.org/pdf/2310.11449.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{kwon_2023_deliffas,\n  title     = {DELIFFAS: Deformable Light Fields for Fast Avatar Synthesis},\n  author    = {Youngjoong Kwon and Lingjie Liu and Henry Fuchs and Marc Habermann and Christian Theobalt},\n  booktitle = {NeurIPS 2023},\n  year      = {2023}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2023",
+      "Conference",
+      "NeurIPS"
+    ],
+    "featured": false
+  },
+  {
+    "id": "chakravarthula-2023-thin",
+    "title": "Thin On-Sensor Nanophotonic Array Cameras",
+    "authors": [
+      "Praneeth Chakravarthula",
+      "Jipeng Sun",
+      "Xiao Li",
+      "Chenyang Lei",
+      "Gene Chou",
+      "Mario Bijelic",
+      "Johannes Froesch",
+      "Arka Majumdar",
+      "Felix Heide"
+    ],
+    "year": 2023,
+    "venue": "ACM Transactions on Graphics 2023, SIGGRAPH Asia 2023",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://arxiv.org/pdf/2308.02797.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@article{chakravarthula_2023_thin,\n  title     = {Thin On-Sensor Nanophotonic Array Cameras},\n  author    = {Praneeth Chakravarthula and Jipeng Sun and Xiao Li and Chenyang Lei and Gene Chou and Mario Bijelic and Johannes Froesch and Arka Majumdar and Felix Heide},\n  journal = {ACM Transactions on Graphics 2023, SIGGRAPH Asia 2023},\n  year      = {2023}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2023",
+      "Conference",
+      "SIGGRAPH Asia"
+    ],
+    "featured": false
+  },
+  {
+    "id": "chakravarthula-2023-seeing",
+    "title": "Seeing with Sound: Long-Range Acoustic Beamforming for Automotive Scene Understanding",
+    "authors": [
+      "Praneeth Chakravarthula",
+      "Jim Aldon D'Souza",
+      "Ethan Tseng",
+      "Joe Bartusek",
+      "Felix Heide"
+    ],
+    "year": 2023,
+    "venue": "CVPR 2023",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://light.princeton.edu/wp-content/uploads/2023/09/SeeingWithSound.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{chakravarthula_2023_seeing,\n  title     = {Seeing with Sound: Long-Range Acoustic Beamforming for Automotive Scene Understanding},\n  author    = {Praneeth Chakravarthula and Jim Aldon D'Souza and Ethan Tseng and Joe Bartusek and Felix Heide},\n  booktitle = {CVPR 2023},\n  year      = {2023}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2023",
+      "Conference",
+      "CVPR"
+    ],
+    "featured": false
+  },
+  {
+    "id": "schiffers-2023-stochastic",
+    "title": "Stochastic Light Field Holography",
+    "authors": [
+      "Florian Schiffers",
+      "Praneeth Chakravarthula",
+      "Nathan Matsuda",
+      "Grace Kuo",
+      "Ethan Tseng",
+      "Douglas Lanman",
+      "Felix Heide",
+      "Oliver Cossairt"
+    ],
+    "year": 2023,
+    "venue": "ICCP 2023",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://arxiv.org/pdf/2307.06277.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{schiffers_2023_stochastic,\n  title     = {Stochastic Light Field Holography},\n  author    = {Florian Schiffers and Praneeth Chakravarthula and Nathan Matsuda and Grace Kuo and Ethan Tseng and Douglas Lanman and Felix Heide and Oliver Cossairt},\n  booktitle = {ICCP 2023},\n  year      = {2023}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2023",
+      "Conference",
+      "ICCP"
+    ],
+    "featured": false
+  },
+  {
+    "id": "zhang-2023-reconstruction",
+    "title": "Reconstruction of Human Body Pose and Appearance Using Body-Worn IMUs and a Nearby Camera View for Collaborative Egocentric Telepresence",
+    "authors": [
+      "Qian Zhang",
+      "Akshay Paruchuri",
+      "YoungWoon Cha",
+      "Jiabin Huang",
+      "Jade Kandel",
+      "Howard Jiang",
+      "Adrian Ilie",
+      "Andrei State",
+      "Danielle Albers",
+      "Daniel Szafir",
+      "Henry Fuchs"
+    ],
+    "year": 2023,
+    "venue": "IEEE VR 2023",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{zhang_2023_reconstruction,\n  title     = {Reconstruction of Human Body Pose and Appearance Using Body-Worn IMUs and a Nearby Camera View for Collaborative Egocentric Telepresence},\n  author    = {Qian Zhang and Akshay Paruchuri and YoungWoon Cha and Jiabin Huang and Jade Kandel and Howard Jiang and Adrian Ilie and Andrei State and Danielle Albers and Daniel Szafir and Henry Fuchs},\n  booktitle = {IEEE VR 2023},\n  year      = {2023}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2023",
+      "Conference",
+      "IEEE VR"
+    ],
+    "featured": false
+  },
+  {
+    "id": "chakravarthula-2022-pupilaware",
+    "title": "Pupil-aware Holography",
+    "authors": [
+      "Praneeth Chakravarthula",
+      "Seung-Hwan Baek",
+      "Florian Schiffers",
+      "Ethan Tseng",
+      "Grace Kuo",
+      "Andrew Maimone",
+      "Nathan Matsuda",
+      "Oliver Cossairt",
+      "Douglas Lanman",
+      "Felix Heide"
+    ],
+    "year": 2022,
+    "venue": "ACM Transactions on Graphics 2022, SIGGRAPH Asia 2022",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://arxiv.org/pdf/2203.14939",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@article{chakravarthula_2022_pupilaware,\n  title     = {Pupil-aware Holography},\n  author    = {Praneeth Chakravarthula and Seung-Hwan Baek and Florian Schiffers and Ethan Tseng and Grace Kuo and Andrew Maimone and Nathan Matsuda and Oliver Cossairt and Douglas Lanman and Felix Heide},\n  journal = {ACM Transactions on Graphics 2022, SIGGRAPH Asia 2022},\n  year      = {2022}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2022",
+      "Conference",
+      "SIGGRAPH Asia"
+    ],
+    "featured": false
+  },
+  {
+    "id": "lu-2022-gaze",
+    "title": "Neural 3D Gaze: 3D Pupil Localization and Gaze Tracking based on Anatomical Eye Model and Neural Refraction Correction",
+    "authors": [
+      "Conny Xinran Lu",
+      "Praneeth Chakravarthula",
+      "Kaihao Liu",
+      "Xixiang Liu",
+      "Siyuan Li",
+      "Henry Fuchs"
+    ],
+    "year": 2022,
+    "venue": "ISMAR 2022",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{lu_2022_gaze,\n  title     = {Neural 3D Gaze: 3D Pupil Localization and Gaze Tracking based on Anatomical Eye Model and Neural Refraction Correction},\n  author    = {Conny Xinran Lu and Praneeth Chakravarthula and Kaihao Liu and Xixiang Liu and Siyuan Li and Henry Fuchs},\n  booktitle = {ISMAR 2022},\n  year      = {2022}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2022",
+      "Conference",
+      "ISMAR"
+    ],
+    "featured": false
+  },
+  {
+    "id": "chakravarthula-2022-hogelfree",
+    "title": "Hogel-free Holography",
+    "authors": [
+      "Praneeth Chakravarthula",
+      "Ethan Tseng",
+      "Henry Fuchs",
+      "Felix Heide"
+    ],
+    "year": 2022,
+    "venue": "ACM Transactions on Graphics 2022, SIGGRAPH 2022",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://www.cs.unc.edu/~cpk/data/papers/hogel_free_sig2022.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@article{chakravarthula_2022_hogelfree,\n  title     = {Hogel-free Holography},\n  author    = {Praneeth Chakravarthula and Ethan Tseng and Henry Fuchs and Felix Heide},\n  journal = {ACM Transactions on Graphics 2022, SIGGRAPH 2022},\n  year      = {2022}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2022",
+      "Conference",
+      "SIGGRAPH"
+    ],
+    "featured": false
+  },
+  {
+    "id": "kwon-2021-human",
+    "title": "Neural Human Performer: Learning Generalizable Radiance Fields for Human Performance Rendering",
+    "authors": [
+      "Youngjoong Kwon",
+      "Dahun Kim",
+      "Duygu Ceylan",
+      "Henry Fuchs"
+    ],
+    "year": 2021,
+    "venue": "NeurIPS 2021",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://arxiv.org/pdf/2109.07448.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{kwon_2021_human,\n  title     = {Neural Human Performer: Learning Generalizable Radiance Fields for Human Performance Rendering},\n  author    = {Youngjoong Kwon and Dahun Kim and Duygu Ceylan and Henry Fuchs},\n  booktitle = {NeurIPS 2021},\n  year      = {2021}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2021",
+      "Conference",
+      "NeurIPS",
+      "Award"
+    ],
+    "featured": true
+  },
+  {
+    "id": "cha-2021-mobile",
+    "title": "Mobile, Egocentric Human Body Motion Reconstruction Using Only Eyeglasses-mounted Cameras and a Few Body-worn Inertial Sensors",
+    "authors": [
+      "Young-Woon Cha",
+      "Husam Shaik",
+      "Qian Zhang",
+      "Fan Feng",
+      "Andrei State",
+      "Adrian Ilie",
+      "Henry Fuchs"
+    ],
+    "year": 2021,
+    "venue": "IEEE VR 2021",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{cha_2021_mobile,\n  title     = {Mobile, Egocentric Human Body Motion Reconstruction Using Only Eyeglasses-mounted Cameras and a Few Body-worn Inertial Sensors},\n  author    = {Young-Woon Cha and Husam Shaik and Qian Zhang and Fan Feng and Andrei State and Adrian Ilie and Henry Fuchs},\n  booktitle = {IEEE VR 2021},\n  year      = {2021}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2021",
+      "Conference",
+      "IEEE VR",
+      "Award"
+    ],
+    "featured": true
+  },
+  {
+    "id": "chakravarthula-2021-gazecontingent",
+    "title": "Gaze-contingent Retinal Speckle Suppression for Perceptually-Matched Foveated Holographic Displays",
+    "authors": [
+      "Praneeth Chakravarthula",
+      "Zhan Zhang",
+      "Okan Tursun",
+      "Piotr Didyk",
+      "Qi Sun",
+      "Henry Fuchs"
+    ],
+    "year": 2021,
+    "venue": "IEEE TVCG 2021",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://arxiv.org/pdf/2108.06192",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@misc{chakravarthula_2021_gazecontingent,\n  title     = {Gaze-contingent Retinal Speckle Suppression for Perceptually-Matched Foveated Holographic Displays},\n  author    = {Praneeth Chakravarthula and Zhan Zhang and Okan Tursun and Piotr Didyk and Qi Sun and Henry Fuchs},\n  howpublished = {IEEE TVCG 2021},\n  year      = {2021}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2021",
+      "Journal",
+      "IEEE TVCG"
+    ],
+    "featured": false
+  },
+  {
+    "id": "chakravarthula-2020-learned",
+    "title": "Learned Hardware-in-the-loop Phase Retrieval for Holographic Near-Eye Displays",
+    "authors": [
+      "Praneeth Chakravarthula",
+      "Ethan Tseng",
+      "Tarun Srivastava",
+      "Henry Fuchs",
+      "Felix Heide"
+    ],
+    "year": 2020,
+    "venue": "ACM Transactions on Graphics 2020, SIGGRAPH Asia 2020",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@article{chakravarthula_2020_learned,\n  title     = {Learned Hardware-in-the-loop Phase Retrieval for Holographic Near-Eye Displays},\n  author    = {Praneeth Chakravarthula and Ethan Tseng and Tarun Srivastava and Henry Fuchs and Felix Heide},\n  journal = {ACM Transactions on Graphics 2020, SIGGRAPH Asia 2020},\n  year      = {2020}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2020",
+      "Conference",
+      "SIGGRAPH Asia"
+    ],
+    "featured": false
+  },
+  {
+    "id": "xia-2020-eyeglassesstyle",
+    "title": "Towards Eyeglasses-style Holographic Near-eye Displays with Static Expanded Eyebox",
+    "authors": [
+      "Xinxing Xia",
+      "Yunqing Guan",
+      "Andrei State",
+      "Praneeth Chakravarthula",
+      "Tat-Jen Cham",
+      "Henry Fuchs"
+    ],
+    "year": 2020,
+    "venue": "ISMAR 2020",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{xia_2020_eyeglassesstyle,\n  title     = {Towards Eyeglasses-style Holographic Near-eye Displays with Static Expanded Eyebox},\n  author    = {Xinxing Xia and Yunqing Guan and Andrei State and Praneeth Chakravarthula and Tat-Jen Cham and Henry Fuchs},\n  booktitle = {ISMAR 2020},\n  year      = {2020}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2020",
+      "Conference",
+      "ISMAR"
+    ],
+    "featured": false
+  },
+  {
+    "id": "chakravarthula-2019-wirtinger",
+    "title": "Wirtinger Holography for Near-Eye Displays",
+    "authors": [
+      "Praneeth Chakravarthula",
+      "Yifan Peng",
+      "Joel Kollin",
+      "Henry Fuchs",
+      "Felix Heide"
+    ],
+    "year": 2019,
+    "venue": "ACM Transactions on Graphics 2019, SIGGRAPH Asia 2019",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://www.cs.unc.edu/~cpk/data/papers/wirt-holo-sigasia19.pdf",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@article{chakravarthula_2019_wirtinger,\n  title     = {Wirtinger Holography for Near-Eye Displays},\n  author    = {Praneeth Chakravarthula and Yifan Peng and Joel Kollin and Henry Fuchs and Felix Heide},\n  journal = {ACM Transactions on Graphics 2019, SIGGRAPH Asia 2019},\n  year      = {2019}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2019",
+      "Conference",
+      "SIGGRAPH Asia"
+    ],
+    "featured": false
+  },
+  {
+    "id": "chabra-2019-stereodrnet",
+    "title": "StereoDRNet: Dilated Residual Stereo Net",
+    "authors": [
+      "Rohan Chabra",
+      "Julian Straub",
+      "Chris Sweeney",
+      "Richard Newcombe",
+      "Henry Fuchs"
+    ],
+    "year": 2019,
+    "venue": "CVPR 2019",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{chabra_2019_stereodrnet,\n  title     = {StereoDRNet: Dilated Residual Stereo Net},\n  author    = {Rohan Chabra and Julian Straub and Chris Sweeney and Richard Newcombe and Henry Fuchs},\n  booktitle = {CVPR 2019},\n  year      = {2019}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2019",
+      "Conference",
+      "CVPR"
+    ],
+    "featured": false
+  },
+  {
+    "id": "aksit-2019-manufacturing",
+    "title": "Manufacturing Application-Driven Foveated Near-Eye Displays",
+    "authors": [
+      "Kaan Aksit",
+      "Praneeth Chakravarthula",
+      "Kishore Rathinavel",
+      "Youngmo Jeong",
+      "Rachel Albert",
+      "David Luebke",
+      "Henry Fuchs"
+    ],
+    "year": 2019,
+    "venue": "IEEE TVCG 2019",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@misc{aksit_2019_manufacturing,\n  title     = {Manufacturing Application-Driven Foveated Near-Eye Displays},\n  author    = {Kaan Aksit and Praneeth Chakravarthula and Kishore Rathinavel and Youngmo Jeong and Rachel Albert and David Luebke and Henry Fuchs},\n  howpublished = {IEEE TVCG 2019},\n  year      = {2019}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2019",
+      "Journal",
+      "IEEE TVCG"
+    ],
+    "featured": false
+  },
+  {
+    "id": "chakravarthula-2018-focusar",
+    "title": "FocusAR: Auto-focus Augmented Reality Eyeglasses for both Real World and Virtual Imagery",
+    "authors": [
+      "Praneeth Chakravarthula",
+      "David Dunn",
+      "Kaan Aksit",
+      "Henry Fuchs"
+    ],
+    "year": 2018,
+    "venue": "IEEE TVCG 2018, ISMAR 2018",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "https://www.cs.unc.edu/~cpk/data/papers/focusAR-2018.pdf",
+    "doi": "https://doi.org/10.1109/TVCG.2018.2868532",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{chakravarthula_2018_focusar,\n  title     = {FocusAR: Auto-focus Augmented Reality Eyeglasses for both Real World and Virtual Imagery},\n  author    = {Praneeth Chakravarthula and David Dunn and Kaan Aksit and Henry Fuchs},\n  booktitle = {IEEE TVCG 2018, ISMAR 2018},\n  year      = {2018}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2018",
+      "Conference",
+      "ISMAR",
+      "Award"
+    ],
+    "featured": true
+  },
+  {
+    "id": "rathinavel-2018-steerable",
+    "title": "Steerable Application-Adaptive Near Eye Displays",
+    "authors": [
+      "Kishore Rathinavel",
+      "Praneeth Chakravarthula",
+      "Kaan Aksit",
+      "Josef Spjut",
+      "Ben Boudaoud",
+      "Turner Whitted",
+      "David Luebke",
+      "Henry Fuchs"
+    ],
+    "year": 2018,
+    "venue": "SIGGRAPH 2018 Emerging Technologies",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{rathinavel_2018_steerable,\n  title     = {Steerable Application-Adaptive Near Eye Displays},\n  author    = {Kishore Rathinavel and Praneeth Chakravarthula and Kaan Aksit and Josef Spjut and Ben Boudaoud and Turner Whitted and David Luebke and Henry Fuchs},\n  booktitle = {SIGGRAPH 2018 Emerging Technologies},\n  year      = {2018}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2018",
+      "Conference",
+      "SIGGRAPH",
+      "Award"
+    ],
+    "featured": true
+  },
+  {
+    "id": "dunn-2017-wide",
+    "title": "Wide Field Of View Varifocal Near-Eye Display Using See-Through Deformable Membrane Mirrors",
+    "authors": [
+      "David Dunn",
+      "Cary Tippets",
+      "Kent Torell",
+      "Petr Kellnhofer",
+      "Kaan Aksit",
+      "Piotr Didyk",
+      "Karol Myszkowski",
+      "David Luebke",
+      "Henry Fuchs"
+    ],
+    "year": 2017,
+    "venue": "IEEE TVCG 2017, IEEE VR 2017",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "https://doi.org/10.1109/TVCG.2017.2657058",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{dunn_2017_wide,\n  title     = {Wide Field Of View Varifocal Near-Eye Display Using See-Through Deformable Membrane Mirrors},\n  author    = {David Dunn and Cary Tippets and Kent Torell and Petr Kellnhofer and Kaan Aksit and Piotr Didyk and Karol Myszkowski and David Luebke and Henry Fuchs},\n  booktitle = {IEEE TVCG 2017, IEEE VR 2017},\n  year      = {2017}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2017",
+      "Conference",
+      "IEEE VR",
+      "Award"
+    ],
+    "featured": true
+  },
+  {
+    "id": "lincoln-2016-motion",
+    "title": "From Motion to Photons in 80 Microseconds: Towards Minimal Latency for Virtual and Augmented Reality",
+    "authors": [
+      "Peter Lincoln",
+      "Alex Blate",
+      "Montek Singh",
+      "Turner Whitted",
+      "Andrei State",
+      "Anselmo Lastra",
+      "Henry Fuchs"
+    ],
+    "year": 2016,
+    "venue": "IEEE VR 2016",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "http://dx.doi.org/10.1109/TVCG.2016.2518038",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{lincoln_2016_motion,\n  title     = {From Motion to Photons in 80 Microseconds: Towards Minimal Latency for Virtual and Augmented Reality},\n  author    = {Peter Lincoln and Alex Blate and Montek Singh and Turner Whitted and Andrei State and Anselmo Lastra and Henry Fuchs},\n  booktitle = {IEEE VR 2016},\n  year      = {2016}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2016",
+      "Conference",
+      "IEEE VR",
+      "Award"
+    ],
+    "featured": true
+  },
+  {
+    "id": "dou-2015-scanning",
+    "title": "3D Scanning Deformable Objects with a Single RGBD Sensor",
+    "authors": [
+      "Mingsong Dou",
+      "Jonathan Taylor",
+      "Henry Fuchs",
+      "Andrew Fitzgibbon",
+      "Shahram Izadi"
+    ],
+    "year": 2015,
+    "venue": "CVPR 2015",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{dou_2015_scanning,\n  title     = {3D Scanning Deformable Objects with a Single RGBD Sensor},\n  author    = {Mingsong Dou and Jonathan Taylor and Henry Fuchs and Andrew Fitzgibbon and Shahram Izadi},\n  booktitle = {CVPR 2015},\n  year      = {2015}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2015",
+      "Conference",
+      "CVPR"
+    ],
+    "featured": false
+  },
+  {
+    "id": "maimone-2014-pinlight",
+    "title": "Pinlight Displays: Wide Field of View Augmented Reality Eyeglasses Using Defocused Point Light Sources",
+    "authors": [
+      "Andrew Maimone",
+      "Douglas Lanman",
+      "Kishore Rathinavel",
+      "Kurtis Keller",
+      "David Luebke",
+      "Henry Fuchs"
+    ],
+    "year": 2014,
+    "venue": "SIGGRAPH 2014",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{maimone_2014_pinlight,\n  title     = {Pinlight Displays: Wide Field of View Augmented Reality Eyeglasses Using Defocused Point Light Sources},\n  author    = {Andrew Maimone and Douglas Lanman and Kishore Rathinavel and Kurtis Keller and David Luebke and Henry Fuchs},\n  booktitle = {SIGGRAPH 2014},\n  year      = {2014}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2014",
+      "Conference",
+      "SIGGRAPH"
+    ],
+    "featured": true
+  },
+  {
+    "id": "fuchs-2014-immersive",
+    "title": "Immersive 3D Telepresence",
+    "authors": [
+      "Henry Fuchs",
+      "Andrei State",
+      "Jean-Charles Bazin"
+    ],
+    "year": 2014,
+    "venue": "IEEE Computer 2014",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@misc{fuchs_2014_immersive,\n  title     = {Immersive 3D Telepresence},\n  author    = {Henry Fuchs and Andrei State and Jean-Charles Bazin},\n  howpublished = {IEEE Computer 2014},\n  year      = {2014}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2014",
+      "Conference"
+    ],
+    "featured": false
+  },
+  {
+    "id": "maimone-2013-computational",
+    "title": "Computational Augmented Reality Eyeglasses",
+    "authors": [
+      "Andrew Maimone",
+      "Henry Fuchs"
+    ],
+    "year": 2013,
+    "venue": "ISMAR 2013",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{maimone_2013_computational,\n  title     = {Computational Augmented Reality Eyeglasses},\n  author    = {Andrew Maimone and Henry Fuchs},\n  booktitle = {ISMAR 2013},\n  year      = {2013}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2013",
+      "Conference",
+      "ISMAR"
+    ],
+    "featured": false
+  },
+  {
+    "id": "maimone-2013-focus",
+    "title": "Focus 3D: Compressive Accommodation Display",
+    "authors": [
+      "Andrew Maimone",
+      "Gordon Wetzstein",
+      "Matthew Hirsch",
+      "Douglas Lanman",
+      "Ramesh Raskar",
+      "Henry Fuchs"
+    ],
+    "year": 2013,
+    "venue": "ACM Transactions on Graphics 2013",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@article{maimone_2013_focus,\n  title     = {Focus 3D: Compressive Accommodation Display},\n  author    = {Andrew Maimone and Gordon Wetzstein and Matthew Hirsch and Douglas Lanman and Ramesh Raskar and Henry Fuchs},\n  journal = {ACM Transactions on Graphics 2013},\n  year      = {2013}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2013",
+      "Journal",
+      "IEEE TVCG"
+    ],
+    "featured": false
+  },
+  {
+    "id": "maimone-2013-generalpurpose",
+    "title": "General-Purpose Telepresence with Head-Worn Optical See-Through Displays and Projector-Based Lighting",
+    "authors": [
+      "Andrew Maimone",
+      "Xubo Yang",
+      "Nate Dierk",
+      "Andrei State",
+      "Mingsong Dou",
+      "Henry Fuchs"
+    ],
+    "year": 2013,
+    "venue": "IEEE VR 2013",
+    "abstract": "",
+    "pdfPath": "",
+    "pdfUrl": "",
+    "doi": "",
+    "semanticScholarId": "",
+    "bibtex": "@inproceedings{maimone_2013_generalpurpose,\n  title     = {General-Purpose Telepresence with Head-Worn Optical See-Through Displays and Projector-Based Lighting},\n  author    = {Andrew Maimone and Xubo Yang and Nate Dierk and Andrei State and Mingsong Dou and Henry Fuchs},\n  booktitle = {IEEE VR 2013},\n  year      = {2013}\n}",
+    "keyContributions": "",
+    "tags": [
+      "2013",
+      "Conference",
+      "IEEE VR",
+      "Award"
+    ],
+    "featured": false
+  }
+]
