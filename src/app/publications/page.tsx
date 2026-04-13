@@ -1,272 +1,178 @@
-'use client'
+'use client';
 
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import '../animations.css';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { Publication } from '@/lib/publications';
+import type { Publication } from '@/lib/types';
 
-export default function Publications() {
-  const [publications, setPublications] = useState<Publication[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [selectedTag, setSelectedTag] = useState<string>('All');
-  const [search, setSearch] = useState<string>('');
+// Data is fetched at build time and embedded via the client boundary
+// We import it directly since this is a client component
+import publicationsData from '../../../data/publications.json';
 
-  useEffect(() => {
-    fetchPublications();
-  }, []);
+const publications: Publication[] = publicationsData as Publication[];
 
-  const fetchPublications = async () => {
-    try {
-      const response = await fetch('/api/publications');
-      if (response.ok) {
-        const data = await response.json();
-        setPublications(data);
-      }
-    } catch (error) {
-      console.error('Error fetching publications:', error);
-    } finally {
-      setIsLoading(false);
+// Sort by year desc
+const sorted = [...publications].sort((a, b) => b.year - a.year);
+
+// Extract unique years and category tags
+const years = [...new Set(sorted.map(p => p.year))].sort((a, b) => b - a);
+const categories = ['Conference', 'Journal', 'Workshop', 'ArXiv', 'Dissertation'];
+
+function isAward(pub: Publication): boolean {
+  return pub.venue.toLowerCase().includes('best paper') ||
+    pub.venue.toLowerCase().includes('award') ||
+    pub.venue.toLowerCase().includes('honorable mention') ||
+    pub.tags.some(t => t.toLowerCase().includes('award'));
+}
+
+export default function PublicationsPage() {
+  const [search, setSearch] = useState('');
+  const [yearFilter, setYearFilter] = useState<number | null>(null);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+
+  const filtered = useMemo(() => {
+    let result = sorted;
+    if (search) {
+      const q = search.toLowerCase();
+      result = result.filter(p =>
+        p.title.toLowerCase().includes(q) ||
+        p.authors.some(a => a.toLowerCase().includes(q)) ||
+        p.venue.toLowerCase().includes(q) ||
+        p.tags.some(t => t.toLowerCase().includes(q))
+      );
     }
-  };
-
-  // Extract years and tags - simplified categories
-  const years = Array.from(
-    new Set(publications.flatMap(pub => pub.tags.filter(tag => /^\d{4}$/.test(tag))))
-  ).sort((a, b) => b.localeCompare(a));
-
-  // Simplified categories - only keep main research areas
-  const mainCategories = ['Conference', 'Journal', 'Workshop', 'ArXiv'];
-  const allTags = Array.from(
-    new Set(publications.flatMap(pub => pub.tags.filter(tag => 
-      !(/^\d{4}$/.test(tag)) && mainCategories.includes(tag)
-    )))
-  );
-
-  // Add Award Winning Papers as a special category
-  const specialCategories = ['Award Winning Papers'];
-
-  const filteredPubs = publications.filter(pub => {
-    let matchesTag;
-    
-    if (selectedTag === 'All') {
-      matchesTag = true;
-    } else if (selectedTag === 'Award Winning Papers') {
-      // Check if publication has awards in meta field
-      const metaLower = pub.meta.toLowerCase();
-      matchesTag = metaLower.includes('best paper') || 
-                   metaLower.includes('award') || 
-                   metaLower.includes('honorable mention');
-    } else {
-      matchesTag = pub.tags.includes(selectedTag);
+    if (yearFilter) {
+      result = result.filter(p => p.year === yearFilter);
     }
-    
-    const matchesSearch =
-      pub.title.toLowerCase().includes(search.toLowerCase()) ||
-      pub.authors.toLowerCase().includes(search.toLowerCase()) ||
-      pub.meta.toLowerCase().includes(search.toLowerCase());
-    return matchesTag && matchesSearch;
-  });
+    if (categoryFilter) {
+      result = result.filter(p => p.tags.some(t => t.toLowerCase() === categoryFilter.toLowerCase()));
+    }
+    return result;
+  }, [search, yearFilter, categoryFilter]);
 
-  const pubsByYear = years.map(year => ({
-    year,
-    pubs: filteredPubs.filter(pub => pub.tags.includes(year)),
-  }));
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-carolina-blue mx-auto"></div>
-          <p className="mt-4 text-gray-600">Loading publications...</p>
-        </div>
-      </div>
-    );
+  // Group by year
+  const grouped: Record<number, Publication[]> = {};
+  for (const pub of filtered) {
+    if (!grouped[pub.year]) grouped[pub.year] = [];
+    grouped[pub.year].push(pub);
   }
+  const groupedYears = Object.keys(grouped).map(Number).sort((a, b) => b - a);
 
   return (
-    <div className="fade-in font-sans bg-neutral-50 text-neutral-900">
-      {/* Hero banner section */}
-      <div className="w-full h-64 md:h-80 relative mb-8">
-        <Image 
-          src="/lab-photos/lab-work-23.jpg" 
-          alt="Research and academic publications" 
-          fill
-          className="object-cover object-center rounded-b-lg shadow-md" 
-        />
-      </div>
-
-      {/* Publications Philosophy - Campus Sandstone translucent banner */}
-      <div className="w-full bg-campus-sandstone backdrop-blur-sm py-3 mb-8">
-        <div className="max-w-7xl mx-auto px-4 md:px-12">
-          <h2 className="text-2xl font-bold text-dome-copper text-center mb-3">PUBLICATIONS</h2>
-          <p className="text-md text-neutral-700 max-w-4xl mx-auto leading-relaxed">
-            Explore our cutting-edge research in visual computing and augmented intelligence. 
-            Our publications span computational imaging, computer vision, AR/VR, nano-optics, and machine learning.
-          </p>
+    <div>
+      <div className="page-banner">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <h1>Publications</h1>
+          <p>{publications.length} papers</p>
         </div>
       </div>
 
-      {/* Main content */}
-      <div className="content-container">
-        <div className="space-y-10">
-          
-          {/* Search and filter section */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-            {/* Search Bar */}
-            <div className="flex-1">
-              <label htmlFor="search" className="block text-sm font-medium text-neutral-700 mb-2">
-                Search Publications
-              </label>
-              <input
-                id="search"
-                type="text"
-                placeholder={`Showing ${filteredPubs.length} publications — search by author, title, venue, or keywords`}
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-                className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-0 focus:border-neutral-300 transition-all duration-300 bg-transparent"
-              />
-            </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+        {/* Filters */}
+        <div className="flex flex-wrap gap-3 mb-8">
+          <input
+            type="text"
+            placeholder="Search papers, authors, venues..."
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            className="px-4 py-2 rounded-lg text-sm flex-1 min-w-[200px]"
+            style={{
+              background: 'var(--card-bg)',
+              border: '1px solid var(--border)',
+              color: 'var(--text-primary)',
+            }}
+          />
+          <select
+            value={yearFilter ?? ''}
+            onChange={e => setYearFilter(e.target.value ? Number(e.target.value) : null)}
+            className="px-3 py-2 rounded-lg text-sm"
+            style={{
+              background: 'var(--card-bg)',
+              border: '1px solid var(--border)',
+              color: 'var(--text-primary)',
+            }}
+          >
+            <option value="">All Years</option>
+            {years.map(y => <option key={y} value={y}>{y}</option>)}
+          </select>
+          <select
+            value={categoryFilter ?? ''}
+            onChange={e => setCategoryFilter(e.target.value || null)}
+            className="px-3 py-2 rounded-lg text-sm"
+            style={{
+              background: 'var(--card-bg)',
+              border: '1px solid var(--border)',
+              color: 'var(--text-primary)',
+            }}
+          >
+            <option value="">All Categories</option>
+            {categories.map(c => <option key={c} value={c}>{c}</option>)}
+          </select>
+          {(search || yearFilter || categoryFilter) && (
+            <button
+              onClick={() => { setSearch(''); setYearFilter(null); setCategoryFilter(null); }}
+              className="px-3 py-2 rounded-lg text-sm text-[var(--unc-blue)] hover:underline"
+            >
+              Clear filters
+            </button>
+          )}
+        </div>
 
-            {/* Tag Filter */}
-            <div className="md:w-1/4">
-              <label htmlFor="tag-filter" className="block text-sm font-medium text-neutral-700 mb-2">
-                Filter by Category
-              </label>
-              <select
-                id="tag-filter"
-                value={selectedTag}
-                onChange={e => setSelectedTag(e.target.value)}
-                className="w-full p-3 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-unc-navy focus:border-transparent transition-all duration-300 bg-transparent"
-              >
-                <option value="All">All Categories</option>
-                {specialCategories.map(category => (
-                  <option key={category} value={category}>{category}</option>
-                ))}
-                {allTags.map(tag => (
-                  <option key={tag} value={tag}>{tag}</option>
-                ))}
-                {years.map(year => (
-                  <option key={year} value={year}>{year}</option>
-                ))}
-              </select>
-            </div>
-          </div>
+        <p className="text-sm mb-6" style={{ color: 'var(--text-muted)' }}>
+          Showing {filtered.length} of {publications.length} publications
+        </p>
 
-          {/* Publications by year */}
-          <div className="space-y-12">
-            {pubsByYear.map(({ year, pubs }) =>
-              pubs.length > 0 ? (
-                <section key={year} className="section-card">
-                  <h2 className="text-3xl font-bold text-carolina-blue mb-8 border-b-2 border-carolina-blue pb-4">
-                    {year}
-                  </h2>
-                  <div className="grid gap-4">
-                    {pubs.map((pub, idx) => (
-                                              <div 
-                          key={pub.title + idx}
-                          className={`group transition-all duration-300 stagger-item mb-2 border border-neutral-200 rounded-lg p-6 md:cursor-pointer transform hover:-translate-y-3 unc-shadow-hover ${
-                            pub.meta.toLowerCase().includes('best paper') || 
-                            pub.meta.toLowerCase().includes('award') || 
-                            pub.meta.toLowerCase().includes('honorable mention')
-                              ? 'bg-campus-sandstone border-dome-copper'
-                              : 'bg-white'
-                          }`}
-                          style={{
-                            boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
-                            transition: 'all 0.3s ease',
-                            animationDelay: `${idx * 0.1}s`
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 20px 20px -10px rgba(0, 0, 0, 0.15)';
-                            const isAward = pub.meta.toLowerCase().includes('best paper') || 
-                                          pub.meta.toLowerCase().includes('award') || 
-                                          pub.meta.toLowerCase().includes('honorable mention');
-                            e.currentTarget.style.backgroundColor = isAward ? '#F4E8DD' : '#f8fafc';
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1)';
-                            const isAward = pub.meta.toLowerCase().includes('best paper') || 
-                                          pub.meta.toLowerCase().includes('award') || 
-                                          pub.meta.toLowerCase().includes('honorable mention');
-                            e.currentTarget.style.backgroundColor = isAward ? '#F4E8DD' : '#ffffff';
-                          }}
-                        onClick={() => {
-                          // Only make div clickable on desktop (md and up)
-                          if (window.innerWidth >= 768) {
-                            window.location.href = `/publications/${pub.slug}`;
-                          }
-                        }}
-                      >
-                        <div className="flex flex-col md:flex-row gap-6 items-start">
-                          <div className="flex-shrink-0 relative">
-                            <div className="relative w-32 h-32 overflow-hidden rounded-lg border-2 border-dome-copper/20 transition-colors duration-500">
-                              <Image 
-                                src={pub.image && pub.image.trim() !== "" ? pub.image : "/lab-photos/lab-work-09.jpg"} 
-                                alt={pub.title} 
-                                width={128}
-                                height={128}
-                                className="object-cover w-full h-full rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105" 
-                                onError={(e) => {
-                                  console.log(`Failed to load image for ${pub.title}:`, pub.image);
-                                  e.currentTarget.src = "/lab-photos/lab-work-09.jpg";
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="text-xl font-bold text-carolina-blue mb-3 transition-colors duration-300 leading-tight">
-                              {pub.title}
-                            </h3>
-                            <p className="mb-2 transition-colors duration-300 font-medium text-neutral-600">
-                              {pub.authors}
-                            </p>
-                            <div className="font-semibold mb-4 transition-colors duration-300">
-                              {pub.meta.split(',').map((part, index) => {
-                                const trimmedPart = part.trim();
-                                const isAwardPart = trimmedPart.toLowerCase().includes('best paper') || 
-                                                   trimmedPart.toLowerCase().includes('award') || 
-                                                   trimmedPart.toLowerCase().includes('honorable mention');
-                                const isAwardPaper = pub.meta.toLowerCase().includes('best paper') || 
-                                                    pub.meta.toLowerCase().includes('award') || 
-                                                    pub.meta.toLowerCase().includes('honorable mention');
-                                
-                                return (
-                                  <div 
-                                    key={index} 
-                                    className={`leading-tight ${index > 0 ? 'mt-1' : ''} ${
-                                      isAwardPaper && isAwardPart 
-                                        ? 'text-carolina-blue group-hover:text-azalea-pink'
-                                        : isAwardPaper 
-                                          ? 'text-carolina-blue group-hover:text-carolina-blue'
-                                          : 'text-carolina-blue group-hover:text-dome-copper'
-                                    }`}
-                                  >
-                                    {trimmedPart}
-                                  </div>
-                                );
-                              })}
-                            </div>
-                            <div className="flex flex-col gap-3 md:hidden">
-                              <Link 
-                                href={`/publications/${pub.slug}`}
-                                className="bg-carolina-blue text-white px-4 py-2 rounded-lg font-medium text-center transition-colors duration-300 hover:bg-unc-navy"
-                                onClick={(e) => e.stopPropagation()}
-                              >
-                                View Details
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
+        {/* Publication list grouped by year */}
+        {groupedYears.map(year => (
+          <section key={year} className="mb-10">
+            <h2 className="text-xl font-bold mb-4 pb-2 border-b" style={{ color: 'var(--text-primary)', borderColor: 'var(--border)' }}>
+              {year}
+            </h2>
+            <div className="space-y-4">
+              {grouped[year].map(pub => (
+                <Link
+                  key={pub.id}
+                  href={`/publications/${pub.id}`}
+                  className={`card p-5 block hover:border-[var(--unc-blue)] transition-colors ${isAward(pub) ? 'award-highlight' : ''}`}
+                >
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>
+                        {pub.title}
+                      </h3>
+                      <p className="text-sm mb-2" style={{ color: 'var(--text-muted)' }}>
+                        {pub.authors.length > 5
+                          ? pub.authors.slice(0, 5).join(', ') + ' et al.'
+                          : pub.authors.join(', ')}
+                      </p>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="badge">{pub.venue}</span>
+                        {pub.tags.filter(t => !/^\d{4}$/.test(t)).map(tag => (
+                          <span key={tag} className="text-xs px-2 py-0.5 rounded-full" style={{
+                            background: 'var(--bg-secondary)',
+                            color: 'var(--text-muted)',
+                          }}>
+                            {tag}
+                          </span>
+                        ))}
+                        {isAward(pub) && (
+                          <span className="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800">
+                            Award
+                          </span>
+                        )}
                       </div>
-                    ))}
+                    </div>
                   </div>
-                </section>
-              ) : null
-            )}
-          </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ))}
 
-        </div>
+        {filtered.length === 0 && (
+          <p className="text-center py-12" style={{ color: 'var(--text-muted)' }}>
+            No publications match your filters.
+          </p>
+        )}
       </div>
     </div>
   );
