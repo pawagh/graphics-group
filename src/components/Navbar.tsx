@@ -24,7 +24,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-[var(--unc-navy)] text-white shadow-lg">
+    <nav className="sticky top-0 z-50 bg-[var(--unc-blue)] text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Lab name */}

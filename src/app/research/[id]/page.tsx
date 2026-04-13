@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getResearch, getResearchById } from '@/lib/data';
 
 export function generateStaticParams() {
@@ -26,6 +27,18 @@ export default async function ResearchDetailPage({ params }: { params: Promise<{
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
+        {project.imagePath && (
+          <div className="mb-8 rounded-lg overflow-hidden">
+            <Image
+              src={project.imagePath}
+              alt={project.title}
+              width={800}
+              height={400}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        )}
+
         <section className="mb-8">
           <p className="leading-relaxed text-lg" style={{ color: 'var(--text-secondary)' }}>{project.description}</p>
         </section>
