@@ -12,30 +12,40 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="font-bold text-white mb-2">Contact</h3>
-            <p className="text-sm">
-              <a href={`mailto:${config.lab.contactEmail}`} className="hover:text-[var(--unc-blue)] transition-colors">
-                {config.lab.contactEmail}
-              </a>
-            </p>
-            {config.pi.website && (
-              <p className="text-sm mt-1">
-                <a href={config.pi.website} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--unc-blue)] transition-colors">
-                  {config.pi.name}&apos;s Homepage
+            <div className="space-y-1 text-sm">
+              <p>
+                <span className="text-white/60">Prof. Chakravarthula:</span>{' '}
+                <a href="mailto:cpk@cs.unc.edu" className="hover:text-white transition-colors">
+                  cpk@cs.unc.edu
                 </a>
               </p>
-            )}
+              <p>
+                <span className="text-white/60">Prof. Fuchs:</span>{' '}
+                <a href="mailto:fuchs@cs.unc.edu" className="hover:text-white transition-colors">
+                  fuchs@cs.unc.edu
+                </a>
+              </p>
+            </div>
           </div>
           <div>
             <h3 className="font-bold text-white mb-2">Links</h3>
-            <div className="flex gap-4">
+            <div className="flex flex-col gap-1">
+              <a
+                href="https://cs.unc.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors text-sm"
+              >
+                UNC CS Department
+              </a>
               {config.social.twitter && (
-                <a href={config.social.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--unc-blue)] transition-colors text-sm">Twitter</a>
+                <a href={config.social.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-sm">Twitter</a>
               )}
               {config.social.github && (
-                <a href={config.social.github} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--unc-blue)] transition-colors text-sm">GitHub</a>
+                <a href={config.social.github} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-sm">GitHub</a>
               )}
               {config.social.googleScholar && (
-                <a href={config.social.googleScholar} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--unc-blue)] transition-colors text-sm">Google Scholar</a>
+                <a href={config.social.googleScholar} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-sm">Google Scholar</a>
               )}
             </div>
           </div>

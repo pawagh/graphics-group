@@ -2,14 +2,11 @@ import Image from 'next/image';
 import { getPeopleByRole } from '@/lib/data';
 import type { Person } from '@/lib/types';
 
-const ROLE_ORDER: Array<{ key: string; label: string }> = [
-  { key: 'faculty', label: 'Faculty & Staff' },
-  { key: 'postdoc', label: 'Postdoctoral Researchers' },
-  { key: 'phd', label: 'PhD Students' },
-  { key: 'ms', label: 'MS Students' },
-  { key: 'undergrad', label: 'Undergraduate Students' },
-  { key: 'visitor', label: 'Visitors' },
-  { key: 'alumni', label: 'Alumni' },
+const ROLE_ORDER: Array<{ key: string; label: string; roles: string[] }> = [
+  { key: 'faculty', label: 'Faculty', roles: ['faculty'] },
+  { key: 'staff', label: 'Staff', roles: ['staff'] },
+  { key: 'students', label: 'Students', roles: ['phd', 'ms', 'undergrad', 'postdoc', 'visitor'] },
+  { key: 'alumni', label: 'Alumni', roles: ['alumni'] },
 ];
 
 function PersonPhoto({ person, size = 64 }: { person: Person; size?: number }) {
@@ -62,7 +59,7 @@ function PersonCard({ person }: { person: Person }) {
 }
 
 function AlumniTable({ alumni }: { alumni: Person[] }) {
-  const sorted = [...alumni].sort((a, b) => (b.alumniYear ?? 0) - (a.alumniYear ?? 0));
+  const sorted = [...alumni].sort((a, b) => a.name.localeCompare(b.name));
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-sm" style={{ color: 'var(--text-primary)' }}>
@@ -106,9 +103,9 @@ export default function PeoplePage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-        {ROLE_ORDER.map(({ key, label }) => {
-          const members = grouped[key];
-          if (!members || members.length === 0) return null;
+        {ROLE_ORDER.map(({ key, label, roles }) => {
+          const members = roles.flatMap(r => grouped[r] || []);
+          if (members.length === 0) return null;
 
           return (
             <section key={key} className="mb-12">
