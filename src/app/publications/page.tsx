@@ -2,10 +2,10 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Publication } from '@/lib/types';
 
 // Data is fetched at build time and embedded via the client boundary
-// We import it directly since this is a client component
 import publicationsData from '../../../data/publications.json';
 
 const publications: Publication[] = publicationsData as Publication[];
@@ -17,11 +17,8 @@ const sorted = [...publications].sort((a, b) => b.year - a.year);
 const years = [...new Set(sorted.map(p => p.year))].sort((a, b) => b - a);
 const categories = ['Conference', 'Journal', 'Workshop', 'ArXiv', 'Dissertation'];
 
-function isAward(pub: Publication): boolean {
-  return pub.venue.toLowerCase().includes('best paper') ||
-    pub.venue.toLowerCase().includes('award') ||
-    pub.venue.toLowerCase().includes('honorable mention') ||
-    pub.tags.some(t => t.toLowerCase().includes('award'));
+function hasAward(pub: Publication): boolean {
+  return !!(pub.award && pub.award.length > 0);
 }
 
 export default function PublicationsPage() {
@@ -132,9 +129,20 @@ export default function PublicationsPage() {
                 <Link
                   key={pub.id}
                   href={`/publications/${pub.id}`}
-                  className={`card p-5 block hover:border-[var(--unc-blue)] transition-colors ${isAward(pub) ? 'award-highlight' : ''}`}
+                  className={`card p-5 block hover:border-[var(--unc-blue)] transition-colors ${hasAward(pub) ? 'award-highlight' : ''}`}
                 >
                   <div className="flex flex-col sm:flex-row gap-4">
+                    {pub.imagePath && (
+                      <div className="flex-shrink-0 w-full sm:w-32 h-24 relative rounded overflow-hidden" style={{ background: 'var(--bg-secondary)' }}>
+                        <Image
+                          src={pub.imagePath}
+                          alt={pub.title}
+                          fill
+                          className="object-cover"
+                          sizes="128px"
+                        />
+                      </div>
+                    )}
                     <div className="flex-1 min-w-0">
                       <h3 className="font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>
                         {pub.title}
@@ -146,7 +154,7 @@ export default function PublicationsPage() {
                       </p>
                       <div className="flex flex-wrap items-center gap-2">
                         <span className="badge">{pub.venue}</span>
-                        {pub.tags.filter(t => !/^\d{4}$/.test(t)).map(tag => (
+                        {pub.tags.filter(t => !/^\d{4}$/.test(t) && t.toLowerCase() !== 'award').map(tag => (
                           <span key={tag} className="text-xs px-2 py-0.5 rounded-full" style={{
                             background: 'var(--bg-secondary)',
                             color: 'var(--text-muted)',
@@ -154,9 +162,9 @@ export default function PublicationsPage() {
                             {tag}
                           </span>
                         ))}
-                        {isAward(pub) && (
-                          <span className="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800">
-                            Award
+                        {hasAward(pub) && (
+                          <span className="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 font-medium">
+                            {pub.award}
                           </span>
                         )}
                       </div>

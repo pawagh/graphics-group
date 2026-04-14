@@ -11,7 +11,9 @@ const NAV_ITEMS = [
   { label: 'People', href: '/people' },
   { label: 'Publications', href: '/publications' },
   { label: 'Research', href: '/research' },
+  { label: 'Teaching', href: '/teaching' },
   { label: 'News', href: '/news' },
+  { label: 'Join Us', href: '/join' },
 ];
 
 export default function Navbar() {

@@ -30,7 +30,7 @@
   {
     "id": "adrian-ilie",
     "name": "Adrian Ilie",
-    "role": "faculty",
+    "role": "staff",
     "title": "Senior Research Scientist",
     "email": "adyilie@cs.unc.edu",
     "photoPath": "/images/people/adrian-ilie.png",
@@ -44,7 +44,7 @@
   {
     "id": "kurtis-keller",
     "name": "Kurtis Keller",
-    "role": "faculty",
+    "role": "staff",
     "title": "Research Associate and Engineer",
     "email": "keller@cs.unc.edu",
     "photoPath": "/images/people/kurtis-keller.jpg",
@@ -58,7 +58,7 @@
   {
     "id": "jim-mahaney",
     "name": "Jim Mahaney",
-    "role": "faculty",
+    "role": "staff",
     "title": "Lab Manager",
     "email": "mahaney@cs.unc.edu",
     "photoPath": "/images/people/jim-mahaney.jpg",
@@ -72,7 +72,7 @@
   {
     "id": "andrei-state",
     "name": "Andrei State",
-    "role": "faculty",
+    "role": "staff",
     "title": "Senior Research Scientist",
     "email": "andrei@cs.unc.edu",
     "photoPath": "/images/people/andrei-state.jpg",
@@ -229,7 +229,7 @@
     "role": "undergrad",
     "title": "Undergraduate Researcher",
     "email": "pawagh@unc.edu",
-    "photoPath": "/images/people/pranav-wagh.jpg",
+    "photoPath": "/images/people/pranav-wagh.png",
     "bio": "",
     "website": "",
     "googleScholar": "",

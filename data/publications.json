@@ -18,7 +18,9 @@
       "2025",
       "Conference"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/chakravarthula-2025-present.png",
+    "award": ""
   },
   {
     "id": "tong-2025-multimodal",
@@ -50,7 +52,9 @@
       "Journal",
       "IEEE TVCG"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/tong-2025-multimodal.png",
+    "award": ""
   },
   {
     "id": "wang-2025-dofgs",
@@ -74,7 +78,9 @@
       "Conference",
       "CVPR"
     ],
-    "featured": true
+    "featured": true,
+    "imagePath": "/images/publications/wang-2025-dofgs.png",
+    "award": ""
   },
   {
     "id": "qu-2025-event",
@@ -100,7 +106,9 @@
       "Conference",
       "CVPR"
     ],
-    "featured": true
+    "featured": true,
+    "imagePath": "/images/publications/qu-2025-event.png",
+    "award": ""
   },
   {
     "id": "peng-2025-perceptuallyguided",
@@ -127,7 +135,9 @@
       "Conference",
       "IEEE VR"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/peng-2025-perceptuallyguided.png",
+    "award": ""
   },
   {
     "id": "jain-2025-flattrack",
@@ -153,7 +163,9 @@
       "Conference",
       "WACV"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/jain-2025-flattrack.png",
+    "award": ""
   },
   {
     "id": "qi-2025-my3dgen",
@@ -179,7 +191,9 @@
       "Conference",
       "WACV"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/qi-2025-my3dgen.png",
+    "award": ""
   },
   {
     "id": "qu-2025-holozip",
@@ -209,7 +223,9 @@
       "Conference",
       "ICCP"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/qu-2025-holozip.png",
+    "award": ""
   },
   {
     "id": "wang-2025-blade",
@@ -238,7 +254,9 @@
       "Conference",
       "CVPR"
     ],
-    "featured": true
+    "featured": true,
+    "imagePath": "/images/publications/wang-2025-blade.png",
+    "award": ""
   },
   {
     "id": "wang-2025-coherent",
@@ -267,7 +285,9 @@
       "Conference",
       "CVPR"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/wang-2025-coherent.png",
+    "award": ""
   },
   {
     "id": "paruchuri-2025-egotrigger",
@@ -297,7 +317,9 @@
       "Journal",
       "IEEE TVCG"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/paruchuri-2025-egotrigger.png",
+    "award": ""
   },
   {
     "id": "wang-2025-view",
@@ -325,7 +347,9 @@
       "Journal",
       "IEEE TVCG"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/wang-2025-view.jpg",
+    "award": ""
   },
   {
     "id": "xia-2025-expanded",
@@ -352,7 +376,9 @@
       "2025",
       "Conference"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/xia-2025-expanded.png",
+    "award": ""
   },
   {
     "id": "kandel-2025-investigating",
@@ -381,7 +407,8 @@
       "Conference",
       "ISMAR"
     ],
-    "featured": false
+    "featured": false,
+    "award": ""
   },
   {
     "id": "xia-2025-dynamic",
@@ -409,7 +436,8 @@
       "Conference",
       "ISMAR"
     ],
-    "featured": false
+    "featured": false,
+    "award": ""
   },
   {
     "id": "kandel-2024-pdinsighter",
@@ -441,11 +469,13 @@
       "Conference",
       "CHI"
     ],
-    "featured": true
+    "featured": true,
+    "imagePath": "/images/publications/kandel-2024-pdinsighter.png",
+    "award": ""
   },
   {
     "id": "tseng-2024-tendue",
-    "title": "Neural Étendue Expander for Ultra-Wide-Angle High-Fidelity Holographic Display",
+    "title": "Neural \u00c9tendue Expander for Ultra-Wide-Angle High-Fidelity Holographic Display",
     "authors": [
       "Ethan Tseng",
       "Seung-Hwan Baek",
@@ -465,14 +495,16 @@
     "pdfUrl": "https://arxiv.org/pdf/2109.08123.pdf",
     "doi": "",
     "semanticScholarId": "",
-    "bibtex": "@article{tseng_2024_tendue,\n  title     = {Neural Étendue Expander for Ultra-Wide-Angle High-Fidelity Holographic Display},\n  author    = {Ethan Tseng and Seung-Hwan Baek and Grace Kuo and Nathan Matsuda and Andrew Maimone and Praneeth Chakravarthula and Qiang Fu and Wolfgang Heidrich and Douglas Lanman and Felix Heide},\n  journal = {Nature Communications 2024},\n  year      = {2024}\n}",
+    "bibtex": "@article{tseng_2024_tendue,\n  title     = {Neural \u00c9tendue Expander for Ultra-Wide-Angle High-Fidelity Holographic Display},\n  author    = {Ethan Tseng and Seung-Hwan Baek and Grace Kuo and Nathan Matsuda and Andrew Maimone and Praneeth Chakravarthula and Qiang Fu and Wolfgang Heidrich and Douglas Lanman and Felix Heide},\n  journal = {Nature Communications 2024},\n  year      = {2024}\n}",
     "keyContributions": "",
     "tags": [
       "2024",
       "Journal",
       "Nature"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/tseng-2024-tendue.png",
+    "award": ""
   },
   {
     "id": "wang-2023-bringing",
@@ -499,7 +531,9 @@
       "2023",
       "ArXiv"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/wang-2023-bringing.png",
+    "award": ""
   },
   {
     "id": "kwon-2023-imagebased",
@@ -524,7 +558,9 @@
       "Conference",
       "ICLR"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/kwon-2023-imagebased.gif",
+    "award": ""
   },
   {
     "id": "kwon-2023-deliffas",
@@ -550,7 +586,9 @@
       "Conference",
       "NeurIPS"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/kwon-2023-deliffas.gif",
+    "award": ""
   },
   {
     "id": "chakravarthula-2023-thin",
@@ -580,7 +618,9 @@
       "Conference",
       "SIGGRAPH Asia"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/chakravarthula-2023-thin.png",
+    "award": ""
   },
   {
     "id": "chakravarthula-2023-seeing",
@@ -606,7 +646,9 @@
       "Conference",
       "CVPR"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/chakravarthula-2023-seeing.png",
+    "award": ""
   },
   {
     "id": "schiffers-2023-stochastic",
@@ -635,7 +677,9 @@
       "Conference",
       "ICCP"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/schiffers-2023-stochastic.png",
+    "award": ""
   },
   {
     "id": "zhang-2023-reconstruction",
@@ -667,7 +711,8 @@
       "Conference",
       "IEEE VR"
     ],
-    "featured": false
+    "featured": false,
+    "award": ""
   },
   {
     "id": "chakravarthula-2022-pupilaware",
@@ -698,7 +743,9 @@
       "Conference",
       "SIGGRAPH Asia"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/chakravarthula-2022-pupilaware.png",
+    "award": ""
   },
   {
     "id": "lu-2022-gaze",
@@ -725,7 +772,9 @@
       "Conference",
       "ISMAR"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/lu-2022-gaze.png",
+    "award": ""
   },
   {
     "id": "chakravarthula-2022-hogelfree",
@@ -750,7 +799,9 @@
       "Conference",
       "SIGGRAPH"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/chakravarthula-2022-hogelfree.png",
+    "award": ""
   },
   {
     "id": "kwon-2021-human",
@@ -776,7 +827,8 @@
       "NeurIPS",
       "Award"
     ],
-    "featured": true
+    "featured": true,
+    "award": "Spotlight Presentation (< 3.0% acceptance)"
   },
   {
     "id": "cha-2021-mobile",
@@ -805,7 +857,8 @@
       "IEEE VR",
       "Award"
     ],
-    "featured": true
+    "featured": true,
+    "award": "Best Conference Paper (1 of 3)"
   },
   {
     "id": "chakravarthula-2021-gazecontingent",
@@ -832,7 +885,9 @@
       "Journal",
       "IEEE TVCG"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/chakravarthula-2021-gazecontingent.jpg",
+    "award": ""
   },
   {
     "id": "chakravarthula-2020-learned",
@@ -858,7 +913,9 @@
       "Conference",
       "SIGGRAPH Asia"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/chakravarthula-2020-learned.png",
+    "award": ""
   },
   {
     "id": "xia-2020-eyeglassesstyle",
@@ -885,7 +942,9 @@
       "Conference",
       "ISMAR"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/xia-2020-eyeglassesstyle.png",
+    "award": ""
   },
   {
     "id": "chakravarthula-2019-wirtinger",
@@ -911,7 +970,9 @@
       "Conference",
       "SIGGRAPH Asia"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/chakravarthula-2019-wirtinger.jpg",
+    "award": ""
   },
   {
     "id": "chabra-2019-stereodrnet",
@@ -937,7 +998,8 @@
       "Conference",
       "CVPR"
     ],
-    "featured": false
+    "featured": false,
+    "award": ""
   },
   {
     "id": "aksit-2019-manufacturing",
@@ -965,7 +1027,9 @@
       "Journal",
       "IEEE TVCG"
     ],
-    "featured": false
+    "featured": false,
+    "imagePath": "/images/publications/aksit-2019-manufacturing.png",
+    "award": ""
   },
   {
     "id": "chakravarthula-2018-focusar",
@@ -991,7 +1055,9 @@
       "ISMAR",
       "Award"
     ],
-    "featured": true
+    "featured": true,
+    "imagePath": "/images/publications/chakravarthula-2018-focusar.jpg",
+    "award": "Best Paper Award"
   },
   {
     "id": "rathinavel-2018-steerable",
@@ -1021,7 +1087,9 @@
       "SIGGRAPH",
       "Award"
     ],
-    "featured": true
+    "featured": true,
+    "imagePath": "/images/publications/rathinavel-2018-steerable.png",
+    "award": "Best in Show"
   },
   {
     "id": "dunn-2017-wide",
@@ -1052,7 +1120,8 @@
       "IEEE VR",
       "Award"
     ],
-    "featured": true
+    "featured": true,
+    "award": "Best Paper Award"
   },
   {
     "id": "lincoln-2016-motion",
@@ -1081,7 +1150,8 @@
       "IEEE VR",
       "Award"
     ],
-    "featured": true
+    "featured": true,
+    "award": "Best Paper Award"
   },
   {
     "id": "dou-2015-scanning",
@@ -1107,7 +1177,8 @@
       "Conference",
       "CVPR"
     ],
-    "featured": false
+    "featured": false,
+    "award": ""
   },
   {
     "id": "maimone-2014-pinlight",
@@ -1134,7 +1205,9 @@
       "Conference",
       "SIGGRAPH"
     ],
-    "featured": true
+    "featured": true,
+    "imagePath": "/images/publications/maimone-2014-pinlight.jpg",
+    "award": ""
   },
   {
     "id": "fuchs-2014-immersive",
@@ -1157,7 +1230,8 @@
       "2014",
       "Conference"
     ],
-    "featured": false
+    "featured": false,
+    "award": ""
   },
   {
     "id": "maimone-2013-computational",
@@ -1180,7 +1254,8 @@
       "Conference",
       "ISMAR"
     ],
-    "featured": false
+    "featured": false,
+    "award": ""
   },
   {
     "id": "maimone-2013-focus",
@@ -1207,7 +1282,8 @@
       "Journal",
       "IEEE TVCG"
     ],
-    "featured": false
+    "featured": false,
+    "award": ""
   },
   {
     "id": "maimone-2013-generalpurpose",
@@ -1235,6 +1311,7 @@
       "IEEE VR",
       "Award"
     ],
-    "featured": false
+    "featured": false,
+    "award": "Best Short Paper"
   }
 ]

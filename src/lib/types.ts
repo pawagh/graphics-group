@@ -1,7 +1,7 @@
 export interface Person {
   id: string;
   name: string;
-  role: 'faculty' | 'phd' | 'ms' | 'undergrad' | 'postdoc' | 'alumni' | 'visitor';
+  role: 'faculty' | 'staff' | 'phd' | 'ms' | 'undergrad' | 'postdoc' | 'alumni' | 'visitor';
   title: string;
   email: string;
   photoPath: string;
@@ -30,6 +30,8 @@ export interface Publication {
   keyContributions: string;
   tags: string[];
   featured: boolean;
+  imagePath?: string;
+  award?: string;
 }
 
 export interface ResearchProject {
