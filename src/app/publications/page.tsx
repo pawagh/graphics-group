@@ -147,10 +147,8 @@ export default function PublicationsPage() {
                       <h3 className="font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>
                         {pub.title}
                       </h3>
-                      <p className="text-sm mb-2" style={{ color: 'var(--text-muted)' }}>
-                        {pub.authors.length > 5
-                          ? pub.authors.slice(0, 5).join(', ') + ' et al.'
-                          : pub.authors.join(', ')}
+                      <p className="text-sm mb-2 line-clamp-2" style={{ color: 'var(--text-muted)' }}>
+                        {pub.authors.join(', ')}
                       </p>
                       <div className="flex flex-wrap items-center gap-2">
                         <span className="badge">{pub.venue}</span>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getPublications, getPublicationById } from '@/lib/data';
@@ -23,6 +24,30 @@ export default async function PublicationDetailPage({ params }: { params: Promis
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
+
+        {/* Thumbnail */}
+        {pub.imagePath && (
+          <div className="mb-8 rounded-lg overflow-hidden" style={{ maxHeight: 340, background: 'var(--bg-secondary)' }}>
+            <Image
+              src={pub.imagePath}
+              alt={pub.title}
+              width={800}
+              height={340}
+              className="w-full object-contain"
+              style={{ maxHeight: 340 }}
+            />
+          </div>
+        )}
+
+        {/* Award badge */}
+        {pub.award && (
+          <div className="mb-6">
+            <span className="inline-block px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+              🏆 {pub.award}
+            </span>
+          </div>
+        )}
+
         {/* Authors */}
         <section className="mb-8">
           <h2 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>Authors</h2>
@@ -49,8 +74,8 @@ export default async function PublicationDetailPage({ params }: { params: Promis
         <section className="mb-8">
           <h2 className="text-sm font-semibold uppercase tracking-wide mb-3" style={{ color: 'var(--text-muted)' }}>Links</h2>
           <div className="flex flex-wrap gap-3">
-            {pub.pdfUrl && (
-              <a href={pub.pdfUrl} target="_blank" rel="noopener noreferrer"
+            {(pub.pdfPath || pub.pdfUrl) && (
+              <a href={pub.pdfPath || pub.pdfUrl} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-[var(--unc-blue)] text-white hover:opacity-90 transition-opacity">
                 PDF
               </a>
@@ -77,7 +102,7 @@ export default async function PublicationDetailPage({ params }: { params: Promis
           <section className="mb-8">
             <h2 className="text-sm font-semibold uppercase tracking-wide mb-3" style={{ color: 'var(--text-muted)' }}>Tags</h2>
             <div className="flex flex-wrap gap-2">
-              {pub.tags.map(tag => (
+              {pub.tags.filter(t => !/^\d{4}$/.test(t)).map(tag => (
                 <span key={tag} className="badge">{tag}</span>
               ))}
             </div>
