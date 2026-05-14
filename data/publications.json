@@ -1984,11 +1984,12 @@
     "bibtex": "@inproceedings{dunn_2018_mitigating,\n  title     = {Mitigating Vergence-Accommodation Conflict for Near-Eye Displays via Deformable Beamsplitters},\n  author    = {David Dunn and Praneeth Chakravarthula and Qian Dong and Henry Fuchs},\n  booktitle = {SPIE Digital Optics for Immersive Displays},\n  year      = {2018}\n}",
     "keyContributions": "",
     "tags": [
-      "Conference"
+      "Conference",
+      "Award"
     ],
     "featured": false,
     "imagePath": "/images/publications/dunn-2018-mitigating.png",
-    "award": ""
+    "award": "Best Optical Design Award, SPIE 2018"
   },
   {
     "id": "dunn-2018-varifocal",
@@ -2321,11 +2322,12 @@
     "bibtex": "@inproceedings{fuchs_2014_temporally,\n  title     = {Temporally Enhanced 3D Capture of Room-sized Dynamic Scene with Commodity Depth Cameras},\n  author    = {Mingsong Dou and Henry Fuchs},\n  booktitle = {IEEE Virtual Reality},\n  year      = {2014}\n}",
     "keyContributions": "",
     "tags": [
-      "Conference"
+      "Conference",
+      "Award"
     ],
     "featured": false,
     "imagePath": "",
-    "award": ""
+    "award": "Best Short Paper, IEEE VR 2014"
   },
   {
     "id": "deng-2013-kinect",
@@ -2557,11 +2559,12 @@
     "bibtex": "@inproceedings{fuchs_2012_reducing,\n  title     = {Reducing Interference Between Multiple Structured Light Depth Sensors Using Motion},\n  author    = {Andrew Maimone and Henry Fuchs},\n  booktitle = {IEEE Virtual Reality},\n  year      = {2012}\n}",
     "keyContributions": "",
     "tags": [
-      "Conference"
+      "Conference",
+      "Award"
     ],
     "featured": false,
     "imagePath": "",
-    "award": ""
+    "award": "Best Short Paper, IEEE VR 2012"
   },
   {
     "id": "dou-2012-exploring",
