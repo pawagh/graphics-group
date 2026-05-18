@@ -89,7 +89,12 @@ function stripHtmlTags(html: string): string {
 async function summarizeWithGemini(title: string, abstract: string, retries = 3): Promise<string> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey || !abstract) return '';
-  const prompt = `Given this research paper title and abstract, write 2-3 sentences summarizing the key contributions. Be specific and technical.\n\nTitle: ${title}\nAbstract: ${abstract}\n\nKey contributions:`;
+  const prompt = `You are summarizing a computer science research paper for a lab website. Write exactly 2-3 concise sentences describing what the paper proposes, builds, or proves — focusing on the novel technical contribution and its significance. Be specific: name the technique, system, or finding. Avoid vague phrases like "this paper presents" or "the authors propose". Start directly with the contribution.
+
+Title: ${title}
+Abstract: ${abstract}
+
+Summary:`;
   for (let attempt = 0; attempt < retries; attempt++) {
     try {
       const res = await fetch(

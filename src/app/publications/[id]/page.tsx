@@ -54,19 +54,19 @@ export default async function PublicationDetailPage({ params }: { params: Promis
           <p style={{ color: 'var(--text-primary)' }}>{pub.authors.join(', ')}</p>
         </section>
 
+        {/* Paper Summary (Gemini-generated key contributions) */}
+        {pub.keyContributions && (
+          <section className="mb-8">
+            <h2 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>Paper Summary</h2>
+            <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{pub.keyContributions}</p>
+          </section>
+        )}
+
         {/* Abstract */}
         {pub.abstract && (
           <section className="mb-8">
             <h2 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>Abstract</h2>
             <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{pub.abstract}</p>
-          </section>
-        )}
-
-        {/* Key Contributions */}
-        {pub.keyContributions && (
-          <section className="mb-8">
-            <h2 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>Key Contributions</h2>
-            <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{pub.keyContributions}</p>
           </section>
         )}
 

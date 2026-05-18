@@ -59,7 +59,8 @@ function PersonCard({ person }: { person: Person }) {
 }
 
 function AlumniTable({ alumni }: { alumni: Person[] }) {
-  const sorted = [...alumni].sort((a, b) => a.name.localeCompare(b.name));
+  const lastName = (n: string) => n.trim().split(/\s+/).slice(-1)[0].toLowerCase();
+  const sorted = [...alumni].sort((a, b) => lastName(a.name).localeCompare(lastName(b.name)));
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-sm" style={{ color: 'var(--text-primary)' }}>
@@ -114,7 +115,10 @@ export default function PeoplePage() {
                 <AlumniTable alumni={members} />
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {members.sort((a, b) => a.name.localeCompare(b.name)).map(person => (
+                  {members.sort((a, b) => {
+                    const lastName = (n: string) => n.trim().split(/\s+/).slice(-1)[0].toLowerCase();
+                    return lastName(a.name).localeCompare(lastName(b.name));
+                  }).map(person => (
                     <PersonCard key={person.id} person={person} />
                   ))}
                 </div>

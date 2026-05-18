@@ -10,8 +10,34 @@ import publicationsData from '../../../data/publications.json';
 
 const publications: Publication[] = publicationsData as Publication[];
 
-// Sort by year desc
-const sorted = [...publications].sort((a, b) => b.year - a.year);
+// Approximate month a paper typically appears, based on venue name keywords.
+// Used for within-year ordering (earlier conferences first).
+function venueMonth(venue: string): number {
+  const v = venue.toLowerCase();
+  if (/\biclr\b/.test(v)) return 4;
+  if (/\bchi\b/.test(v)) return 5;
+  if (/\bcvpr\b/.test(v)) return 6;
+  if (/\bicml\b/.test(v)) return 7;
+  if (/\bsiggraph\b/.test(v) && !/asia/.test(v)) return 8;
+  if (/\bieeevr\b|ieee vr/.test(v)) return 3;
+  if (/\bi3d\b/.test(v)) return 2;
+  if (/\biccv\b/.test(v)) return 10;
+  if (/\bismar\b/.test(v)) return 10;
+  if (/\beccv\b/.test(v)) return 10;
+  if (/\bneurips\b|nips/.test(v)) return 12;
+  if (/\bsiggraph asia\b/.test(v)) return 12;
+  if (/\bvrst\b/.test(v)) return 11;
+  if (/\b3dv\b/.test(v)) return 9;
+  if (/\biosm\b|osm/.test(v)) return 6;
+  if (/\bspie\b/.test(v)) return 2;
+  return 6; // mid-year default
+}
+
+// Sort by year desc, then within year by conference month desc (most recent first)
+const sorted = [...publications].sort((a, b) => {
+  if (b.year !== a.year) return b.year - a.year;
+  return venueMonth(b.venue) - venueMonth(a.venue);
+});
 
 // Extract unique years and category tags
 const years = [...new Set(sorted.map(p => p.year))].sort((a, b) => b - a);
@@ -147,7 +173,7 @@ export default function PublicationsPage() {
                       <h3 className="font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>
                         {pub.title}
                       </h3>
-                      <p className="text-sm mb-2 line-clamp-2" style={{ color: 'var(--text-muted)' }}>
+                      <p className="text-sm mb-2" style={{ color: 'var(--text-muted)' }}>
                         {pub.authors.join(', ')}
                       </p>
                       <div className="flex flex-wrap items-center gap-2">
