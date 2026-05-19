@@ -54,19 +54,31 @@ export default async function PublicationDetailPage({ params }: { params: Promis
           <p style={{ color: 'var(--text-primary)' }}>{pub.authors.join(', ')}</p>
         </section>
 
-        {/* Paper Summary (Gemini-generated key contributions) */}
-        {pub.keyContributions && (
+        {/* Paper Summary — from Semantic Scholar TLDR */}
+        {pub.tldr && (
           <section className="mb-8">
             <h2 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>Paper Summary</h2>
-            <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{pub.keyContributions}</p>
+            <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{pub.tldr}</p>
           </section>
         )}
 
-        {/* Abstract */}
-        {pub.abstract && (
+        {/* Key Contributions — Gemini bulleted list */}
+        {pub.keyContributions && (
           <section className="mb-8">
-            <h2 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: 'var(--text-muted)' }}>Abstract</h2>
-            <p className="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>{pub.abstract}</p>
+            <h2 className="text-sm font-semibold uppercase tracking-wide mb-3" style={{ color: 'var(--text-muted)' }}>Key Contributions</h2>
+            <ul className="space-y-1.5 list-none">
+              {pub.keyContributions
+                .split('\n')
+                .filter(line => /^[•\-\*]/.test(line.trim()))
+                .map(line => line.replace(/^[•\-\*]\s*/, '').trim())
+                .filter(Boolean)
+                .map((item, i) => (
+                  <li key={i} className="flex gap-2" style={{ color: 'var(--text-secondary)' }}>
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-[var(--unc-blue)]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+            </ul>
           </section>
         )}
 

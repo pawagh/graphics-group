@@ -22,6 +22,7 @@ export interface Publication {
   year: number;
   venue: string;
   abstract: string;
+  tldr: string;
   pdfPath: string;
   pdfUrl: string;
   doi: string;

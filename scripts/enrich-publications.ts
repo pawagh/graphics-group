@@ -1,6 +1,8 @@
 /**
- * Enrich publications: fetch abstracts via Semantic Scholar + CrossRef,
- * then run Gemini 2.5 Flash to generate keyContributions.
+ * Enrich publications:
+ *   1. Fetch abstract + tldr from Semantic Scholar (by ID or title search)
+ *   2. Fetch abstract from CrossRef if S2 misses (older papers)
+ *   3. Generate bulleted Key Contributions via Gemini 2.5 Flash
  *
  * Usage: npx tsx scripts/enrich-publications.ts
  */
@@ -20,6 +22,7 @@ interface Publication {
   year: number;
   venue: string;
   abstract: string;
+  tldr: string;
   keyContributions: string;
   semanticScholarId: string;
   doi: string;
@@ -30,71 +33,74 @@ async function sleep(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// ── Semantic Scholar: direct ID lookup ──
-async function fetchAbstractByS2Id(s2Id: string): Promise<string> {
-  const url = `https://api.semanticscholar.org/graph/v1/paper/${s2Id}?fields=abstract`;
+// ── Semantic Scholar: direct ID lookup (abstract + tldr) ──
+async function fetchByS2Id(s2Id: string): Promise<{ abstract: string; tldr: string }> {
+  const url = `https://api.semanticscholar.org/graph/v1/paper/${s2Id}?fields=abstract,tldr`;
   const headers: Record<string, string> = {};
   if (process.env.SEMANTIC_SCHOLAR_API_KEY) headers['x-api-key'] = process.env.SEMANTIC_SCHOLAR_API_KEY;
   try {
     const res = await fetch(url, { headers });
-    if (!res.ok) return '';
-    const json = await res.json() as { abstract?: string };
-    return json.abstract ?? '';
-  } catch { return ''; }
+    if (!res.ok) return { abstract: '', tldr: '' };
+    const json = await res.json() as { abstract?: string; tldr?: { text?: string } };
+    return { abstract: json.abstract ?? '', tldr: json.tldr?.text ?? '' };
+  } catch { return { abstract: '', tldr: '' }; }
 }
 
-// ── Semantic Scholar: title search (short prefix, year-tolerant) ──
-async function fetchByS2TitleSearch(title: string, year: number): Promise<{ abstract: string; s2Id: string; doi: string }> {
-  // Use first 6-8 words as query to improve match rate
+// ── Semantic Scholar: title search ──
+async function fetchByS2Title(title: string, year: number): Promise<{ abstract: string; tldr: string; s2Id: string; doi: string }> {
   const words = title.split(/\s+/).slice(0, 7).join(' ');
-  const query = encodeURIComponent(words);
-  const url = `https://api.semanticscholar.org/graph/v1/paper/search?query=${query}&fields=abstract,paperId,year,externalIds&limit=8`;
+  const url = `https://api.semanticscholar.org/graph/v1/paper/search?query=${encodeURIComponent(words)}&fields=abstract,tldr,paperId,year,externalIds&limit=8`;
   const headers: Record<string, string> = {};
   if (process.env.SEMANTIC_SCHOLAR_API_KEY) headers['x-api-key'] = process.env.SEMANTIC_SCHOLAR_API_KEY;
   try {
     const res = await fetch(url, { headers });
-    if (!res.ok) return { abstract: '', s2Id: '', doi: '' };
-    const json = await res.json() as { data?: Array<{ year?: number; abstract?: string; paperId?: string; externalIds?: { DOI?: string } }> };
+    if (!res.ok) return { abstract: '', tldr: '', s2Id: '', doi: '' };
+    const json = await res.json() as { data?: Array<{ year?: number; abstract?: string; tldr?: { text?: string }; paperId?: string; externalIds?: { DOI?: string } }> };
     const papers = json.data ?? [];
-    // Match by year proximity and require an abstract
-    let best = papers.find(p => Math.abs((p.year ?? 0) - year) <= 1 && p.abstract);
-    if (!best) best = papers.find(p => Math.abs((p.year ?? 0) - year) <= 3 && p.abstract);
-    if (!best) best = papers.find(p => p.abstract);
-    if (best) return { abstract: best.abstract ?? '', s2Id: best.paperId ?? '', doi: best.externalIds?.DOI ?? '' };
+    let best = papers.find(p => Math.abs((p.year ?? 0) - year) <= 1 && (p.abstract || p.tldr));
+    if (!best) best = papers.find(p => Math.abs((p.year ?? 0) - year) <= 3 && (p.abstract || p.tldr));
+    if (!best) best = papers.find(p => p.abstract || p.tldr);
+    if (best) return { abstract: best.abstract ?? '', tldr: best.tldr?.text ?? '', s2Id: best.paperId ?? '', doi: best.externalIds?.DOI ?? '' };
   } catch { /* ignore */ }
-  return { abstract: '', s2Id: '', doi: '' };
+  return { abstract: '', tldr: '', s2Id: '', doi: '' };
 }
 
-// ── CrossRef: title + author search ──
+// ── CrossRef: abstract only (older papers not in S2) ──
 async function fetchByCrossRef(title: string, firstAuthor: string, year: number): Promise<{ abstract: string; doi: string }> {
   const q = encodeURIComponent(title.slice(0, 80));
   const author = encodeURIComponent(firstAuthor.split(' ').pop() ?? '');
-  const url = `https://api.crossref.org/works?query.title=${q}&query.author=${author}&filter=from-pub-date:${year - 1},until-pub-date:${year + 1}&rows=3&select=abstract,DOI,title,published`;
+  const url = `https://api.crossref.org/works?query.title=${q}&query.author=${author}&filter=from-pub-date:${year - 1},until-pub-date:${year + 1}&rows=3&select=abstract,DOI`;
   try {
-    const res = await fetch(url, { headers: { 'User-Agent': 'vcail-website/1.0 (mailto:admin@example.com)' } });
+    const res = await fetch(url, { headers: { 'User-Agent': 'vcail-website/1.0' } });
     if (!res.ok) return { abstract: '', doi: '' };
     const json = await res.json() as { message?: { items?: Array<{ abstract?: string; DOI?: string }> } };
-    const items = json.message?.items ?? [];
-    const hit = items.find(it => it.abstract);
-    if (hit) return { abstract: stripHtmlTags(hit.abstract ?? ''), doi: hit.DOI ?? '' };
+    const hit = (json.message?.items ?? []).find(it => it.abstract);
+    if (hit) return { abstract: hit.abstract!.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim(), doi: hit.DOI ?? '' };
   } catch { /* ignore */ }
   return { abstract: '', doi: '' };
 }
 
-function stripHtmlTags(html: string): string {
-  return html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+// ── Validate abstract isn't a CrossRef mismatch ──
+function abstractMatchesTitle(title: string, abstract: string): boolean {
+  const stopwords = new Set(['a','an','the','of','in','for','with','on','to','and','or','by','via','using','from','at','is','are','as','its','into','be']);
+  const kw = (s: string) => new Set(s.toLowerCase().match(/[a-z]{4,}/g)?.filter(w => !stopwords.has(w)) ?? []);
+  const tk = kw(title);
+  const ak = kw(abstract);
+  const overlap = [...tk].filter(w => ak.has(w)).length;
+  return tk.size < 3 || overlap > 0;
 }
 
-// ── Gemini summarization with retry ──
-async function summarizeWithGemini(title: string, abstract: string, retries = 3): Promise<string> {
+// ── Gemini: bulleted key contributions ──
+async function keyContributionsWithGemini(title: string, abstract: string, retries = 3): Promise<string> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey || !abstract) return '';
-  const prompt = `You are summarizing a computer science research paper for a lab website. Write exactly 2-3 concise sentences describing what the paper proposes, builds, or proves — focusing on the novel technical contribution and its significance. Be specific: name the technique, system, or finding. Avoid vague phrases like "this paper presents" or "the authors propose". Start directly with the contribution.
+  const prompt = `Extract 3-5 key contributions from this computer science paper as a bullet list. Output ONLY the bullets — no intro sentence, no preamble, no section header. Each bullet must start with "•", be one sentence, name a concrete technique/system/result, and avoid starting with "We" or "This paper".
 
 Title: ${title}
 Abstract: ${abstract}
 
-Summary:`;
+•`;
+
   for (let attempt = 0; attempt < retries; attempt++) {
     try {
       const res = await fetch(
@@ -104,93 +110,94 @@ Summary:`;
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             contents: [{ parts: [{ text: prompt }] }],
-            generationConfig: { maxOutputTokens: 300, temperature: 0.3 },
+            generationConfig: { maxOutputTokens: 400, temperature: 0.2 },
           }),
         }
       );
-      if (res.status === 429) {
-        await sleep(5000 * (attempt + 1)); // back off on rate limit
-        continue;
-      }
+      if (res.status === 429) { await sleep(8000 * (attempt + 1)); continue; }
       if (!res.ok) return '';
       const json = await res.json() as { candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }> };
-      const text = json.candidates?.[0]?.content?.parts?.[0]?.text?.trim() ?? '';
+      let text = json.candidates?.[0]?.content?.parts?.[0]?.text?.trim() ?? '';
+      // The prompt ends with "•" so prepend it back if the model continued without it
+      if (text && !text.startsWith('•')) text = '• ' + text;
       if (text) return text;
     } catch { /* ignore */ }
-    await sleep(1000 * (attempt + 1));
+    await sleep(2000 * (attempt + 1));
   }
   return '';
 }
 
 async function main() {
   const pubs: Publication[] = JSON.parse(fs.readFileSync(PUBS_PATH, 'utf-8'));
-  const needsAbstract = pubs.filter(p => !p.abstract);
-  const needsSummary = pubs.filter(p => p.abstract && !p.keyContributions);
-  console.log(`Total: ${pubs.length}  |  Need abstract: ${needsAbstract.length}  |  Need summary: ${needsSummary.length}\n`);
 
-  let abstractsAdded = 0;
-  let summariesAdded = 0;
+  // Ensure tldr field exists on all entries
+  for (const p of pubs) {
+    if (p.tldr === undefined) p.tldr = '';
+  }
+
+  const needsS2 = pubs.filter(p => !p.tldr && !p.abstract);
+  const needsGemini = pubs.filter(p => p.abstract && !p.keyContributions);
+  console.log(`Total: ${pubs.length} | Need S2 lookup: ${needsS2.length + pubs.filter(p => !p.tldr && p.semanticScholarId).length} | Need Gemini: ${needsGemini.length}\n`);
+
+  let tldrAdded = 0, abstractsAdded = 0, keysAdded = 0;
 
   for (let i = 0; i < pubs.length; i++) {
     const pub = pubs[i];
-    const progress = `[${i + 1}/${pubs.length}]`;
+    const prog = `[${i + 1}/${pubs.length}]`;
 
-    // ── Step 1: fetch abstract ──
-    if (!pub.abstract) {
-      process.stdout.write(`${progress} Abstract: ${pub.title.slice(0, 55)}... `);
-      let abstract = '';
-      let s2Id = '';
-      let doi = '';
+    // ── Step 1: S2 lookup for tldr + abstract ──
+    if (!pub.tldr || !pub.abstract) {
+      let abstract = pub.abstract;
+      let tldr = pub.tldr;
+      let s2Id = pub.semanticScholarId;
+      let doi = pub.doi;
 
-      // Strategy A: direct S2 ID
-      if (pub.semanticScholarId) {
-        abstract = await fetchAbstractByS2Id(pub.semanticScholarId);
-        s2Id = pub.semanticScholarId;
+      if (s2Id) {
+        process.stdout.write(`${prog} S2 ID lookup: ${pub.title.slice(0, 50)}... `);
+        const r = await fetchByS2Id(s2Id);
+        abstract = abstract || r.abstract;
+        tldr = tldr || r.tldr;
         await sleep(200);
-      }
-
-      // Strategy B: S2 title search
-      if (!abstract) {
-        const r = await fetchByS2TitleSearch(pub.title, pub.year);
-        abstract = r.abstract; s2Id = s2Id || r.s2Id; doi = doi || r.doi;
+        console.log(tldr ? '✓ (tldr)' : abstract ? '✓ (abstract)' : '(no tldr)');
+      } else if (!abstract) {
+        process.stdout.write(`${prog} S2 search: ${pub.title.slice(0, 50)}... `);
+        const r = await fetchByS2Title(pub.title, pub.year);
+        abstract = abstract || r.abstract;
+        tldr = tldr || r.tldr;
+        s2Id = s2Id || r.s2Id;
+        doi = doi || r.doi;
         await sleep(300);
+
+        // CrossRef fallback
+        if (!abstract && !tldr) {
+          const r2 = await fetchByCrossRef(pub.title, pub.authors[0] ?? '', pub.year);
+          if (r2.abstract && abstractMatchesTitle(pub.title, r2.abstract)) {
+            abstract = r2.abstract;
+            doi = doi || r2.doi;
+          }
+          await sleep(200);
+        }
+        console.log(tldr ? '✓ (tldr)' : abstract ? '✓ (abstract)' : '(not found)');
       }
 
-      // Strategy C: CrossRef (good for older papers)
-      if (!abstract) {
-        const r = await fetchByCrossRef(pub.title, pub.authors[0] ?? '', pub.year);
-        abstract = r.abstract; doi = doi || r.doi;
-        await sleep(300);
-      }
-
-      if (abstract) {
-        pub.abstract = abstract;
-        if (s2Id && !pub.semanticScholarId) pub.semanticScholarId = s2Id;
-        if (doi && !pub.doi) pub.doi = doi;
-        abstractsAdded++;
-        console.log('✓');
-      } else {
-        console.log('(not found)');
-      }
+      if (tldr && tldr !== pub.tldr) { pub.tldr = tldr; tldrAdded++; }
+      if (abstract && abstract !== pub.abstract) { pub.abstract = abstract; abstractsAdded++; }
+      if (s2Id && !pub.semanticScholarId) pub.semanticScholarId = s2Id;
+      if (doi && !pub.doi) pub.doi = doi;
     }
 
-    // ── Step 2: generate key contributions ──
+    // ── Step 2: Gemini key contributions ──
     if (pub.abstract && !pub.keyContributions) {
-      process.stdout.write(`${progress} Summary:  ${pub.title.slice(0, 55)}... `);
-      const summary = await summarizeWithGemini(pub.title, pub.abstract);
-      if (summary) {
-        pub.keyContributions = summary;
-        summariesAdded++;
-        console.log('✓');
-      } else {
-        console.log('(failed)');
-      }
-      await sleep(600);
+      process.stdout.write(`${prog} Gemini: ${pub.title.slice(0, 50)}... `);
+      const kc = await keyContributionsWithGemini(pub.title, pub.abstract);
+      if (kc) { pub.keyContributions = kc; keysAdded++; console.log('✓'); }
+      else console.log('(quota)');
+      await sleep(700);
     }
   }
 
   fs.writeFileSync(PUBS_PATH, JSON.stringify(pubs, null, 2));
-  console.log(`\nDone. Abstracts added: ${abstractsAdded}, summaries added: ${summariesAdded}`);
+  console.log(`\nDone. TLDRs: +${tldrAdded}, abstracts: +${abstractsAdded}, key contributions: +${keysAdded}`);
 }
 
 main().catch(console.error);
