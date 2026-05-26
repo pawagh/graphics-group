@@ -5,7 +5,8 @@ import type { Person } from '@/lib/types';
 const ROLE_ORDER: Array<{ key: string; label: string; roles: string[] }> = [
   { key: 'faculty', label: 'Faculty', roles: ['faculty'] },
   { key: 'staff', label: 'Staff', roles: ['staff'] },
-  { key: 'students', label: 'Students', roles: ['phd', 'ms', 'undergrad', 'postdoc', 'visitor'] },
+  { key: 'students', label: 'Students', roles: ['phd', 'ms', 'undergrad', 'postdoc'] },
+  { key: 'collaborators', label: 'Collaborators', roles: ['visitor'] },
   { key: 'alumni', label: 'Alumni', roles: ['alumni'] },
 ];
 

@@ -104,17 +104,17 @@ Abstract: ${abstract}
   for (let attempt = 0; attempt < retries; attempt++) {
     try {
       const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             contents: [{ parts: [{ text: prompt }] }],
-            generationConfig: { maxOutputTokens: 400, temperature: 0.2 },
+            generationConfig: { maxOutputTokens: 800, temperature: 0.2 },
           }),
         }
       );
-      if (res.status === 429) { await sleep(8000 * (attempt + 1)); continue; }
+      if (res.status === 429) { await sleep(20000 * (attempt + 1)); continue; }
       if (!res.ok) return '';
       const json = await res.json() as { candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }> };
       let text = json.candidates?.[0]?.content?.parts?.[0]?.text?.trim() ?? '';
@@ -192,7 +192,7 @@ async function main() {
       const kc = await keyContributionsWithGemini(pub.title, pub.abstract);
       if (kc) { pub.keyContributions = kc; keysAdded++; console.log('✓'); }
       else console.log('(quota)');
-      await sleep(700);
+      await sleep(3100); // gemini-2.5-flash-lite: 20 RPM free tier → 3s/call
     }
   }
 
