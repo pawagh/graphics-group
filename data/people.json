@@ -672,7 +672,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "2002"
+    "alumniPosition": "Associate Professor, Emory Univeristy",
+    "alumniYear": 2002
   },
   {
     "id": "michael-bajura",
@@ -687,7 +688,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "1997"
+    "alumniPosition": "Research Staff Member, IDA",
+    "alumniYear": 1997
   },
   {
     "id": "will-berner",
@@ -748,7 +750,7 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "2013"
+    "alumniYear": 2013
   },
   {
     "id": "rohan-chabra",
@@ -794,7 +796,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "Postdoctoral\n  2015"
+    "alumniPosition": "Professor, University of Science and Technology of China, School of Mathematical Sciences",
+    "alumniYear": 2015
   },
   {
     "id": "yang-chen",
@@ -823,7 +826,7 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "2022"
+    "alumniYear": 2022
   },
   {
     "id": "mingsong-dou",
@@ -870,7 +873,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "1996"
+    "alumniPosition": "Senior Research Scientist, NASA Ames Research Center",
+    "alumniYear": 1996
   },
   {
     "id": "fan-feng",
@@ -899,7 +903,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "Postdoctoral\n  2014"
+    "alumniPosition": "Assistant Professor in Computer Science, Universit\u00e9 Paris-Sud",
+    "alumniYear": 2014
   },
   {
     "id": "martim-gaspar",
@@ -928,7 +933,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "2019"
+    "alumniPosition": "Quantitative UX Researcher, Facebook",
+    "alumniYear": 2019
   },
   {
     "id": "austin-hale",
@@ -957,7 +963,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "PhD\n  2002"
+    "alumniPosition": "Engineer, NVIDIA",
+    "alumniYear": 2002
   },
   {
     "id": "victoria-interrante",
@@ -1015,7 +1022,8 @@
     "googleScholar": "",
     "github": "",
     "twitter": "",
-    "interests": []
+    "interests": [],
+    "alumniYear": 2023
   },
   {
     "id": "tyler-johnson",
@@ -1030,7 +1038,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "PhD\n  2009"
+    "alumniPosition": "Principal Software Engineer, Scalable Display Technologies",
+    "alumniYear": 2009
   },
   {
     "id": "hyounghun-kim",
@@ -1059,7 +1068,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "PhD\n  2008"
+    "alumniPosition": "Senior Technical Asset, Qualtrics",
+    "alumniYear": 2008
   },
   {
     "id": "anselmo-lastra",
@@ -1135,7 +1145,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "PhD\n  1998"
+    "alumniPosition": "Head of the Virtual Environments and Visualization Section, Naval Research Laboratory (NRL)",
+    "alumniYear": 1998
   },
   {
     "id": "andrew-maimone",
@@ -1166,7 +1177,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "PhD\n  2005"
+    "alumniPosition": "Assistant Professor, Dana-Farber Cancer Institute/Harvard Cancer Center",
+    "alumniYear": 2005
   },
   {
     "id": "federico-menozzi",
@@ -1181,7 +1193,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "2016"
+    "alumniPosition": "2016 BS Honors Thesis, UNC as a MS Student",
+    "alumniYear": 2016
   },
   {
     "id": "steven-molnar",
@@ -1212,7 +1225,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "PhD\n  2010"
+    "alumniPosition": "Software Engineer, Cisco Systems",
+    "alumniYear": 2010
   },
   {
     "id": "ulrich-neumann",
@@ -1243,7 +1257,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "PhD\n  1994"
+    "alumniPosition": "Professor, University of Yamanashi, Japan",
+    "alumniYear": 1994
   },
   {
     "id": "tabitha-peck",
@@ -1274,7 +1289,7 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "2019"
+    "alumniYear": 2019
   },
   {
     "id": "vijay-rajkumar",
@@ -1289,7 +1304,8 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "2016"
+    "alumniPosition": "2016 BS Honors Thesis, Duke University as a Grad Student in Media",
+    "alumniYear": 2016
   },
   {
     "id": "ramesh-raskar",
@@ -1363,7 +1379,7 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "2022"
+    "alumniYear": 2022
   },
   {
     "id": "paul-song",
@@ -1406,7 +1422,7 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "2022"
+    "alumniYear": 2022
   },
   {
     "id": "yujie-tao",
@@ -1479,7 +1495,7 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "PhD\n  1990"
+    "alumniYear": 1990
   },
   {
     "id": "hanpeng-wang",
@@ -1551,7 +1567,7 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "2016"
+    "alumniYear": 2016
   },
   {
     "id": "david-siqing-xu",
@@ -1566,7 +1582,7 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "2016"
+    "alumniYear": 2016
   },
   {
     "id": "irene-zhan",
@@ -1595,7 +1611,7 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "(advised by Prof. Greg Welch), PhD\n  2015"
+    "alumniYear": 2015
   },
   {
     "id": "chongyi-zheng",

@@ -144,38 +144,58 @@ def parse_person_block(block, section_heading, is_alumni_section):
     # (c) in a separate <p> block after the name paragraph
 
     title = ''
+    alumni_year_from_block = None
+    alumni_position_from_block = ''
 
-    # Option (a): comma after strong tag on same p tag
-    # Look for text after </strong> in first <p>
-    first_p = re.search(r'<p[^>]*>.*?</p>', block, re.DOTALL | re.IGNORECASE)
-    if first_p:
-        p_text = strip_tags(first_p.group(0))
-        # Remove the name itself
-        if name in p_text:
-            after_name = p_text[p_text.index(name) + len(name):].strip().lstrip(',').strip()
-            if after_name:
-                title = after_name
+    # All <p> blocks in the entry
+    all_ps = re.findall(r'<p[^>]*>(.*?)</p>', block, re.DOTALL | re.IGNORECASE)
 
-    # Option (b): text immediately after the first </p> tag (before next <p>)
-    if not title:
-        after_first_p = re.search(r'</p>\s*([^\n<][^\n]*?)\s*\n', block, re.IGNORECASE)
-        if after_first_p:
-            candidate = after_first_p.group(1).strip()
-            candidate = strip_tags(candidate).strip()
-            if candidate and len(candidate) > 2 and len(candidate) < 150:
+    # Parse the first <p> which contains: <img/><strong>Name</strong>[, Title][<br/>Year]
+    if all_ps:
+        first_p_html = all_ps[0]
+        after_strong = re.sub(r'^.*</strong>', '', first_p_html, flags=re.DOTALL|re.IGNORECASE)
+        # Extract year from <br />Year pattern
+        year_match = re.search(r'<br\s*/?>[\s\n]*(\d{4})', after_strong, re.IGNORECASE)
+        if year_match:
+            alumni_year_from_block = int(year_match.group(1))
+            after_strong = re.sub(r'<br\s*/?>.*', '', after_strong, flags=re.DOTALL|re.IGNORECASE)
+        after_text = strip_tags(after_strong).strip().lstrip(',').strip()
+        # Use as title only if it's a role/degree, not a year
+        if after_text and not re.match(r'^\d{4}$', after_text):
+            title = after_text
+
+    # Check remaining <p> blocks for:
+    # - alumni_position (current job/institution)
+    # - additional title if none found yet
+    # - contact info (email, homepage)
+    for p_html in all_ps[1:]:
+        p_text = strip_tags(p_html).strip()
+        p_text = re.sub(r'\s+', ' ', p_text)
+        # Skip contact/office lines
+        if '[AT]' in p_text or 'Office:' in p_text:
+            continue
+        if re.search(r'\.(edu|com|org|net|gov|io)', p_text) and not re.search(r'University|College|Institute', p_text):
+            continue
+        if not p_text or len(p_text) < 3 or len(p_text) > 300:
+            continue
+        if re.match(r'^\d{4}$', p_text):
+            # Just a year, skip
+            continue
+        # This looks like a position/title description
+        if is_alumni_section:
+            alumni_position_from_block = p_text
+        elif not title:
+            title = p_text
+
+    # Also check text after </div> at block end (e.g., "Princeton University")
+    after_div_match = re.search(r'</p>\s*([A-Z][^\n<]{3,80}?)\s*</div>', block, re.DOTALL|re.IGNORECASE)
+    if after_div_match:
+        candidate = strip_tags(after_div_match.group(1)).strip()
+        if candidate and not re.match(r'^\d{4}$', candidate) and len(candidate) < 150:
+            if is_alumni_section and not alumni_position_from_block:
+                alumni_position_from_block = candidate
+            elif not title and not is_alumni_section:
                 title = candidate
-
-    # Option (c): second <p> block (not email) contains title
-    if not title:
-        all_ps = re.findall(r'<p[^>]*>(.*?)</p>', block, re.DOTALL | re.IGNORECASE)
-        for p in all_ps[1:]:
-            p_text = strip_tags(p).strip()
-            # Skip if it looks like an email/contact line
-            if '[AT]' in p_text or 'Office:' in p_text or re.search(r'\.(edu|com|org)', p_text):
-                continue
-            if p_text and len(p_text) > 2 and len(p_text) < 200:
-                title = p_text
-                break
 
     title = decode_entities(title.strip())
 
@@ -193,11 +213,6 @@ def parse_person_block(block, section_heading, is_alumni_section):
         website_match = re.search(r'<a[^>]+href="(https?://[^"]+)"', block, re.IGNORECASE)
     website = website_match.group(1) if website_match else ''
 
-    # Determine alumni position/year for alumni sections
-    alumni_position = ''
-    if is_alumni_section and title:
-        alumni_position = title
-
     return {
         'name': name,
         'title': title,
@@ -205,7 +220,8 @@ def parse_person_block(block, section_heading, is_alumni_section):
         'website': website,
         'photo_url': photo_url,
         'section': section_heading,
-        'alumni_position': alumni_position,
+        'alumni_position': alumni_position_from_block,
+        'alumni_year': alumni_year_from_block,
     }
 
 
@@ -340,6 +356,21 @@ def build_person_entry(scraped, existing_by_id, existing_by_name):
             entry['email'] = scraped['email']
         if not entry.get('website') and scraped.get('website'):
             entry['website'] = scraped['website']
+        # Update alumni position/year
+        if entry['role'] == 'alumni':
+            existing_pos = entry.get('alumniPosition', '')
+            # Update if missing, was a placeholder year, or contains a newline (bad from old run)
+            needs_update = (not existing_pos or re.match(r'^\d{4}$', existing_pos.strip()) or '\n' in existing_pos)
+            if needs_update and scraped.get('alumni_position'):
+                pos = re.sub(r'\s+', ' ', scraped['alumni_position']).strip()
+                if pos and not re.match(r'^\d{4}$', pos):
+                    entry['alumniPosition'] = pos
+                else:
+                    entry.pop('alumniPosition', None)
+            elif needs_update:
+                entry.pop('alumniPosition', None)
+            if not entry.get('alumniYear') and scraped.get('alumni_year'):
+                entry['alumniYear'] = scraped['alumni_year']
 
         # Download photo if missing
         if not entry.get('photoPath') and scraped.get('photo_url'):
@@ -372,9 +403,17 @@ def build_person_entry(scraped, existing_by_id, existing_by_name):
         }
 
         if role == 'alumni':
-            alumni_pos = scraped.get('alumni_position', '') or title
+            alumni_pos = scraped.get('alumni_position', '')
+            # Clean up alumni position — remove newlines/extra whitespace
             if alumni_pos:
-                entry['alumniPosition'] = alumni_pos
+                alumni_pos = re.sub(r'\s+', ' ', alumni_pos).strip()
+                # Don't set if it's just a year or empty
+                if alumni_pos and not re.match(r'^\d{4}$', alumni_pos):
+                    entry['alumniPosition'] = alumni_pos
+            # Set alumni year if found
+            alumni_year = scraped.get('alumni_year')
+            if alumni_year:
+                entry['alumniYear'] = alumni_year
 
         return entry
 
