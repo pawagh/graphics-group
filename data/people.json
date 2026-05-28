@@ -59,7 +59,7 @@
     "id": "jim-mahaney",
     "name": "Jim Mahaney",
     "role": "staff",
-    "title": "Lab Manager",
+    "title": "Director of Engineering and Research",
     "email": "mahaney@cs.unc.edu",
     "photoPath": "/images/people/jim-mahaney.jpg",
     "bio": "",
@@ -92,20 +92,6 @@
     "photoPath": "/images/people/jade-kandel.jpg",
     "bio": "",
     "website": "https://jadekandel.wixsite.com/jadesart",
-    "googleScholar": "",
-    "github": "",
-    "twitter": "",
-    "interests": []
-  },
-  {
-    "id": "youngjoong-kwon",
-    "name": "YoungJoong Kwon",
-    "role": "phd",
-    "title": "PhD Student",
-    "email": "youngjoong@cs.unc.edu",
-    "photoPath": "/images/people/youngjoong-kwon.jpeg",
-    "bio": "",
-    "website": "https://youngjoongunc.github.io/",
     "googleScholar": "",
     "github": "",
     "twitter": "",
@@ -154,20 +140,6 @@
     "interests": []
   },
   {
-    "id": "akshay-paruchuri",
-    "name": "Akshay Paruchuri",
-    "role": "phd",
-    "title": "PhD Student",
-    "email": "aparuchuri@unc.edu",
-    "photoPath": "/images/people/akshay-paruchuri.jpeg",
-    "bio": "",
-    "website": "https://www.cs.unc.edu/~akshaypa/",
-    "googleScholar": "",
-    "github": "",
-    "twitter": "",
-    "interests": []
-  },
-  {
     "id": "ryan-schmelzle",
     "name": "Ryan Schmelzle",
     "role": "phd",
@@ -204,48 +176,6 @@
     "photoPath": "/images/people/qian-zhang.png",
     "bio": "",
     "website": "https://www.qzane.com/",
-    "googleScholar": "",
-    "github": "",
-    "twitter": "",
-    "interests": []
-  },
-  {
-    "id": "jayden-lim",
-    "name": "Jayden Lim",
-    "role": "undergrad",
-    "title": "Undergraduate Researcher",
-    "email": "jaylim@unc.edu",
-    "photoPath": "/images/people/jayden-lim.png",
-    "bio": "",
-    "website": "",
-    "googleScholar": "",
-    "github": "",
-    "twitter": "",
-    "interests": []
-  },
-  {
-    "id": "ashley-neall",
-    "name": "Ashley Neall",
-    "role": "undergrad",
-    "title": "Undergraduate Researcher",
-    "email": "aneall@unc.edu",
-    "photoPath": "/images/people/ashley-neall.jpg",
-    "bio": "",
-    "website": "https://aneall.github.io/",
-    "googleScholar": "",
-    "github": "",
-    "twitter": "",
-    "interests": []
-  },
-  {
-    "id": "pranav-wagh",
-    "name": "Pranav Wagh",
-    "role": "undergrad",
-    "title": "Undergraduate Researcher",
-    "email": "pawagh@unc.edu",
-    "photoPath": "/images/people/pranav-wagh.png",
-    "bio": "",
-    "website": "",
     "googleScholar": "",
     "github": "",
     "twitter": "",
@@ -1056,6 +986,21 @@
     "interests": []
   },
   {
+    "id": "youngjoong-kwon",
+    "name": "YoungJoong Kwon",
+    "role": "alumni",
+    "title": "PhD",
+    "email": "youngjoong@cs.unc.edu",
+    "photoPath": "/images/people/youngjoong-kwon.jpeg",
+    "bio": "",
+    "website": "https://youngjoongunc.github.io/",
+    "googleScholar": "",
+    "github": "",
+    "twitter": "",
+    "interests": [],
+    "alumniPosition": "Assistant Professor, Emory University"
+  },
+  {
     "id": "scott-larsen",
     "name": "Scott Larsen",
     "role": "alumni",
@@ -1101,6 +1046,20 @@
     "interests": [],
     "alumniYear": 1989,
     "alumniPosition": "Distinguished Engineer, Google Research"
+  },
+  {
+    "id": "jayden-lim",
+    "name": "Jayden Lim",
+    "role": "alumni",
+    "title": "BS",
+    "email": "jaylim@unc.edu",
+    "photoPath": "/images/people/jayden-lim.png",
+    "bio": "",
+    "website": "",
+    "googleScholar": "",
+    "github": "",
+    "twitter": "",
+    "interests": []
   },
   {
     "id": "peter-lincoln",
@@ -1229,6 +1188,20 @@
     "alumniYear": 2010
   },
   {
+    "id": "ashley-neall",
+    "name": "Ashley Neall",
+    "role": "alumni",
+    "title": "BS",
+    "email": "aneall@unc.edu",
+    "photoPath": "/images/people/ashley-neall.jpg",
+    "bio": "",
+    "website": "https://aneall.github.io/",
+    "googleScholar": "",
+    "github": "",
+    "twitter": "",
+    "interests": []
+  },
+  {
     "id": "ulrich-neumann",
     "name": "Ulrich Neumann",
     "role": "alumni",
@@ -1259,6 +1232,21 @@
     "interests": [],
     "alumniPosition": "Professor, University of Yamanashi, Japan",
     "alumniYear": 1994
+  },
+  {
+    "id": "akshay-paruchuri",
+    "name": "Akshay Paruchuri",
+    "role": "alumni",
+    "title": "PhD",
+    "email": "aparuchuri@unc.edu",
+    "photoPath": "/images/people/akshay-paruchuri.jpeg",
+    "bio": "",
+    "website": "https://www.cs.unc.edu/~akshaypa/",
+    "googleScholar": "",
+    "github": "",
+    "twitter": "",
+    "interests": [],
+    "alumniPosition": "Postdoctoral Researcher, Stanford University"
   },
   {
     "id": "tabitha-peck",
@@ -1481,6 +1469,20 @@
     "interests": [],
     "alumniYear": 1992,
     "alumniPosition": "Professor, Georgia Tech"
+  },
+  {
+    "id": "pranav-wagh",
+    "name": "Pranav Wagh",
+    "role": "alumni",
+    "title": "BS",
+    "email": "pawagh@unc.edu",
+    "photoPath": "/images/people/pranav-wagh.png",
+    "bio": "",
+    "website": "",
+    "googleScholar": "",
+    "github": "",
+    "twitter": "",
+    "interests": []
   },
   {
     "id": "jih-fang-wang",
