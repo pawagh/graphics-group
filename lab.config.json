@@ -4,7 +4,7 @@
     "shortName": "Graphics & VR Group",
     "university": "UNC Chapel Hill",
     "department": "Department of Computer Science",
-    "description": "The Graphics and Virtual Reality group has been around since 1978 at UNC Chapel Hill, under various names: Pixel-Planes, Tracker, Ultrasound, Office of the Future, as part of BeingThere Centre, and others. Our research encompasses 3D scene acquisition & reconstruction, 3D tracking, fast rendering hardware and algorithms, autostereoscopic 3D displays, head-mounted and other near-eye displays, telepresence, and medical applications.",
+    "description": "The Graphics and Virtual Reality group and its predecessors has been around since 1978 at UNC Chapel Hill: Pixel-Planes, Tracker, Ultrasound, Office of the Future, as part of BeingThere Centre, and others. Our research encompasses 3D scene acquisition & reconstruction, 3D tracking, fast rendering hardware and algorithms, autostereoscopic 3D displays, head-mounted and other near-eye displays, telepresence, and medical applications.",
     "logoPath": "/images/lab-logo.png",
     "contactEmail": "fuchs@cs.unc.edu"
   },
