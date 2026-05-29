@@ -7224,7 +7224,7 @@
     "doi": "10.1063/1.522561",
     "semanticScholarId": "",
     "bibtex": "@inproceedings{fuchs_1975_automatic,\n  title     = {The Automatic Sensing and Analysis of Three-Dimensional Surface Points from Visual Scenes},\n  author    = {Henry Fuchs},\n  booktitle = {Ph.D. Dissertation, University of Utah, Salt Lake City},\n  year      = {1975}\n}",
-    "keyContributions": "• A necessary and sufficient condition for unidirectional energy transfer from the pump to two other waves is established in terms of a critical damping factor.\n• Asymptotic solutions are derived for the nonlinear evolution of three coherent positive energy waves in a homogeneous lossy medium.\n• Solutions are found for both weakly and strongly damped regimes of the interacting waves.\n• The pump wave depletion time is analyzed as a function of the damping rate and initial pump wave intensity.",
+    "keyContributions": "Described are the design and implementation of a new range-measuring sensing device and an associated software algorithm for constructing surface descriptions of arbitrary three-dimensional objects from single or multiple views.",
     "tags": [
       "Conference"
     ],
