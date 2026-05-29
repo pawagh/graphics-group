@@ -7225,7 +7225,6 @@
     "semanticScholarId": "",
     "bibtex": "@inproceedings{fuchs_1975_automatic,\n  title     = {The Automatic Sensing and Analysis of Three-Dimensional Surface Points from Visual Scenes},\n  author    = {Henry Fuchs},\n  booktitle = {Ph.D. Dissertation, University of Utah, Salt Lake City},\n  year      = {1975}\n}",
     "keyContributions": "•Described are the design and implementation of a new range-measuring sensing device and an associated software algorithm for constructing surface descriptions of arbitrary three-dimensional objects from single or multiple views.",
-",
     "tags": [
     "Dissertation"
     ],
