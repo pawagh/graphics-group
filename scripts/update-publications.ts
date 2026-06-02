@@ -89,6 +89,8 @@ function detectTags(venue: string, types: string[] | null): string[] {
     tags.push('Workshop');
   } else if (v.includes('arxiv')) {
     tags.push('ArXiv');
+  } else if (v.includes('dissertation') || v.includes('thesis')) {
+    tags.push('Dissertation');
   } else {
     tags.push('Conference');
   }

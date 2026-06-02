@@ -167,16 +167,6 @@ async function main() {
         s2Id = s2Id || r.s2Id;
         doi = doi || r.doi;
         await sleep(300);
-
-        // CrossRef fallback
-        if (!abstract && !tldr) {
-          const r2 = await fetchByCrossRef(pub.title, pub.authors[0] ?? '', pub.year);
-          if (r2.abstract && abstractMatchesTitle(pub.title, r2.abstract)) {
-            abstract = r2.abstract;
-            doi = doi || r2.doi;
-          }
-          await sleep(200);
-        }
         console.log(tldr ? '✓ (tldr)' : abstract ? '✓ (abstract)' : '(not found)');
       }
 
