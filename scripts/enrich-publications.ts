@@ -46,6 +46,19 @@ async function fetchByS2Id(s2Id: string): Promise<{ abstract: string; tldr: stri
   } catch { return { abstract: '', tldr: '' }; }
 }
 
+// ── Semantic Scholar: DOI lookup ──
+async function fetchByDOI(doi: string): Promise<{ abstract: string; tldr: string; s2Id: string }> {
+  const url = `https://api.semanticscholar.org/graph/v1/paper/DOI:${encodeURIComponent(doi)}?fields=abstract,tldr,paperId`;
+  const headers: Record<string, string> = {};
+  if (process.env.SEMANTIC_SCHOLAR_API_KEY) headers['x-api-key'] = process.env.SEMANTIC_SCHOLAR_API_KEY;
+  try {
+    const res = await fetch(url, { headers });
+    if (!res.ok) return { abstract: '', tldr: '', s2Id: '' };
+    const json = await res.json() as { abstract?: string; tldr?: { text?: string }; paperId?: string };
+    return { abstract: json.abstract ?? '', tldr: json.tldr?.text ?? '', s2Id: json.paperId ?? '' };
+  } catch { return { abstract: '', tldr: '', s2Id: '' }; }
+}
+
 // ── Semantic Scholar: title search ──
 async function fetchByS2Title(title: string, year: number): Promise<{ abstract: string; tldr: string; s2Id: string; doi: string }> {
   const words = title.split(/\s+/).slice(0, 7).join(' ');
@@ -159,13 +172,25 @@ async function main() {
         tldr = tldr || r.tldr;
         await sleep(200);
         console.log(tldr ? '✓ (tldr)' : abstract ? '✓ (abstract)' : '(no tldr)');
-      } else if (!abstract) {
-        process.stdout.write(`${prog} S2 search: ${pub.title.slice(0, 50)}... `);
-        const r = await fetchByS2Title(pub.title, pub.year);
+      } else if (!abstract && doi) {
+        // DOI lookup is exact — always the right paper
+        process.stdout.write(`${prog} S2 DOI lookup: ${pub.title.slice(0, 50)}... `);
+        const r = await fetchByDOI(doi);
         abstract = abstract || r.abstract;
         tldr = tldr || r.tldr;
         s2Id = s2Id || r.s2Id;
-        doi = doi || r.doi;
+        await sleep(200);
+        console.log(tldr ? '✓ (tldr)' : abstract ? '✓ (abstract)' : '(not on S2)');
+      } else if (!abstract) {
+        process.stdout.write(`${prog} S2 search: ${pub.title.slice(0, 50)}... `);
+        const r = await fetchByS2Title(pub.title, pub.year);
+        // Only accept if S2 returned a confirmed paper ID (not just a title-match guess)
+        if (r.s2Id) {
+          abstract = abstract || r.abstract;
+          tldr = tldr || r.tldr;
+          s2Id = r.s2Id;
+          doi = doi || r.doi;
+        }
         await sleep(300);
         console.log(tldr ? '✓ (tldr)' : abstract ? '✓ (abstract)' : '(not found)');
       }
