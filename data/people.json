@@ -100,7 +100,7 @@
   {
     "id": "conny-lu",
     "name": "Conny Xinran Lu",
-    "role": "phd",
+    "role": "alumni",
     "title": "PhD Student",
     "email": "connylu@cs.unc.edu",
     "photoPath": "/images/people/conny-lu.jpg",
@@ -114,7 +114,7 @@
   {
     "id": "chenyang-ma",
     "name": "Chenyang Ma",
-    "role": "phd",
+    "role": "alumni",
     "title": "PhD Student",
     "email": "mach@cs.unc.edu",
     "photoPath": "/images/people/chenyang-ma.jpg",
@@ -128,7 +128,7 @@
   {
     "id": "emre-onemli",
     "name": "Emre Onemli",
-    "role": "phd",
+    "role": "alumni",
     "title": "PhD Student",
     "email": "emre@cs.unc.edu",
     "photoPath": "/images/people/emre-onemli.jpeg",
@@ -142,7 +142,7 @@
   {
     "id": "ryan-schmelzle",
     "name": "Ryan Schmelzle",
-    "role": "phd",
+    "role": "alumni",
     "title": "PhD Student",
     "email": "ryancschmelzle@gmail.com",
     "photoPath": "/images/people/ryan-schmelzle.jpeg",
@@ -156,7 +156,7 @@
   {
     "id": "shengze-wang",
     "name": "Shengze Wang",
-    "role": "phd",
+    "role": "alumni",
     "title": "PhD Student",
     "email": "shengzew@email.unc.edu",
     "photoPath": "/images/people/shengze-wang.jpg",
@@ -184,7 +184,7 @@
   {
     "id": "ronald-azuma",
     "name": "Ronald Azuma",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "Research Scientist",
     "email": "ronald.azuma@gmail.com",
     "photoPath": "/images/people/ronald-azuma.png",
@@ -198,7 +198,7 @@
   {
     "id": "jeremy-n-bailenson",
     "name": "Jeremy N. Bailenson",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "Assistant Professor",
     "email": "bailenso@stanford.edu",
     "photoPath": "/images/people/jeremy-n-bailenson.png",
@@ -212,7 +212,7 @@
   {
     "id": "gedas-bertasius",
     "name": "Gedas Bertasius",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "Assistant Professor",
     "email": "gbertasius@unc.edu",
     "photoPath": "/images/people/gedas-bertasius.png",
@@ -241,7 +241,7 @@
     "id": "tat-jen-cham",
     "name": "Tat-Jen Cham",
     "role": "visitor",
-    "title": "Associate Professor",
+    "title": "Associate Professor, Nanyang Technological University",
     "email": "",
     "photoPath": "/images/people/tat-jen-cham.jpg",
     "bio": "",
@@ -254,7 +254,7 @@
   {
     "id": "jingwen-dai",
     "name": "Jingwen Dai",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "",
     "email": "jai@ximmerse.com",
     "photoPath": "/images/people/jingwen-dai.png",
@@ -268,7 +268,7 @@
   {
     "id": "chelsea-cj-duppen",
     "name": "Chelsea \"CJ\" Duppen",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "Doctor of Physical Therapy",
     "email": "chelsea_parker@med.unc.edu",
     "photoPath": "/images/people/chelsea-cj-duppen.png",
@@ -282,7 +282,7 @@
   {
     "id": "timothy-michael-farrell",
     "name": "Timothy Michael Farrell",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "MD, PhD",
     "email": "timothy_farrell@med.unc.edu",
     "photoPath": "/images/people/timothy-michael-farrell.png",
@@ -296,7 +296,7 @@
   {
     "id": "ben-goldberg",
     "name": "Ben Goldberg",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "",
     "email": "beakerthespeaker@gmail.com",
     "photoPath": "/images/people/ben-goldberg.jpg",
@@ -310,7 +310,7 @@
   {
     "id": "anders-grunnet-jepsen",
     "name": "Anders Grunnet-Jepsen",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "CTO and Director of Advanced Technology",
     "email": "anders.grunnet-jepsen@intel.com",
     "photoPath": "/images/people/anders-grunnet-jepsen.png",
@@ -325,7 +325,7 @@
     "id": "frank-yunqing-guan",
     "name": "Frank Yunqing Guan",
     "role": "visitor",
-    "title": "Assistant Professor",
+    "title": "Associate Professor, Singapore Institute of Technology",
     "email": "frank.guan@singaporetech.edu.sg",
     "photoPath": "/images/people/frank-yunqing-guan.jpg",
     "bio": "",
@@ -338,7 +338,7 @@
   {
     "id": "yongtao-hu",
     "name": "Yongtao Hu",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "",
     "email": "herohuyongtao@gmail.com",
     "photoPath": "/images/people/yongtao-hu.png",
@@ -353,7 +353,7 @@
     "id": "jia-bin-huang",
     "name": "Jia-bin Huang",
     "role": "visitor",
-    "title": "Research Scientist and Professor at UMD College Park",
+    "title": "Professor, Department of Computer Science, University of Maryland",
     "email": "jbhuang@vt.edu",
     "photoPath": "/images/people/jia-bin-huang.png",
     "bio": "",
@@ -366,7 +366,7 @@
   {
     "id": "hanseul-jun",
     "name": "Hanseul Jun",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "PhD, Software Engineer at Apple",
     "email": "hanseuljun@gmail.com",
     "photoPath": "/images/people/hanseul-jun.png",
@@ -394,7 +394,7 @@
   {
     "id": "david-luebke",
     "name": "David Luebke",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "",
     "email": "luebke@email.unc.edu",
     "photoPath": "/images/people/david-luebke.png",
@@ -408,7 +408,7 @@
   {
     "id": "kyla-mcmullen",
     "name": "Kyla McMullen",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "Assistant Professor",
     "email": "",
     "photoPath": "/images/people/kyla-mcmullen.jpg",
@@ -422,7 +422,7 @@
   {
     "id": "austin-s-rose",
     "name": "Austin S. Rose",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "MD, Professor of Pediatric Rhinology, Allergy & Sinus Surgery",
     "email": "",
     "photoPath": "/images/people/austin-s-rose.jpg",
@@ -436,7 +436,7 @@
   {
     "id": "jerzy-w-rozenblit",
     "name": "Jerzy W. Rozenblit",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "University Distinguished Professor, and the Raymond J. Oglethorpe Endowed Chair",
     "email": "jr@ece.arizona.edu",
     "photoPath": "/images/people/jerzy-w-rozenblit.jpg",
@@ -450,7 +450,7 @@
   {
     "id": "manuel-sanchez-casalongue",
     "name": "Manuel Sanchez-Casalongue",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "MD, PhD",
     "email": "manuel.sanchezcasalongue@unchealth.unc.edu",
     "photoPath": "/images/people/manuel-sanchez-casalongue.png",
@@ -464,7 +464,7 @@
   {
     "id": "montek-singh",
     "name": "Montek Singh",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "Associate Professor",
     "email": "montek@cs.unc.edu",
     "photoPath": "/images/people/montek-singh.jpg",
@@ -506,7 +506,7 @@
   {
     "id": "eric-m-wallen",
     "name": "Eric M. Wallen",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "MD, FACS, Professor of Urology",
     "email": "",
     "photoPath": "/images/people/eric-m-wallen.jpg",
@@ -520,7 +520,7 @@
   {
     "id": "gordon-wetzstein",
     "name": "Gordon Wetzstein",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "Associate Professor",
     "email": "gordon.wetzstein@stanford.edu",
     "photoPath": "/images/people/gordon-wetzstein.png",
@@ -534,7 +534,7 @@
   {
     "id": "turner-whitted",
     "name": "Turner Whitted",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "Adjunct Research Professor",
     "email": "jtw@twilab.com",
     "photoPath": "/images/people/turner-whitted.jpg",
@@ -548,7 +548,7 @@
   {
     "id": "mary-whitton",
     "name": "Mary Whitton",
-    "role": "visitor",
+    "role": "past_collaborator",
     "title": "Research Professor",
     "email": "whitton@cs.unc.edu",
     "photoPath": "/images/people/mary-whitton.jpeg",
@@ -563,7 +563,7 @@
     "id": "xinxing-xia",
     "name": "Xinxing Xia",
     "role": "visitor",
-    "title": "Research Fellow",
+    "title": "Associate Professor, School of Mechatronic Engineering & Automation, Shanghai University",
     "email": "xxxia@ntu.edu.sg",
     "photoPath": "/images/people/xinxing-xia.jpg",
     "bio": "",
@@ -833,7 +833,7 @@
     "github": "",
     "twitter": "",
     "interests": [],
-    "alumniPosition": "Assistant Professor in Computer Science, Universit\u00e9 Paris-Sud",
+    "alumniPosition": "Assistant Professor in Computer Science, Université Paris-Sud",
     "alumniYear": 2014
   },
   {
@@ -1019,7 +1019,7 @@
   {
     "id": "anselmo-lastra",
     "name": "Anselmo Lastra",
-    "role": "alumni",
+    "role": "past_collaborator",
     "title": "Professor",
     "email": "lastra@cs.unc.edu",
     "photoPath": "/images/people/anselmo-lastra.jpeg",
@@ -1443,7 +1443,7 @@
   {
     "id": "herman-towles",
     "name": "Herman Towles",
-    "role": "alumni",
+    "role": "past_collaborator",
     "title": "",
     "email": "",
     "photoPath": "",
@@ -1636,6 +1636,20 @@
     "title": "",
     "email": "liujiez@email.unc.edu",
     "photoPath": "/images/people/liujie-zheng.jpeg",
+    "bio": "",
+    "website": "",
+    "googleScholar": "",
+    "github": "",
+    "twitter": "",
+    "interests": []
+  },
+  {
+    "id": "nancy-lei",
+    "name": "Nancy Lei",
+    "role": "phd",
+    "title": "PhD Student",
+    "email": "",
+    "photoPath": "",
     "bio": "",
     "website": "",
     "googleScholar": "",

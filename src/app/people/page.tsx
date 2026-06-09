@@ -4,10 +4,11 @@ import type { Person } from '@/lib/types';
 
 const ROLE_ORDER: Array<{ key: string; label: string; roles: string[] }> = [
   { key: 'faculty', label: 'Faculty', roles: ['faculty'] },
-  { key: 'staff', label: 'Staff', roles: ['staff'] },
+  { key: 'staff', label: 'Research Staff', roles: ['staff'] },
   { key: 'students', label: 'Students', roles: ['phd', 'ms', 'undergrad', 'postdoc'] },
-  { key: 'collaborators', label: 'Collaborators', roles: ['visitor'] },
+  { key: 'collaborators', label: 'Current Collaborators', roles: ['visitor'] },
   { key: 'alumni', label: 'Alumni', roles: ['alumni'] },
+  { key: 'past_collaborators', label: 'Past / Possible Future Collaborators', roles: ['past_collaborator'] },
 ];
 
 function PersonPhoto({ person, size = 64 }: { person: Person; size?: number }) {

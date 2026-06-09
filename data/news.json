@@ -1,5 +1,21 @@
 [
   {
+    "id": "pixel-planes-siggraph-50th-2023",
+    "title": "Pixel-Planes 5 Honored in ACM SIGGRAPH 50 Years of Papers Collection",
+    "date": "2023-08-01",
+    "summary": "The 1989 paper \"Pixel-Planes 5: A Heterogeneous Multiprocessor Graphics System Using Processor-Enhanced Memories\" by Fuchs, Poulton, Eyles et al. has been selected as one of the most influential papers in SIGGRAPH's 50-year history. The honoree collection is published by ACM (doi: 10.1145/3596711).",
+    "link": "https://dl.acm.org/doi/book/10.1145/3596711",
+    "type": "award"
+  },
+  {
+    "id": "ar-parkinsons-unc-2024",
+    "title": "UNC Computer Science Team Uses AR to Treat Parkinson's Disease",
+    "date": "2024-11-01",
+    "summary": "A UNC Computer Science team, in collaboration with UNC Health neurologists and physical therapists, is developing augmented reality tools to help Parkinson's disease patients improve their gait and movement.",
+    "link": "https://www.unc.edu/discover/computer-science-team-uses-ar-to-treat-parkinsons/",
+    "type": "media"
+  },
+  {
     "id": "membrane-ar-dcaj-siggraph-2017",
     "title": "Membrane AR Wins DCAJ Award at SIGGRAPH E-Tech 2017",
     "date": "2017-08-10",
@@ -27,7 +43,7 @@
     "id": "roadtovr-coverage-2017",
     "title": "GVR Varifocal AR Research Featured in RoadToVR",
     "date": "2017-01-28",
-    "summary": "RoadToVR.com covered the UNC/MPI Informatik/NVIDIA research on a varifocal membrane-mirror AR headset achieving a 100\u00b0 field of view while addressing the vergence-accommodation conflict.",
+    "summary": "RoadToVR.com covered the UNC/MPI Informatik/NVIDIA research on a varifocal membrane-mirror AR headset achieving a 100° field of view while addressing the vergence-accommodation conflict.",
     "link": "",
     "type": "media"
   },
@@ -81,7 +97,7 @@
   },
   {
     "id": "neall-mit-reality-hack-2024",
-    "title": "Ashley Neall \u2013 Best Use of Looking Glass at MIT Reality Hack 2024",
+    "title": "Ashley Neall – Best Use of Looking Glass at MIT Reality Hack 2024",
     "date": "2024-01-20",
     "summary": "Ashley Neall won Best Use of Looking Glass at MIT Reality Hack 2024.",
     "link": "",
@@ -89,7 +105,7 @@
   },
   {
     "id": "wagh-hackprinceton-2024",
-    "title": "Pranav Wagh \u2013 Best Healthcare Hack at HackPrinceton 2024",
+    "title": "Pranav Wagh – Best Healthcare Hack at HackPrinceton 2024",
     "date": "2024-03-01",
     "summary": "Pranav Wagh won Best Healthcare Hack at HackPrinceton 2024.",
     "link": "",

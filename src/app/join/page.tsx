@@ -28,8 +28,8 @@ export default function JoinUsPage() {
             </ul>
             <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
               To apply, please submit your application through the{' '}
-              <a href="https://cs.unc.edu/academics/graduate/admissions/" target="_blank" rel="noopener noreferrer" className="text-[var(--unc-blue)] hover:underline">
-                UNC CS Graduate Admissions
+              <a href="https://gradschool.unc.edu/admissions/" target="_blank" rel="noopener noreferrer" className="text-[var(--unc-blue)] hover:underline">
+                UNC Graduate School Admissions
               </a>{' '}
               portal and mention the faculty member(s) you are interested in working with.
             </p>

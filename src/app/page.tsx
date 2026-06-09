@@ -4,8 +4,8 @@ import { getNews, getPublications } from '@/lib/data';
 
 export default function HomePage() {
   const news = getNews().slice(0, 3);
-  const featured = getPublications().filter(p => p.featured).slice(0, 3);
-  const recentPubs = featured.length > 0 ? featured : getPublications().slice(0, 3);
+  // Always show the 3 most recent publications by year (newest first)
+  const recentPubs = getPublications().slice(0, 3);
 
   return (
     <div>
@@ -47,7 +47,7 @@ export default function HomePage() {
                 <span className="badge">{pub.venue}</span>
                 <h3 className="font-semibold mt-3 mb-2 line-clamp-2" style={{ color: 'var(--text-primary)' }}>{pub.title}</h3>
                 <p className="text-sm line-clamp-1" style={{ color: 'var(--text-muted)' }}>
-                  {pub.authors.slice(0, 3).join(', ')}{pub.authors.length > 3 ? ' et al.' : ''}
+                  {pub.authors.join(', ')}
                 </p>
                 <p className="text-xs mt-2" style={{ color: 'var(--text-muted)' }}>{pub.year}</p>
               </Link>
