@@ -30,7 +30,8 @@
       { "name": "Jade Kandel", "id": "2215952216", "startYear": 2020 },
       { "name": "Ashley Neall", "id": "2296783777", "startYear": 2023 },
       { "name": "Qian Zhang", "id": "2308022912", "startYear": 2020 },
-      { "name": "Pranav Wagh", "id": "2280805939", "startYear": 2023 }
+      { "name": "Pranav Wagh", "id": "2280805939", "startYear": 2023 },
+      { "name": "Jeremy Ackerman", "id": "49021561", "startYear": 1996, "endYear" : 2005},
     ],
     "defaultStartYear": 2014
   },
