@@ -15,6 +15,11 @@ on:
         required: false
         default: "false"
         type: boolean
+      skip_scrape:
+        description: "Skip re-scraping Semantic Scholar — just upload existing public/papers/ PDFs to Drive"
+        required: false
+        default: false
+        type: boolean
   push:
     branches: [main]
     paths:
@@ -40,6 +45,7 @@ jobs:
         run: pip install -r scraper/requirements.txt
 
       - name: Run publication scraper
+        if: ${{ !inputs.skip_scrape }}
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           FORCE_RESUMMARY: ${{ inputs.force_resummary || 'false' }}
