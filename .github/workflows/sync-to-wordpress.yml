@@ -1,0 +1,56 @@
+name: Sync to WordPress
+
+# Triggers:
+#   1. Automatically when data files are updated on main
+#   2. Weekly on Monday at 3am UTC
+#   3. Manually via GitHub UI (Actions → Run workflow)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/publications.json"
+      - "data/people.json"
+      - "data/research.json"
+      - "data/news.json"
+  schedule:
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "What to sync"
+        required: false
+        default: "all"
+        type: choice
+        options:
+          - all
+          - publications
+          - pages
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r wordpress/sync/requirements.txt
+
+      - name: Sync to WordPress
+        env:
+          WP_URL: ${{ secrets.WP_URL }}
+          WP_USER: ${{ secrets.WP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+        run: |
+          TARGET="${{ inputs.target || 'all' }}"
+          if [ "$TARGET" = "publications" ]; then
+            python wordpress/sync/sync.py --publications
+          elif [ "$TARGET" = "pages" ]; then
+            python wordpress/sync/sync.py --pages
+          else
+            python wordpress/sync/sync.py
+          fi

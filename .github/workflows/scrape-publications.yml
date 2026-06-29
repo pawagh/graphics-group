@@ -1,0 +1,89 @@
+name: Scrape & Update Publications
+
+# Runs weekly, or manually from GitHub UI.
+# Fetches new papers from Semantic Scholar, generates AI summaries,
+# uploads PDFs to Google Drive, then commits updated data/publications.json.
+# The commit triggers sync-to-wordpress.yml automatically.
+
+on:
+  schedule:
+    - cron: "0 2 * * 0"   # every Sunday at 2am UTC
+  workflow_dispatch:
+    inputs:
+      force_resummary:
+        description: "Regenerate AI summaries for all papers"
+        required: false
+        default: "false"
+        type: boolean
+  push:
+    branches: [main]
+    paths:
+      - "public/papers/**"   # maintainer manually added a PDF — pick it up immediately
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true   # public/papers/*.pdf is stored via Git LFS
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install scraper dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Run publication scraper
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          FORCE_RESUMMARY: ${{ inputs.force_resummary || 'false' }}
+        run: python scraper/pipeline.py
+
+      - name: Write Google service account credentials
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: echo "$GOOGLE_SERVICE_ACCOUNT_JSON" > /tmp/gcp-key.json
+
+      - name: Upload PDFs to Google Drive
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcp-key.json
+          GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+        run: python scraper/drive_uploader.py
+
+      - name: Check for publications needing a manual PDF
+        id: pdf_check
+        run: python scraper/pdf_alert.py
+
+      - name: Alert maintainer via GitHub issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ISSUE_TITLE="📋 Publications needing manual PDF upload"
+          EXISTING=$(gh issue list --search "in:title $ISSUE_TITLE" --state open --json number --jq '.[0].number')
+
+          if [ "${{ steps.pdf_check.outputs.has_missing }}" = "true" ]; then
+            if [ -n "$EXISTING" ]; then
+              gh issue edit "$EXISTING" --body-file missing_pdfs_report.md
+            else
+              gh issue create --title "$ISSUE_TITLE" --body-file missing_pdfs_report.md
+            fi
+          else
+            if [ -n "$EXISTING" ]; then
+              gh issue close "$EXISTING" --comment "All publications now have a PDF on file. Closing."
+            fi
+          fi
+
+      - name: Commit updated publications
+        run: |
+          git config user.name "vcail-bot"
+          git config user.email "actions@github.com"
+          git add data/publications.json public/papers/ public/images/publications/
+          git diff --staged --quiet || git commit -m "auto: update publications $(date +%Y-%m-%d)"
+          git push

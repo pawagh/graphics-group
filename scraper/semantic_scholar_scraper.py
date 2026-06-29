@@ -185,38 +185,55 @@ class SemanticScholarScraper:
             if oa_pdf and isinstance(oa_pdf, dict):
                 pdf_url = oa_pdf.get("url", "")
 
-            abstract = paper.get("abstract", "")
-            paper_id = paper.get("paperId", "")
+            abstract = paper.get("abstract", "") or ""
+            paper_id = paper.get("paperId", "") or ""
             tldr_text = tldrs.get(paper_id, "") if paper_id else ""
-            summary_text = tldr_text if tldr_text else (abstract[:300] + "..." if abstract else "")
+            ext_ids = paper.get("externalIds") or {}
+            doi = ext_ids.get("DOI", "") or ""
 
+            # Canonical schema fields (must match what wordpress/sync/sync.py and
+            # the website consume — see data/publications.json for the shape).
             pub = {
                 "title": title,
-                "slug": self.create_slug(title),
-                "authors": ", ".join(authors_list),
-                "meta": self.format_meta(venue, year),
-                "image": "",
-                "link": paper.get("url", ""),
+                "authors": authors_list,           # list, not a joined string
+                "year": year,
+                "venue": venue,
+                "abstract": abstract,
+                "doi": doi,
+                "semanticScholarId": paper_id,
+                "pdfUrl": pdf_url,
+                "pdfPath": "",                      # filled in by pdf_downloader.py
                 "tags": self.generate_tags(venue, year, paper.get("publicationTypes")),
-                "summary": summary_text, 
                 "keyContributions": [],
-                "project": "",
-                "_abstract": abstract,
-                "_pdf_url": pdf_url,
+                "featured": False,
+                "tldr": tldr_text,
+                "bibtex": "",
+                "award": "",
+                "imagePath": "",
+                # Transient — stripped before saving. Used within this same run only:
+                # _slug seeds a new publication's id (see pipeline.merge_with_existing);
+                # the rest are informational/dedup signals.
+                "_slug": self.create_slug(title),
                 "_citations": paper.get("citationCount", 0),
-                "_external_ids": paper.get("externalIds", {}),
+                "_external_ids": ext_ids,
                 "_lab_member": name,
-                "_source": "semantic_scholar"
+                "_source": "semantic_scholar",
             }
             results.append(pub)
             
         print(f"   ✓ Fetched {len(results)} papers")
         return results
 
-    def scrape_multiple_authors(self, authors_config: List[dict], start_year: int = None, end_year: int = None) -> List[dict]:
-        """Scrape publications for all lab members."""
+    def scrape_multiple_authors(self, authors_config: List[dict], default_start_year: int = None, default_end_year: int = None) -> List[dict]:
+        """
+        Scrape publications for all lab members. Each author's own start_year/end_year
+        (from their config entry) takes priority; the default_* args only apply to
+        authors that don't specify their own.
+        """
         all_pubs = []
         for author in authors_config:
+            start_year = author.get("start_year") if author.get("start_year") is not None else default_start_year
+            end_year = author.get("end_year") if author.get("end_year") is not None else default_end_year
             all_pubs.extend(self.scrape_author(author, start_year, end_year))
         return all_pubs
 
@@ -236,7 +253,7 @@ class SemanticScholarScraper:
             ext_ids = pub.get("_external_ids", {})
             corpus_id = ext_ids.get("CorpusId")
             doi = ext_ids.get("DOI")
-            slug = pub.get("slug", "")
+            slug = pub.get("_slug", "")
 
             if (corpus_id and corpus_id in seen_corpus_ids) or \
                (doi and doi in seen_dois) or \

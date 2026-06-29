@@ -25,11 +25,12 @@ except ImportError:
 load_dotenv()
 
 # Fix: Path resolution makes the script runnable from anywhere
-BASE_DIR = Path(__file__).resolve().parent.parent 
-OUTPUT_FILE = BASE_DIR / "src/data/publications.json"
+BASE_DIR = Path(__file__).resolve().parent.parent
+OUTPUT_FILE = BASE_DIR / "data/publications.json"
+CONFIG_FILE = BASE_DIR / "lab.config.json"
 PUBLIC_DIR = BASE_DIR / "public"
 PDF_DIR = PUBLIC_DIR / "papers"
-THUMBNAIL_DIR = PUBLIC_DIR / "publication-photos"
+THUMBNAIL_DIR = PUBLIC_DIR / "images" / "publications"
 
 NON_PAPER_TITLE_PATTERNS = [
     r"^system and method", r"^apparatus", r"^systems,?\s+methods",     
@@ -48,7 +49,7 @@ MIN_TITLE_LENGTH = 15
 def is_non_paper(pub: Dict) -> str:
     title = html.unescape(pub.get("title", "")).strip()
     title_lower = title.lower()
-    meta = (pub.get("meta") or "").lower()
+    venue = (pub.get("venue") or "").lower()
 
     if len(title) < MIN_TITLE_LENGTH: return f"title too short ({len(title)} chars)"
     for pattern in NON_PAPER_TITLE_PATTERNS:
@@ -57,7 +58,7 @@ def is_non_paper(pub: Dict) -> str:
     for pattern in GARBAGE_TITLE_PATTERNS:
         if re.match(pattern, normalized): return f"garbage title"
     for pattern in NON_PAPER_VENUE_PATTERNS:
-        if pattern in meta: return f"non-paper venue"
+        if pattern in venue: return f"non-paper venue"
     return ""
 
 def filter_publications(publications: List[Dict]) -> List[Dict]:
@@ -69,28 +70,38 @@ def filter_publications(publications: List[Dict]) -> List[Dict]:
     print(f"\n🗑️ Filtered out {removed} non-papers. Remaining: {len(kept)}")
     return kept
 
-LAB_MEMBERS = [
-    { "name": "Praneeth Chakravarthula", "s2_id": "51151674", "start_year": 2014 },
-    { "name": "Henry Fuchs", "s2_id": "145472944", "start_year": 1975 },
-    { "name": "Adrian Ilie", "s2_id": "2044671", "start_year": 2002 },
-    { "name": "Andrei State", "s2_id": "144379239", "start_year": 1994 },
-    { "name": "Kurtis Keller", "s2_id": "", "start_year": 1998 },
-    { "name": "Jade Kandel", "s2_id": "2215952216", "start_year": 2020 },
-    { "name": "Ashley Neall", "s2_id": "2296783777", "start_year": 2023 },
-    { "name": "Qian Zhang", "s2_id": "2308022912", "start_year": 2020 }, 
-    { "name": "Pranav Wagh", "s2_id": "2280805939", "start_year": 2023 },
-    { "name": "Jayden Lim", "s2_id": "", "start_year": 2023 }, 
-]
+def load_lab_members(config_file: Path = CONFIG_FILE) -> List[Dict]:
+    """
+    Reads the author roster from lab.config.json (semanticScholar.authorIds),
+    which is the single source of truth for who the pipeline scrapes.
+    An author with id: "" is kept in the roster but skipped for fetching
+    (e.g. someone without a Semantic Scholar profile yet).
+    """
+    with open(config_file, encoding="utf-8") as f:
+        cfg = json.load(f)
+    authors = cfg.get("semanticScholar", {}).get("authorIds", [])
+    return [
+        {
+            "name": a.get("name", ""),
+            "s2_id": a.get("id", ""),
+            "start_year": a.get("startYear"),
+            "end_year": a.get("endYear"),
+        }
+        for a in authors
+    ]
 
 SUMMARIZE_WITH_AI = True
 DOWNLOAD_PDFS = True
 EXTRACT_THUMBNAILS = True
 FORCE_RESUMMARY = os.getenv("FORCE_RESUMMARY", "false").lower() == "true"
-START_YEAR = int(os.getenv("START_YEAR_OVERRIDE", "2014"))
-END_YEAR = None
+# Fallback only for authors that don't specify their own startYear/endYear in lab.config.json.
+DEFAULT_START_YEAR = int(os.getenv("START_YEAR_OVERRIDE", "2014"))
+DEFAULT_END_YEAR = None
 
-ALWAYS_PRESERVE = ["image", "summary", "keyContributions", "project"]
-SCRAPER_CONTROLLED = ["authors", "meta", "link", "tags"]
+# Fields a human/AI has curated that the scraper should never blank out once set.
+ALWAYS_PRESERVE = ["imagePath", "award", "featured", "bibtex", "press", "summaryModel"]
+# Fields where a fresh, non-empty scrape value always wins (authoritative source).
+SCRAPER_CONTROLLED = ["authors", "tags"]
 
 def _is_empty(val) -> bool:
     if val is None: return True
@@ -108,38 +119,102 @@ def _merge_field(existing: Dict, new_pub: Dict, key: str) -> Any:
         return new_val if not _is_empty(new_val) else existing_val
     return new_val if not _is_empty(new_val) else existing_val
 
+def _normalize_title(title: str) -> str:
+    t = html.unescape(title or "").lower()
+    t = re.sub(r'[^a-z0-9\s]', '', t)
+    return re.sub(r'\s+', ' ', t).strip()
+
+_ID_STOPWORDS = {"a", "an", "the", "on", "of", "for", "to", "in", "with", "and", "towards", "toward"}
+
+def _topic_word(title: str) -> str:
+    """Pick a short topic word from the title, for generating a new publication's id."""
+    words = re.findall(r"[A-Za-z0-9]+", html.unescape(title or ""))
+    for w in words:
+        if w.lower() not in _ID_STOPWORDS:
+            return re.sub(r'[^a-z0-9]', '', w.lower()) or "paper"
+    return re.sub(r'[^a-z0-9]', '', words[0].lower()) if words else "untitled"
+
+def _generate_new_id(pub: Dict, taken_ids: set) -> str:
+    """author-year-topic id, in the style of the existing curated dataset (e.g. kandel-2024-pdinsighter)."""
+    authors = pub.get("authors") or []
+    first_author = authors[0] if authors else ""
+    lastname = re.sub(r'[^a-z0-9]', '', first_author.split()[-1].lower()) if first_author else "unknown"
+    year = pub.get("year") or "0000"
+    topic = _topic_word(pub.get("title", ""))
+    base = f"{lastname}-{year}-{topic}"
+    candidate, n = base, 2
+    while candidate in taken_ids:
+        candidate = f"{base}-{n}"
+        n += 1
+    return candidate
+
 def merge_with_existing(new_pubs: List[Dict], existing_file: Path) -> List[Dict]:
+    """
+    Matches freshly-scraped papers against the existing curated dataset using
+    Semantic Scholar paperId, then DOI, then normalized title as a last resort —
+    NOT by slug/id equality, since existing entries use a hand-curated
+    author-year-topic id scheme the scraper has no way to reproduce exactly.
+    A matched existing publication always keeps its existing "id"; only genuinely
+    new publications get a freshly generated one.
+    """
     try:
         with open(existing_file, "r", encoding="utf-8") as f:
             existing_pubs = json.load(f)
     except FileNotFoundError:
-        return new_pubs
+        existing_pubs = []
 
-    # Fix: Ensure empty slugs don't overwrite each other in the lookup dict
-    existing_by_slug = {p.get("slug"): p for p in existing_pubs if p.get("slug")}
+    by_s2id = {p["semanticScholarId"]: p for p in existing_pubs if p.get("semanticScholarId")}
+    by_doi = {p["doi"].strip().lower(): p for p in existing_pubs if p.get("doi")}
+    by_title: Dict[str, Dict] = {}
+    for p in existing_pubs:
+        nt = _normalize_title(p.get("title", ""))
+        if nt:
+            by_title.setdefault(nt, p)  # first-seen wins on duplicate titles
+
+    taken_ids = {p["id"] for p in existing_pubs if p.get("id")}
+    matched_existing_ids = set()
     merged = []
-    merged_slugs = set()
+    new_count = 0
 
     for pub in new_pubs:
-        slug = pub.get("slug", "")
-        if slug:
-            merged_slugs.add(slug)
-            
-        existing = existing_by_slug.get(slug) if slug else None
-        
+        s2id = pub.get("semanticScholarId") or ""
+        doi = (pub.get("doi") or "").strip().lower()
+        nt = _normalize_title(pub.get("title", ""))
+
+        existing = None
+        if s2id and s2id in by_s2id:
+            existing = by_s2id[s2id]
+        elif doi and doi in by_doi:
+            existing = by_doi[doi]
+        elif nt and nt in by_title:
+            existing = by_title[nt]
+
         if existing:
             merged_pub = {}
             all_keys = set(existing.keys()) | set(pub.keys())
             for k in all_keys:
                 if k.startswith("_"): continue
                 merged_pub[k] = _merge_field(existing, pub, k)
+            merged_pub["id"] = existing["id"]  # never overwrite a curated id
             merged.append(merged_pub)
+            matched_existing_ids.add(existing["id"])
         else:
-            merged.append({k: v for k, v in pub.items() if not k.startswith("_")})
+            new_id = _generate_new_id(pub, taken_ids)
+            taken_ids.add(new_id)
+            clean = {k: v for k, v in pub.items() if not k.startswith("_")}
+            clean["id"] = new_id
+            merged.append(clean)
+            new_count += 1
 
+    carried_over = 0
     for pub in existing_pubs:
-        if pub.get("slug", "") not in merged_slugs:
+        if pub.get("id") not in matched_existing_ids:
             merged.append(pub)
+            carried_over += 1
+
+    print(f"\n🔗 Merge: {len(matched_existing_ids)} matched existing, "
+          f"{new_count} new, {carried_over} existing carried over unchanged "
+          f"(not present in this scrape batch)")
 
     return merged
 
@@ -158,9 +233,16 @@ def save_publications(publications: List[Dict], output_file: Path):
 
 def run_pipeline():
     print(f"\n{'='*70}\nVCAIL PUBLICATION SCRAPER PIPELINE\n{'='*70}")
-    
+
+    lab_members = load_lab_members()
+    print(f"Roster ({len(lab_members)} from lab.config.json):")
+    for m in lab_members:
+        years = f"{m['start_year']}–{m['end_year']}" if m.get("end_year") else f"{m['start_year']}+"
+        s2 = m["s2_id"] or "(no S2 id, skipped)"
+        print(f"  {m['name']}: {s2} [{years}]")
+
     scraper = SemanticScholarScraper()
-    publications = scraper.scrape_multiple_authors(LAB_MEMBERS, START_YEAR, END_YEAR)
+    publications = scraper.scrape_multiple_authors(lab_members, DEFAULT_START_YEAR, DEFAULT_END_YEAR)
     publications = scraper.deduplicate(publications)
     publications = filter_publications(publications)
 

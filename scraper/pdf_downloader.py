@@ -19,21 +19,29 @@ class PDFDownloader:
         """Convert slug to safe filename."""
         return re.sub(r'[^a-z0-9-]', '', slug)[:80] + ".pdf"
 
+    def expected_path(self, slug: str) -> Path:
+        """The exact local path a manually-supplied PDF for this slug must use."""
+        return self.output_dir / self._safe_filename(slug)
+
     def download(self, pdf_url: str, slug: str) -> str:
         """
-        Download a PDF and save it locally.
+        Download a PDF and save it locally, or pick up a manually-placed file
+        at the expected path if one already exists (auto-download or maintainer-supplied).
         Returns the local path (relative to website/public) or empty string on failure.
         """
-        if not pdf_url:
-            return ""
-
         filename = self._safe_filename(slug)
         output_path = self.output_dir / filename
         local_url = f"/papers/{filename}"
 
+        # A file already at the expected path wins regardless of pdf_url — this is how
+        # a maintainer's manually-supplied PDF (for a paper the auto-download couldn't reach)
+        # gets picked up on the next run.
         if output_path.exists():
-            print(f"   ↩ Already downloaded: {filename}")
+            print(f"   ↩ Found local PDF: {filename}")
             return local_url
+
+        if not pdf_url:
+            return ""
 
         try:
             print(f"   ⬇ Downloading: {filename}")
@@ -66,43 +74,61 @@ class PDFDownloader:
             return ""
 
     def download_all(self, publications: list, delay: float = 0.5) -> list:
-        """Download PDFs for all publications that have a _pdf_url."""
+        """
+        Download PDFs for all publications. Sets pdfPath (persisted) and _local_pdf
+        (transient, used by the same-run AI summarizer/thumbnail extractor).
+        Sets pdfMissing=True on publications that need a maintainer to manually supply
+        a PDF — printed in a report at the end with the exact filename expected.
+        """
         print(f"\n{'='*70}")
         print(f"Downloading PDFs for {len(publications)} publications")
         print(f"Output: {self.output_dir.resolve()}")
         print(f"{'='*70}")
 
         downloaded = 0
-        skipped = 0
         failed = 0
+        no_url = 0
+        needs_manual = []
 
         for i, pub in enumerate(publications, 1):
-            pdf_url = pub.get("_pdf_url", "")
-            slug = pub.get("slug", f"paper-{i}")
+            pdf_url = pub.get("pdfUrl") or pub.get("_pdf_url", "")
+            slug = pub.get("id") or pub.get("_slug") or pub.get("slug", f"paper-{i}")
 
             print(f"\n[{i}/{len(publications)}] {pub.get('title', 'Unknown')[:60]}...")
-
-            if not pdf_url:
-                print(f"   ℹ No PDF URL available")
-                skipped += 1
-                continue
 
             local_path = self.download(pdf_url, slug)
 
             if local_path:
+                pub["pdfPath"] = local_path
                 pub["_local_pdf"] = local_path
+                pub["pdfMissing"] = False
                 downloaded += 1
             else:
-                failed += 1
+                pub["pdfMissing"] = True
+                reason = "no PDF URL found (closed access)" if not pdf_url else "download failed"
+                needs_manual.append((pub.get("title", "Unknown"), slug, self._safe_filename(slug), reason))
+                if not pdf_url:
+                    no_url += 1
+                else:
+                    failed += 1
 
             time.sleep(delay)
 
         print(f"\n{'='*70}")
         print(f"PDF Download Summary:")
-        print(f"  ✓ Downloaded: {downloaded}")
-        print(f"  ↩ Skipped (already exists): -")
-        print(f"  ✗ Failed: {failed}")
-        print(f"  ℹ No URL: {skipped}")
+        print(f"  ✓ Downloaded/found locally: {downloaded}")
+        print(f"  ✗ Download failed:          {failed}")
+        print(f"  ℹ No URL (closed access):   {no_url}")
         print(f"{'='*70}")
+
+        if needs_manual:
+            print(f"\n{'='*70}")
+            print(f"⚠ {len(needs_manual)} publication(s) need a MANUAL PDF upload:")
+            print(f"{'='*70}")
+            for title, slug, filename, reason in needs_manual:
+                print(f"  • {title[:65]}")
+                print(f"      slug: {slug}  |  reason: {reason}")
+                print(f"      → place file at: public/papers/{filename}")
+            print(f"{'='*70}")
 
         return publications

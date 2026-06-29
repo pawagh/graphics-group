@@ -489,7 +489,13 @@
     "featured": true,
     "imagePath": "/images/publications/kandel-2024-pdinsighter.png",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "press": [
+      {
+        "outlet": "UNC Discover",
+        "url": ""
+      }
+    ]
   },
   {
     "id": "tseng-2024-tendue",

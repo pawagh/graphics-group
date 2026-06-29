@@ -25,7 +25,9 @@ class ThumbnailExtractor:
         """
         filename = f"{slug[:80]}.jpg"
         output_path = self.output_dir / filename
-        local_url = f"/publication-photos/{filename}"
+        # Derived from output_dir (e.g. public/images/publications), not hardcoded,
+        # so the URL can't silently drift out of sync with where files are saved.
+        local_url = f"/{self.output_dir.parent.name}/{self.output_dir.name}/{filename}"
 
         if output_path.exists():
             print(f"   ↩ Thumbnail already exists: {filename}")
@@ -153,13 +155,13 @@ class ThumbnailExtractor:
             title = pub.get("title", "Unknown")[:60]
             print(f"\n[{i}/{len(publications)}] {title}...")
 
-            existing = pub.get("image", "")
+            existing = pub.get("imagePath", "")
             if existing and existing.strip():
                 print(f"   ↩ Already has image: {existing}")
                 skipped += 1
                 continue
 
-            local_pdf = pub.get("_local_pdf", "")
+            local_pdf = pub.get("pdfPath") or pub.get("_local_pdf", "")
             if not local_pdf:
                 print(f"   ℹ No local PDF, skipping")
                 no_pdf += 1
@@ -172,11 +174,11 @@ class ThumbnailExtractor:
                 no_pdf += 1
                 continue
 
-            slug = pub.get("slug", f"paper-{i}")
+            slug = pub.get("id") or pub.get("_slug") or pub.get("slug", f"paper-{i}")
             thumbnail_url = self.extract(pdf_path, slug)
 
             if thumbnail_url:
-                pub["image"] = thumbnail_url
+                pub["imagePath"] = thumbnail_url
                 done += 1
             else:
                 failed += 1
