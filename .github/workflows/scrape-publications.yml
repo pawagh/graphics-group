@@ -91,5 +91,13 @@ jobs:
           git config user.name "vcail-bot"
           git config user.email "actions@github.com"
           git add data/publications.json public/papers/ public/images/publications/
-          git diff --staged --quiet || git commit -m "auto: update publications $(date +%Y-%m-%d)"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "auto: update publications $(date +%Y-%m-%d)"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && break
+            echo "Push rejected (attempt $i/5), retrying after rebase..."
+            sleep 5
+          done
