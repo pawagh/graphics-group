@@ -246,6 +246,15 @@ def run_pipeline():
     publications = scraper.deduplicate(publications)
     publications = filter_publications(publications)
 
+    # Merge BEFORE downloading/extracting/summarizing, not after: matching against
+    # the existing dataset is what assigns each publication its real curated id
+    # (e.g. "ilie-2004-combining"). PDFDownloader/ThumbnailExtractor/AISummarizer all
+    # check "do we already have this?" using that id to build the expected filename —
+    # if they run on pre-merge entries (which only have an auto-generated title slug),
+    # that check looks at the wrong path, always misses, and re-attempts/re-flags
+    # papers that already have a PDF, corrupting pdfPath/pdfMissing on merge.
+    publications = merge_with_existing(publications, OUTPUT_FILE)
+
     if DOWNLOAD_PDFS:
         downloader = PDFDownloader(output_dir=PDF_DIR)
         publications = downloader.download_all(publications)
@@ -262,7 +271,6 @@ def run_pipeline():
         else:
             print("⚠ Skipping AI Summary: GEMINI_API_KEY not found in environment")
 
-    publications = merge_with_existing(publications, OUTPUT_FILE)
     save_publications(publications, OUTPUT_FILE)
     print(f"\nPIPELINE COMPLETE. Saved to {OUTPUT_FILE}.")
 
