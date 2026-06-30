@@ -4,9 +4,16 @@ Upload publication PDFs to Google Drive and store shareable URLs in publications
 Setup:
   1. Create a Google Cloud project, enable the Drive API.
   2. Create a Service Account, download the JSON key.
-  3. Share your target Drive folder with the service account email (Editor).
+  3. Create a Shared Drive (Drive > Shared drives > New) and add the service
+     account's email (the key file's "client_email" field) as a member with
+     at least Content Manager access. A regular "My Drive" folder will NOT
+     work here even if shared with the service account as Editor — service
+     accounts have no storage quota of their own, so creating a file fails
+     with "storageQuotaExceeded" regardless of folder permissions. It must
+     be a Shared Drive (or a folder inside one), whose storage belongs to
+     the organization rather than an individual.
   4. Set env vars: GOOGLE_APPLICATION_CREDENTIALS=/path/to/key.json
-                   GOOGLE_DRIVE_FOLDER_ID=your_folder_id
+                   GOOGLE_DRIVE_FOLDER_ID=the Shared Drive's (or subfolder's) id
 
 Usage:
   python drive_uploader.py
@@ -43,7 +50,9 @@ class DriveUploader:
     def _find_existing(self, filename: str) -> str | None:
         results = self.service.files().list(
             q=f"name='{filename}' and '{self.folder_id}' in parents and trashed=false",
-            fields="files(id)"
+            fields="files(id)",
+            supportsAllDrives=True,
+            includeItemsFromAllDrives=True,
         ).execute()
         files = results.get("files", [])
         return files[0]["id"] if files else None
@@ -62,13 +71,14 @@ class DriveUploader:
         file_meta = {"name": filename, "parents": [self.folder_id]}
 
         file = self.service.files().create(
-            body=file_meta, media_body=media, fields="id"
+            body=file_meta, media_body=media, fields="id", supportsAllDrives=True
         ).execute()
         file_id = file["id"]
 
         self.service.permissions().create(
             fileId=file_id,
-            body={"type": "anyone", "role": "reader"}
+            body={"type": "anyone", "role": "reader"},
+            supportsAllDrives=True,
         ).execute()
 
         print(f"   ✓ Uploaded: {filename}")
