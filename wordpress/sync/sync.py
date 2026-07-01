@@ -10,7 +10,6 @@ Research      → Page  /research/
 News          → Page  /news/
 Join Us       → Page  /join/
 About         → front Page (home)
-
 Usage:
   python sync.py                    # sync everything
   python sync.py --publications     # only publications
@@ -544,6 +543,56 @@ def _upsert_publication(pub: dict) -> None:
     else:
         _api("POST", "posts", json=post_data)
         print(f"   + Created: {slug}")
+
+
+def _pub_content(pub: dict, pdf_url: str) -> str:
+    """Build the HTML body for a publication post, matching the existing WP format."""
+    authors = pub.get("authors", [])
+    year    = str(pub.get("year", ""))
+    venue   = pub.get("venue", "")
+    doi     = pub.get("doi", "")
+
+    # Search-index line used by the theme for full-text search/filtering
+    non_year_tags = [t for t in pub.get("tags", []) if not (t.isdigit() and len(t) == 4)]
+    search_line = " | ".join(filter(None, [year, " | ".join(non_year_tags), " ".join(authors)]))
+
+    parts = []
+    parts.append(
+        '<div><span></span><span></span><span></span><span></span><span></span><span></span>'
+        f'<span class="search-index">{search_line}</span></div>'
+    )
+
+    meta_lines = [f"<strong>Authors:</strong> {', '.join(authors)}"]
+    if venue:
+        meta_lines.append(f"<strong>Venue:</strong> {venue}")
+    meta_lines.append(f"<strong>Year:</strong> {year}")
+    parts.append(
+        '<p style="background:#f5f5f5;padding:12px;border-radius:4px;line-height:1.8">'
+        + "<br>\n".join(meta_lines) + "</p>"
+    )
+
+    links = []
+    if doi:
+        doi_url = f"https://doi.org/{doi}" if not doi.startswith("http") else doi
+        links.append(f'<a href="{doi_url}" target="_blank" rel="noopener">DOI</a>')
+    if pdf_url:
+        links.append(f'<a href="{pdf_url}" target="_blank" rel="noopener">PDF</a>')
+    if links:
+        parts.append("<p>" + " &nbsp;·&nbsp; ".join(links) + "</p>")
+
+    abstract = pub.get("abstract", "")
+    if abstract:
+        parts.append(f"<h2>Abstract</h2>\n<p>{abstract}</p>")
+
+    contributions = pub.get("keyContributions", "")
+    if contributions:
+        parts.append(f"<h2>Key Contributions</h2>\n<ul><li>{contributions}</li></ul>")
+
+    bibtex = pub.get("bibtex", "")
+    if bibtex:
+        parts.append(f'<h2>BibTeX</h2>\n<pre style="background:#f5f5f5;padding:12px;font-size:.85em">{bibtex}</pre>')
+
+    return "\n\n".join(parts)
 
 
 def sync_publications():

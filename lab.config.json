@@ -27,11 +27,13 @@
       { "name": "Praneeth Chakravarthula", "id": "51151674", "startYear": 2014 },
       { "name": "Adrian Ilie", "id": "2044671", "startYear": 2002 },
       { "name": "Andrei State", "id": "144379239", "startYear": 1994 },
+      { "name": "Kurtis Keller", "id": "", "startYear": 1998 },
       { "name": "Jade Kandel", "id": "2215952216", "startYear": 2020 },
       { "name": "Ashley Neall", "id": "2296783777", "startYear": 2023 },
       { "name": "Qian Zhang", "id": "2308022912", "startYear": 2020 },
       { "name": "Pranav Wagh", "id": "2280805939", "startYear": 2023 },
-      { "name": "Jeremy Ackerman", "id": "49021561", "startYear": 1996, "endYear": 2005 }
+      { "name": "Jeremy Ackerman", "id": "49021561", "startYear": 1996, "endYear": 2005 },
+      { "name": "Jayden Lim", "id": "", "startYear": 2023 }
     ],
     "defaultStartYear": 2014
   },
