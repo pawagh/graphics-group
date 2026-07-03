@@ -2655,7 +2655,6 @@
     "year": 1987,
     "venue": "",
     "abstract": "",
-    "pdfPath": "",
     "pdfUrl": "",
     "doi": "",
     "semanticScholarId": "",
@@ -2667,7 +2666,8 @@
     "featured": false,
     "imagePath": "",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "pdfMissing": true
   },
   {
     "id": "state-1994-bunker",
@@ -5292,7 +5292,6 @@
     "year": 1985,
     "venue": "Principles of CMOS VLSI Design by N. Weste and K. Eshraghian, Addison-Wesley",
     "abstract": "Pixel-planes is a logic-enhanced memory system for raster graphics and imaging. Although each pixel-memory is enhanced with a one-bit ALU, the system's real power comes from a tree of one-bit adders that can evaluate linear expressions Ax+By+C for every pixel (x,y) simultaneously, as fast as the ALUs and the memory circuits can accept the results. We and others have begun to develop a variety of algorithms that exploit this fast linear expression evaluation capability. In this paper we report some of those results. Illustrated in this paper is a sample image from a small working prototype of the Pixel-planes hardware and a variety of images from simulations of a full-scale system. Timing estimates indicate that 30,000 smooth shaded triangles can be generated per second, or 21,000 smooth-shaded and shadowed triangles can be generated per second, or over 25,000 shaded spheres can be generated per second. Image-enhancement by adaptive histogram equalization can be performed within 4 seconds on a 512x512 image.",
-    "pdfPath": "",
     "pdfUrl": "",
     "doi": "10.1145/325165.325205",
     "semanticScholarId": "",
@@ -5304,7 +5303,8 @@
     "featured": false,
     "imagePath": "",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "pdfMissing": true
   },
   {
     "id": "poulton-1981-pixel-planes",
@@ -6733,7 +6733,6 @@
     "year": 1987,
     "venue": "International Journal of Radiation Oncology and Biomedical Physics, vol. 13, pp. 198",
     "abstract": "Higher-order correlation functions are firmly established as a fundamental tool for the statistical analysis of clustering in modern galaxy surveys. It was demonstrated that they greatly enrich the information content extracted by two-point statistics, allowing us to break the degeneracies between model parameters and constrain departures from Gaussianity. This paper presents the statistical estimators adopted to evaluate the galaxy three-point correlation function and its numerical implementation within the data analysis pipeline of the Euclid Science Ground Segment. Two different algorithms are adopted to count triplets: a direct and exact counting method capable of providing a robust three-point correlation function measurement for any triangular configuration, and a more efficient method based on spherical harmonic decomposition, designed to address the computational challenges of measuring the three-point statistics for data sets as large as those of the final Euclid survey. The spherical harmonic decomposition estimates the Legendre coefficients of the three-point correlation function up to a finite expansion order. Despite being an approximation, the three-point function measured with this approach satisfies the scientific requirements of the mission. We also introduce, implement, and validate the random split technique, which reduces the computational cost of counting triplets in the reference random sample by a factor of 10, without significantly compromising numerical accuracy. We evaluated the robustness, precision, and accuracy of the numerical estimates through an extensive campaign of validation tests, the results of which are presented. Finally, we quantify the computational requirements and their scaling with the expected size of Euclid data set, showing that a complete three-point analysis of the final Euclid survey is within computational reach.",
-    "pdfPath": "",
     "pdfUrl": "",
     "doi": "",
     "semanticScholarId": "1236107300bc9994df8a75650e410d59958d3edc",
@@ -6745,7 +6744,8 @@
     "featured": false,
     "imagePath": "",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "pdfMissing": true
   },
   {
     "id": "rosenman-1989-three-dimensional",
@@ -6874,7 +6874,6 @@
     "year": 1996,
     "venue": "Health Care in the Information Age, IOS Press",
     "abstract": "Over the last several years we have been building an augmented reality system that will allow physicians to see real time ultrasound data superimposed on a live view of their patients. We are also hopeful that the same technology can be used for a number of telemedical tasks, including training, emergency consulting and general clinical consultation. Our most recent ultrasound work has focused on breast biopsies and the aspiration of cysts in the breast. The system uses real-time video compositing to combine ultrasound volume rendering with a view of the patient, a view that is captured by two video cameras that are mounted on an HMD. This same light-weight head-mounted display presents the fused images to both eyes of the physician. Careful calibration of several tracking systems are necessary to provide an effective, stable fusion of the views. Recent trials by our physician collaborator on synthetic cysts in a mannequin indicate that we are close to having a system that will be useful to the working physician. Much of the technology that is used in this system will be directly applicable to remote telemedicine.",
-    "pdfPath": "",
     "pdfUrl": "http://books.google.com/books?id=8hshSwZX_AYC&pg=PR12&lpg=PR12&dq=toward+virtual+teleconferencing+for+telemedical+applications&source=bl&ots=nGWk0fPLq4&sig=lAHc06ppAh7w-DLB8HX36TN0bgE&hl=en&ei=4nVnTuWXJ-HY0QHem5zRCw&sa=X&oi=book_result&ct=result&resnum=3&sqi=2&ved=0CG8Q6AEwAg#v=onepage&q&f=true",
     "doi": "10.3233/978-1-60750-873-1-283",
     "semanticScholarId": "",
@@ -7002,7 +7001,6 @@
     "year": 1996,
     "venue": "Proceedings of the 4th International Conference on Visualization in Biomedical Computing (Hamburg, Germany",
     "abstract": "The ease of use and effectiveness of ultrasound image-guided surgical procedures might be improved by observing single or multiple echographic views properly positioned &amp;ldquo;within&amp;rdquo; the patient. Several computer hardware and visualization technologies have to be extended and combined in order to build a system in which such visualizations are available in real time, e.g., during the ultrasound imaging of the patient.",
-    "pdfPath": "",
     "pdfUrl": "http://www.cs.unc.edu/%7Eandrei/pubs/1996_VBC_usound_Mac.pdf",
     "doi": "10.3233/978-1-60750-873-1-60",
     "semanticScholarId": "",
@@ -7014,7 +7012,8 @@
     "featured": false,
     "imagePath": "",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "pdfMissing": true
   },
   {
     "id": "dunn-2018-varifocal",
@@ -7368,7 +7367,6 @@
     "year": 2022,
     "venue": "Elsevier Displays",
     "abstract": "",
-    "pdfPath": "",
     "pdfUrl": "https://www.sciencedirect.com/science/article/pii/S0141938222001512",
     "doi": "10.1007/jhep12(2023)125",
     "semanticScholarId": "",
@@ -7380,7 +7378,8 @@
     "featured": false,
     "imagePath": "/images/publications/georgiou-2022-visual.png",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "pdfMissing": true
   },
   {
     "id": "pizer-1989-volume",
