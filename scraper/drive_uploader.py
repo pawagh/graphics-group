@@ -62,18 +62,16 @@ class DriveUploader:
 
         filename = f"{pub_id}.pdf"
         existing_id = self._find_existing(filename)
-        media = MediaFileUpload(str(pdf_path), mimetype="application/pdf", resumable=True)
 
+        # Delete stale Drive file so the new upload gets a clean ID and content.
         if existing_id:
-            # Replace content of existing Drive file (handles stale/corrupt uploads).
-            self.service.files().update(
+            self.service.files().delete(
                 fileId=existing_id,
-                media_body=media,
                 supportsAllDrives=True,
             ).execute()
-            print(f"   ↺ Re-uploaded (replaced): {filename}")
-            return f"https://drive.google.com/file/d/{existing_id}/view"
+            print(f"   🗑 Deleted stale Drive file: {filename}")
 
+        media = MediaFileUpload(str(pdf_path), mimetype="application/pdf", resumable=True)
         file_meta = {"name": filename, "parents": [self.folder_id]}
         file = self.service.files().create(
             body=file_meta, media_body=media, fields="id", supportsAllDrives=True
