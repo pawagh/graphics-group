@@ -201,7 +201,7 @@
     "year": 2025,
     "venue": "WACV Workshops 2025",
     "abstract": "This chapter investigates the developing topic of neuromarketing and its possible impact on consumer purchasing decisions. Neuromarketing integrates neuroscience, psychology, and marketing to better understand consumer decision-making. This chapter explores neuromarketing techniques like FMRI, EEG, and Eye tracking and how they reveal subconscious elements that impact consumer behavior. This chapter raises ethical questions about neuromarketing, specifically the manipulation of customer behavior. It indicates that neuromarketing has the potential to transform how marketers understand and affect consumer behavior. Neuromarketing has the ability to transform how organizations understand and interact with customers. Keywords: Neuromarketing, FMRI, EEG, Eye Tracking, Marketing, Consumer Buying Behaviour",
-    "pdfPath": "",
+    "pdfPath": "/papers/jain-2025-flattrack.pdf",
     "pdfUrl": "https://www.scribd.com/document/951722590/Jain-FlatTrack-Eye-tracking-With-Ultra-thin-Lensless-Cameras-WACVW-2025-Paper",
     "doi": "10.4018/979-8-3693-8222-6.ch015",
     "semanticScholarId": "",
@@ -216,7 +216,7 @@
     "imagePath": "/images/publications/jain-2025-flattrack.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "qu-2025-holozip",
@@ -2189,7 +2189,7 @@
     "year": 2020,
     "venue": "PRESENCE: Teleoperators and Virtual Environment",
     "abstract": "AbstractWe present InstanceFusion, a robust real‐time system to detect, segment, and reconstruct instance‐level 3D objects of indoor scenes with a hand‐held RGBD camera. It combines the strengths of deep learning and traditional SLAM techniques to produce visually compelling 3D semantic models. The key success comes from our novel segmentation scheme and the efficient instance‐level data fusion, which are both implemented on GPU. Specifically, for each incoming RGBD frame, we take the advantages of the RGBD features, the 3D point cloud, and the reconstructed model to perform instance‐level segmentation. The corresponding RGBD data along with the instance ID are then fused to the surfel‐based models. In order to sufficiently store and update these data, we design and implement a new data structure using the OpenGL Shading Language. Experimental results show that our method advances the state‐of‐the‐art (SOTA) methods in instance segmentation and data fusion by a big margin. In addition, our instance segmentation improves the precision of 3D reconstruction, especially in the loop closure. InstanceFusion system runs 20.5Hz on a consumer‐level GPU, which supports a number of augmented reality (AR) applications (e.g., 3D model registration, virtual interaction, AR map) and robot applications (e.g., navigation, manipulation, grasping). To facilitate future research and reproduce our system more easily, the source code, data, and the trained model are released on Github: https://github.com/Fancomi2017/InstanceFusion.",
-    "pdfPath": "",
+    "pdfPath": "/papers/jun-2020-easy-to-use.pdf",
     "pdfUrl": "https://hanseuljun.com/papers/jun2020easy.pdf",
     "doi": "10.1111/cgf.14157",
     "semanticScholarId": "",
@@ -2202,7 +2202,7 @@
     "imagePath": "/images/publications/jun-2020-easy-to-use.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "jun-2022-evaluation",
@@ -2748,7 +2748,7 @@
     "year": 2023,
     "venue": "Biomedical Optics Express",
     "abstract": "A large portion of today's world population suffers from vision impairments and wears prescription eyeglasses. However, prescription glasses causes additional bulk and discomfort when used with Virtual Reality (VR) headsets, negatively impacting the viewer's visual experience. In this work, we remedy the usage of prescription eyeglasses with screens by shifting the optical complexity into the software. Our proposal is a prescription-aware rendering approach for providing sharper and more immersive imagery for screens, including VR headsets. To this end, we develop a differentiable display and visual perception model encapsulating the human visual system's display-specific parameters, color, visual acuity, and user-specific refractive errors. Using this differentiable visual perception model, we optimize the rendered imagery in the display using gradient-descent solvers. This way, we provide prescription glasses-free sharper images for a person with vision impairments. We evaluate our approach and show significant quality and contrast improvements for users with vision impairments.",
-    "pdfPath": "",
+    "pdfPath": "/papers/guzel-2023-chromacorrect.pdf",
     "pdfUrl": "https://opg.optica.org/boe/fulltext.cfm?uri=boe-14-5-2166&id=529310",
     "doi": "10.1364/opticaopen.21912831.v1",
     "semanticScholarId": "",
@@ -2761,7 +2761,7 @@
     "imagePath": "/images/publications/guzel-2023-chromacorrect.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1989-coarse-grain",
