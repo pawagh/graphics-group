@@ -1270,7 +1270,8 @@
     "featured": false,
     "award": "",
     "tldr": "This work proposes a novel learning-based method for the completion of partial shapes using a variational autoencoder with graph convolutional operations that learns a latent space for complete realistic shapes that best fits the generated shape to the known partial input.",
-    "driveUrl": "https://drive.google.com/file/d/1rhtjecNAJ23PhYQzcPThfMdbfabsEnBO/view"
+    "driveUrl": "https://drive.google.com/file/d/1rhtjecNAJ23PhYQzcPThfMdbfabsEnBO/view",
+    "imagePath": "/images/publications/dou-2015-scanning.jpg"
   },
   {
     "id": "fuchs-2014-immersive",
@@ -1296,7 +1297,8 @@
     "featured": false,
     "award": "",
     "tldr": "",
-    "driveUrl": "https://drive.google.com/file/d/19-O4HrRm2jgOUhZLMiGVMs62hjKS9Myj/view"
+    "driveUrl": "https://drive.google.com/file/d/19-O4HrRm2jgOUhZLMiGVMs62hjKS9Myj/view",
+    "imagePath": "/images/publications/fuchs-2014-immersive.jpg"
   },
   {
     "id": "maimone-2014-pinlight",
@@ -1352,7 +1354,8 @@
     "featured": false,
     "award": "",
     "tldr": "",
-    "driveUrl": "https://drive.google.com/file/d/1Mzpk7ge2AlTesg4vOP5xcOQoaRqGVTTY/view"
+    "driveUrl": "https://drive.google.com/file/d/1Mzpk7ge2AlTesg4vOP5xcOQoaRqGVTTY/view",
+    "imagePath": "/images/publications/maimone-2013-computational.jpg"
   },
   {
     "id": "maimone-2013-focus",
@@ -1382,7 +1385,8 @@
     "featured": false,
     "award": "",
     "tldr": "",
-    "driveUrl": "https://drive.google.com/file/d/1f0CXp-cElfeFPkIK27F0VuOnOj_7AQ3W/view"
+    "driveUrl": "https://drive.google.com/file/d/1f0CXp-cElfeFPkIK27F0VuOnOj_7AQ3W/view",
+    "imagePath": "/images/publications/maimone-2013-focus.jpg"
   },
   {
     "id": "maimone-2013-generalpurpose",
@@ -1413,7 +1417,8 @@
     "featured": false,
     "award": "Best Short Paper",
     "tldr": "",
-    "driveUrl": "https://drive.google.com/file/d/1NCYGGj1jQxcmIHt9NbD6xVlqdjrmnRFw/view"
+    "driveUrl": "https://drive.google.com/file/d/1NCYGGj1jQxcmIHt9NbD6xVlqdjrmnRFw/view",
+    "imagePath": "/images/publications/maimone-2013-generalpurpose.jpg"
   },
   {
     "id": "pizer-1989-display",
@@ -1439,7 +1444,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/pizer-1989-display.jpg",
     "award": "",
     "tldr": "Methods that lead to improved usefulness in many areas of medicine, including radiation oncology, surgery, multimodality image display, and diagnostic imaging from CT, MRI, SPECT, PET, and ultrasound are described.",
     "driveUrl": "https://drive.google.com/file/d/1mfUc4OfNFsugUhdNd1ekAsJkh06HjYWc/view"
@@ -1477,7 +1482,7 @@
       "Journal"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/welch-2009-medical.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/19imeH8VLJR6y-TXNgAcOP88sdQONtDUo/view"
@@ -1547,7 +1552,7 @@
       "Workshop"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/towles-2002-tele-collaboration.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1oua9iU8axYJtXsRtezniTCXiviaemZH6/view"
@@ -1586,7 +1591,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/welch-2004-telepresence.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1lgW6TwV9O_-ftTH264AkkhDVGYFiQxBO/view"
@@ -1610,7 +1615,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1990-ultrasound.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/138vOMK7QP5CugkvJQ2u7r3ocvuA_Xj_8/view"
@@ -1638,7 +1643,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/ward-1992-demonstrated.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1aNl4GPYazkeyPgztHakPrib-JT9GgzeV/view"
@@ -1666,7 +1671,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/johnson-2009-distributed.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1jovg7NfvusA9A1se0UeOUfZUHp1I-ezb/view"
@@ -1690,7 +1695,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-2011-first.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1gDYgAodFNi1ppvR_INzZfdetJXc_UYVH/view"
@@ -1718,7 +1723,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/brooks-2005-new.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/16p6T926k4qXIsX-6AiLVIOMM72ABDy2A/view"
@@ -1746,7 +1751,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/johnson-2007-personal.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1hUBrzwRnuRP4HDz9IM7tlZTUF2rmRlXs/view"
@@ -1772,7 +1777,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/ye-2010-practical.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/11JgQXynrZLmT1J9lch5WC5kYVi0ETTCI/view"
@@ -1802,7 +1807,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/johnson-2009-projector-based.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1R7D3r-hmmdHQI9WSHJEaoNdaWeMp8OLn/view"
@@ -1828,7 +1833,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/wang-1990-real-time.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1gp126hDvDuRfo9VaGjjEf1AxUwZbV40H/view"
@@ -1855,7 +1860,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/molnar-1994-sorting.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1Y1bm2jrymwxVP_P5OYgbpslZgBODez12/view"
@@ -1881,7 +1886,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1977-system.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1Nyhlr8YmZxLUUiL6XlfZVJ0Cdw0DSyJ6/view"
@@ -1909,7 +1914,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1979-three-dimensional.jpg",
     "award": "",
     "tldr": "",
     "pdfMissing": false,
@@ -1964,7 +1969,7 @@
       "Workshop"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-2007-unified.jpg",
     "award": "",
     "tldr": "The purpose of the study is to improve the reliability and efficiency of technical diagnostics of main pipelines by developing and validating algorithms for jointly processing data obtained from an integrated system consisting of a gas analyzer, a thermal imaging module, high-definition cameras, and an aerial vehicle.",
     "driveUrl": "https://drive.google.com/file/d/1ExK1RBKB-I_4PdxGpdSjAv7r9LfKMw1M/view"
@@ -1988,7 +1993,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1993-vision.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/15oq-gUXXZS1gE4qCVyYODZSo4w-vxl2Q/view"
@@ -2018,7 +2023,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/yoo-1991-achieving.jpg",
     "award": "",
     "tldr": "NLI4VolVis is an interactive system that enables users to explore, query, and edit volumetric scenes using natural language, and introduces a multi-agent large language model architecture equipped with extensive function-calling tools to interpret user intents and execute visualization tasks.",
     "driveUrl": "https://drive.google.com/file/d/13AEGZ3hcog9yOmB30bMqJWLehdJ1dlsY/view"
@@ -2045,7 +2050,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1978-acquisition.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1zkeRbeC5idwdZR0TflAroZo3NbXxgWXu/view"
@@ -2072,7 +2077,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/chen-2003-acquisition.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1hWYXDMquCgiAszHa5sAlH0r9JFHL3FG9/view"
@@ -2099,7 +2104,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/cotting-2005-adaptive.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1o2VKIhuSrDFziIVuOFsyYznjsRVaXHk4/view"
@@ -2127,7 +2132,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1982-adding.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1ei7FO5iV5oeYH8flxg2708qn_P-56ej1/view"
@@ -2181,7 +2186,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/schubert-2012-advances.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1-4uSTVKZ3TC4kSm7qRv6E7uqnzt-l9ZR/view"
@@ -2264,7 +2269,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/peck-2011-evaluation.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1g233y_NEf68i7jLKCq4jIHvi0oh7PxBO/view"
@@ -2316,7 +2321,7 @@
       "Journal"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/rathinavel-2018-extended.jpg",
     "award": "",
     "tldr": "",
     "pdfMissing": false,
@@ -2350,7 +2355,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/cutts-1998-immersive.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1sVEZYiNQZ6Kd_zXg3tzwnsJbrQGXjOAb/view"
@@ -2378,7 +2383,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/hirota-2001-implicit.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1BjuEBJBi_WTdtp429CWKQN2zvy-wLRBw/view"
@@ -2457,7 +2462,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/lincoln-2009-animatronic.jpg",
     "award": "",
     "tldr": "The overview of IS MAR2009 is introduced and some interesting researches presented in ISMAR2009 are presented.",
     "driveUrl": "https://drive.google.com/file/d/1e6PZra422aCOcXS46N2S6d_dRxBboZ81/view"
@@ -2487,7 +2492,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/md-1998-augmented.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1YljHuKFsxKkD0H6ezY0pPCxU4KEqSb0c/view"
@@ -2520,7 +2525,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/rosenthal-2001-augmented.jpg",
     "award": "",
     "tldr": "Augmented reality (AR) platforms, such as Microsoft HoloLens-based systems, overlay 3D patient-specific anatomy in real time, enabling clinicians to visualize biopsy needle trajectories without dividing attention between monitors and the procedural field, and showing promising accuracy gains.",
     "driveUrl": "https://drive.google.com/file/d/1QS4_VmSA-4M06l5pxvfH2lxiZ05x77JH/view"
@@ -2548,7 +2553,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/rosenthal-2002-augmented.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1HoCcCwXmFvroAfcmUQLyVOQgGy5Lrj8G/view"
@@ -2581,7 +2586,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1998-augmented.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/11ZMQxMwA3YpIqUblFTG_-ZTsfA9plmFE/view"
@@ -2605,7 +2610,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1998-beyond.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1qJQzAOgB_E8bpTRAy-Mb0RD95ISqPPHE/view"
@@ -2685,7 +2690,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/state-1994-bunker.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1frtvv-asL3emdMGBiCrpRbTNH4VY9KFK/view"
@@ -2714,7 +2719,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/nyland-2001-capturing.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1EGFjzao0SvbfQsQqYp-PnTciIDF-kO6L/view"
@@ -2745,7 +2750,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/state-1994-case.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1MWYQONpJ6nowTcV6TPRIwc7c-gMRioXd/view"
@@ -2829,7 +2834,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/ilie-2004-combining.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/19upBbCRfDkDLvRYuKCLVi0PoZtpGRcGU/view"
@@ -2855,7 +2860,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/kohli-2005-combining.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1U3VNxa1_bpYkD3MNcFBMdleqRVGPFz_i/view"
@@ -2881,7 +2886,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/rolland-1994-comparison.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1lquazh-W8S-ghqfn9jP2vQKkV5buYW0A/view"
@@ -2935,7 +2940,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/lincoln-2011-continual.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1Hf4l5R6DOAE4CUUV5uaMMyhPNyUC80AC/view"
@@ -2961,7 +2966,7 @@
       "Journal"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/interrante-1997-conveying.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1iCNdC3pzq8yfQZZuailNNWuUKQa06JSk/view"
@@ -2989,7 +2994,7 @@
       "Workshop"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/yang-2002-creating.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1yA8bF1oGFXA7T_i1W2QPautOEk6jSy8u/view"
@@ -3045,7 +3050,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1982-developing.jpg",
     "award": "",
     "tldr": "A system for designing floodlighting of objects using computer graphics based on the daytime photography of the object and not on its three-dimensional geometric model, with the advantage of the high photorealism of the simulation.",
     "driveUrl": "https://drive.google.com/file/d/1MKHZQS163W5RCmXQjHL2uXzEPtIIhTdA/view"
@@ -3106,7 +3111,7 @@
       "Journal"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/burke-2011-development.jpg",
     "award": "",
     "tldr": "A safe, reliable and consistent method to study radiofrequency ablation of spontaneous primary hepatocellular carcinoma using chronically woodchuck hepatitis virus-infected woodchucks, an animal model of Hepatits B virus-induced hepatocellular carcinoma is developed.",
     "driveUrl": "https://drive.google.com/file/d/14f1BqOARmzoULPzBhOqhzU_5ftn2Qzj7/view"
@@ -3157,7 +3162,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1977-distributing.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1OveqZwpAyyCb0bHInkEVQzdUPWb2JPX9/view"
@@ -3185,7 +3190,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/state-2001-dynamic.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1tpFxSCQMCC5uNCET0gE2OvOL2NzMkRD-/view"
@@ -3212,7 +3217,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/cotting-2004-embedding.jpg",
     "award": "",
     "tldr": "A method allowing the acquisition to take place under controlled illumination conditions, exploiting the micro-mirror modulation pattern used by Digital Light Processing (DLP) projectors, to efficiently improve signal-to-noise ratio is presented.",
     "driveUrl": "https://drive.google.com/file/d/12MoeOF8KYjLPCLATElItR-1_f4vGS30v/view"
@@ -3236,7 +3241,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-2011-encumbrance-free.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1-yVm6GZChk8VLgMTR8qH5BKyc1DTwpHF/view"
@@ -3263,7 +3268,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/maimone-2012-enhanced.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1o5zCMsMi67gKKnjqUtlFWOOg8ygh7E01/view"
@@ -3290,7 +3295,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/naweed-2014-enhancement.jpg",
     "award": "",
     "tldr": "This work uses PTZ cameras in an indoor setting to zoom in on relevant and interesting objects to get fine visual details, which enables them to augment and refine the room’s 3D surface as constructed from off-the-shelf depth cameras statically mounted around the room.",
     "driveUrl": "https://drive.google.com/file/d/1bfEKM2P98gOU_PoM3JK6GVexy2IKEy-g/view"
@@ -3347,7 +3352,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/interrante-1995-enhancing.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1mtSqG_FS-01tZh5esx7K2f-UKTbjI5Nc/view"
@@ -3373,7 +3378,7 @@
       "Journal"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/peck-2009-evaluation.jpg",
     "award": "",
     "tldr": "This consensus aimed to provide comprehensive guidance for the standardized application of LECS-SNNS, thereby advancing precise, minimally invasive, and function-preserving treatment for EGC.",
     "driveUrl": "https://drive.google.com/file/d/1Feg7YGnJBoxMo6zCo3ErxWOuv7iHVJdj/view"
@@ -3432,7 +3437,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/heinz-1984-examination.jpg",
     "award": "",
     "tldr": "The report focuses on the initial management of SVT in a primary care setting with constraints on equipment and referral facilities and it's important to note that changes in the ST segment in SVT do not always indicate myocardial infarction, and further examination is necessary to confirm the diagnosis.",
     "pdfMissing": false,
@@ -3463,7 +3468,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/sonnenwald-2006-experimental.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1lG6_1g7lxMz0AxVV6xC8xCWeYrHaTU1W/view"
@@ -3492,7 +3497,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/maurin-2006-exploring.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1NhMfAnN4T4q55l9mIHKRuCgzVlj_njWE/view"
@@ -3519,7 +3524,7 @@
       "Workshop"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/dou-2012-exploring.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1PcSwzUWMiRLPX6mOx58HuUpkkXsfdNRg/view"
@@ -3552,7 +3557,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/chung-1989-exploring.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1BLH5O-D0aObGb_TpLIidc9XK0bM6cm6K/view"
@@ -3581,7 +3586,7 @@
       "Journal"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/soderholm-2008-exploring-2.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1oIEQQQ9xL7QwUD5tGkksM4kQHDX6Jzdi/view"
@@ -3610,7 +3615,7 @@
       "Journal"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/soderholm-2008-exploring.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1c5qfOcybOedpBS0DxoUqAtf0kII_cuQl/view"
@@ -3642,7 +3647,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1985-fast.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/11XVXAqXLpEibjOSvf9Y4jm9ECt9dgapG/view"
@@ -3694,7 +3699,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/bishop-1994-frameless.jpg",
     "award": "",
     "tldr": "A novel way to utilize entropy to evaluate the efficiency of a rendering technique is introduced and various spatial coherence exploiting techniques in 3D path tracing and their application to AFR are presented, paving the way to future research in the field.",
     "driveUrl": "https://drive.google.com/file/d/1YALaaiDGhG5OnAby6cT7w-na_RUPoFTJ/view"
@@ -3725,7 +3730,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/welch-2006-gpu-based.jpg",
     "award": "",
     "tldr": "Conceptual sketches of some three-dimensional (3D) medical telepresence paradigms based on hospital-based 3D viewing and portable multi-camera unit are presented.",
     "driveUrl": "https://drive.google.com/file/d/1SVfNUsE1-9rs1_3NbYgLQdgO46-bFaPT/view"
@@ -3749,7 +3754,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1979-generating.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/13eSrF8ZV2sx-NbF4M6eGVrrb0upIXo-u/view"
@@ -3776,7 +3781,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/yang-1999-geometrically.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/138kYD3h5xXvOkO-RTQdmxDYgLMmVoH3h/view"
@@ -3857,7 +3862,7 @@
       "Workshop"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/lastra-1996-harnessing.jpg",
     "award": "",
     "tldr": "The Pixel-Planes project has been to advance the state of the art in interactive computer graphics and visualization since its inception in 1980 and has influenced many of the commercial machines currently on the market.",
     "driveUrl": "https://drive.google.com/file/d/1jxetpgaOY3nbOAkWF-1vMdXPK05z-BW0/view"
@@ -3935,7 +3940,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/mills-1989-imex.jpg",
     "award": "",
     "tldr": "This work has developed an highly interactive, flexible, and portable program for the 2D display of image slices and contours outlining anatomical objects, designed to run in a windowing environment (i.e., the X Window System).",
     "driveUrl": "https://drive.google.com/file/d/1cqwLKpTz_bYRAJhHKBgpO-BNrRabrsAX/view"
@@ -3990,7 +3995,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/bergman-1986-image.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/14Quoo6Ol5mu9q4H42uCmD84Mrvra_wNK/view"
@@ -4026,7 +4031,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/welch-2005-immersive.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1qETkzz7BdTbs6t09cZb8szuizTE-Zks3/view"
@@ -4058,7 +4063,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/dam-2002-immersive.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1v-KnmE-GHonFHNNxrFXWN9iDVkb9NryM/view"
@@ -4115,7 +4120,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/majumder-1999-immersive.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1PN9V2bcbntp_jGamCIPc2ItR4sIiqm3h/view"
@@ -4142,7 +4147,7 @@
       "Workshop"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/cotting-2005-imperceptible.jpg",
     "award": "",
     "tldr": "A method allowing the acquisition to take place under controlled illumination conditions, exploiting the micro-mirror modulation pattern used by Digital Light Processing (DLP) projectors, to efficiently improve signal-to-noise ratio is presented.",
     "driveUrl": "https://drive.google.com/file/d/1WaiGltlzbv8tW3N33ZRPGSseMQVx8wG-/view"
@@ -4199,7 +4204,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/peck-2010-improved.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1jIKEuw14iN_MaqP8QtglzxacPUvk3FJa/view"
@@ -4262,7 +4267,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/welch-2005-improving.jpg",
     "award": "",
     "tldr": "The basic goal is to enhance and expand medical diagnosis and treatment for lifecritical trauma scenarios by providing an advising health care provider and a distant medical advisee a “live” highfidelity sense of 3D presence with each other.",
     "driveUrl": "https://drive.google.com/file/d/10msiBa2YLQlbgWEYApAhLnncec5m73ta/view"
@@ -4286,7 +4291,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1990-incremental.jpg",
     "award": "",
     "tldr": "This study proposed a real-time volumetric free-hand ultrasound imaging system optimized for the above issues and applied it to the clinical diagnosis of scoliosis and might hold the potential to be clinically applied to other large-sized organs.",
     "driveUrl": "https://drive.google.com/file/d/1scjppAg8W_EC8q0DTQ1mI31h8_Sc3l5M/view"
@@ -4312,7 +4317,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/ohbuchi-1992-incremental.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1Yt4wVUIPmX-hV2xmBdbYtxPrOsQ4LUZ2/view"
@@ -4336,7 +4341,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1991-incremental.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1VgH5h8gL4V2TSEB2YUVFxJNuLI7dHLkx/view"
@@ -4370,7 +4375,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/pizer-1983-interactive.jpg",
     "award": "",
     "tldr": "The strengths and weaknesses of 3D display are discussed and areas of medical imaging where it seems that these strengths can be capitalized upon are indicated.",
     "driveUrl": "https://drive.google.com/file/d/1gjFUcrCzerDLSKw3b6vTFq0MpWpT5Bqk/view"
@@ -4400,7 +4405,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/yoo-1992-interactive.jpg",
     "award": "",
     "tldr": "This work designed and implemented the first system that permits an interactive, iteratively reﬁned classiﬁcation of multi-shell diffusion MRI and Diffusion Spectrum Imaging data, and demonstrates that this approach produces more accurate classiﬁcations compared to learning with raw data, established domain-speciﬁc features, or PCA dimensionality reduction.",
     "driveUrl": "https://drive.google.com/file/d/1oIbnAo-5X8IgujixXdc0dje-a5BxJu-u/view"
@@ -4427,7 +4432,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1989-interactive-3.jpg",
     "award": "",
     "tldr": "A comprehensive methodology focusing on streamlining the segmentation, reconstruction, and visualization of MRI data for surgical training is presented, found to augment the interpretability of the anatomical information from MRI scans.",
     "driveUrl": "https://drive.google.com/file/d/1H4bo6FkQSJIzFKw1QHvJDVlxt3DHGv8x/view"
@@ -4453,7 +4458,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1989-interactive-2.jpg",
     "award": "",
     "tldr": "This work introduces ClipGS-VR and restructure ClipGS's neural inference into a consolidated dataset, integrating high-fidelity layers from multiple pre-computed slicing states into a unified rendering structure, and supports arbitrary-angle slicing via gradient-based opacity modulation for smooth, visually coherent rendering.",
     "driveUrl": "https://drive.google.com/file/d/1R9NN9mMkQIYukvSAsAR863Hdt1SRN4zN/view"
@@ -4483,7 +4488,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/state-1995-interactive.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1Lch1tBqmXKT7haEn9erNnmKRJZPAhqla/view"
@@ -4511,7 +4516,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1988-interactive.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1y7WK-3bP7qCufHGF--Juon-zQXaGyA79/view"
@@ -4622,7 +4627,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/low-2001-life-sized.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1VdWZinYUE_u9SuhWIkvk8HuNiomGbVvO/view"
@@ -4680,7 +4685,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fleury-2014-merging.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1TdR52vblYZ784OnllqMCfkGmgRFDFGso/view"
@@ -4706,7 +4711,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/bajura-1992-merging.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1-xN6sAlJ409Piy6A8xQEs_VZMK6sdyy_/view"
@@ -4736,7 +4741,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/zheng-2014-minimizing.jpg",
     "award": "",
     "tldr": "This dissertation presents new methods, implementations, results (both visual and performance), and future steps for low latency displays, primarily in the context of Optical See-through Augmented Reality (OST-AR) Head-Mounted Displays, focusing on temporal consistency in registration, HDR color support, and spatial andporal consistency in brightness.",
     "driveUrl": "https://drive.google.com/file/d/1HHjScLr68I1O43dGJMrMNne_U1IjasqZ/view"
@@ -4795,7 +4800,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/raskar-1999-multi-projector.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1XzamJ8ZfjayXng-s2nk-flDSC7XoXYDb/view"
@@ -4824,7 +4829,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/lincoln-2009-multi-view.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/11tGcGfYnNN2f5E2sqSxyxySIL_L3NCkP/view"
@@ -4851,7 +4856,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/goldfeather-1989-near.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1lCFgaVSQrFEYXk3X6vh8S6WaPLSD6W8W/view"
@@ -4877,7 +4882,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1983-near.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1l9LwJuozHictbBSPClt4PTQShdGDa-h2/view"
@@ -4913,7 +4918,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/sadagic-2009-new.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1OYAK6vG0EETnU9OoQK2nxUR8DcboQTIH/view"
@@ -4963,7 +4968,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1980-visible.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1RvzMbcaw7L8dOqLwP_fG6KL1lvfA2tSI/view"
@@ -4989,7 +4994,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/rathinavel-2020-optical.jpg",
     "award": "",
     "tldr": "",
     "pdfMissing": false,
@@ -5014,7 +5019,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-2000-optical.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/11Xeg4w9QdNJ-X0eI0YcpdrKIVdi-wWjE/view"
@@ -5040,7 +5045,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1977-optimal.jpg",
     "award": "One of two papers at SIGGRAPH 1977 selected for publication in Communications of the ACM",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1LE-Gh890rQQ6R9noGIvp2t4P3wj4uSMs/view"
@@ -5098,7 +5103,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-2008-optimizing.jpg",
     "award": "",
     "tldr": "This first report shows a proof of principle of intraoperative patient tracking using a standalone holographic neuronavigation system with patient-to-image registration and patient tracking with a reference array using an augmented reality head-mounted display (AR-HMD).",
     "driveUrl": "https://drive.google.com/file/d/19OH2rWcryaa90LIqv1rVdvna7-Q8RdDx/view"
@@ -5122,7 +5127,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/poulton-1985-parallel.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1fKHgte9bGHOrgpLSvWHSfMQD7GIhWJuE/view"
@@ -5238,7 +5243,7 @@
       "Workshop"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/eyles-1987-pixel-planes.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1FjHBVWGLILDrSnQ2DzzaK-E99CwhDJND/view"
@@ -5271,7 +5276,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1989-pixel-planes.jpg",
     "award": "ACM SIGGRAPH 50 Years of Papers Honoree (2023)",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/11XfSr3loeWdjq1ok-2wxMwV0eUhErAwm/view"
@@ -5320,7 +5325,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/poulton-1981-pixel-planes.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1a40WaztEYsvBzgDSqCHRAIEpQu_Zykqs/view"
@@ -5381,7 +5386,7 @@
       "Workshop"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/raij-2003-pixelflex2.jpg",
     "award": "",
     "tldr": "PixelFlex2 retains the achievements of PixelFlex (high-performance through single-pass rendering, single-pixel accuracy for geometric blending with only casual placement of projectors), while adding a) higher performance and scalability with a Linux PC-cluster.",
     "driveUrl": "https://drive.google.com/file/d/1vnpepJ_3psEP87kXmiFvksjJ-dKqYIR8/view"
@@ -5435,7 +5440,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/welch-2000-projected.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1Psw4SCjmC_WKkkIwZHdVhr2z-xo1LS4I/view"
@@ -5516,7 +5521,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/quirk-2006-ransac-assisted.jpg",
     "award": "",
     "tldr": "From the extensive simulation results, it can significantly observe that the proposed method can present the digital reconstruction information of real geological structures through comparing with existing reconstruction modeling methods.",
     "driveUrl": "https://drive.google.com/file/d/1MJVWmCpnzYLKsd8TSbi0dyj1MC5L6ukk/view"
@@ -5540,7 +5545,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-2009-random.jpg",
     "award": "",
     "tldr": "Non‐activated ECs‐2 are quite resistant to the impacts of microgravity and even exhibited an elevation of the VE‐cadherin gene and protein expression, thus improving the integrity of the endothelial monolayer, among the mechanisms underlying cardiovascular dysregulation in real microgravity conditions.",
     "driveUrl": "https://drive.google.com/file/d/19ZULVQygQHP-Ui70T8Tykk4-_DBClmJ_/view"
@@ -5566,7 +5571,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/kum-2003-real-time.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1G2ULzFlqGFjwQ7lGcTLho2b3U7OtyffI/view"
@@ -5593,7 +5598,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/garrett-1996-real-time.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1-MEziWeu7kJG4xXErvjaXlqCcmNid2Tj/view"
@@ -5617,7 +5622,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-2007-real-time.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1WEcsDEhcAvhxjXsn03FrP2ioYJWsRLaK/view"
@@ -5698,7 +5703,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/ackerman-2001-real-time.jpg",
     "award": "",
     "tldr": "",
     "pdfMissing": false,
@@ -5737,7 +5742,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/kelshikar-2003-real-time.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1in9rQGVmUvM6BRbBMwz7iRsdkCOiC08l/view"
@@ -5789,7 +5794,7 @@
       "Award"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-2012-reducing.jpg",
     "award": "Best Short Paper, IEEE VR 2012",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1qNKaybTlN3Vjoa2S8A-r8uUPmsLgc3gw/view"
@@ -5816,7 +5821,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/yang-1999-registering.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1Dzit3fKLEK-4NPt3mXMeEr3naQwBhS-r/view"
@@ -5850,7 +5855,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/welch-2008-remote.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1iM-dxA6kUitEpOgBiMZ2_2VGxbSXsMgX/view"
@@ -5901,7 +5906,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/co-chairs-1992-research.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1GbboMrJLZYL-csYJn1VeBC9x4KxucqZp/view"
@@ -5930,7 +5935,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/dou-2012-room-sized.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1RC0IyPsuvHfsN3tGHUBNfhLejB4y3iVl/view"
@@ -6014,7 +6019,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/dou-2013-scanning.jpg",
     "award": "",
     "tldr": "S slamDunk permits highly responsive interactive operation in a variety of workspaces and scenarios, such as scanning small objects or densely reconstructing large-scale environments, and enables metric loop closure seamlessly and preserves local consistency by means of relative bundle adjustment principles.",
     "driveUrl": "https://drive.google.com/file/d/1vUSpBRRRILc74dZRcTDcWxPKzWHbdbEW/view"
@@ -6044,7 +6049,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/lincoln-2017-scene-adaptive.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1J5YJgy4JO2PdQDMocmuomfFSM1Bi3iz8/view"
@@ -6070,7 +6075,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/raskar-1998-seamless.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1YIcEl1-sKpWAgjObR1Yq-6gNNEHY1tQp/view"
@@ -6101,7 +6106,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/rivera-gutierrez-2012-shader.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/12_3SJTU08H7MhT3b0IpgbmI-ulb6wk3r/view"
@@ -6128,7 +6133,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/larsen-2006-simplified.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1EKXsHA4Ty-1UazkGAq0OWbabBW_Jyzb3/view"
@@ -6154,7 +6159,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/state-2005-simulation-based.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1zaFBcn5Mm56GxDSEtdvMTqjc1qc63viO/view"
@@ -6187,7 +6192,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/bloomenthal-1998-sketch-n-make.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1I5MqRhMwnhWEaP3oxvg78TsOuFrABtFD/view"
@@ -6223,7 +6228,7 @@
       "Journal"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/sadagic-2013-smart.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1jHy-z3EelJYcvr-nUqEER0pZLFegXpZy/view"
@@ -6302,7 +6307,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/state-2003-stereo.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1761647plz1xkRLOVkRfwdjS6biRsdnK8/view"
@@ -6328,7 +6333,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/ackerman-2002-surface.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1TQGzfCfNrAmWjbtgAHyHnAegGSTcFOHv/view"
@@ -6352,7 +6357,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1981-survey.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1aEW0E8th7qG6C9GqvzIZKvLriegljuqQ/view"
@@ -6463,7 +6468,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/larsen-2007-temporally.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1HlUiFyL3ja2NYoRz6PRFp1auyBDLmkg8/view"
@@ -6488,7 +6493,7 @@
       "Award"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-2014-temporally.jpg",
     "award": "Best Short Paper, IEEE VR 2014",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1triS0yL8IR6nLTNXoyIolftpKj13xHwM/view"
@@ -6568,7 +6573,7 @@
       "Dissertation"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1975-automatic.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1cONylxCnzrXYo5An6xyOYHuDzD3iuJ0Z/view"
@@ -6594,7 +6599,7 @@
       "Journal"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/peck-2012-design.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/16At7FODUXGOW6jW1LV9r6xMrbpoAI0Rl/view"
@@ -6628,7 +6633,7 @@
       "Workshop"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/nyland-1999-impact.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1tY1DRxTpGYJylYF5D8Bl0KSL6-q3CNUe/view"
@@ -6657,7 +6662,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/raskar-1998-office.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1bZXNB-I-cU0Z-wl99Q8mLrbC_oG2VyCV/view"
@@ -6686,7 +6691,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/soderholm-2007-potential.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1q2_runEQvoZkdl48KKfl51XSCzbXepBr/view"
@@ -6710,7 +6715,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1984-self-tracker.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/10uIW96AXvvENdbGw6_ONube4emkrBnPS/view"
@@ -6768,7 +6773,7 @@
       "Journal"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/rosenman-1989-three-dimensional.jpg",
     "award": "",
     "tldr": "This paper surveys some of the methods used at the University of North Carolina, and shows specific examples of how these displays can be used in radiation therapy treatment planning.",
     "driveUrl": "https://drive.google.com/file/d/1mcqni-93mSlANSiW276tOQyIzOIePqcM/view"
@@ -7124,7 +7129,7 @@
       "Journal"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/md-1993-vistanet.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1ZJYrGyCaK0VzwxEBO4lw5hgZnLJL-Zsr/view"
@@ -7151,7 +7156,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/state-1994-vistanet.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1P86oYBE9vuNfAI029eIoj2bFECtZeMAz/view"
@@ -7258,7 +7263,7 @@
       "Workshop"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/brooks-2006-virtual.jpg",
     "award": "",
     "tldr": "The finding that trust and information sharing play a central role in virtual teams can help organizations develop effective virtual work policies, design appropriate training programs, and select suitable collaboration platforms.",
     "driveUrl": "https://drive.google.com/file/d/1sHt-AIUZWb_vnQfMDUwcb1QVyQI1aW0w/view"
@@ -7319,7 +7324,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/fuchs-1994-virtual.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1_GtwMPJcdrNmRIgiX677FfdOV2nfCUsn/view"
@@ -7460,7 +7465,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/shahidi-2001-white.jpg",
     "award": "",
     "tldr": "",
     "driveUrl": "https://drive.google.com/file/d/1Nf98lZw48QiWvDNRw8Ji-1AqRNliI1rd/view"
@@ -7488,7 +7493,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/maimone-2014-wide.jpg",
     "award": "",
     "tldr": "",
     "pdfMissing": false,
