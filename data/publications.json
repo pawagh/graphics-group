@@ -650,7 +650,7 @@
     "year": 2023,
     "venue": "IEEE VR 2023",
     "abstract": "We envision a future in which telepresence is available to users any-time and anywhere, enabled by sensors and displays embedded in accessories worn daily, such as watches, jewelry, belt buckles, shoes, and eyeglasses. We present a collaborative approach to 3D reconstruction that combines a set of IMUs worn by a target person with an external view from another nearby person wearing an AR headset, used for estimating the target person's body pose and reconstructing their appearance, respectively.",
-    "pdfPath": "",
+    "pdfPath": "/papers/zhang-2023-reconstruction.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1yeIdI88bgQUoK7Gu_DQT-PWNd3iJyHx0/view",
     "doi": "",
     "semanticScholarId": "92bd6937e6fe3330145b20210ea834f927d33c86",
@@ -665,7 +665,7 @@
     "award": "",
     "imagePath": "/images/publications/zhang-2023-reconstruction.png",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "chakravarthula-2023-seeing",
@@ -905,7 +905,7 @@
     "year": 2021,
     "venue": "IEEE VR 2021",
     "abstract": "We envision a convenient telepresence system available to users anywhere, anytime. Such a system requires displays and sensors embedded in commonly worn items such as eyeglasses, wristwatches, and shoes. To that end, we present a standalone real-time system for the dynamic 3D capture of a person, relying only on cameras embedded into a head-worn device, and on Inertial Measurement Units (IMUs) worn on the wrists and ankles. Our prototype system egocentrically reconstructs the wearer's motion via learning-based pose estimation, which fuses inputs from visual and inertial sensors that complement each other, overcoming challenges such as inconsistent limb visibility in head-worn views, as well as pose ambiguity from sparse IMUs. The estimated pose is continuously re-targeted to a prescanned surface model, resulting in a high-fidelity 3D reconstruction. We demonstrate our system by reconstructing various human body movements and show that our visual-inertial learning-based method, which runs in real time, outperforms both visual-only and inertial-only approaches. We captured an egocentric visual-inertial 3D human pose dataset publicly available at https://sites.google.com/site/youngwooncha/egovip for training and evaluating similar methods.",
-    "pdfPath": "",
+    "pdfPath": "/papers/cha-2021-mobile.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1NuTNKeBjAbjP0rJjLHZTRGuxSS1PTzXb",
     "doi": "10.1109/VR50410.2021.00087",
     "semanticScholarId": "3ab0e3bb5df46b7d727ee63fdd0f0180e35d359d",
@@ -921,7 +921,7 @@
     "award": "Best Conference Paper (1 of 3)",
     "imagePath": "/images/publications/cha-2021-mobile.png",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "kwon-2021-human",
@@ -1028,7 +1028,7 @@
     "year": 2019,
     "venue": "IEEE TVCG 2019",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/aksit-2019-manufacturing.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1HPCF0FLmx9zoOPqFg85x0CX3INOi5IP_/view?usp=sharing",
     "doi": "",
     "semanticScholarId": "",
@@ -1043,7 +1043,7 @@
     "imagePath": "/images/publications/aksit-2019-manufacturing.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "chabra-2019-stereodrnet",
@@ -1058,7 +1058,7 @@
     "year": 2019,
     "venue": "CVPR 2019",
     "abstract": "We propose a system that uses a convolution neural network (CNN) to estimate depth from a stereo pair followed by volumetric fusion of the predicted depth maps to produce a 3D reconstruction of a scene. Our proposed depth refinement architecture, predicts view-consistent disparity and occlusion maps that helps the fusion system to produce geometrically consistent reconstructions. We utilize 3D dilated convolutions in our proposed cost filtering network that yields better filtering while almost halving the computational cost in comparison to state of the art cost filtering architectures. For feature extraction we use the Vortex Pooling architecture. The proposed method achieves state of the art results in KITTI 2012, KITTI 2015 and ETH 3D stereo benchmarks. Finally, we demonstrate that our system is able to produce high fidelity 3D scene reconstructions that outperforms the state of the art stereo system.",
-    "pdfPath": "",
+    "pdfPath": "/papers/chabra-2019-stereodrnet.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1KuUsCQBGtOF4kLAihsgGRWW_PKNlp8rr/view?usp=sharing",
     "doi": "10.1109/CVPR.2019.01206",
     "semanticScholarId": "f052c2569de6487482277b3b826feea06282346a",
@@ -1073,7 +1073,7 @@
     "award": "",
     "imagePath": "/images/publications/chabra-2019-stereodrnet.png",
     "tldr": "This work proposes a system that uses a convolution neural network to estimate depth from a stereo pair followed by volumetric fusion of the predicted depth maps to produce a 3D reconstruction of a scene and demonstrates that the system is able to produce high fidelity 3D scene reconstructions that outperforms the state of the art stereo system.",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "chakravarthula-2019-wirtinger",
@@ -1151,7 +1151,7 @@
     "year": 2018,
     "venue": "SIGGRAPH 2018 Emerging Technologies",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/rathinavel-2018-steerable.pdf",
     "pdfUrl": "https://drive.google.com/file/d/14Gugro0HuboIXTHfQE1UWQN_31Ird6YT/view?usp=sharing",
     "doi": "",
     "semanticScholarId": "",
@@ -1167,7 +1167,7 @@
     "imagePath": "/images/publications/rathinavel-2018-steerable.png",
     "award": "Best in Show",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "dunn-2017-wide",
@@ -1495,7 +1495,7 @@
     "year": 1986,
     "venue": "Computer Graphics '86 (National Computer Graphics Association annual conference)",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/pizer-1986-shaded.pdf",
     "pdfUrl": "https://drive.google.com/file/d/17fxlMWgbzO9DjeYDKDK9Wlchevv9zyJz/view?usp=sharing",
     "doi": "10.1117/12.968720",
     "semanticScholarId": "60378b51bcada8185cb0c25ad566ebe97b7246ba",
@@ -1508,7 +1508,7 @@
     "imagePath": "/images/publications/pizer-1986-shaded.png",
     "award": "",
     "tldr": "The 3D comprehension of anatomic and computed objects in medical images, presented using shaded display, can be increased by attention to light sources, surface textures, and transparency.",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "towles-2002-tele-collaboration",
@@ -1892,7 +1892,7 @@
     "year": 1979,
     "venue": "Traitement des Informations en Imagerie Medicale (Proceedings of the VIth International Conference on Information Processing in Medical Imaging), Paris, France (2-6 July",
     "abstract": "We describe a method for matching computed tomography (CT) and/or magnetic resonance (MR) medical image data with digital subtraction angiograms (DSA). The tomographic data set is processed and rendered to yield a volumetric image which is displayed stereoscopically from the same viewpoint at which the DSA images were acquired. The vessels are merged on top of the 3D rendered volumes and the composite images are viewed stereoscopically on a PC-based workstation. The workstation has facilities allowing the user to manipulate a. cursor or vector in stereo within a defined 3D coordinate system and to make accurate 3D measurements within the imaged volume. While surgical planning can be conducted from analysis of the separate tomographic images and individual bi-plane angiograms, such an approach is tedious since as many as 400 separate images from separate modalities may be acquired for a single patient. Furthermore, it is sometimes difficult to fully appreciate the anatomy of the surrounding structures from individual CT and MR slices of the 3D volume. All image processing and rendering is performed on a PIXAR Image Computer, a SIMD (single instruction, multiple data) channel array processor with a 48 - bit deep image buffer. PIXAR's Chap Volumes rendering library is employed in the rendering process. The stereoscopic workstation consists of a high performance color monitor which displays the left and right eye views of the data sequentially at 120 Hz via a liquid crystal polarizing shutter. The operator views the image via left and right eye circularly polarized glasses.",
-    "pdfPath": "",
+    "pdfPath": "/papers/fuchs-1979-three-dimensional.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1qXH9Uuw6j9ERwmKyIAnpTxFAO7dWYGxb/view?usp=sharing",
     "doi": "10.1117/12.953246",
     "semanticScholarId": "bb47e13d7f2ba5433e0f355d124ecd983cfbcd48",
@@ -1905,7 +1905,7 @@
     "imagePath": "",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "chaney-1985-three-dimensional",
@@ -2133,7 +2133,7 @@
     "year": 1990,
     "venue": "Chapter 18 in Computer Graphics: Principles and Practice, 2nd ed., eds. J. Foley, A. van Dam, S. Feiner, and J. Hughes, Addison-Wesley Publishers, Reading, MA",
     "abstract": "AbstractVor gerade erst zehn Jahren begannen Gerd Binnig und Heinrich Rohrer am IBM‐Forschungslabor in Zürich, eine neue, hochauflösende Methode zur spektroskopischen Untersuchung dünner Oxidfilme zu entwickeln. Das Ergebnis ihrer unkonventionellen Vorgehensweise war das Raster‐Tunnelmikroskop (RTM) [1]. Es sollte sehr bald die ursprünglichen Erwartungen hinsichtlich seines lateralen Auflösungsvermögens in topographischen und energieselektiven Abbildungstechniken und vor allem hinsichtlich der Breite seiner Anwendungsmöglichkeiten weit übertreffen. Heute, nach drei internationalen Konferenzen seit 1986 und weit über eintausend Publikationen zum Thema Tunnelmikroskopie (vgl. [2]) zeigt sich, daß die Methode nicht nur eine sehr nützliche Erweiterung des „Geräte‐Zoos”︁ der Oberflächenphysiker darstellt, sondern im Begriff ist, auch in Chemie und Biologie neue Einsichten in atomare und molekulare Mechanismen zu vermitteln. Im kreativen und kooperativen Klima, das in der Gemeinde der Tunnelmikroskopiker herrscht, entstand inzwischen eine Reihe interessanter technischer Erweiterungen, und in den drei letzten Jahren entwickelten sich aus dem RTM sogar neue eigenständige Mikroskopieverfahren, wie die Kraftmikroskopie, die Thermoskopie und die optische und akustische Nahfeldmikroskopie. Über einige jüngere Ergebnisse und Weiterentwicklungen der Tunnelmikroskopie wird in diesem Artikel berichtet.",
-    "pdfPath": "",
+    "pdfPath": "/papers/fuchs-1990-advanced.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1MxHn-NtHEZQzo86eyR1AzzEOhQQV5W0Z/view?usp=sharing",
     "doi": "10.1002/phbl.19890450402",
     "semanticScholarId": "",
@@ -2146,7 +2146,7 @@
     "imagePath": "/images/publications/fuchs-1990-advanced.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "schubert-2012-advances",
@@ -2268,7 +2268,7 @@
     "year": 1979,
     "venue": "Proceedings of the Sixth Annual (ACM-IEEE) Symposium on Computer Architecture, April",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/johnson-1979-expandable.pdf",
     "pdfUrl": "https://drive.google.com/file/d/17MZgacm-PrLSLazAkvSBLpBexnNcPNqF/view?usp=sharing",
     "doi": "",
     "semanticScholarId": "",
@@ -2281,7 +2281,7 @@
     "imagePath": "/images/publications/johnson-1979-expandable.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "rathinavel-2018-extended",
@@ -2295,7 +2295,7 @@
     "year": 2018,
     "venue": "IEEE TVCG",
     "abstract": "We introduce an optical design and a rendering pipeline for a full-color volumetric near-eye display which simultaneously presents imagery with near-accurate per-pixel focus across an extended volume ranging from 15cm (6.7 diopters) to 4M (0.25 diopters), allowing the viewer to accommodate freely across this entire depth range. This is achieved using a focus-tunable lens that continuously sweeps a sequence of 280 synchronized binary images from a high-speed, Digital Micromirror Device (DMD) projector and a high-speed, high dynamic range (HDR) light source that illuminates the DMD images with a distinct color and brightness at each binary frame. Our rendering pipeline converts 3-D scene information into a 2-D surface of color voxels, which are decomposed into 280 binary images in a voxel-oriented manner, such that 280 distinct depth positions for full-color voxels can be displayed.",
-    "pdfPath": "",
+    "pdfPath": "/papers/rathinavel-2018-extended.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1wzkP5jNBXk1CSzoy5wwwyCcALoamEZPj/view?usp=sharing",
     "doi": "10.1109/TVCG.2018.2868570",
     "semanticScholarId": "4698e56fd5a5e350b29cbf9255e09fae82e79a01",
@@ -2308,7 +2308,7 @@
     "imagePath": "",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "cutts-1998-immersive",
@@ -2380,7 +2380,7 @@
     "year": 1989,
     "venue": "Computer Graphics International '89 Conference, Leeds, UK",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/fuchs-1989-interactive.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1h-e9-EkB025pbqm1xDXxy7gpftum5rov/view?usp=sharing",
     "doi": "10.1007/978-4-431-68093-2_1",
     "semanticScholarId": "d02e81769d13eaa487dff6a0dd1d9674ef315bf4",
@@ -2393,7 +2393,7 @@
     "imagePath": "/images/publications/fuchs-1989-interactive.png",
     "award": "",
     "tldr": "Common to all visions was the computer interaction mechanism consisting of a 2D computer display that appeared like stylized version of the user’s desktop: papers strewn about, ones on top obscuring ones below; various objects of interest, such as trash cans and clocks, serving their obvious and useful functions.",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1987-introduction",
@@ -2404,7 +2404,7 @@
     "year": 1987,
     "venue": "Theoretical Foundations of Computer Graphics and CAD (Proceedings of the NATO International Advanced Study Institute, Il Ciocco, Italy, July",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/fuchs-1987-introduction.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1AKdh--OHAHy-vvsAVJaPWb5xx0v1aP3u/view?usp=sharing",
     "doi": "",
     "semanticScholarId": "",
@@ -2417,7 +2417,7 @@
     "imagePath": "/images/publications/fuchs-1987-introduction.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "lincoln-2009-animatronic",
@@ -2775,7 +2775,7 @@
     "year": 1989,
     "venue": "International Conference on Parallel Processing for Computer Vision and Display, University of Leeds, UK",
     "abstract": "This paper introduces the architecture and initial algorithms for Pixel-Planes 5, a heterogeneous multi-computer designed both for high-speed polygon and sphere rendering (1M Phong-shaded triangles/second) and for supporting algorithm and application research in interactive 3D graphics. Techniques are described for volume rendering at multiple frames per second, font generation directly from conic spline descriptions, and rapid calculation of radiosity form-factors. The hardware consists of up to 32 math-oriented processors, up to 16 rendering units, and a conventional 1280 &amp;times; 1024-pixel frame buffer, interconnected by a 5 gigabit ring network. Each rendering unit consists of a 128 &amp;times; 128-pixel array of processors-with-memory with parallel quadratic expression evaluation for every pixel. Implemented on 1.6 micron CMOS chips designed to run at 40MHz, this array has 208 bits/pixel on-chip and is connected to a video RAM memory system that provides 4,096 bits of off-chip memory. Rendering units can be independently reasigned to any part of the screen or to non-screen-oriented computation. As of April 1989, both hardware and software are still under construction, with initial system operation scheduled for fall 1989.",
-    "pdfPath": "",
+    "pdfPath": "/papers/fuchs-1989-coarse-grain.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1PKjU1r846aXHdLkTkUXSXr2g6DUPnSAR/view?usp=sharing",
     "doi": "10.1145/74334.74341",
     "semanticScholarId": "",
@@ -2788,7 +2788,7 @@
     "imagePath": "/images/publications/fuchs-1989-coarse-grain.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "ilie-2004-combining",
@@ -3046,7 +3046,7 @@
     "year": 2019,
     "venue": "The Laryngoscope, Jul",
     "abstract": "Augmented reality (AR) allows for the addition of transparent virtual images and video to one's view of a physical environment. Our objective was to develop a head‐worn, AR system for accurate, intraoperative localization of pathology and normal anatomic landmarks during open head and neck surgery.",
-    "pdfPath": "",
+    "pdfPath": "/papers/rose-2019-development.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1AYADX1i8zwxi2kjLKZ0--1wFbD3-CkV0/view?usp=sharing",
     "doi": "10.1002/lary.28098",
     "semanticScholarId": "a6d007b2fd85f1b3ce6bfd45c4fef4133e37ec5d",
@@ -3059,7 +3059,7 @@
     "imagePath": "/images/publications/rose-2019-development.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "burke-2011-development",
@@ -3293,7 +3293,7 @@
     "year": 2019,
     "venue": "",
     "abstract": "We report work in progress towards a system for laparoscopy training that is enhanced with an augmented reality display. The system can be used to perform peg-transfer training tasks using a Microsoft Hololens AR device, with full 6 degrees of freedom (DoF) shared presence with the pegboard workspace. This mode is in contrast to the conventional visualization, whose views are solely through a 2D or stereo laparoscope. In order to achieve this enhanced visualization, the system extracts the pose of the triangular prism being manipulated, and of the laparoscopic instruments with which the user manipulates the prism. These two objects are added to a CAD model of a (fixed) pegboard, and all the objects are visualized within the AR display. In the near future we expect to conduct user studies measuring accuracy and time-to-completion of this peg-transfer task using these new enhancements and compare it to conventional visualization techniques.",
-    "pdfPath": "",
+    "pdfPath": "/papers/jiang-2019-enhancing.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1aydbpJ5zkrO7CICHqbQ8EuAShpU5Q5DA/view?usp=sharing",
     "doi": "10.23919/SpringSim.2019.8732876",
     "semanticScholarId": "76a2009eb99d54e215cbfbecafc0cad56374fd2f",
@@ -3306,7 +3306,7 @@
     "imagePath": "/images/publications/jiang-2019-enhancing.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "interrante-1995-enhancing",
@@ -3404,7 +3404,7 @@
     "year": 1984,
     "venue": "American Roentgen Ray Society, July/August",
     "abstract": "Introduction: Supraventricular tachycardia (SVT) is a common cardiac emergency that can be life-threatening. Symptoms may include palpitations, chest pain, and difficulty breathing. Case: A 50-year-old male with sudden palpitations since one hour ago, accompanied by chest pain and breathing difficulty. A 12-lead ECG revealed an SVT rhythm with ST-segment depression in leads II, III, aVF, and V2-V6. After initial interventions, which included carotid massage, Valsalva maneuver, and oral bisoprolol, the rhythm converted to sinus rhythm within an hour. ST-segment depression may occur during SVT, which warrants evaluation for ischemic etiology. Conclusion: The report focuses on the initial management of SVT in a primary care setting with constraints on equipment and referral facilities. It's important to note that changes in the ST segment in SVT do not always indicate myocardial infarction, and further examination is necessary to confirm the diagnosis.",
-    "pdfPath": "",
+    "pdfPath": "/papers/heinz-1984-examination.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1Z7oNpfJCPoYjkrIp9FuOlw22AMQFe2zc/view?usp=sharing",
     "doi": "10.55175/cdk.v52i6.1327",
     "semanticScholarId": "b1e7b6763613723b241eba06a4cbd37244209920",
@@ -3417,7 +3417,7 @@
     "imagePath": "",
     "award": "",
     "tldr": "The report focuses on the initial management of SVT in a primary care setting with constraints on equipment and referral facilities and it's important to note that changes in the ST segment in SVT do not always indicate myocardial infarction, and further examination is necessary to confirm the diagnosis.",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "sonnenwald-2006-experimental",
@@ -3637,7 +3637,7 @@
     "year": 2016,
     "venue": "IEEE Virtual Reality",
     "abstract": "We provide a new rationale for the use of discretionary bonuses. In a setting with unknown match qualities between a worker and a firm and subjective evaluations by the principal, bonuses are useful in order to make the feedback from the firm to the workers credible. This way workers in good matches are less inclined to accept outside offers. (JEL D82, J33, M12, M52)",
-    "pdfPath": "",
+    "pdfPath": "/papers/fuchs-2016-faster.pdf",
     "pdfUrl": "https://drive.google.com/file/d/13ogWfId9hdWiHHqSQ3ox08jiSbomltXq/view?usp=sharing",
     "doi": "10.1257/mic.20130250",
     "semanticScholarId": "",
@@ -3650,7 +3650,7 @@
     "imagePath": "/images/publications/fuchs-2016-faster.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "bishop-1994-frameless",
@@ -3800,7 +3800,7 @@
     "year": 1985,
     "venue": "Fundamental Algorithms for Computer Graphics, ed. R.A. Earnshaw (Heidelberg: Springer-Verlag",
     "abstract": "Computer graphics is the field that deals with Computer graphics is a discipline focused on generating, modifying, and presenting visual content through computational means. It transforms data and mathematical \nrepresentations into images using specialized hardware and software, requiring a foundation in both mathematics and programming. \nThis field has broad applications across numerous sectors. In education and training, it facilitates learning through simulated models. Engineering and design rely on it for technical illustrations and computer-aided design (CAD). The entertainment industry uses it for animation, films, and video games. Within science and medicine, it enables the visualization of intricate information, such as meteorological maps and medical imagery from MRI or CT scans. For business and communication, it enhances presentations, marketing materials, and user interfaces with compelling visuals. \nThe primary output device is the video display, which converts electrical signals into visible imagery. Initially, the Cathode Ray Tube (CRT) was the standard technology. CRTs functioned by directing a stream of electrons onto a phosphor coated screen, causing it to illuminate. Key components included an electron gun, systems for focusing, accelerating, and deflecting the beam, and the phosphor screen. Two primary methods were used: raster scan and random scan. Raster scan illuminates the screen line by line, storing image data as pixels in a frame buffer, making it ideal for detailed scenes. Random scan directly draws specific lines and shapes, excelling at producing precise line drawings, such as those in \nearly computer-aided design. Color CRTs employed three electron guns for red, green, and blue, utilizing a shadow mask to ensure color purity. Contemporary displays utilize flat-panel technologies like LCD, LED, and OLED. LCDs are non-emissive; they do not generate light but use a backlight modulated by liquid crystal cells that block or transmit light. LED displays are an advanced variant of LCDs, offering superior color and energy efficiency. OLEDs are emissive, with each pixel producing its own light, resulting in exceptional contrast, true black levels, and rapid response times. \nThe evolution from CRT to modern raster-based digital displays represents a significant transition in how images are stored and rendered. Displays are categorized as either emissive (e.g., CRT, OLED), which generate their own light, or non-emissive (e.g., LCD), which control light from an external source. \nRegarding image quality, random scan produces very sharp line drawings but is less suited for realistic imagery. In contrast, raster scan supports more complex and realistic images, though its detail is constrained by screen resolution. Modern systems predominantly use raster technology. The RGB (Red, Green, Blue) color model serves as the foundation for all color displays, where combinations of these three primary colors create the full spectrum of hues seen on screen.",
-    "pdfPath": "",
+    "pdfPath": "/papers/fuchs-1985-hardware.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1v2ybDlzPs19sR6rAPGShINIUWkuNX31f/view?usp=sharing",
     "doi": "10.71097/ijsat.v16.i4.9219",
     "semanticScholarId": "0c3b7becc47cf35f84e4ccaea3ce2790511685e5",
@@ -3813,7 +3813,7 @@
     "imagePath": "/images/publications/fuchs-1985-hardware.png",
     "award": "",
     "tldr": "The evolution from CRT to modern raster-based digital displays represents a significant transition in how images are stored and rendered, and modern systems predominantly use raster technology.",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "lastra-1996-harnessing",
@@ -4141,7 +4141,7 @@
     "year": 2019,
     "venue": "IEEE TVCG",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/blate-2019-implementation.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1CuoDcexeETD0u5t43w6DRYdmaYNQssUB/view?usp=sharing",
     "doi": "",
     "semanticScholarId": "",
@@ -4154,7 +4154,7 @@
     "imagePath": "/images/publications/blate-2019-implementation.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "peck-2010-improved",
@@ -4562,7 +4562,7 @@
     "year": 2013,
     "venue": "",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/deng-2013-kinect.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1McB8xKTbZrqvo21SUpILXc8iCe3JkmNU/view?usp=sharing",
     "doi": "10.1016/j.engappai.2013.04.013",
     "semanticScholarId": "0fab3486f4e2252bad317e21624dde5225d48853",
@@ -4575,7 +4575,7 @@
     "imagePath": "/images/publications/deng-2013-kinect.png",
     "award": "",
     "tldr": "This work proposes the implementation of an evolutionary selection of sequences of image transformation to detect people through supervised classifiers based on the fusion of Kinect and a thermical sensor mounted on top of a mobile platform.",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "low-2001-life-sized",
@@ -4956,7 +4956,7 @@
     "year": 2020,
     "venue": "Emerging Digital Micromirror Device Based Systems and Applications XII, Photonics West",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/rathinavel-2020-optical.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1jIbqkxoZrmGhK5P-yiGopdhgdJAhgZK3/view?usp=sharing",
     "doi": "",
     "semanticScholarId": "",
@@ -4969,7 +4969,7 @@
     "imagePath": "",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "fuchs-2000-optical",
@@ -5318,7 +5318,7 @@
     "year": 1985,
     "venue": "Proceedings of the",
     "abstract": "Pixel-planes is a logic-enhanced memory system for raster graphics and imaging. Although each pixel-memory is enhanced with a one-bit ALU, the system's real power comes from a tree of one-bit adders that can evaluate linear expressions Ax+By+C for every pixel (x,y) simultaneously, as fast as the ALUs and the memory circuits can accept the results. We and others have begun to develop a variety of algorithms that exploit this fast linear expression evaluation capability. In this paper we report some of those results. Illustrated in this paper is a sample image from a small working prototype of the Pixel-planes hardware and a variety of images from simulations of a full-scale system. Timing estimates indicate that 30,000 smooth shaded triangles can be generated per second, or 21,000 smooth-shaded and shadowed triangles can be generated per second, or over 25,000 shaded spheres can be generated per second. Image-enhancement by adaptive histogram equalization can be performed within 4 seconds on a 512x512 image.",
-    "pdfPath": "",
+    "pdfPath": "/papers/poulton-1985-pixel-planes.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1wYJScRipb1y9O5EIH9C23j4YDthAQKZC/view?usp=sharing",
     "doi": "10.1145/325165.325205",
     "semanticScholarId": "",
@@ -5331,7 +5331,7 @@
     "imagePath": "/images/publications/poulton-1985-pixel-planes.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "raij-2003-pixelflex2",
@@ -5426,7 +5426,7 @@
     "year": 2009,
     "venue": "The PSI Handbook of Virtual Environments for Training and Education Vol. 2, D. Nicholson, D. Schmorrow, and J. Cohn (editors). Westport, Praeger Security International. pp. 63-89",
     "abstract": "To improve teaching and assessment for students with the most significant cognitive disabilities and to truly ensure that state accountability systems address the performance of these students, a better understanding of the instructional effects of accountability systems as perceived by school leaders (i.e., principals) is critically important. This study was designed to examine two exploratory research questions related to principals' perceptions of the alternate assessment based on alternate achievement standards (AA-AAS) in two states; specifically, (a) What were principals' overall perceptions of the influence of the AA-AAS on teachers' daily instruction; and (b) Were there meaningful differences in perceptions between principals from State 1 and State 2? Findings across the two states were similar and, overall, the principals' perceptions of the AA-AAS in their respective states were positive. Future research considerations and implications for practitioners are discussed.",
-    "pdfPath": "",
+    "pdfPath": "/papers/towles-2009-projector.pdf",
     "pdfUrl": "https://drive.google.com/file/d/13hb1QQgTYDvS5jgkQMLllhyR6jTbSrLd/view?usp=sharing",
     "doi": "10.2511/rpsd.33.3.122",
     "semanticScholarId": "",
@@ -5439,7 +5439,7 @@
     "imagePath": "/images/publications/towles-2009-projector.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1986-quadratic",
@@ -5450,7 +5450,7 @@
     "year": 1986,
     "venue": "IEEE Computer Graphics and Applications, vol. 6, pp. 48-59",
     "abstract": "This paper describes techniques for improving the performance of image rendering on personal workstations by using CPU cycles going idle while the user is examining a static image on the screen. In that spirit, we believe that a renderer's work is never done . Our goal is to convey the most information to the user as early as possible, with image quality constantly improving with time. We do this by first generating a crude image rapidly and then adaptively refining it where necessary as long as the user does not change viewing parameters. The renderer operates in a succession of phases, first displaying only vertices of polygons, next polygon edges, then flat shading polygons, then shadowing polygons, then Gouraud shading polygons, then Phong shading polygons, and finally anti-aliasing. Performance is enhanced by each phase using results from previous phases and trimming the amount of data needed by the next phase. In this way, only a fraction of the pixels in an image may be Phong shaded while the rest may be Gouraud or flat shaded. Similarly anti-aliasing is performed only on pixels around which there is significant color change. The system features fast response to user intervention, encourages user intervention at any moment, and makes useful the idle cycles in a personal computer.",
-    "pdfPath": "",
+    "pdfPath": "/papers/fuchs-1986-quadratic.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1L-dUlrPSyy5W76ktlqi3VqsFFjd-Sp8G/view?usp=sharing",
     "doi": "10.1145/15886.15889",
     "semanticScholarId": "",
@@ -5463,7 +5463,7 @@
     "imagePath": "/images/publications/fuchs-1986-quadratic.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "quirk-2006-ransac-assisted",
@@ -5604,7 +5604,7 @@
     "year": 2012,
     "venue": "3DTV Conference: The True Vision – Capture, Transmission and Display of 3D Video (3DTV-CON)",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/fuchs-2012-real-time.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1h-IMtqRWHdqIP_gDL_gbDAdxTRkd5IUp/view?usp=sharing",
     "doi": "",
     "semanticScholarId": "1e9f671cd3c680de39db2afef69991d8f8e038ba",
@@ -5617,7 +5617,7 @@
     "imagePath": "/images/publications/fuchs-2012-real-time.png",
     "award": "",
     "tldr": "A first look at a telepresence system offering room-sized, fully dynamic real-time 3D scene capture and continuous-viewpoint head-tracked display on a life-sized tiled display wall is provided.",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "song-2018-real-time",
@@ -5633,7 +5633,7 @@
     "year": 2018,
     "venue": "Proceedings of the 26th ACM International Conference on Multimedia, Oct. 28",
     "abstract": "We implemented an ASIC‐oriented, real‐time eye gaze tracking solution without calling ARM, DSP, calculation IP cores and external memories. Prototype validation on Xilinx kintex‐7 platform showed that the sampling rate of the system can be above 380Hz and the accuracy is ≦1.5 degree at 200MHz frequency.",
-    "pdfPath": "",
+    "pdfPath": "/papers/song-2018-real-time.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1dvUppGTcxh87QPF9ITkmyGpelYVDMBnN/view?usp=sharing",
     "doi": "10.1002/sdtp.12579",
     "semanticScholarId": "",
@@ -5646,7 +5646,7 @@
     "imagePath": "/images/publications/song-2018-real-time.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "ackerman-2001-real-time",
@@ -5659,7 +5659,7 @@
     "year": 2001,
     "venue": "Medicine Meets Virtual Reality",
     "abstract": "Progress in the application of augmented reality to laparoscopic surgery has been limited by the difficulty associated with generating geometric information about the current patient in real time. Structured light techniques are well known methods for generating range images using a camera and projector, but typically fail when faced, with biological specimens. We describe techniques and equipment that have shown promise for acquisition of range images for use in a real-time augmented reality system for laparoscopic surgery.",
-    "pdfPath": "",
+    "pdfPath": "/papers/ackerman-2001-real-time.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1pUujuQne_vyDOb7t45oV9pZQk62gGzqd/view?usp=sharing",
     "doi": "10.3233/978-1-60750-925-7-18",
     "semanticScholarId": "",
@@ -5672,7 +5672,7 @@
     "imagePath": "",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "kelshikar-2003-real-time",
@@ -5723,7 +5723,7 @@
     "year": 2017,
     "venue": "Proceedings of the 23rd ACM Symposium on Virtual Reality Software and Technology (VRST",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/avveduto-2017-real-world.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1I-4z39cThRVlu41YXSexpL2DGf-WM8sO/view?usp=sharing",
     "doi": "",
     "semanticScholarId": "",
@@ -5736,7 +5736,7 @@
     "imagePath": "/images/publications/avveduto-2017-real-world.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "fuchs-2012-reducing",
@@ -6232,7 +6232,7 @@
     "year": 1985,
     "venue": "Algorithmically-Specialized Parallel Computers, edited by L. Snyder, L. H. Jamieson, D. B. Gannon, and H. J. Siegel, Academic Press",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/abram-1985-specialized.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1h1OuwI4HUIDZRE-nt3NyuCsVIAjeGE0_/view?usp=sharing",
     "doi": "10.3929/ETHZ-A-000467442",
     "semanticScholarId": "ae9d3f28f3494a0e329ecb51abf05e77f62048fe",
@@ -6245,7 +6245,7 @@
     "imagePath": "/images/publications/abram-1985-specialized.png",
     "award": "",
     "tldr": "This thesis documents the hardware development of the workstation Ceres and analysis of processor-memory communication is motivated by the observed small benefit in performance gained by replacing the NS32016 CPU with the NS32032 CPU and thus doubling the memory bus bandwidth.",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "state-2003-stereo",
@@ -6393,7 +6393,7 @@
     "year": 1996,
     "venue": "SIGGRAPH",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/state-1996-technologies.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1UPOlCgl0YPGPPLU3V7wP2yWGKCf01IZV/view?usp=sharing",
     "doi": "10.1145/237170.237283",
     "semanticScholarId": "322525892b839524f58d4df4a7b29c4f9a3b74de",
@@ -6406,7 +6406,7 @@
     "imagePath": "/images/publications/state-1996-technologies.png",
     "award": "",
     "tldr": "A real-time stereoscopic video-see-through augmented reality system applied to the medical procedure known as ultrasound-guided needle biopsy of the breast successfully guided a needle into an artificial tumor within a training phantom of a human breast.",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "larsen-2007-temporally",
@@ -6469,7 +6469,7 @@
     "year": 1978,
     "venue": "Proceedings of",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/kedem-1978-intelligent.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1fAekM8fcAzMwTfVrb_g1XUhurM8q2hjZ/view?usp=sharing",
     "doi": "10.1145/800178.810125",
     "semanticScholarId": "17dfbbf4efaa42bc44d219ef24b914bf55708a16",
@@ -6482,7 +6482,7 @@
     "imagePath": "/images/publications/kedem-1978-intelligent.png",
     "award": "",
     "tldr": "The algorithm is based on partitioning the screen among the currently displayed points and minimally modifing this structure as points are added and deleted, and a divide-and-conquer method is used.",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "state-2020-a-desk",
@@ -6499,7 +6499,7 @@
     "year": 2020,
     "venue": "IEEE Computer Graphics and Applications, vol. 40, issue 1, pp. 56-71, January",
     "abstract": "& I T IS MADE from wood, projectors, and a computer running multiprojector blending software. Developed in 2008–2009 in response to an agency interest in future work environments for intelligence analysts, the immersive curved A-Desk supports a variety of tasks, such as traditional ofﬁce or development work, design, and even immersive telepresence (Figure 1)",
-    "pdfPath": "",
+    "pdfPath": "/papers/state-2020-a-desk.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1Xf_6UBR8Ix1-le5Gay2aKehV3JdQcW7c/view?usp=sharing",
     "doi": "10.18500/1817-7115-2021-21-2-208-211",
     "semanticScholarId": "d4c21476cad4ebad9b0ee12c115059f4c5fc3deb",
@@ -6512,7 +6512,7 @@
     "imagePath": "/images/publications/state-2020-a-desk.jpg",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1975-automatic",
@@ -6784,7 +6784,7 @@
     "year": 1991,
     "venue": "Laryngoscope, June",
     "abstract": "AbstractConventional computed tomographic display formats are not optimal for demonstrating three‐dimensional anatomic relationships. In otolaryngology—head and neck surgery these critical relationships are often highly complex, and their complete understanding is essential to a successful surgical outcome. A new computer‐generated image display format, high‐resolution volume rendering (HRVR), facilitates the understanding of these critical anatomic relationships by transforming conventional imaging data into clinically relevant 3‐D images. Unlike many other 3‐D reconstruction algorithms, HRVR suffers minimal data loss in the conversion process, which in turn provides for superior image resolution. This better allows the application of 3‐D technology to small or complicated anatomic structures such as those frequently encountered in otolaryngology—head and neck surgery. Advances in computer‐controlled manipulations that further enhance the evaluation of desired pathologic features have been achieved. This pilot study contains representative clinical cases chosen to illustrate the potential utility of HRVR in otolaryngology—head and neck surgery. The authors believe HRVR images will enhance the surgeon's understanding of the 3‐D anatomic relationships that exist between critical pathologic features and surrounding vital structures.",
-    "pdfPath": "",
+    "pdfPath": "/papers/davis-1991-three-dimensional.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1uYn73hZWRaD-r7gQs6h3WmIrP1R6ITHO/view?usp=sharing",
     "doi": "10.1288/00005537-199106000-00001",
     "semanticScholarId": "",
@@ -6797,7 +6797,7 @@
     "imagePath": "/images/publications/davis-1991-three-dimensional.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1987-three-dimensional",
@@ -6808,7 +6808,7 @@
     "year": 1987,
     "venue": "International Symposium on Computer Assisted Radiology, Berlin, Germany",
     "abstract": "The chick chorioallantoic membrane (CAM) is a common model for studying biological processes, but descriptions of the CAM circulatory system and especially experimental preparations of the CAM in shell-less eggs are both scant and controversial. We studied the CAM structure and the three-dimensional spatial configuration of the CAM vessels using five methods: in vivo stereoscopic observations, whole-mount preparations, histological sections, corrosion cast microinjection techniques and the reconstruction of a three-dimensional wax model. Our findings show that the CAM consists of a superficial two-dimensional layer composed of a network of a very dense capillary mesh, floating over and enclosing a deeper three-dimensional space in which medium and larger free-floating vessels are seen to supply and drain the superficial layer. It is interesting to note that no tips or sprouts of blood vessels were observed during the development of the CAM vessels. In a shell-less egg preparation, the capillaries were found in the mesoderm layer of the CAM and not in or superficial to the ectoderm as is the case in the CAM of the intact egg which adheres to the shell membrane.",
-    "pdfPath": "",
+    "pdfPath": "/papers/fuchs-1987-three-dimensional.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1wtiSRr86PAGuJOc4yZ5sw8HoRXHtKeLD/view?usp=sharing",
     "doi": "10.1159/000146528",
     "semanticScholarId": "",
@@ -6821,7 +6821,7 @@
     "imagePath": "/images/publications/fuchs-1987-three-dimensional.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1996-toward",
@@ -6860,7 +6860,7 @@
     "year": 2000,
     "venue": "IEEE Visualization",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/chen-2000-toward.pdf",
     "pdfUrl": "https://drive.google.com/file/d/12Y0pxch7gmfgjwisNzgyVo4U31zoLD12/view?usp=sharing",
     "doi": "10.1152/advances.1999.277.6.s67",
     "semanticScholarId": "",
@@ -6873,7 +6873,7 @@
     "imagePath": "/images/publications/chen-2000-toward.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "xia-2018-efficient",
@@ -6888,7 +6888,7 @@
     "year": 2018,
     "venue": "Proceedings of Computer Graphics International, CGI",
     "abstract": "Abstract Multi-camera vision systems are often needed to achieve large-scale and high-precision measurement because these systems have larger fields of view (FOV) than a single camera. Multiple cameras may have no or narrow overlapping FOVs in many applications, which pose a huge challenge to global calibration. This paper presents a global calibration method for multi-cameras without overlapping FOVs based on photogrammetry technology and a reconfigurable target. Firstly, two planar targets are fixed together and made into a long target according to the distance between the two cameras to be calibrated. The relative positions of the two planar targets can be obtained by photogrammetric methods and used as invariant constraints in global calibration. Then, the reprojection errors of target feature points in the two cameras’ coordinate systems are calculated at the same time and optimized by the Levenberg–Marquardt algorithm to find the optimal solution of the transformation matrix between the two cameras. Finally, all the camera coordinate systems are converted to the reference coordinate system in order to achieve global calibration. Experiments show that the proposed method has the advantages of high accuracy (the RMS error is 0.04 mm) and low cost and is especially suitable for on-site calibration.",
-    "pdfPath": "",
+    "pdfPath": "/papers/xia-2018-efficient.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1KXBzsAbbRxNKEaj6zEl6vf0FbeT8RR4g/view?usp=sharing",
     "doi": "10.1088/1361-6501/aab028",
     "semanticScholarId": "",
@@ -6901,7 +6901,7 @@
     "imagePath": "/images/publications/xia-2018-efficient.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "cha-2018-fully",
@@ -6926,7 +6926,7 @@
     "year": 2018,
     "venue": "IEEE TVCG",
     "abstract": "We propose a new approach for 3D reconstruction of dynamic indoor and outdoor scenes in everyday environments, leveraging only cameras worn by a user. This approach allows 3D reconstruction of experiences at any location and virtual tours from anywhere. The key innovation of the proposed ego-centric reconstruction system is to capture the wearer's body pose and facial expression from near-body views, e.g. cameras on the user's glasses, and to capture the surrounding environment using outward-facing views. The main challenge of the ego-centric reconstruction, however, is the poor coverage of the near-body views – that is, the user's body and face are observed from vantage points that are convenient for wear but inconvenient for capture. To overcome these challenges, we propose a parametric-model-based approach to user motion estimation. This approach utilizes convolutional neural networks (CNNs) for near-view body pose estimation, and we introduce a CNN-based approach for facial expression estimation that combines audio and video. For each time-point during capture, the intermediate model-based reconstructions from these systems are used to re-target a high-fidelity pre-scanned model of the user. We demonstrate that the proposed self-sufficient, head-worn capture system is capable of reconstructing the wearer's movements and their surrounding environment in both indoor and outdoor situations without any additional views. As a proof of concept, we show how the resulting 3D-plus-time reconstruction can be immersively experienced within a virtual reality system (e.g., the HTC Vive). We expect that the size of the proposed egocentric capture-and-reconstruction system will eventually be reduced to fit within future AR glasses, and will be widely useful for immersive 3D telepresence, virtual tours, and general use-anywhere 3D content creation.",
-    "pdfPath": "",
+    "pdfPath": "/papers/cha-2018-fully.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1YOLspN09OATGgZztkzVCrt_qt7GVBCnF/view?usp=sharing",
     "doi": "10.1109/TVCG.2018.2868527",
     "semanticScholarId": "1b1bf37c1799edc8f68ee38930b4940a26beca1b",
@@ -6939,7 +6939,7 @@
     "imagePath": "/images/publications/cha-2018-fully.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1996-performing",
@@ -7014,7 +7014,7 @@
     "year": 2019,
     "venue": "IEEE TVCG",
     "abstract": "We propose a hybrid computational near‐eye light field display based on micro‐lens arrays (MLAs) and structure parameters prioritization method (SPPM) which can render correct accommodation and expand the depth of field (DOF). The proposed display consists two MLAs and two micro‐displays. Two sets of depth‐sliced images are superimposed to reconstruct the object's light field. The system's ray resolution and the spectra difference between the proposed light field and the conventional one are discussed. The DOF of the proposed system is extended without the requiring of high refresh rate display. Furthermore, structure parameters prioritization method is proposed to extend the spatial frequency of the light field. A prototype is demonstrated and the experimental result shows that the depth field of the reconstructed images is significantly increased compared with conventional near‐eye light field display based on single MLA. Schematic of the configuration of the proposed system figure The result of experiment 1: VR mode figure The result of experiment 2: AR mode figure We proposed a novel hybrid near‐eye light field display based on MLA to improve the DoF of the reconstructed light field, which is capable of expanding the accommodation range for virtual and augmented reality. The new algorithm for optimizing the structure parameters of hybrid computational neareye light field display is proposed to lessen the ray resolution and the mismatching of the reconstructed light field. We evaluate the capability of extending DOF through optical experiment. It shows that the propose system can effectively expand the depth range in near‐eye displays.",
-    "pdfPath": "",
+    "pdfPath": "/papers/xia-2019-switchable.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1iEOJ5iAqc5xMksNrpau_bD8IXE18Nan3/view?usp=sharing",
     "doi": "10.1002/sdtp.13615",
     "semanticScholarId": "",
@@ -7027,7 +7027,7 @@
     "imagePath": "/images/publications/xia-2019-switchable.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "wang-1990-tracking",
@@ -7124,7 +7124,7 @@
     "year": 1984,
     "venue": "Proceedings of the NATO Advanced Study Institute on Microarchitecture of VLSI Computers (Sogesta-Urbino, Italy, July 9-20",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/fuchs-1984-vlsi.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1pUWi6TzKVKvCcXACFhRvwKgqy8RN5U6s/view?usp=sharing",
     "doi": "",
     "semanticScholarId": "959a61ad99ece0604babcbccb21617f4df43fa57",
@@ -7137,7 +7137,7 @@
     "imagePath": "/images/publications/fuchs-1984-vlsi.png",
     "award": "",
     "tldr": "This study proposes to look at special purpose VLSI architectures for realtime display generation by developing a methodology for taking a selected computer graphics algorithm and producing a silicon system that performs that algorithm.",
-    "pdfMissing": true
+    "pdfMissing": false
   },
   {
     "id": "pizer-1982-varifocal",
@@ -7436,7 +7436,7 @@
     "year": 2014,
     "venue": "SID Display Week",
     "abstract": "AbstractIn this paper, we discuss an intuitive extension to compressive multilayer light field displays that greatly extends their field of view and depth of field. Rather than optimizing these displays to create a moderately narrow field of view at the center of the display, we constrain optimization to create narrow view cones that are directed to a few viewers' eyes, allowing the available display bandwidth to be utilized more efficiently. These narrow view cones follow the viewers, creating a wide apparent field of view. Imagery is also recalculated for the viewers' exact eye positions, creating a greater depth of field. The view cones can be scaled to match the positional error and latency of the tracking system. Using more efficient optimization and commodity tracking hardware and software, we demonstrate a real‐time, glasses‐free 3D display that offers a 100° × 40° field of view.",
-    "pdfPath": "",
+    "pdfPath": "/papers/maimone-2014-wide.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1zk2Bl4SjHz1IF3SX0X2S7bMRVxCeqGo7/view?usp=sharing",
     "doi": "10.1002/jsid.285",
     "semanticScholarId": "",
@@ -7449,6 +7449,6 @@
     "imagePath": "",
     "award": "",
     "tldr": "",
-    "pdfMissing": true
+    "pdfMissing": false
   }
 ]
