@@ -122,7 +122,8 @@
     "featured": false,
     "award": "",
     "imagePath": "/images/publications/xia-2025-dynamic.png",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/1JwqWe63BWnlc62CHTAXd3G_fCXx0dW0O/view"
   },
   {
     "id": "paruchuri-2025-egotrigger",
@@ -216,7 +217,8 @@
     "imagePath": "/images/publications/jain-2025-flattrack.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1cD7budDTkv9oLDonrm1_iI8KndzoKitD/view"
   },
   {
     "id": "qu-2025-holozip",
@@ -249,7 +251,8 @@
     "featured": false,
     "imagePath": "/images/publications/qu-2025-holozip.png",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/1424AUdV2-bxMQ8AKIrA1sZWeRovm5-zM/view"
   },
   {
     "id": "kandel-2025-investigating",
@@ -313,7 +316,8 @@
     "featured": false,
     "imagePath": "/images/publications/wang-2025-view.jpg",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/1AR8kt0ikOmy7Ytv0nKMlYJJI2U2rahzY/view"
   },
   {
     "id": "tong-2025-multimodal",
@@ -348,7 +352,8 @@
     "featured": false,
     "imagePath": "/images/publications/tong-2025-multimodal.png",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/17Va7OEYDoebmiEr_DZM2aGduiRJbKR59/view"
   },
   {
     "id": "qi-2025-my3dgen",
@@ -433,7 +438,8 @@
     "featured": false,
     "imagePath": "/images/publications/chakravarthula-2025-present.png",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/1xwTcRNXxCCCJvgypro3ioYw0ASFl1rGG/view"
   },
   {
     "id": "xia-2025-expanded",
@@ -463,7 +469,8 @@
     "featured": false,
     "imagePath": "/images/publications/xia-2025-expanded.png",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/1CVQNZfXl8PCFQU6kC718BTGsWIozYG_k/view"
   },
   {
     "id": "tseng-2024-tendue",
@@ -539,7 +546,8 @@
         "outlet": "UNC Discover",
         "url": ""
       }
-    ]
+    ],
+    "driveUrl": "https://drive.google.com/file/d/1DrvYKIy8ztHb0GaRkZg9dY2wPIfRnm1T/view"
   },
   {
     "id": "wang-2023-bringing",
@@ -665,7 +673,8 @@
     "award": "",
     "imagePath": "/images/publications/zhang-2023-reconstruction.png",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1LHQGFjVe81DXIqpYpan3JLEQm9to4w_A/view"
   },
   {
     "id": "chakravarthula-2023-seeing",
@@ -921,7 +930,8 @@
     "award": "Best Conference Paper (1 of 3)",
     "imagePath": "/images/publications/cha-2021-mobile.png",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1era0saw6YyF_dBfll08Wv1Z4mlizgwnS/view"
   },
   {
     "id": "kwon-2021-human",
@@ -980,7 +990,8 @@
     "featured": false,
     "imagePath": "/images/publications/chakravarthula-2020-learned.png",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/1bShnMd7aRJULV-_kqETfdYo3dmPt8Uxs/view"
   },
   {
     "id": "xia-2020-eyeglassesstyle",
@@ -1043,7 +1054,8 @@
     "imagePath": "/images/publications/aksit-2019-manufacturing.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1T_b5qfGBy72suPi7c1tSvr-Jj5daycfG/view"
   },
   {
     "id": "chabra-2019-stereodrnet",
@@ -1073,7 +1085,8 @@
     "award": "",
     "imagePath": "/images/publications/chabra-2019-stereodrnet.png",
     "tldr": "This work proposes a system that uses a convolution neural network to estimate depth from a stereo pair followed by volumetric fusion of the predicted depth maps to produce a 3D reconstruction of a scene and demonstrates that the system is able to produce high fidelity 3D scene reconstructions that outperforms the state of the art stereo system.",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1HVoE88wRY7TT4ezrTJAYASiSbO6-AWTI/view"
   },
   {
     "id": "chakravarthula-2019-wirtinger",
@@ -1167,7 +1180,8 @@
     "imagePath": "/images/publications/rathinavel-2018-steerable.png",
     "award": "Best in Show",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1fusxLF6ttN305LZhYPyG6DEI3nX9upE3/view"
   },
   {
     "id": "dunn-2017-wide",
@@ -1322,7 +1336,8 @@
     "featured": true,
     "imagePath": "/images/publications/maimone-2014-pinlight.jpg",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/1tTAus3GjeU19ZLGqDvlZrGrgKG71QdKR/view"
   },
   {
     "id": "maimone-2013-computational",
@@ -1513,7 +1528,8 @@
     "imagePath": "/images/publications/pizer-1986-shaded.png",
     "award": "",
     "tldr": "The 3D comprehension of anatomic and computed objects in medical images, presented using shaded display, can be increased by attention to light sources, surface textures, and transparency.",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1lgFkuU4qMJ7QmeMsSVZMdR2GFFZzLHvc/view"
   },
   {
     "id": "towles-2002-tele-collaboration",
@@ -1910,7 +1926,8 @@
     "imagePath": "/images/publications/fuchs-1979-three-dimensional.jpg",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1Nmck_nQR7knGyAKPeX7f-etBPWTrFDD7/view"
   },
   {
     "id": "chaney-1985-three-dimensional",
@@ -2151,7 +2168,8 @@
     "imagePath": "/images/publications/fuchs-1990-advanced.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/170JLdeLQlPIvYLwApPiTix7bLKxwmfVZ/view"
   },
   {
     "id": "schubert-2012-advances",
@@ -2207,7 +2225,8 @@
     "imagePath": "/images/publications/jun-2020-easy-to-use.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1JWSxrsR6Rz--w_Paw35c2zBfZ-r_Ja_Y/view"
   },
   {
     "id": "jun-2022-evaluation",
@@ -2286,7 +2305,8 @@
     "imagePath": "/images/publications/johnson-1979-expandable.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1d_t9X1I-5x6CoU6eu1UsxIP_WUaITUti/view"
   },
   {
     "id": "rathinavel-2018-extended",
@@ -2313,7 +2333,8 @@
     "imagePath": "/images/publications/rathinavel-2018-extended.jpg",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1dJeGUcxkLszcABJMSzYD2TrUB3OmDN33/view"
   },
   {
     "id": "cutts-1998-immersive",
@@ -2398,7 +2419,8 @@
     "imagePath": "/images/publications/fuchs-1989-interactive.png",
     "award": "",
     "tldr": "Common to all visions was the computer interaction mechanism consisting of a 2D computer display that appeared like stylized version of the user’s desktop: papers strewn about, ones on top obscuring ones below; various objects of interest, such as trash cans and clocks, serving their obvious and useful functions.",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1hz5wyMJSMleKzSlo1bBtmTivvMN_GZl2/view"
   },
   {
     "id": "fuchs-1987-introduction",
@@ -2422,7 +2444,8 @@
     "imagePath": "/images/publications/fuchs-1987-introduction.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/16lqRVA-sNMnznUVknLlXij_0KQSNNnvf/view"
   },
   {
     "id": "lincoln-2009-animatronic",
@@ -2766,7 +2789,8 @@
     "imagePath": "/images/publications/guzel-2023-chromacorrect.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1fYX5s521YIBIiRN8nNfQZVLx4wnmW2MT/view"
   },
   {
     "id": "fuchs-1989-coarse-grain",
@@ -2793,7 +2817,8 @@
     "imagePath": "/images/publications/fuchs-1989-coarse-grain.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1RIapUWbWvJGJXlupOmARo7oW6_WAB85O/view"
   },
   {
     "id": "ilie-2004-combining",
@@ -2901,7 +2926,8 @@
     "featured": false,
     "imagePath": "/images/publications/chakravarthula-2020-computing.jpg",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/1I2MAIiN-9zlbYL1FLNNtLrTPny6jIg19/view"
   },
   {
     "id": "lincoln-2011-continual",
@@ -3064,7 +3090,8 @@
     "imagePath": "/images/publications/rose-2019-development.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1wkGfhkWj_cmxW4dJM76vk2yg8xs-PRMe/view"
   },
   {
     "id": "burke-2011-development",
@@ -3311,7 +3338,8 @@
     "imagePath": "/images/publications/jiang-2019-enhancing.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1QFrYFT0MRMHQKAvj3QeagjyNZhDYG750/view"
   },
   {
     "id": "interrante-1995-enhancing",
@@ -3422,7 +3450,8 @@
     "imagePath": "/images/publications/heinz-1984-examination.jpg",
     "award": "",
     "tldr": "The report focuses on the initial management of SVT in a primary care setting with constraints on equipment and referral facilities and it's important to note that changes in the ST segment in SVT do not always indicate myocardial infarction, and further examination is necessary to confirm the diagnosis.",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1t6uOylvsUMwBL8Eg2AMy4Co1owI3CyCM/view"
   },
   {
     "id": "sonnenwald-2006-experimental",
@@ -3655,7 +3684,8 @@
     "imagePath": "/images/publications/fuchs-2016-faster.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1Zv8q_DGZB7B2TtJns3SxM-iMDwAjY8yF/view"
   },
   {
     "id": "bishop-1994-frameless",
@@ -3818,7 +3848,8 @@
     "imagePath": "/images/publications/fuchs-1985-hardware.png",
     "award": "",
     "tldr": "The evolution from CRT to modern raster-based digital displays represents a significant transition in how images are stored and rendered, and modern systems predominantly use raster technology.",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1YPysqzEzabyQ_giDDW_nVYAYsou2gr2h/view"
   },
   {
     "id": "lastra-1996-harnessing",
@@ -3869,7 +3900,8 @@
     "featured": false,
     "imagePath": "/images/publications/keller-2008-head.png",
     "award": "",
-    "tldr": "It is supported that XRHMD is a feasible, engaging, and educationally valuable modality, with greatest impact within blended, mastery-oriented health care education curricula where opportunities for repeated, standardized practice and three-dimensional visualization are critical for enhancing skill acquisition and spatial understanding."
+    "tldr": "It is supported that XRHMD is a feasible, engaging, and educationally valuable modality, with greatest impact within blended, mastery-oriented health care education curricula where opportunities for repeated, standardized practice and three-dimensional visualization are critical for enhancing skill acquisition and spatial understanding.",
+    "driveUrl": "https://drive.google.com/file/d/14m2WZSDobdihAJ3Z0nm2dJ8Paom1AWaP/view"
   },
   {
     "id": "mills-1984-high-speed",
@@ -3950,7 +3982,8 @@
     "featured": false,
     "imagePath": "/images/publications/sonnenwald-2014-illuminating.png",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/18pCA-L3E3PcBG3Ipxgdarhx2mnEaraEl/view"
   },
   {
     "id": "bergman-1986-image",
@@ -4159,7 +4192,8 @@
     "imagePath": "/images/publications/blate-2019-implementation.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/16fJthzbCjJllCsBvnlxm22quSml6o-bY/view"
   },
   {
     "id": "peck-2010-improved",
@@ -4580,7 +4614,8 @@
     "imagePath": "/images/publications/deng-2013-kinect.png",
     "award": "",
     "tldr": "This work proposes the implementation of an evolutionary selection of sequences of image transformation to detect people through supervised classifiers based on the fusion of Kinect and a thermical sensor mounted on top of a mobile platform.",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1zMFHMWIf9SvU6HtFT5miaXSHdZkB_bKF/view"
   },
   {
     "id": "low-2001-life-sized",
@@ -4638,7 +4673,8 @@
     "featured": false,
     "imagePath": "/images/publications/dunn-2017-membrane.png",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/19ZuKMgXNtEUF9R4pZuiCFCWxD_B9hTNE/view"
   },
   {
     "id": "fleury-2014-merging",
@@ -4974,7 +5010,8 @@
     "imagePath": "/images/publications/rathinavel-2020-optical.jpg",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/167gBRk5OFRkxMrxRuC_ZU06r_8R8lJih/view"
   },
   {
     "id": "fuchs-2000-optical",
@@ -5051,7 +5088,8 @@
     "featured": false,
     "imagePath": "/images/publications/chabra-2017-optimizing.jpg",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/18Zlxkfn0k4f-4DsWvUElaKJYImtFQlJj/view"
   },
   {
     "id": "fuchs-2008-optimizing",
@@ -5336,7 +5374,8 @@
     "imagePath": "/images/publications/poulton-1985-pixel-planes.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1lS0oet12pla0hH4cIa8Pj-NLqIE12LuT/view"
   },
   {
     "id": "raij-2003-pixelflex2",
@@ -5444,7 +5483,8 @@
     "imagePath": "/images/publications/towles-2009-projector.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1opH8xSEEP0WxC2bGBHwQM77nMJFkQHZX/view"
   },
   {
     "id": "fuchs-1986-quadratic",
@@ -5468,7 +5508,8 @@
     "imagePath": "/images/publications/fuchs-1986-quadratic.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1cBU7y47CRLNs2PdRilXUhhqG8tu2GLA8/view"
   },
   {
     "id": "quirk-2006-ransac-assisted",
@@ -5622,7 +5663,8 @@
     "imagePath": "/images/publications/fuchs-2012-real-time.png",
     "award": "",
     "tldr": "A first look at a telepresence system offering room-sized, fully dynamic real-time 3D scene capture and continuous-viewpoint head-tracked display on a life-sized tiled display wall is provided.",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1RabVxErHEHeioAvQab42eZYAVXIyNkvY/view"
   },
   {
     "id": "song-2018-real-time",
@@ -5651,7 +5693,8 @@
     "imagePath": "/images/publications/song-2018-real-time.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1ro2_ZgOF9kYL357PQCIJJRuxV5h8iBCs/view"
   },
   {
     "id": "ackerman-2001-real-time",
@@ -5677,7 +5720,8 @@
     "imagePath": "/images/publications/ackerman-2001-real-time.jpg",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1y3WFSHQhgtiY8OOR3Psc4X1ohbSK4Lh5/view"
   },
   {
     "id": "kelshikar-2003-real-time",
@@ -5741,7 +5785,8 @@
     "imagePath": "/images/publications/avveduto-2017-real-world.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1HCKdDtBwV4YDCSmnUpI9vUPg-YFUo7pA/view"
   },
   {
     "id": "fuchs-2012-reducing",
@@ -5854,7 +5899,8 @@
     "featured": false,
     "imagePath": "/images/publications/hale-2021-remote.jpg",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/1mpYsETRZOrPgoVqs75SET62Nt5RcFdMQ/view"
   },
   {
     "id": "co-chairs-1992-research",
@@ -5935,7 +5981,8 @@
     "featured": false,
     "imagePath": "/images/publications/kwon-2020-rotationally-consistent.png",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/1l5rUq9BE-8TiGtLWgLZ34f5VGkd3ZT3s/view"
   },
   {
     "id": "kwon-2020-rotationally-temporally",
@@ -6250,7 +6297,8 @@
     "imagePath": "/images/publications/abram-1985-specialized.png",
     "award": "",
     "tldr": "This thesis documents the hardware development of the workstation Ceres and analysis of processor-memory communication is motivated by the observed small benefit in performance gained by replacing the NS32016 CPU with the NS32032 CPU and thus doubling the memory bus bandwidth.",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/14LTofyiL5gmEw4T19E5poWPM203vWAXP/view"
   },
   {
     "id": "state-2003-stereo",
@@ -6411,7 +6459,8 @@
     "imagePath": "/images/publications/state-1996-technologies.png",
     "award": "",
     "tldr": "A real-time stereoscopic video-see-through augmented reality system applied to the medical procedure known as ultrasound-guided needle biopsy of the breast successfully guided a needle into an artificial tumor within a training phantom of a human breast.",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1UJNSj7LCwGud3tZ3CbvbbHDda53nSErQ/view"
   },
   {
     "id": "larsen-2007-temporally",
@@ -6487,7 +6536,8 @@
     "imagePath": "/images/publications/kedem-1978-intelligent.png",
     "award": "",
     "tldr": "The algorithm is based on partitioning the screen among the currently displayed points and minimally modifing this structure as points are added and deleted, and a divide-and-conquer method is used.",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1Qy96HOT5ueNtF3UJtSPJfXfMVdMIgUp6/view"
   },
   {
     "id": "state-2020-a-desk",
@@ -6517,7 +6567,8 @@
     "imagePath": "/images/publications/state-2020-a-desk.jpg",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1jSV5Z1kos7tJ0Gn-VaspRJsZbBZx-dmE/view"
   },
   {
     "id": "fuchs-1975-automatic",
@@ -6710,7 +6761,8 @@
     "featured": false,
     "imagePath": "/images/publications/rosenman-1987-value.jpg",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/1RLA3i8lanBz9rJ9wWf7U0oe0FbtBzNX5/view"
   },
   {
     "id": "rosenman-1989-three-dimensional",
@@ -6802,7 +6854,8 @@
     "imagePath": "/images/publications/davis-1991-three-dimensional.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1KS3JExdeU5aTFPOlm9JeplRwqhEW73FK/view"
   },
   {
     "id": "fuchs-1987-three-dimensional",
@@ -6826,7 +6879,8 @@
     "imagePath": "/images/publications/fuchs-1987-three-dimensional.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1QxA60QRUUPpvVAQHzbm6EAcWskf9lw02/view"
   },
   {
     "id": "fuchs-1996-toward",
@@ -6878,7 +6932,8 @@
     "imagePath": "/images/publications/chen-2000-toward.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1pNPbP2G3_ECf0LDTQW9V9f6a3HIJyrbK/view"
   },
   {
     "id": "xia-2018-efficient",
@@ -6906,7 +6961,8 @@
     "imagePath": "/images/publications/xia-2018-efficient.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1C21Ld-OdHm-HXN1oCZnhuCXCqjgHkHKX/view"
   },
   {
     "id": "cha-2018-fully",
@@ -6944,7 +7000,8 @@
     "imagePath": "/images/publications/cha-2018-fully.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/17HkXZKErUoBNb99cnnVJf9HJtlMpGk1t/view"
   },
   {
     "id": "fuchs-1996-performing",
@@ -7032,7 +7089,8 @@
     "imagePath": "/images/publications/xia-2019-switchable.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1j-CvYSz569nQ4IAjhOzdofYQ1Z4LiSQV/view"
   },
   {
     "id": "wang-1990-tracking",
@@ -7142,7 +7200,8 @@
     "imagePath": "/images/publications/fuchs-1984-vlsi.png",
     "award": "",
     "tldr": "This study proposes to look at special purpose VLSI architectures for realtime display generation by developing a methodology for taking a selected computer graphics algorithm and producing a silicon system that performs that algorithm.",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/1Y7OBGSiK4XNAIbPpomU1aunJBONZBaRC/view"
   },
   {
     "id": "pizer-1982-varifocal",
@@ -7195,7 +7254,8 @@
     "featured": false,
     "imagePath": "/images/publications/rathinavel-2019-varifocal.png",
     "award": "",
-    "tldr": ""
+    "tldr": "",
+    "driveUrl": "https://drive.google.com/file/d/1NNHufSzgrbLUBA8xkVZPaCO9i1N1DR81/view"
   },
   {
     "id": "brooks-2006-virtual",
@@ -7454,6 +7514,7 @@
     "imagePath": "/images/publications/maimone-2014-wide.jpg",
     "award": "",
     "tldr": "",
-    "pdfMissing": false
+    "pdfMissing": false,
+    "driveUrl": "https://drive.google.com/file/d/18nxvY9rOK49cnro0jM2dMcMS6lwi09sN/view"
   }
 ]
