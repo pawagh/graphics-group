@@ -108,7 +108,7 @@
     "year": 2025,
     "venue": "ISMAR 2025",
     "abstract": "An optical-see-through near-eye display (NED) for augmented reality (AR) allows the user to perceive virtual and real imagery simultaneously. Existing technologies for optical-see-through AR NEDs involve trade-offs between key metrics such as field of view (FOV), eyebox size, form factor, etc. We have enhanced an existing compact wide-FOV pinlight AR NED design with real-time 3D pupil localization in order to dynamically steer and thus effectively enlarge the usable eyebox. This is achieved with a dual-camera rig that captures stereoscopic views of the pupils. The 3D pupil location is used to dynamically calculate a display pattern that spatio-temporally modulates the light entering the wearer's eyes. We have built a demonstrable compact prototype and have conducted a user study that indicates the effectiveness of our eyebox steering method (e.g., without eyebox steering, in 10.5% of our tests, users were unable to perceive the test pattern correctly before experiment timeout; with eyebox steering, that fraction decreased dramatically to 1.25%). This is a small yet crucial step in making simple wide-FOV pinlight NEDs usable for human users and not just as demonstration prototypes filmed with a precisely positioned camera standing in for the user's eye. Further contributions of this paper include a detailed description of display design, calibration technique, and user study design, all of which may benefit other NED research.",
-    "pdfPath": "",
+    "pdfPath": "/papers/xia-2025-dynamic.pdf",
     "pdfUrl": "https://ieeexplore.ieee.org/document/11192782",
     "doi": "10.1109/TVCG.2025.3616807",
     "semanticScholarId": "51827cb19779d2a836a5cf534ddb853b6c777b5b",
@@ -216,8 +216,7 @@
     "imagePath": "/images/publications/jain-2025-flattrack.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/17j7Nu8ZIbSDfYklDV7n2NTuwkvXdzvfz/view"
+    "pdfMissing": false
   },
   {
     "id": "qu-2025-holozip",
@@ -236,7 +235,7 @@
     "year": 2025,
     "venue": "ICCP 2025",
     "abstract": "Holographic displays are gaining increasing popularity, particularly as a holy grail solution to augmented and virtual reality (AR/VR) wearable displays. However, the generation of holograms is computationally intensive for AR/VR edge devices, which are expected to be compact and lightweight with low power consumption and heat dissipation to last all day. To address this, we propose a distributed hologram generation framework, dubbed HoloZip, to jointly generate, compress, transmit, and decode computer-generated holograms across the cloud-edge devices. Specifically, we perform compute intensive hologram generation via a vision transformer based backbone on the cloud, compress and transmit before decoding on a local edge device by a lightweight model. Our HoloZip framework supports both both 2D/3D holograms as well as holographic videos, achieving a reconstruction quality of over 30 dB in PSNR (lossy compression standard) with bit rates as low as 0.6 bits per pixel as validated by experiments.",
-    "pdfPath": "",
+    "pdfPath": "/papers/qu-2025-holozip.pdf",
     "pdfUrl": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11143849",
     "doi": "10.1109/ICCP64821.2025.11143849",
     "semanticScholarId": "d20cc0c6c8a29674fbddb2abae1d923e6bd3be9e",
@@ -300,7 +299,7 @@
     "year": 2025,
     "venue": "IEEE TVCG 2025",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/wang-2025-view.pdf",
     "pdfUrl": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10557509",
     "doi": "",
     "semanticScholarId": "",
@@ -335,7 +334,7 @@
     "year": 2025,
     "venue": "IEEE TVCG 2025",
     "abstract": "The hospital lobby functions as a pivotal therapeutic threshold and connective hub that defines a user’s initial psychological experience, yet empirical evidence regarding its restorative potential remains limited. This study addresses the design challenge in healthcare settings where live vegetation is frequently restricted due to stringent infection control protocols. Utilizing immersive virtual reality (VR), the research investigated whether the strategic integration of low-risk natural analogues (materials and motifs) and forest soundscapes could effectively mitigate physiological stress responses.The analysis focused on two primary dimensions of restoration: the attenuation of sympathetic stress arousal and the activation of parasympathetic recovery mechanisms. Results demonstrated that the introduction of visual biophilic elements induced significant physiological restoration compared to the non-biophilic baseline. However, the concurrent integration of natural sounds did not yield a statistically greater magnitude of recovery than the visual-only condition. This suggests a \"visual dominance effect,\" where high-fidelity natural analogues may saturate the restorative capacity during short-term exposure. These findings provide empirical support for utilizing biophilic materials and motifs as active therapeutic strategies in high-traffic healthcare thresholds. The study offers design implications for calibrating biophilic \"doses\" to facilitate patient recovery without introducing biological risk factors.",
-    "pdfPath": "",
+    "pdfPath": "/papers/tong-2025-multimodal.pdf",
     "pdfUrl": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10938352",
     "doi": "10.2139/ssrn.6377403",
     "semanticScholarId": "",
@@ -421,7 +420,7 @@
     "year": 2025,
     "venue": "IEEE CVTG 2025",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/chakravarthula-2025-present.pdf",
     "pdfUrl": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10964495",
     "doi": "",
     "semanticScholarId": "",
@@ -451,7 +450,7 @@
     "year": 2025,
     "venue": "VR Workshops 2025",
     "abstract": "A head-worn optical-see-through near-eye display (NED) is crucial for augmented reality (AR), enabling simultaneous perception of virtual and real imagery. Current AR NEDs face trade-offs among field of view (FOV), eyebox size, and form factor. We designed an enhanced pinlight AR NED using a novel approach to capture the pupil’s 3D location and compute a modulation pattern on the display. In our design, an eye-tracking camera rig captures stereoscopic views to calculate a display pattern, modulating light beams for precise imagery. Our compact prototype achieves a wide FOV of 79° in horizontal, a large eyebox, and experimental results confirm its spatial and temporal consistency.",
-    "pdfPath": "",
+    "pdfPath": "/papers/xia-2025-expanded.pdf",
     "pdfUrl": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10972738",
     "doi": "",
     "semanticScholarId": "c54626a2cf2eafff5da67e709b59c1159448d796",
@@ -520,7 +519,7 @@
     "year": 2024,
     "venue": "CHI 2024",
     "abstract": "The title 'Comparison between Unitary and Federal System' is the focus research topic for the critical analysis of the Comparative Politics or political race to sustain in the lens of unitary and federal systems. The objective of this research is to generate a political ideology based on the unitary and federal system and its base foundation and fundamental understanding of politics. To conduct this research in terms of methodological paradigm. Where, the secondary data and information have been taken from the various scholarly works, based on Unitary and Federal, such as the different forms of unitary and federal systems based on their origin, design and jurisdiction and the types of government and constitution. There are many merits and demerits of unitary government. It is useful in the term that rules and regulations in this government system remain consistent and equal throughout the country",
-    "pdfPath": "",
+    "pdfPath": "/papers/kandel-2024-pdinsighter.pdf",
     "pdfUrl": "https://dl.acm.org/doi/pdf/10.1145/3613904.3642215",
     "doi": "10.3126/hisan.v10i1.74823",
     "semanticScholarId": "",
@@ -666,8 +665,7 @@
     "award": "",
     "imagePath": "/images/publications/zhang-2023-reconstruction.png",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1XjoK34UGyHhwkBkNNb3NSEoIunH5RVSd/view"
+    "pdfMissing": false
   },
   {
     "id": "chakravarthula-2023-seeing",
@@ -923,8 +921,7 @@
     "award": "Best Conference Paper (1 of 3)",
     "imagePath": "/images/publications/cha-2021-mobile.png",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/18NjXpPqeaP1FtRJasBQoGRedqG-9TaOe/view"
+    "pdfMissing": false
   },
   {
     "id": "kwon-2021-human",
@@ -969,7 +966,7 @@
     "year": 2020,
     "venue": "ACM Transactions on Graphics 2020, SIGGRAPH Asia 2020",
     "abstract": "Holography is arguably the most promising technology to provide wide field-of-view compact eyeglasses-style near-eye displays for augmented and virtual reality. However, the image quality of existing holographic displays is far from that of current generation conventional displays, effectively making today's holographic display systems impractical. This gap stems predominantly from the severe deviations in the idealized approximations of the \"unknown\" light transport model in a real holographic display, used for computing holograms. In this work, we depart from such approximate \"ideal\" coherent light transport models for computing holograms. Instead, we learn the deviations of the real display from the ideal light transport from the images measured using a display-camera hardware system. After this unknown light propagation is learned, we use it to compensate for severe aberrations in real holographic imagery. The proposed hardware-in-the-loop approach is robust to spatial, temporal and hardware deviations, and improves the image quality of existing methods qualitatively and quantitatively in SNR and perceptual quality. We validate our approach on a holographic display prototype and show that the method can fully compensate unknown aberrations and erroneous and non-linear SLM phase delays, without explicitly modeling them. As a result, the proposed method significantly outperforms existing state-of-the-art methods in simulation and experimentation - just by observing captured holographic images.",
-    "pdfPath": "",
+    "pdfPath": "/papers/chakravarthula-2020-learned.pdf",
     "pdfUrl": "https://www.cs.unc.edu/~cpk/HIL-holography.html",
     "doi": "10.1145/3414685.3417846",
     "semanticScholarId": "",
@@ -1046,8 +1043,7 @@
     "imagePath": "/images/publications/aksit-2019-manufacturing.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1BJWaNEdW_hJghFCP62M2LfkJwZ0mOexQ/view"
+    "pdfMissing": false
   },
   {
     "id": "chabra-2019-stereodrnet",
@@ -1077,8 +1073,7 @@
     "award": "",
     "imagePath": "/images/publications/chabra-2019-stereodrnet.png",
     "tldr": "This work proposes a system that uses a convolution neural network to estimate depth from a stereo pair followed by volumetric fusion of the predicted depth maps to produce a 3D reconstruction of a scene and demonstrates that the system is able to produce high fidelity 3D scene reconstructions that outperforms the state of the art stereo system.",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1LhYzWmConmbauu8itCwxxRSrP15ED4wA/view"
+    "pdfMissing": false
   },
   {
     "id": "chakravarthula-2019-wirtinger",
@@ -1172,8 +1167,7 @@
     "imagePath": "/images/publications/rathinavel-2018-steerable.png",
     "award": "Best in Show",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1fAQWD-imh4GjQlSN5Wa9lvHIPiLduqKy/view"
+    "pdfMissing": false
   },
   {
     "id": "dunn-2017-wide",
@@ -1314,7 +1308,7 @@
     "year": 2014,
     "venue": "SIGGRAPH 2014",
     "abstract": "We present a novel design for an optical see-through augmented reality display that offers a wide field of view and supports a compact form factor approaching ordinary eyeglasses. Instead of conventional optics, our design uses only two simple hardware components: an LCD panel and an array of point light sources (implemented as an edge-lit, etched acrylic sheet) placed directly in front of the eye, out of focus. We code the point light sources through the LCD to form miniature see-through projectors. A virtual aperture encoded on the LCD allows the projectors to be tiled, creating an arbitrarily wide field of view. Software rearranges the target augmented image into tiled sub-images sent to the display, which appear as the correct image when observed out of the viewer's accommodation range. We evaluate the design space of tiled point light projectors with an emphasis on increasing spatial resolution through the use of eye tracking. We demonstrate feasibility through software simulations and a real-time prototype display that offers a 110° diagonal field of view in the form factor of large glasses and discuss remaining challenges to constructing a practical display.",
-    "pdfPath": "",
+    "pdfPath": "/papers/maimone-2014-pinlight.pdf",
     "pdfUrl": "https://drive.google.com/file/d/1FNpKo9ymc9t8Xh0kwbhxiw5GsS4sBDTr/view?usp=sharing",
     "doi": "10.1145/2601097.2601141",
     "semanticScholarId": "",
@@ -1519,8 +1513,7 @@
     "imagePath": "/images/publications/pizer-1986-shaded.png",
     "award": "",
     "tldr": "The 3D comprehension of anatomic and computed objects in medical images, presented using shaded display, can be increased by attention to light sources, surface textures, and transparency.",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1NEBybINatxBj6tWTP7TsFFaK78aOWDe7/view"
+    "pdfMissing": false
   },
   {
     "id": "towles-2002-tele-collaboration",
@@ -1917,8 +1910,7 @@
     "imagePath": "/images/publications/fuchs-1979-three-dimensional.jpg",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1RHAr9mTiQb0qo4D-3o1sQ6fI4ToClnCa/view"
+    "pdfMissing": false
   },
   {
     "id": "chaney-1985-three-dimensional",
@@ -2159,8 +2151,7 @@
     "imagePath": "/images/publications/fuchs-1990-advanced.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1XK5z5w0geVMKqqFVx1S70KRkVe_qvIRq/view"
+    "pdfMissing": false
   },
   {
     "id": "schubert-2012-advances",
@@ -2216,8 +2207,7 @@
     "imagePath": "/images/publications/jun-2020-easy-to-use.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1gMPlppffSodEcmt7ZZjZt24ROs7cVkbU/view"
+    "pdfMissing": false
   },
   {
     "id": "jun-2022-evaluation",
@@ -2296,8 +2286,7 @@
     "imagePath": "/images/publications/johnson-1979-expandable.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1sYia28oq18ntWFUr0R-ZHxccJ6EChO9S/view"
+    "pdfMissing": false
   },
   {
     "id": "rathinavel-2018-extended",
@@ -2324,8 +2313,7 @@
     "imagePath": "/images/publications/rathinavel-2018-extended.jpg",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1VOdaZrJzNUXzyyJLo8bsz4aIVXYbqi2H/view"
+    "pdfMissing": false
   },
   {
     "id": "cutts-1998-immersive",
@@ -2410,8 +2398,7 @@
     "imagePath": "/images/publications/fuchs-1989-interactive.png",
     "award": "",
     "tldr": "Common to all visions was the computer interaction mechanism consisting of a 2D computer display that appeared like stylized version of the user’s desktop: papers strewn about, ones on top obscuring ones below; various objects of interest, such as trash cans and clocks, serving their obvious and useful functions.",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1f2s-f-AnzcMettsNKI2IJxhI5ryH_n1f/view"
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1987-introduction",
@@ -2435,8 +2422,7 @@
     "imagePath": "/images/publications/fuchs-1987-introduction.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1CSeiv9xDKuAmZ7PrXOEutIDl2STAbU0m/view"
+    "pdfMissing": false
   },
   {
     "id": "lincoln-2009-animatronic",
@@ -2655,6 +2641,7 @@
     "year": 1987,
     "venue": "",
     "abstract": "",
+    "pdfPath": "",
     "pdfUrl": "",
     "doi": "",
     "semanticScholarId": "",
@@ -2666,8 +2653,7 @@
     "featured": false,
     "imagePath": "",
     "award": "",
-    "tldr": "",
-    "pdfMissing": true
+    "tldr": ""
   },
   {
     "id": "state-1994-bunker",
@@ -2780,8 +2766,7 @@
     "imagePath": "/images/publications/guzel-2023-chromacorrect.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/16EY6S4c5lMn1VE9Zt2gDvh99vwqZpRgI/view"
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1989-coarse-grain",
@@ -2808,8 +2793,7 @@
     "imagePath": "/images/publications/fuchs-1989-coarse-grain.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1vetD6oeGiDTsIe5y_vBjUFREnu4xYOWA/view"
+    "pdfMissing": false
   },
   {
     "id": "ilie-2004-combining",
@@ -2905,7 +2889,7 @@
     "year": 2020,
     "venue": "Optical Architectures for Displays and Sensing in Augmented, Virtual, and Mixed Reality (AR, VR, MR). Vol. 11310. International Society for Optics and Photonics",
     "abstract": "Holography is arguably the most promising technology to provide wide field-of-view compact eyeglasses-style near-eye displays for augmented and virtual reality. However, the image quality of existing holographic displays is far from that of current generation conventional displays, effectively making today's holographic display systems impractical. This gap stems predominantly from the severe deviations in the idealized approximations of the \"unknown\" light transport model in a real holographic display, used for computing holograms. In this work, we depart from such approximate \"ideal\" coherent light transport models for computing holograms. Instead, we learn the deviations of the real display from the ideal light transport from the images measured using a display-camera hardware system. After this unknown light propagation is learned, we use it to compensate for severe aberrations in real holographic imagery. The proposed hardware-in-the-loop approach is robust to spatial, temporal and hardware deviations, and improves the image quality of existing methods qualitatively and quantitatively in SNR and perceptual quality. We validate our approach on a holographic display prototype and show that the method can fully compensate unknown aberrations and erroneous and non-linear SLM phase delays, without explicitly modeling them. As a result, the proposed method significantly outperforms existing state-of-the-art methods in simulation and experimentation - just by observing captured holographic images.",
-    "pdfPath": "",
+    "pdfPath": "/papers/chakravarthula-2020-computing.pdf",
     "pdfUrl": "https://doi.org/10.1117/12.2547647",
     "doi": "10.1145/3414685.3417846",
     "semanticScholarId": "",
@@ -2915,7 +2899,7 @@
       "Conference"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/chakravarthula-2020-computing.jpg",
     "award": "",
     "tldr": ""
   },
@@ -3080,8 +3064,7 @@
     "imagePath": "/images/publications/rose-2019-development.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1TlQBX0BtDAWdQLevxpv__SHiOHad6kb7/view"
+    "pdfMissing": false
   },
   {
     "id": "burke-2011-development",
@@ -3328,8 +3311,7 @@
     "imagePath": "/images/publications/jiang-2019-enhancing.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1NCZ1brj5hlkKm__IIYDyJlQXh2_HWv5S/view"
+    "pdfMissing": false
   },
   {
     "id": "interrante-1995-enhancing",
@@ -3440,8 +3422,7 @@
     "imagePath": "/images/publications/heinz-1984-examination.jpg",
     "award": "",
     "tldr": "The report focuses on the initial management of SVT in a primary care setting with constraints on equipment and referral facilities and it's important to note that changes in the ST segment in SVT do not always indicate myocardial infarction, and further examination is necessary to confirm the diagnosis.",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/12SvFmj5uQzKpsa8Yyynrs4HxlnYDP0ad/view"
+    "pdfMissing": false
   },
   {
     "id": "sonnenwald-2006-experimental",
@@ -3674,8 +3655,7 @@
     "imagePath": "/images/publications/fuchs-2016-faster.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1HfPFetbbJszU2phxi_l9HKd8B2wtmpDR/view"
+    "pdfMissing": false
   },
   {
     "id": "bishop-1994-frameless",
@@ -3838,8 +3818,7 @@
     "imagePath": "/images/publications/fuchs-1985-hardware.png",
     "award": "",
     "tldr": "The evolution from CRT to modern raster-based digital displays represents a significant transition in how images are stored and rendered, and modern systems predominantly use raster technology.",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/15cEZFwHnb9L-KdOgqqiWC3NcSUz64HiF/view"
+    "pdfMissing": false
   },
   {
     "id": "lastra-1996-harnessing",
@@ -3878,7 +3857,7 @@
     "year": 2008,
     "venue": "Journal of Display Technology, IEEE and OSA, Vol. 4, pp. 468-472, 18 November",
     "abstract": "Introduction This scoping review examines the use of extended reality head-mounted displays (XRHMD), including virtual, augmented, and mixed reality, across medical and nursing educational settings. Methods A comprehensive search of PubMed, CINAHL, and Scopus identified 29 U.S.-based studies that met the inclusion criteria. Results Based on the studies examined, XR modalities were utilized across various skill and knowledge domains, including anatomy instruction, procedural rehearsal, emergency response, and surgical training. Most studies reported high learner satisfaction, citing enhanced engagement, spatial understanding, and opportunities for repeated, standardized practice. Knowledge gains were mixed, with 60% of studies showing improvement, while others demonstrated no significant advantage over traditional methods. Examination of feasibility outcomes highlighted the promise of XR for scalable, remote, and immersive instruction; however, implementation challenges were frequently reported, including technical limitations (battery life, connectivity, field of view), ergonomic concerns, and mild physiological side effects such as dizziness and visual strain. Discussion Despite noted barriers, XR demonstrated benefits for complex spatial learning and procedural skill development, particularly when integrated into curricula with structured pre-briefing and debriefing. This review supports that XRHMD is a feasible, engaging, and educationally valuable modality, with greatest impact within blended, mastery-oriented health care education curricula where opportunities for repeated, standardized practice and three-dimensional visualization are critical for enhancing skill acquisition and spatial understanding. However, further longitudinal and standardized research is needed to inform best practices and long-term outcomes.",
-    "pdfPath": "",
+    "pdfPath": "/papers/keller-2008-head.pdf",
     "pdfUrl": "https://doi.org/10.1109/JDT.2008.2001577",
     "doi": "10.3389/fmed.2026.1798546",
     "semanticScholarId": "bffe419c73375a3cfa379edb14dfe88b5f8816fd",
@@ -3959,7 +3938,7 @@
     "year": 2014,
     "venue": "Information Research, Vol. 19, no. 2, pp. 618. June",
     "abstract": "AbstractEditor's SummaryGiven the risk and cost of proposed but unproven technologies, a method to project likely outcomes offers great value. Visioning studies deliver that opportunity by enabling potential users and other stakeholders the chance to explore new technologies. Goals include validating benefits, exposing unanticipated consequences, discovering hurdles to deployment and revealing considerations for funding. A visioning study was used to investigate 3D telepresence technology in emergency health care, enabling paramedics to work on a simulated trauma victim along with a remote physician. In another phase of the study, three groups of stakeholders viewed a brief video on the proposed technology and were interviewed to understand their thoughts on advantages, obstacles and potential fit. Through the visioning study, researchers were able to explore implementation of the technology and experience its potential benefits and challenges in a realistic test mode. Knowledge gained through visioning can lead to better‐informed decisions and more effective use of limited resources.",
-    "pdfPath": "",
+    "pdfPath": "/papers/sonnenwald-2014-illuminating.pdf",
     "pdfUrl": "http://www.informationr.net/ir/19-2/paper618.html#.U6Azq_ldW1h",
     "doi": "10.1002/bult.2013.1720390509",
     "semanticScholarId": "",
@@ -4180,8 +4159,7 @@
     "imagePath": "/images/publications/blate-2019-implementation.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1wuvdpwtNJe0HXggsGG5WB-SIakPwbftZ/view"
+    "pdfMissing": false
   },
   {
     "id": "peck-2010-improved",
@@ -4602,8 +4580,7 @@
     "imagePath": "/images/publications/deng-2013-kinect.png",
     "award": "",
     "tldr": "This work proposes the implementation of an evolutionary selection of sequences of image transformation to detect people through supervised classifiers based on the fusion of Kinect and a thermical sensor mounted on top of a mobile platform.",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1c2V2sy5dMhD-b16SuLD7hT2gdgryVn43/view"
+    "pdfMissing": false
   },
   {
     "id": "low-2001-life-sized",
@@ -4649,7 +4626,7 @@
     "year": 2017,
     "venue": "SIGGRAPH",
     "abstract": "Growing evidence in recent literature suggests gaze contingent varifocal Near Eye Displays (NEDs) are mitigating visual discomfort caused by the vergence‐accommodation conflict (VAC). Such displays promise improved task performance in Virtual Reality (VR) and Augmented Reality (AR) applications and demand less compute and power than light field and holographic display alternatives. In the context of this paper, we further extend the evaluation of our gaze contingent wide field of view varifocal AR NED layout [1] by evaluating optical characteristics of resolution, brightness, and eye‐box. Our most recent prototype dramatically reduces form‐factor, while improving maximum depth switching time to under 200 ms.",
-    "pdfPath": "",
+    "pdfPath": "/papers/dunn-2017-membrane.pdf",
     "pdfUrl": "https://dl.acm.org/doi/pdf/10.1145/3084822.3084846",
     "doi": "10.1002/sdtp.12490",
     "semanticScholarId": "",
@@ -4997,8 +4974,7 @@
     "imagePath": "/images/publications/rathinavel-2020-optical.jpg",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1JaOMgcdKfIv73kKhBdguYzRsroeRTwl1/view"
+    "pdfMissing": false
   },
   {
     "id": "fuchs-2000-optical",
@@ -5063,7 +5039,7 @@
     "year": 2017,
     "venue": "IEEE Virtual Reality",
     "abstract": "We present SLOPER4D, a novel scene-aware dataset collected in large urban environments to facilitate the research of global human pose estimation (GHPE) with human-scene interaction in the wild. Employing a head-mounted device integrated with a LiDAR and camera, we record 12 human subjects' activities over 10 diverse urban scenes from an egocentric view. Frame-wise annotations for 2D key points, 3D pose parameters, and global translations are provided, together with reconstructed scene point clouds. To obtain accurate 3D ground truth in such large dynamic scenes, we propose a joint optimization method to fit local SMPL meshes to the scene and fine-tune the camera calibration during dynamic motions frame by frame, resulting in plausible and scene-natural 3D human poses. Even-tually, SLOPER4D consists of 15 sequences of human motions, each of which has a trajectory length of more than 200 meters (up to 1,300 meters) and covers an area of more than 200 m2 (up to 30,000 m2), including more than 100k LiDAR frames, 300k video frames, and 500k IMU-based motion frames. With SLOPER4D, we provide a detailed and thorough analysis of two critical tasks, including camera-based 3D HPE and LiDAR-based 3D HPE in urban environments, and benchmark a new task, GHPE. The in-depth analysis demonstrates SLOPER4D poses significant challenges to existing methods and produces great research opportunities. The dataset and code are released at http://www.lidarhumanmotion.net/sloper4d/.",
-    "pdfPath": "",
+    "pdfPath": "/papers/chabra-2017-optimizing.pdf",
     "pdfUrl": "https://www.cs.unc.edu/~rohanc/OCP_VR2017.pdf",
     "doi": "10.1109/CVPR52729.2023.00073",
     "semanticScholarId": "7fb8204ba37eaad41b76e7c0e717d83db821ddf7",
@@ -5292,6 +5268,7 @@
     "year": 1985,
     "venue": "Principles of CMOS VLSI Design by N. Weste and K. Eshraghian, Addison-Wesley",
     "abstract": "Pixel-planes is a logic-enhanced memory system for raster graphics and imaging. Although each pixel-memory is enhanced with a one-bit ALU, the system's real power comes from a tree of one-bit adders that can evaluate linear expressions Ax+By+C for every pixel (x,y) simultaneously, as fast as the ALUs and the memory circuits can accept the results. We and others have begun to develop a variety of algorithms that exploit this fast linear expression evaluation capability. In this paper we report some of those results. Illustrated in this paper is a sample image from a small working prototype of the Pixel-planes hardware and a variety of images from simulations of a full-scale system. Timing estimates indicate that 30,000 smooth shaded triangles can be generated per second, or 21,000 smooth-shaded and shadowed triangles can be generated per second, or over 25,000 shaded spheres can be generated per second. Image-enhancement by adaptive histogram equalization can be performed within 4 seconds on a 512x512 image.",
+    "pdfPath": "",
     "pdfUrl": "",
     "doi": "10.1145/325165.325205",
     "semanticScholarId": "",
@@ -5303,8 +5280,7 @@
     "featured": false,
     "imagePath": "",
     "award": "",
-    "tldr": "",
-    "pdfMissing": true
+    "tldr": ""
   },
   {
     "id": "poulton-1981-pixel-planes",
@@ -5360,8 +5336,7 @@
     "imagePath": "/images/publications/poulton-1985-pixel-planes.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1pr8MT9oC0dtWK9DpR3_azD_sN0cdaFvb/view"
+    "pdfMissing": false
   },
   {
     "id": "raij-2003-pixelflex2",
@@ -5469,8 +5444,7 @@
     "imagePath": "/images/publications/towles-2009-projector.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1sKM9xj-3Nyzz4OVSVzUqQqn7jU1Skktc/view"
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1986-quadratic",
@@ -5494,8 +5468,7 @@
     "imagePath": "/images/publications/fuchs-1986-quadratic.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1gpSTIaVQAAfnIYFhIYW1lbGkyV2eHrup/view"
+    "pdfMissing": false
   },
   {
     "id": "quirk-2006-ransac-assisted",
@@ -5649,8 +5622,7 @@
     "imagePath": "/images/publications/fuchs-2012-real-time.png",
     "award": "",
     "tldr": "A first look at a telepresence system offering room-sized, fully dynamic real-time 3D scene capture and continuous-viewpoint head-tracked display on a life-sized tiled display wall is provided.",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/18wWum4iN7Nkgrby07HIMY27kSuUBFYcZ/view"
+    "pdfMissing": false
   },
   {
     "id": "song-2018-real-time",
@@ -5679,8 +5651,7 @@
     "imagePath": "/images/publications/song-2018-real-time.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1PEiU8wc4HQwc2RgMPt0TirH1CtOFP2-A/view"
+    "pdfMissing": false
   },
   {
     "id": "ackerman-2001-real-time",
@@ -5706,8 +5677,7 @@
     "imagePath": "/images/publications/ackerman-2001-real-time.jpg",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1wQGpSXM9n4EyEsJDn7E6TEXNrqqGX9oZ/view"
+    "pdfMissing": false
   },
   {
     "id": "kelshikar-2003-real-time",
@@ -5771,8 +5741,7 @@
     "imagePath": "/images/publications/avveduto-2017-real-world.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/19RiiXjgKnXAQ0Piq79vXpIXZRqQ51958/view"
+    "pdfMissing": false
   },
   {
     "id": "fuchs-2012-reducing",
@@ -5873,7 +5842,7 @@
     "year": 2021,
     "venue": "MARSS",
     "abstract": "This work aims to leverage medical augmented reality (AR) technology to counter the shortage of medical experts in low-resource environments. We present a complete and cross-platform proof-of-concept AR system that enables remote users to teach and train medical procedures without expensive medical equipment or external sensors. By seeing the 3D viewpoint and head movements of the teacher, the student can follow the teacher’s actions on the real patient. Alternatively, it is possible to stream the 3D view of the patient from the student to the teacher, allowing the teacher to guide the student during the remote session. A pilot study of our system shows that it is easy to transfer detailed instructions through this remote teaching system and that the interface is easily accessible and intuitive for users. We provide a performant pipeline that synchronizes, compresses, and streams sensor data through parallel efficiency.",
-    "pdfPath": "",
+    "pdfPath": "/papers/hale-2021-remote.pdf",
     "pdfUrl": "https://www.mdpi.com/2313-433X/8/12/319",
     "doi": "",
     "semanticScholarId": "5522950fa7f1b2a383f32d6d29b47ae4a75cb072",
@@ -5954,7 +5923,7 @@
     "year": 2020,
     "venue": "Proceedings of the 28th ACM International Conference on Multimedia Oct",
     "abstract": "Category: Hindfoot, Trauma Introduction/Purpose: The axial alignment of the calcaneus has paramount importance in the management of these fractures. The Harris view has long stood as the recommended radiograph to assess axial alignment. However, given the obliquity at which the radiograph is obtained, it doesn´t represent a true axial view and is subject to inaccuracies secondary to rotational malpositioning of the foot and mismeasurement of angulation. Multiple reports have described the axial alignment as a surgical outcome, but usually this assessment of the residual deformity have no described method. The objectives of this study are to evaluate the capacity of Harris view to assess axial alignment in a cadaveric model and to describe the use of a true AP view of the calcaneus that we have named Captain´s view. Methods: Five below knee amputated fresh-frozen cadaveric specimens were used in the study. For each specimen, the soft tissues over the lateral side were removed to access to the lateral wall. A small wedge of the cuboid was removed to visualize the center of the calcaneocuboid articular surface. LCA-guide and a cannulated drill were used to create a tunnel in the axis of the calcaneus. An oblique osteotomy was performed in order to simulate a non-comminuted fracture. Varus deformity was created by inserting solid radiolucent wedges into the osteotomy to create models of 10, 20, and 30 degrees of varus angulation. Harris and Captain views were obtained for each specimen with 0 (control), 10, 20, and 30 degrees of varus malalignment. Measurements of the deformity were made digitally on each fluoroscopic image. Results: The average degrees of varus in Harris views were 10,9 (5,5-16); 11,5 (8,2-13,6); and 18,3 (13,3-23,6) for 10,20 and 30 degrees of deformity respectively. The average degrees of varus in Captain´s view were 13,0 (7,3-20,9); 18,4 (11,7-23,5); and 28,2 (24,4-31,1) for 10,20 and 30 degrees of deformity respectively. The average degrees of error for varus deformity in Harris views were 4,1 (41%); 8,4 (42%) and 11,6 (39%) for 10,20 and 30 degrees of deformity respectively. The average degrees of error for varus deformity in Captain´s views were 4,8 (48%); 3,6 (18%) and 2,8 (8%) for 10,20 and 30 degrees of deformity respectively. Conclusion: The results of this study show a high rate of mismeasurement for both radiographic views. Despite the average angles have a clear correlation with the severity of varus, the wide range of error observed between specimens make this assessment unreliable and inaccurate. We observed an improvement of accuracy of captain´s view for more severe deformities, but not with Harris views which maintain a 40% mismeasurement in all the settings. Therefore, intraoperative Harris views should not be used in isolation to evaluate axial alignment and Captain´s view provides an additional perspective that can be useful to rule out severe deformities.",
-    "pdfPath": "",
+    "pdfPath": "/papers/kwon-2020-rotationally-consistent.pdf",
     "pdfUrl": "https://dl.acm.org/doi/pdf/10.1145/3394171.3413754",
     "doi": "10.1177/2473011419s00426",
     "semanticScholarId": "",
@@ -6281,8 +6250,7 @@
     "imagePath": "/images/publications/abram-1985-specialized.png",
     "award": "",
     "tldr": "This thesis documents the hardware development of the workstation Ceres and analysis of processor-memory communication is motivated by the observed small benefit in performance gained by replacing the NS32016 CPU with the NS32032 CPU and thus doubling the memory bus bandwidth.",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1LbtkKMbexYbdVy4XGY8oZkvO8bxHj2uw/view"
+    "pdfMissing": false
   },
   {
     "id": "state-2003-stereo",
@@ -6443,8 +6411,7 @@
     "imagePath": "/images/publications/state-1996-technologies.png",
     "award": "",
     "tldr": "A real-time stereoscopic video-see-through augmented reality system applied to the medical procedure known as ultrasound-guided needle biopsy of the breast successfully guided a needle into an artificial tumor within a training phantom of a human breast.",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1OuYy4nLp6vIspUiEJOVPy7RUoFhEDg-m/view"
+    "pdfMissing": false
   },
   {
     "id": "larsen-2007-temporally",
@@ -6520,8 +6487,7 @@
     "imagePath": "/images/publications/kedem-1978-intelligent.png",
     "award": "",
     "tldr": "The algorithm is based on partitioning the screen among the currently displayed points and minimally modifing this structure as points are added and deleted, and a divide-and-conquer method is used.",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/14WqVhxJFG-j1Sjx9i4Da8KdhpTRKWZYP/view"
+    "pdfMissing": false
   },
   {
     "id": "state-2020-a-desk",
@@ -6551,8 +6517,7 @@
     "imagePath": "/images/publications/state-2020-a-desk.jpg",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1olMnIg5GgZFpq9itkZYFEvIiDd076tCA/view"
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1975-automatic",
@@ -6733,6 +6698,7 @@
     "year": 1987,
     "venue": "International Journal of Radiation Oncology and Biomedical Physics, vol. 13, pp. 198",
     "abstract": "Higher-order correlation functions are firmly established as a fundamental tool for the statistical analysis of clustering in modern galaxy surveys. It was demonstrated that they greatly enrich the information content extracted by two-point statistics, allowing us to break the degeneracies between model parameters and constrain departures from Gaussianity. This paper presents the statistical estimators adopted to evaluate the galaxy three-point correlation function and its numerical implementation within the data analysis pipeline of the Euclid Science Ground Segment. Two different algorithms are adopted to count triplets: a direct and exact counting method capable of providing a robust three-point correlation function measurement for any triangular configuration, and a more efficient method based on spherical harmonic decomposition, designed to address the computational challenges of measuring the three-point statistics for data sets as large as those of the final Euclid survey. The spherical harmonic decomposition estimates the Legendre coefficients of the three-point correlation function up to a finite expansion order. Despite being an approximation, the three-point function measured with this approach satisfies the scientific requirements of the mission. We also introduce, implement, and validate the random split technique, which reduces the computational cost of counting triplets in the reference random sample by a factor of 10, without significantly compromising numerical accuracy. We evaluated the robustness, precision, and accuracy of the numerical estimates through an extensive campaign of validation tests, the results of which are presented. Finally, we quantify the computational requirements and their scaling with the expected size of Euclid data set, showing that a complete three-point analysis of the final Euclid survey is within computational reach.",
+    "pdfPath": "/papers/rosenman-1987-value.pdf",
     "pdfUrl": "",
     "doi": "",
     "semanticScholarId": "1236107300bc9994df8a75650e410d59958d3edc",
@@ -6742,10 +6708,9 @@
       "Journal"
     ],
     "featured": false,
-    "imagePath": "",
+    "imagePath": "/images/publications/rosenman-1987-value.jpg",
     "award": "",
-    "tldr": "",
-    "pdfMissing": true
+    "tldr": ""
   },
   {
     "id": "rosenman-1989-three-dimensional",
@@ -6837,8 +6802,7 @@
     "imagePath": "/images/publications/davis-1991-three-dimensional.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1DFDK59QpogXmu36hp7-x0c9Y5YqyGN82/view"
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1987-three-dimensional",
@@ -6862,8 +6826,7 @@
     "imagePath": "/images/publications/fuchs-1987-three-dimensional.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1VThEoQ3K9uins-7NyXtGWRrdPcQG9EEr/view"
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1996-toward",
@@ -6874,6 +6837,7 @@
     "year": 1996,
     "venue": "Health Care in the Information Age, IOS Press",
     "abstract": "Over the last several years we have been building an augmented reality system that will allow physicians to see real time ultrasound data superimposed on a live view of their patients. We are also hopeful that the same technology can be used for a number of telemedical tasks, including training, emergency consulting and general clinical consultation. Our most recent ultrasound work has focused on breast biopsies and the aspiration of cysts in the breast. The system uses real-time video compositing to combine ultrasound volume rendering with a view of the patient, a view that is captured by two video cameras that are mounted on an HMD. This same light-weight head-mounted display presents the fused images to both eyes of the physician. Careful calibration of several tracking systems are necessary to provide an effective, stable fusion of the views. Recent trials by our physician collaborator on synthetic cysts in a mannequin indicate that we are close to having a system that will be useful to the working physician. Much of the technology that is used in this system will be directly applicable to remote telemedicine.",
+    "pdfPath": "",
     "pdfUrl": "http://books.google.com/books?id=8hshSwZX_AYC&pg=PR12&lpg=PR12&dq=toward+virtual+teleconferencing+for+telemedical+applications&source=bl&ots=nGWk0fPLq4&sig=lAHc06ppAh7w-DLB8HX36TN0bgE&hl=en&ei=4nVnTuWXJ-HY0QHem5zRCw&sa=X&oi=book_result&ct=result&resnum=3&sqi=2&ved=0CG8Q6AEwAg#v=onepage&q&f=true",
     "doi": "10.3233/978-1-60750-873-1-283",
     "semanticScholarId": "",
@@ -6914,8 +6878,7 @@
     "imagePath": "/images/publications/chen-2000-toward.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1fPi9RwzhdsZ7FyH9QRGLkcCpxhEXucJ7/view"
+    "pdfMissing": false
   },
   {
     "id": "xia-2018-efficient",
@@ -6943,8 +6906,7 @@
     "imagePath": "/images/publications/xia-2018-efficient.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1Qs6JUeJsi1bmgaM__pyVBj2TAfrE1U11/view"
+    "pdfMissing": false
   },
   {
     "id": "cha-2018-fully",
@@ -6982,8 +6944,7 @@
     "imagePath": "/images/publications/cha-2018-fully.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1xY1m6Ap7hFTcrfLlLRN77Bas61Fgri0I/view"
+    "pdfMissing": false
   },
   {
     "id": "fuchs-1996-performing",
@@ -7001,6 +6962,7 @@
     "year": 1996,
     "venue": "Proceedings of the 4th International Conference on Visualization in Biomedical Computing (Hamburg, Germany",
     "abstract": "The ease of use and effectiveness of ultrasound image-guided surgical procedures might be improved by observing single or multiple echographic views properly positioned &amp;ldquo;within&amp;rdquo; the patient. Several computer hardware and visualization technologies have to be extended and combined in order to build a system in which such visualizations are available in real time, e.g., during the ultrasound imaging of the patient.",
+    "pdfPath": "",
     "pdfUrl": "http://www.cs.unc.edu/%7Eandrei/pubs/1996_VBC_usound_Mac.pdf",
     "doi": "10.3233/978-1-60750-873-1-60",
     "semanticScholarId": "",
@@ -7012,8 +6974,7 @@
     "featured": false,
     "imagePath": "",
     "award": "",
-    "tldr": "",
-    "pdfMissing": true
+    "tldr": ""
   },
   {
     "id": "dunn-2018-varifocal",
@@ -7071,8 +7032,7 @@
     "imagePath": "/images/publications/xia-2019-switchable.png",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/13oAS0SFtytOZUoYePN8ZmQFxEik9-bBh/view"
+    "pdfMissing": false
   },
   {
     "id": "wang-1990-tracking",
@@ -7182,8 +7142,7 @@
     "imagePath": "/images/publications/fuchs-1984-vlsi.png",
     "award": "",
     "tldr": "This study proposes to look at special purpose VLSI architectures for realtime display generation by developing a methodology for taking a selected computer graphics algorithm and producing a silicon system that performs that algorithm.",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1gA5K0vTrvomiSmuL1BEwDvFbECISCh1E/view"
+    "pdfMissing": false
   },
   {
     "id": "pizer-1982-varifocal",
@@ -7224,7 +7183,7 @@
     "year": 2019,
     "venue": "IEEE TVCG",
     "abstract": "",
-    "pdfPath": "",
+    "pdfPath": "/papers/rathinavel-2019-varifocal.pdf",
     "pdfUrl": "https://doi.org/10.1109/TVCG.2019.2933120",
     "doi": "",
     "semanticScholarId": "",
@@ -7367,6 +7326,7 @@
     "year": 2022,
     "venue": "Elsevier Displays",
     "abstract": "",
+    "pdfPath": "",
     "pdfUrl": "https://www.sciencedirect.com/science/article/pii/S0141938222001512",
     "doi": "10.1007/jhep12(2023)125",
     "semanticScholarId": "",
@@ -7378,8 +7338,7 @@
     "featured": false,
     "imagePath": "/images/publications/georgiou-2022-visual.png",
     "award": "",
-    "tldr": "",
-    "pdfMissing": true
+    "tldr": ""
   },
   {
     "id": "pizer-1989-volume",
@@ -7495,7 +7454,6 @@
     "imagePath": "/images/publications/maimone-2014-wide.jpg",
     "award": "",
     "tldr": "",
-    "pdfMissing": false,
-    "driveUrl": "https://drive.google.com/file/d/1nq6H3SqbO2UdwEDshitZoNXcsDYuGYNr/view"
+    "pdfMissing": false
   }
 ]
