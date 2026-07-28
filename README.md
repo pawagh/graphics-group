@@ -128,7 +128,7 @@ python drive_uploader.py         # Drive upload only
 ## GitHub Actions workflows
 
 **`scrape-publications.yml`** runs every Sunday at 2am UTC. It can also be triggered manually from the Actions tab with two options:
-- "Skip re-scraping" to only run the Drive uploader (useful after manually adding PDFs).
+- "Skip re-scraping" to only run the Drive uploader (useful after manually uploading a PDF to Drive).
 - "Force resummary" to regenerate all AI key-contribution summaries.
 
 **`sync-to-wordpress.yml`** runs automatically whenever `data/publications.json`, `data/people.json`, `data/research.json`, or `data/news.json` changes on main. It also runs weekly on Monday at 3am UTC and can be triggered manually with a choice of what to sync (all, publications only, or pages only).
@@ -137,11 +137,13 @@ python drive_uploader.py         # Drive upload only
 
 ## Adding publications manually
 
-If the pipeline cannot find a PDF for a paper, it opens a GitHub issue listing the missing files. To add one manually:
+PDFs are stored in the shared Google Drive folder and are not committed to git. If the pipeline cannot find a PDF for a paper automatically, it opens a GitHub issue listing the missing files.
 
-1. Place the PDF at `public/papers/<publication-id>.pdf`.
-2. Commit and push.
-3. Go to Actions > "Scrape & Update Publications" > "Run workflow" and check "Skip re-scraping". This uploads the new PDF to Drive and updates `data/publications.json` with the Drive link.
+To add a PDF manually:
+
+1. Upload the PDF to the shared Google Drive folder with the filename `<publication-id>.pdf`.
+2. Remove `"pdfMissing": true` from the entry in `data/publications.json` (if present), commit, and push.
+3. Go to Actions > "Scrape & Update Publications" > "Run workflow" and check "Skip re-scraping". The Drive uploader will detect the new file and record the link in `data/publications.json`.
 4. The WordPress sync triggers automatically once `data/publications.json` is updated.
 
 If a PDF cannot be found anywhere, set `"pdfMissing": true` on the entry in `data/publications.json` to stop the pipeline from flagging it.

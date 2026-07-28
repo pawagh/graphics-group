@@ -31,8 +31,7 @@ def run():
         return
 
     lines = [
-        f"{len(missing)} publication(s) need a PDF manually placed in `public/papers/` "
-        f"so the automated pipeline can pick them up and upload them to Google Drive on the next run.",
+        f"{len(missing)} publication(s) need a PDF uploaded manually to the shared Google Drive folder.",
         "",
         "| Title | Slug/ID | Expected filename |",
         "|---|---|---|",
@@ -41,13 +40,14 @@ def run():
         slug = pub.get("id") or pub.get("slug", "")
         filename = f"{slug}.pdf"
         title = pub.get("title", "Unknown")[:80]
-        lines.append(f"| {title} | `{slug}` | `public/papers/{filename}` |")
+        lines.append(f"| {title} | `{slug}` | `{filename}` |")
 
     lines.append("")
     lines.append(
-        "To resolve: download the PDF, save it with the exact filename above, "
-        "commit it to `public/papers/`, and push. The next pipeline run will detect "
-        "the file, set `pdfPath`, clear `pdfMissing`, and upload it to the shared Drive folder."
+        "To resolve: upload the PDF with the exact filename shown above directly to the "
+        "shared Google Drive folder, then remove `pdfMissing: true` from the entry in "
+        "`data/publications.json` and push. The next pipeline run will detect the file on "
+        "Drive and record the link."
     )
 
     report = "\n".join(lines)

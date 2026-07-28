@@ -16,7 +16,7 @@ on:
         default: "false"
         type: boolean
       skip_scrape:
-        description: "Skip re-scraping Semantic Scholar — just upload existing public/papers/ PDFs to Drive"
+        description: "Skip re-scraping Semantic Scholar — just run the Drive uploader (picks up PDFs uploaded directly to Drive)"
         required: false
         default: false
         type: boolean
@@ -30,8 +30,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          lfs: true   # public/papers/*.pdf is stored via Git LFS
 
       - uses: actions/setup-python@v5
         with:
@@ -86,7 +84,7 @@ jobs:
         run: |
           git config user.name "vcail-bot"
           git config user.email "actions@github.com"
-          git add data/publications.json public/papers/ public/images/publications/
+          git add data/publications.json public/images/publications/
           if git diff --staged --quiet; then
             echo "No changes to commit."
             exit 0

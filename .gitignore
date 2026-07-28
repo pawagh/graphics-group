@@ -51,5 +51,8 @@ scraper/.env
 
 public/publication-photos/
 
+# PDFs are stored in Google Drive; local copies are transient working files only.
+public/papers/
+
 # Scraper output
 scripts/scraped/

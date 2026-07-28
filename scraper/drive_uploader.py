@@ -87,6 +87,44 @@ class DriveUploader:
         print(f"   ✓ Uploaded: {filename}")
         return f"https://drive.google.com/file/d/{file_id}/view"
 
+    def scan_drive(self, publications: list) -> list:
+        """Discover PDFs already in Drive and set driveUrl for publications missing one.
+
+        This handles the case where a PDF was uploaded directly to the Drive folder
+        without going through the pipeline (e.g. a manual upload by a maintainer).
+        """
+        print(f"\n{'='*70}\nScanning Drive for existing files\n{'='*70}")
+        pub_by_id = {pub["id"]: pub for pub in publications if pub.get("id")}
+        found = 0
+        page_token = None
+
+        while True:
+            results = self.service.files().list(
+                q=f"'{self.folder_id}' in parents and trashed=false and mimeType='application/pdf'",
+                fields="nextPageToken, files(id, name)",
+                supportsAllDrives=True,
+                includeItemsFromAllDrives=True,
+                pageToken=page_token,
+            ).execute()
+
+            for file in results.get("files", []):
+                name = file["name"]
+                if not name.endswith(".pdf"):
+                    continue
+                pub_id = name[:-4]
+                pub = pub_by_id.get(pub_id)
+                if pub and not pub.get("driveUrl"):
+                    pub["driveUrl"] = f"https://drive.google.com/file/d/{file['id']}/view"
+                    print(f"   ✓ Discovered on Drive: {name}")
+                    found += 1
+
+            page_token = results.get("nextPageToken")
+            if not page_token:
+                break
+
+        print(f"   {found} publication(s) updated from existing Drive files.")
+        return publications
+
     def upload_all(self, publications: list, force: bool = False) -> list:
         print(f"\n{'='*70}\nGoogle Drive Upload\n{'='*70}")
 
@@ -140,7 +178,17 @@ def run():
         publications = json.load(f)
 
     uploader = DriveUploader(credentials, folder_id)
+
+    # Pick up any PDFs already on Drive (e.g. manually uploaded by a maintainer).
+    publications = uploader.scan_drive(publications)
+
+    # Upload any local PDFs that the pipeline downloaded this run.
     publications = uploader.upload_all(publications, force=force)
+
+    # Strip pdfPath from all entries: local PDFs are transient (not committed to git).
+    # driveUrl is the canonical reference for whether a publication has a PDF.
+    for pub in publications:
+        pub.pop("pdfPath", None)
 
     with open(PUBLICATIONS_FILE, "w", encoding="utf-8") as f:
         json.dump(publications, f, indent=2, ensure_ascii=False)
