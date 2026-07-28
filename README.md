@@ -1,126 +1,157 @@
-# Graphics and Virtual Reality Group — Website
+# Graphics and Virtual Reality Group — Publications Pipeline
 
-Website for the [Graphics and Virtual Reality Group](https://telepresence.web.unc.edu/) at UNC Chapel Hill, led by Henry Fuchs.
+This repo automatically keeps the lab's WordPress site up to date with publications from Semantic Scholar. The pipeline fetches papers, downloads PDFs, generates AI summaries, uploads files to Google Drive, and syncs everything to WordPress via the REST API.
 
-Built with **Next.js 16**, **TypeScript**, **Tailwind CSS 3**, and **React 19**. All content is statically generated from JSON data files.
+## How it works
 
-## Quick Start
-
-```bash
-npm install
-npm run dev       # http://localhost:3000
-npm run build     # production build
-```
-
-## Architecture
+1. **Scrape** (`scraper/pipeline.py`, weekly via GitHub Actions): fetches papers from Semantic Scholar for each author in `lab.config.json`, downloads open-access PDFs, extracts thumbnail images, and generates key-contribution summaries.
+2. **Drive upload** (`scraper/drive_uploader.py`): uploads PDFs to a Shared Google Drive folder and records the shareable link in `data/publications.json`.
+3. **WordPress sync** (`wordpress/sync/sync.py`): pushes publications as standard WordPress posts and updates the People, Research, News, and other pages via the WP REST API. Triggered automatically when `data/publications.json` changes.
 
 ```
-lab.config.json          # Central config: lab name, PI, Semantic Scholar IDs, theme
+lab.config.json          # Lab name, author roster, contact info
 data/
+  publications.json      # Paper records (auto-updated by pipeline)
   people.json            # Team members and alumni
-  publications.json      # Papers (auto-updated by pipeline)
   research.json          # Research projects
   news.json              # News items
-src/
-  lib/config.ts          # Typed re-export of lab.config.json
-  lib/data.ts            # Server-side helpers reading data/*.json
-  lib/types.ts           # Shared TypeScript interfaces
-  components/            # Navbar, Footer, ThemeProvider
-  app/                   # Next.js App Router pages
-scripts/                 # One-off / manual maintenance tools (see MAINTENANCE.md)
-scraper/                 # Automated publications pipeline (Semantic Scholar + Gemini + Drive)
-wordpress/sync/          # Syncs data/*.json + lab.config.json to the WordPress REST API
+scraper/                 # Semantic Scholar fetch, PDF download, thumbnail extraction, Drive upload
+wordpress/sync/          # WordPress REST API sync
+.github/workflows/
+  scrape-publications.yml   # Weekly scrape + Drive upload
+  sync-to-wordpress.yml     # Triggered on data/ changes
 ```
 
-## Editing Content
+---
 
-All content lives in `data/*.json`. Edit directly and commit — no admin UI needed.
+## Setup
 
-### People
+### 1. lab.config.json
 
-Add/edit entries in `data/people.json`. Roles: `faculty`, `phd`, `ms`, `undergrad`, `postdoc`, `alumni`, `visitor`. Alumni can include `alumniYear` and `alumniPosition`.
+Update the following fields before running anything:
 
-### Publications
+```json
+{
+  "lab": {
+    "name": "Your Lab Name",
+    "shortName": "Short Name",
+    "university": "Your University",
+    "department": "Department of ...",
+    "description": "One paragraph about the lab.",
+    "contactEmail": "pi@university.edu"
+  },
+  "semanticScholar": {
+    "authorIds": [
+      { "name": "Jane Doe", "id": "123456789", "startYear": 2018 }
+    ]
+  }
+}
+```
 
-Publications are auto-updated every 2 months via GitHub Actions. Manual additions go in `data/publications.json`.
+To find a Semantic Scholar author ID, search for the author at [semanticscholar.org](https://www.semanticscholar.org/) and copy the numeric ID from the URL. Set `"id": ""` for authors without a Semantic Scholar profile; the pipeline skips fetching for them but keeps them in the roster. Add `"endYear"` for authors who have left the lab to stop fetching new papers for them.
 
-### Research Projects
+### 2. Google Drive (Shared Drive)
 
-Edit `data/research.json`. Set `active: true/false` to control which section a project appears in.
+PDFs are stored in a Google Shared Drive. A regular My Drive folder will not work because service accounts have no personal storage quota.
 
-### News
+**Create the Shared Drive:**
 
-Add entries to `data/news.json`. Types: `award`, `paper`, `talk`, `media`, `hiring`, `other`.
+1. Go to [drive.google.com](https://drive.google.com) and create a new Shared Drive (left sidebar > "Shared drives" > "New").
+2. Note the folder ID from the URL: `drive.google.com/drive/folders/<FOLDER_ID>`.
 
-## Configuration
+**Create a service account:**
 
-All lab-specific strings come from `lab.config.json` — no hardcoded names in components.
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/), create a project, and enable the **Google Drive API**.
+2. Under "IAM & Admin" > "Service Accounts", create a new service account.
+3. Create a JSON key for the service account and download it.
+4. Copy the `client_email` from the JSON key (looks like `name@project.iam.gserviceaccount.com`).
+5. In the Shared Drive, click "Manage members" and add that email with **Content Manager** access.
 
-Key fields:
-- `lab.name` / `lab.shortName` — displayed in navbar, footer, hero
-- `pi` — principal investigator details
-- `semanticScholar.authorIds` — drives the publications pipeline
-- `social` — footer links (Twitter, GitHub, Google Scholar)
-- `theme` — color tokens
+### 3. WordPress application password
 
-## Publications Pipeline
+The sync uses a WordPress application password, not your login password.
 
-Automated via `scraper/pipeline.py` (Python), run weekly by `.github/workflows/scrape-publications.yml`:
+1. In WordPress admin, go to **Users > Profile**.
+2. Scroll to "Application Passwords", enter a name (e.g. "Pipeline"), and click "Add New Application Password".
+3. Copy the generated password (shown only once).
 
-1. Reads the author roster from `lab.config.json` → `semanticScholar.authorIds`
-2. Fetches papers from Semantic Scholar for each configured author
-3. Merges with the existing `data/publications.json` by Semantic Scholar ID → DOI → normalized title (never by a regenerated slug — existing curated `id`s are always preserved)
-4. Downloads open-access PDFs to `public/papers/` (Git LFS) and extracts thumbnails to `public/images/publications/`
-5. Summarizes key contributions via Gemini (PDF-title-verified, or abstract-only if the abstract is substantial — both guarded against hallucinating from training data instead of the actual paper)
-6. Uploads PDFs to a shared Google Drive folder, recording the link back into `data/publications.json` (`driveUrl`)
-7. Flags any publication it couldn't get a PDF for (`pdfMissing: true`) and opens/updates a GitHub issue listing exactly which file to manually add and where
+### 4. GitHub repository secrets
 
-The resulting commit to `data/publications.json` automatically triggers `.github/workflows/sync-to-wordpress.yml`, which pushes the updated content to the WordPress site.
+Go to **Settings > Secrets and variables > Actions** and add the following secrets:
 
-Run manually:
+| Secret | Value |
+|---|---|
+| `WP_URL` | Your WordPress site URL, e.g. `https://yoursite.unc.edu` |
+| `WP_USER` | Your WordPress username |
+| `WP_APP_PASSWORD` | The application password from step 3 |
+| `GOOGLE_SERVICE_ACCOUNT_JSON` | The full contents of the service account JSON key file |
+| `GOOGLE_DRIVE_FOLDER_ID` | The folder ID from the Shared Drive URL |
+| `GEMINI_API_KEY` | *(optional)* Gemini API key for AI summaries (see below) |
+
+### 5. AI summaries (optional)
+
+The pipeline uses the [Gemini API](https://ai.google.dev/) to extract key contributions from each paper. Without a key, papers are added without the "Key Contributions" section.
+
+To enable:
+
+1. Get an API key from [Google AI Studio](https://aistudio.google.com/).
+2. Add it as the `GEMINI_API_KEY` repository secret.
+
+The pipeline verifies the paper title matches the PDF before extracting anything, and requires a minimum abstract length for text-only analysis, to avoid generating content from the wrong document.
+
+---
+
+## Running manually
+
+**WordPress sync:**
+```bash
+cd wordpress/sync
+pip install -r requirements.txt
+# create a .env file with WP_URL, WP_USER, WP_APP_PASSWORD
+python sync.py                   # sync everything
+python sync.py --publications    # publications only
+python sync.py --pages           # static pages only
+python sync.py --dry-run         # preview without writing
+```
+
+**Publications scrape + Drive upload:**
 ```bash
 cd scraper
 pip install -r requirements.txt
-python pipeline.py                              # full run
-FORCE_RESUMMARY=true python pipeline.py         # regenerate all AI summaries
-python drive_uploader.py                        # Drive upload only (needs GOOGLE_APPLICATION_CREDENTIALS + GOOGLE_DRIVE_FOLDER_ID)
+# set GOOGLE_APPLICATION_CREDENTIALS=/path/to/key.json and GOOGLE_DRIVE_FOLDER_ID
+python pipeline.py               # full scrape
+python drive_uploader.py         # Drive upload only
 ```
 
-For one-off manual tasks (enriching an individual paper, re-running Gemini summaries, scraping people photos, etc.) see [MAINTENANCE.md](MAINTENANCE.md) — those tools in `scripts/` are unaffected by this pipeline and safe to keep using.
+---
 
-### Adding a lab member to the pipeline
+## GitHub Actions workflows
 
-1. Find the author on [semanticscholar.org](https://www.semanticscholar.org/) and copy the numeric ID from the URL.
-2. Add an entry to `lab.config.json` under `semanticScholar.authorIds`:
-   ```json
-   { "name": "Jane Doe", "id": "123456789", "startYear": 2022 }
-   ```
-3. Optional `"endYear"` stops fetching new papers for that author after a given year (e.g. once they've left the lab) — papers already in `data/publications.json` are never removed.
-4. If someone has no Semantic Scholar profile yet, use `"id": ""` — the pipeline skips fetching for them but keeps them in the roster.
+**`scrape-publications.yml`** runs every Sunday at 2am UTC. It can also be triggered manually from the Actions tab with two options:
+- "Skip re-scraping" to only run the Drive uploader (useful after manually adding PDFs).
+- "Force resummary" to regenerate all AI key-contribution summaries.
 
-## Dark Mode
+**`sync-to-wordpress.yml`** runs automatically whenever `data/publications.json`, `data/people.json`, `data/research.json`, or `data/news.json` changes on main. It also runs weekly on Monday at 3am UTC and can be triggered manually with a choice of what to sync (all, publications only, or pages only).
 
-Toggle in navbar. Uses `data-theme="dark"` on `<html>` with CSS custom properties. Persisted in localStorage, falls back to OS preference.
+---
 
-## Deployment
+## Adding publications manually
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for Vercel setup instructions.
+If the pipeline cannot find a PDF for a paper, it opens a GitHub issue listing the missing files. To add one manually:
 
-## Using as a Template
+1. Place the PDF at `public/papers/<publication-id>.pdf`.
+2. Commit and push.
+3. Go to Actions > "Scrape & Update Publications" > "Run workflow" and check "Skip re-scraping". This uploads the new PDF to Drive and updates `data/publications.json` with the Drive link.
+4. The WordPress sync triggers automatically once `data/publications.json` is updated.
 
-1. Fork the repo
-2. Edit `lab.config.json` with your group's details
-3. Replace `data/*.json` with your content
-4. Update `semanticScholar.authorIds` for your team
-5. Deploy to Vercel
+If a PDF cannot be found anywhere, set `"pdfMissing": true` on the entry in `data/publications.json` to stop the pipeline from flagging it.
 
-## Tech Stack
+---
 
-- **Framework**: Next.js 16 (App Router, static generation)
-- **Language**: TypeScript (strict mode)
-- **Styling**: Tailwind CSS 3 + CSS custom properties
-- **Data**: JSON files read at build time
-- **Pipeline**: Semantic Scholar API + Gemini API + Google Drive API
-- **CI**: GitHub Actions
-- **Hosting**: Vercel (free tier)
-- **WordPress sync**: REST API (`wordpress/sync/`), for the parallel WordPress deployment
+## Editing content
+
+All content is in `data/*.json`. Edit directly and commit.
+
+- **People**: `data/people.json`. Roles: `faculty`, `phd`, `ms`, `undergrad`, `postdoc`, `alumni`, `visitor`. Alumni entries can include `alumniYear` and `alumniPosition`.
+- **Research projects**: `data/research.json`. Set `"active": true/false` to control which section a project appears in.
+- **News**: `data/news.json`. Types: `award`, `paper`, `talk`, `media`, `hiring`, `other`.
