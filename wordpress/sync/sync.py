@@ -326,7 +326,11 @@ def _upload_research_image(image_path: Path, research_id: str) -> int:
     if DRY_RUN:
         print(f"   [dry-run] upload research image: {image_path.name}")
         return 0
-    media_id = _upload_or_reuse(image_path, f"research-{image_path.name}", "image/jpeg")
+    # A publication thumbnail used as a research image is already in the media library
+    # under its own filename, so reuse that attachment instead of uploading a copy.
+    in_publications = image_path.parent.name == "publications"
+    upload_name = image_path.name if in_publications else f"research-{image_path.name}"
+    media_id = _upload_or_reuse(image_path, upload_name, "image/jpeg")
     if media_id:
         _research_media_cache[research_id] = media_id
         _save_research_media_cache()

@@ -11,5 +11,10 @@
   "3d-laparoscopic-visualization": 1334,
   "wide-area-tracking": 1335,
   "image-based-rendering": 1336,
-  "telecollaboration": 1337
+  "telecollaboration": 1337,
+  "desktop-3d-telepresence": 148,
+  "egocentric-body-pose-tracking": 169,
+  "eye-tracking-with-3d-pupil-localization": 163,
+  "holographic-near-eye-display": 2630,
+  "novel-view-rendering-using-neural-networks": 167
 }

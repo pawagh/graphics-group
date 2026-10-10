@@ -3,7 +3,7 @@
     "id": "desktop-3d-telepresence",
     "title": "Desktop 3D Telepresence",
     "description": "Bringing Telepresence to Every Desk — developing systems for real-time 3D telepresence using commodity RGBD cameras.",
-    "imagePath": "/images/research/desktop-3d-telepresence.png",
+    "imagePath": "/images/publications/wang-2023-bringing.png",
     "tags": [],
     "publicationIds": [
       "wang-2023-bringing",
@@ -19,7 +19,7 @@
     "id": "egocentric-body-pose-tracking",
     "title": "Egocentric Body Pose Tracking",
     "description": "Mobile, egocentric human body motion reconstruction using eyeglasses-mounted cameras and body-worn inertial sensors.",
-    "imagePath": "/images/research/egocentric-body-pose-tracking.png",
+    "imagePath": "/images/publications/cha-2021-mobile.png",
     "tags": [],
     "publicationIds": [
       "cha-2021-mobile",
@@ -33,7 +33,7 @@
     "id": "eye-tracking-with-3d-pupil-localization",
     "title": "Eye Tracking with 3D Pupil Localization",
     "description": "3D pupil localization and gaze tracking based on anatomical eye models and neural refraction correction for AR/VR displays.",
-    "imagePath": "/images/research/eye-tracking-with-3d-pupil-localization.png",
+    "imagePath": "/images/publications/lu-2022-gaze.png",
     "tags": [],
     "publicationIds": [
       "lu-2022-gaze",
@@ -48,7 +48,7 @@
     "id": "holographic-near-eye-display",
     "title": "Holographic Near-Eye Display",
     "description": "Computing high-quality phase-only holograms for near-eye holographic displays with applications in AR eyeglasses.",
-    "imagePath": "/images/research/holographic-near-eye-display.jpg",
+    "imagePath": "/images/publications/chakravarthula-2020-computing.jpg",
     "tags": [],
     "publicationIds": [
       "chakravarthula-2019-wirtinger",
@@ -70,7 +70,7 @@
     "id": "novel-view-rendering-using-neural-networks",
     "title": "Novel View Rendering using Neural Networks",
     "description": "Learning generalizable radiance fields for human performance rendering and novel view synthesis.",
-    "imagePath": "/images/research/novel-view-rendering-using-neural-networks.png",
+    "imagePath": "/images/publications/kwon-2021-human.png",
     "tags": [],
     "publicationIds": [
       "kwon-2020-rotationally-consistent",
