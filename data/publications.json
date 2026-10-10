@@ -7255,5 +7255,22 @@
     "tldr": "",
     "pdfMissing": false,
     "driveUrl": "https://drive.google.com/file/d/18nxvY9rOK49cnro0jM2dMcMS6lwi09sN/view"
+  },
+  {
+    "id": "dunn-2019-required",
+    "title": "Required Accuracy of Gaze Tracking for Varifocal Displays",
+    "authors": [
+      "David Dunn"
+    ],
+    "year": 2019,
+    "venue": "IEEE VR Workshop on Eye Tracking and Vision Augmentation (VisAug)",
+    "abstract": "Varifocal displays are a practical method to solve vergence-accommodation conflict in near-eye displays for both virtual and augmented reality, but they are reliant on knowing the user's focal state. One approach for detecting the focal state is to use the link between vergence and accommodation and employ binocular gaze tracking to determine the depth of the fixation point; consequently, the focal depth is also known. In order to ensure the virtual image is in focus, the display must be set to a depth which causes no negative perceptual or physiological effects to the viewer, which indicates error bounds for the calculation of fixation point. I analyze the required gaze tracker accuracy to ensure the display focus is set within the viewer's depth of field, zone of comfort, and zone of clear single binocular vision. My findings indicate that for the median adult using an augmented reality varifocal display, gaze tracking accuracy must be better than 0.541 degrees. In addition, I discuss eye tracking approaches presented in the literature to determine their ability to meet the specified requirements.",
+    "pdfUrl": "https://telepresence.web.unc.edu/wp-content/uploads/sites/11620/2019/03/Dunn_2019_RequiredAccuracyOfGazeTrackingForVarifocalDisplays.pdf",
+    "tags": [
+      "Workshop",
+      "IEEE VR"
+    ],
+    "featured": false,
+    "imagePath": "/images/publications/dunn-2019-required.png"
   }
 ]

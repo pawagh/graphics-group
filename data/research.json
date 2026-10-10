@@ -5,10 +5,15 @@
     "description": "Bringing Telepresence to Every Desk — developing systems for real-time 3D telepresence using commodity RGBD cameras.",
     "imagePath": "/images/research/desktop-3d-telepresence.png",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "wang-2023-bringing",
+      "wang-2025-view",
+      "wang-2025-coherent",
+      "jun-2022-evaluation",
+      "jun-2020-easy-to-use"
+    ],
     "active": true,
-    "order": 0,
-    "url": "/wang-2023-bringing/"
+    "order": 0
   },
   {
     "id": "egocentric-body-pose-tracking",
@@ -16,10 +21,13 @@
     "description": "Mobile, egocentric human body motion reconstruction using eyeglasses-mounted cameras and body-worn inertial sensors.",
     "imagePath": "/images/research/egocentric-body-pose-tracking.png",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "cha-2021-mobile",
+      "cha-2018-fully",
+      "zhang-2023-reconstruction"
+    ],
     "active": true,
-    "order": 1,
-    "url": "/cha-2021-mobile/"
+    "order": 1
   },
   {
     "id": "eye-tracking-with-3d-pupil-localization",
@@ -27,10 +35,14 @@
     "description": "3D pupil localization and gaze tracking based on anatomical eye models and neural refraction correction for AR/VR displays.",
     "imagePath": "/images/research/eye-tracking-with-3d-pupil-localization.png",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "lu-2022-gaze",
+      "lu-2022-geometry-aware",
+      "lu-2020-improved",
+      "jain-2025-flattrack"
+    ],
     "active": true,
-    "order": 2,
-    "url": "/lu-2022-gaze/"
+    "order": 2
   },
   {
     "id": "holographic-near-eye-display",
@@ -38,10 +50,21 @@
     "description": "Computing high-quality phase-only holograms for near-eye holographic displays with applications in AR eyeglasses.",
     "imagePath": "/images/research/holographic-near-eye-display.jpg",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "chakravarthula-2019-wirtinger",
+      "chakravarthula-2020-computing",
+      "chakravarthula-2020-learned",
+      "xia-2020-eyeglassesstyle",
+      "chakravarthula-2021-gazecontingent",
+      "chakravarthula-2022-hogelfree",
+      "chakravarthula-2022-pupilaware",
+      "georgiou-2022-visual",
+      "schiffers-2023-stochastic",
+      "tseng-2024-tendue",
+      "qu-2025-holozip"
+    ],
     "active": true,
-    "order": 3,
-    "url": "/chakravarthula-2020-computing/"
+    "order": 3
   },
   {
     "id": "novel-view-rendering-using-neural-networks",
@@ -49,10 +72,15 @@
     "description": "Learning generalizable radiance fields for human performance rendering and novel view synthesis.",
     "imagePath": "/images/research/novel-view-rendering-using-neural-networks.png",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "kwon-2020-rotationally-consistent",
+      "kwon-2020-rotationally-temporally",
+      "kwon-2021-human",
+      "kwon-2023-imagebased",
+      "kwon-2023-deliffas"
+    ],
     "active": true,
-    "order": 4,
-    "url": "/kwon-2021-human/"
+    "order": 4
   },
   {
     "id": "dynamic-focus-augmented-reality-display",
@@ -60,10 +88,16 @@
     "description": "Addresses fundamental limitations of near eye displays including limited field of view, low angular resolution, and fixed accommodative state. Proposes hybrid hardware using see-through deformable membrane mirrors to provide wide FOV and accommodative cues, addressing Vergence-Accommodation Conflict.",
     "imagePath": "/images/research/dynamic-focus-augmented-reality-display.png",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "dunn-2017-wide",
+      "dunn-2017-membrane",
+      "dunn-2018-varifocal",
+      "dunn-2018-mitigating",
+      "chakravarthula-2018-focusar",
+      "dunn-2019-required"
+    ],
     "active": false,
-    "order": 5,
-    "url": "https://telepresence.web.unc.edu/research/dynamic-focus-augmented-reality-display/"
+    "order": 5
   },
   {
     "id": "immersive-learning-from-3d-reconstruction",
@@ -71,10 +105,14 @@
     "description": "Investigates 3D reconstruction of room-sized dynamic scenes with higher quality and fidelity. Enables immersive learning of rare situations through post-event, annotated virtual reality experiences for emergency medical procedures.",
     "imagePath": "/images/research/immersive-learning-from-3d-reconstruction.png",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "cha-2016-immersive",
+      "dou-2015-scanning",
+      "fuchs-2014-temporally",
+      "chabra-2017-optimizing"
+    ],
     "active": false,
-    "order": 6,
-    "url": "https://telepresence.web.unc.edu/research/3dreconstructiondynamic/"
+    "order": 6
   },
   {
     "id": "low-latency-display",
@@ -82,10 +120,14 @@
     "description": "Developing low latency tracking and display system for ultra-low latency, optical see-through augmented reality head mounted displays. Runs at high frame rate and performs in-display corrections.",
     "imagePath": "/images/research/low-latency-display.jpg",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "zheng-2014-minimizing",
+      "lincoln-2016-motion",
+      "lincoln-2017-scene-adaptive",
+      "blate-2019-implementation"
+    ],
     "active": false,
-    "order": 7,
-    "url": "https://telepresence.web.unc.edu/research/low-latency-displays/"
+    "order": 7
   },
   {
     "id": "pinlight-display",
@@ -93,10 +135,14 @@
     "description": "Novel optical see-through augmented reality display offering wide field of view and compact eyeglasses form factor. Prototype demonstrates 110° diagonal field of view.",
     "imagePath": "/images/research/pinlight-display.jpeg",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "maimone-2013-computational",
+      "maimone-2014-pinlight",
+      "xia-2025-expanded",
+      "xia-2025-dynamic"
+    ],
     "active": false,
-    "order": 8,
-    "url": ""
+    "order": 8
   },
   {
     "id": "office-of-the-future",
@@ -104,10 +150,15 @@
     "description": "Unified application of computer vision and computer graphics combining panoramic image display, tiled display systems, image-based modeling, and immersive environments for 3D tele-immersion capabilities.",
     "imagePath": "/images/research/office-of-the-future.jpg",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "raskar-1998-office",
+      "raskar-1998-spatially",
+      "raskar-1998-seamless",
+      "fuchs-1998-beyond",
+      "welch-2000-projected"
+    ],
     "active": false,
-    "order": 9,
-    "url": ""
+    "order": 9
   },
   {
     "id": "3d-telepresence-for-medical-consultation",
@@ -115,10 +166,19 @@
     "description": "Develops permanent, portable, handheld 3D telepresence technologies for remote medical consultations. Addresses real time acquisition, novel view generation, network variability, and 3D depth cues.",
     "imagePath": "/images/research/3d-telepresence-for-medical-consultation.jpg",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "fuchs-1993-vision",
+      "welch-2004-telepresence",
+      "welch-2005-improving",
+      "sonnenwald-2006-experimental",
+      "soderholm-2007-potential",
+      "soderholm-2008-exploring",
+      "welch-2008-remote",
+      "welch-2009-medical",
+      "sonnenwald-2014-illuminating"
+    ],
     "active": false,
-    "order": 10,
-    "url": ""
+    "order": 10
   },
   {
     "id": "wall-to-wall-telepresence",
@@ -126,10 +186,11 @@
     "description": "Enabled visualization of large 3D models on multi-screen 2D display for telepresence. Experimented with reconstructed models and dense datasets.",
     "imagePath": "/images/research/wall-to-wall-telepresence.png",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "dou-2012-room-sized"
+    ],
     "active": false,
-    "order": 11,
-    "url": "https://henryfuchs.web.unc.edu/wp-content/uploads/sites/4964/2013/05/roomsized-informal-telepresence-system.pdf"
+    "order": 11
   },
   {
     "id": "multi-view-teleconferencing",
@@ -137,19 +198,22 @@
     "description": "Two-site teleconferencing system supporting multiple people per site while maintaining gaze awareness. Provides unique views of remote sites to each local participant.",
     "imagePath": "/images/research/multi-view-teleconferencing.jpg",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "lincoln-2009-multi-view"
+    ],
     "active": false,
-    "order": 12,
-    "url": "http://telepresence.web.unc.edu/wp-content/uploads/sites/11620/2016/04/lincoln-imm2009-multiview.pdf"
+    "order": 12
   },
   {
     "id": "avatar",
     "title": "Avatar",
     "description": "One-to-many teleconferencing system in which a user inhabits an animatronic shader lamps avatar at a remote site, maintaining gaze awareness with the people there.",
     "imagePath": "/images/research/avatar.jpg",
-    "url": "http://telepresence.web.unc.edu/wp-content/uploads/sites/11620/2016/04/lincoln-2011ijvr-avatars.pdf",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "lincoln-2009-animatronic",
+      "schubert-2012-advances"
+    ],
     "active": false,
     "order": 13
   },
@@ -159,10 +223,20 @@
     "description": "Develops system allowing physicians to see inside patients using augmented reality. Combines ultrasound echography, laparoscopic range imaging, video see-through HMD, and graphics.",
     "imagePath": "/images/research/ultrasound-medical-augmented-reality.jpg",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "fuchs-1990-ultrasound",
+      "bajura-1992-merging",
+      "ohbuchi-1992-incremental",
+      "fuchs-1996-virtual",
+      "state-1996-technologies",
+      "garrett-1996-real-time",
+      "md-1998-augmented",
+      "rosenthal-2001-augmented",
+      "rosenthal-2002-augmented",
+      "state-2003-stereo"
+    ],
     "active": false,
-    "order": 14,
-    "url": ""
+    "order": 14
   },
   {
     "id": "pixel-planes-pixelflow",
@@ -170,10 +244,21 @@
     "description": "Explores computer architectures for 3D graphics since 1980. Focuses on image-based rendering with goal of high-performance graphics engine using images as principal rendering primitive.",
     "imagePath": "/images/research/pixel-planes-pixelflow.jpg",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "poulton-1981-pixel-planes",
+      "fuchs-1982-developing",
+      "poulton-1985-pixel-planes",
+      "poulton-1985-parallel",
+      "fuchs-1985-fast",
+      "fuchs-1987-introduction",
+      "eyles-1987-pixel-planes",
+      "fuchs-1989-pixel-planes",
+      "fuchs-1989-coarse-grain",
+      "molnar-1994-sorting",
+      "lastra-1996-harnessing"
+    ],
     "active": false,
-    "order": 15,
-    "url": ""
+    "order": 15
   },
   {
     "id": "3d-laparoscopic-visualization",
@@ -181,10 +266,13 @@
     "description": "Three-dimensional visualization system for laparoscopic surgical procedures. Uses 3D visualization, depth extraction, six degree-of-freedom tracking to display merged real and synthetic images.",
     "imagePath": "/images/research/3d-laparoscopic-visualization.jpg",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "fuchs-1998-augmented",
+      "ackerman-2001-real-time",
+      "ackerman-2002-surface"
+    ],
     "active": false,
-    "order": 16,
-    "url": ""
+    "order": 16
   },
   {
     "id": "wide-area-tracking",
@@ -192,10 +280,14 @@
     "description": "Develops wide-area systems for 6D tracking of heads, limbs, and hand-held devices. Provides precise position and orientation information for head-mounted displays.",
     "imagePath": "/images/research/wide-area-tracking.jpg",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "fuchs-1984-self-tracker",
+      "wang-1990-real-time",
+      "wang-1990-tracking",
+      "ward-1992-demonstrated"
+    ],
     "active": false,
-    "order": 17,
-    "url": ""
+    "order": 17
   },
   {
     "id": "image-based-rendering",
@@ -203,10 +295,13 @@
     "description": "Investigates alternative approach representing complex 3D environments with image sets containing depth information. Develops algorithms to produce new images from viewpoints not in original image set.",
     "imagePath": "/images/research/image-based-rendering.jpg",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "nyland-1999-impact",
+      "nyland-2001-capturing",
+      "chen-2003-acquisition"
+    ],
     "active": false,
-    "order": 18,
-    "url": ""
+    "order": 18
   },
   {
     "id": "telecollaboration",
@@ -214,19 +309,28 @@
     "description": "Multi-site, multi-disciplinary project developing distributed collaborative design environment. Includes shared virtual environment software, collaborative VR, and interaction tools.",
     "imagePath": "/images/research/telecollaboration.gif",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "cutts-1998-immersive",
+      "towles-2002-tele-collaboration",
+      "kelshikar-2003-real-time"
+    ],
     "active": false,
-    "order": 19,
-    "url": "http://cs.brown.edu/stc/resea/telecollaboration/overview_telecollaboration.html"
+    "order": 19
   },
   {
     "id": "wide-area-visuals-with-projectors",
     "title": "Wide Area Visuals with Projectors",
     "description": "Portable multi-projector display and rendering system that can be rapidly deployed in geometrically complex environments, with seamless geometric and photometric projection and continuous self-calibration using pan-tilt-zoom cameras and imperceptible structured light.",
     "imagePath": "/images/research/wide-area-visuals-with-projectors.gif",
-    "url": "",
     "tags": [],
-    "publicationIds": [],
+    "publicationIds": [
+      "raskar-1999-multi-projector",
+      "raij-2003-pixelflex2",
+      "cotting-2004-embedding",
+      "cotting-2005-imperceptible",
+      "cotting-2005-adaptive",
+      "johnson-2009-distributed"
+    ],
     "active": false,
     "order": 20
   }

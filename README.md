@@ -137,7 +137,7 @@ python drive_uploader.py         # Drive upload only
 
 ## Adding publications manually
 
-PDFs are stored in the shared Google Drive folder and are not committed to git. If the pipeline cannot find a PDF for a paper automatically, it opens a GitHub issue listing the missing files.
+PDFs are stored in the shared Google Drive folder and are not committed to git. The site only links PDFs from Drive. The `pdfUrl` field in `data/publications.json` is the address the pipeline downloads a PDF from before uploading it to Drive; it is not shown on the site. If the pipeline cannot find a PDF for a paper automatically, it opens a GitHub issue listing the missing files.
 
 To add a PDF manually:
 
@@ -157,7 +157,8 @@ All content is in `data/*.json`. Edit directly and commit.
 The About, Publications, People, Research, News, and Join Us pages are generated from these files on every sync. Changes made to those pages in the WordPress editor are overwritten the next time the sync runs, so make changes in this repo instead. Publication posts are regenerated the same way.
 
 - **People**: `data/people.json`. Roles: `faculty`, `phd`, `ms`, `undergrad`, `postdoc`, `alumni`, `visitor`. Alumni entries can include `alumniYear` and `alumniPosition`. Photos go in `public/images/people/`.
-- **Research projects**: `data/research.json`. Set `"active": true/false` to control which section a project appears in, and `order` to control position. `imagePath` points to a file in `public/images/research/`. `url` is where the title and image link to: a path starting with `/` links to a page on this site (for example `/wang-2023-bringing/` for a publication post), and a full `https://` address links elsewhere. Leave `url` empty for no link.
+- **Research projects**: `data/research.json`. Each project gets a card on the Research page and its own page at `/research/<id>/`. Set `"active": true/false` to control which section a project appears in, and `order` to control position. `imagePath` points to a file in `public/images/research/`. `publicationIds` lists the publications (by their `id` in `data/publications.json`) shown at the bottom of the project page, each linking to that paper's post.
+- **Research project pages**: the main text of a project page comes from `data/research/<id>.html` if that file exists, and from the project's `description` otherwise. These files are plain HTML. Images go in `public/images/research/<id>/` and are referenced as `<img src="/images/research/<id>/file.jpg">`; the sync uploads them. Links to other pages on the site can start with `/` (for example `<a href="/research/image-based-rendering/">`). A YouTube URL on its own line becomes an embedded video.
 - **News**: `data/news.json`. Types: `award`, `paper`, `talk`, `media`, `hiring`, `other`.
 
 ### How images reach the site

@@ -1,0 +1,10 @@
+<p>This project looks to develop a robust multi-projector display and rendering system that is portable, and rapidly set up and deployed in a variety of geometrically complex display environments. Our goals include seamless geometric and photometric image projection, and continuous self-calibration using one or more pan-tilt-zoom cameras.</p>
+
+<h3>Basic Calibration Method</h3>
+<p>We use two pan-tilt-zoom cameras and adapt the calibration procedures developed by Sinha to geometrically calibrate an array of projectors and extract an accurate display surface model. This method is expected to achieve excellent panoramic registration and compensation for lens distortion in both the camera and projectors.</p>
+
+<h3>Rendering System</h3>
+<p>We built a PC-cluster rendering system that uses a 2-pass rendering algorithm running on either Chromium or UNC's PixelFlex software framework.</p>
+
+<h3>Continuous Calibration using Imperceptible Structured Light</h3>
+<p>We embedded structured light patterns in normal color imagery so it is imperceptible to humans observing the display yet visible to a synchronized camera. The recovered structured light imagery is then used to continuously refine the calibration geometry while the system is in use, making the system more tolerant to changes in display geometry.</p>

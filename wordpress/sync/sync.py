@@ -425,10 +425,9 @@ def _format_pub_html(pub: dict) -> str:
 
     # Action links
     links = []
+    # PDFs are only linked from the shared Drive; pdfUrl is just the original download source.
     if pub.get("driveUrl"):
         links.append(f'<a href="{pub["driveUrl"]}" target="_blank" rel="noopener">&#128196; Download PDF</a>')
-    elif pub.get("pdfUrl"):
-        links.append(f'<a href="{pub["pdfUrl"]}" target="_blank" rel="noopener">&#128196; View PDF</a>')
     if doi:
         links.append(f'<a href="https://doi.org/{doi}" target="_blank" rel="noopener">DOI</a>')
     if pub.get("semanticScholarId"):
@@ -610,7 +609,8 @@ def sync_publications():
 # ─────────────────────────────────────────────
 
 def _upsert_page(slug: str, title: str, content: str, parent_id: int = 0) -> int:
-    r = _api("GET", f"pages?slug={slug}&per_page=1")
+    parent_filter = f"&parent={parent_id}" if parent_id else ""
+    r = _api("GET", f"pages?slug={slug}&per_page=1{parent_filter}")
     existing = r.json() if r.ok and isinstance(r.json(), list) else []
 
     page_data: dict = {"title": title, "content": content, "slug": slug, "status": "publish"}
@@ -805,12 +805,10 @@ def _research_html(research: list, image_urls: dict) -> str:
         desc  = r.get("description", "")
         rid   = r.get("id", "")
         img   = image_urls.get(rid, "")
-        url   = r.get("url", "")
-        if url.startswith("/"):
-            url = f"{WP_URL}{url}"
+        url   = f"{WP_URL}/research/{rid}/"
 
         def _linked(inner: str) -> str:
-            return f'<a href="{url}">{inner}</a>' if url else inner
+            return f'<a href="{url}">{inner}</a>'
 
         if img:
             thumb = _linked(
@@ -845,6 +843,94 @@ def _research_html(research: list, image_urls: dict) -> str:
         return f"<h2>{heading}</h2>\n{cards}"
 
     return _section(active, "Active Research") + _section(inactive, "Past Research")
+
+
+RESEARCH_PAGES_DIR = DATA_DIR / "research"
+_LOCAL_IMG = re.compile(r'<img\b[^>]*?\bsrc="(/images/[^"]+)"[^>]*>')
+
+
+def _media_source_url(media_id: int) -> str:
+    r = _api("GET", f"media/{media_id}?_fields=source_url")
+    return r.json().get("source_url", "") if r.ok else ""
+
+
+def _resolve_local_links(html: str) -> str:
+    """Upload images written as src="/images/..." and make href="/..." absolute.
+
+    An image that cannot be uploaded is left out rather than shown broken.
+    """
+    def _img(m: re.Match) -> str:
+        rel = m.group(1)
+        key = f"file:{rel}"
+        img = PUBLIC_DIR / rel.lstrip("/")
+        if key not in _research_media_cache and img.exists() and not DRY_RUN:
+            media_id = _upload_or_reuse(img, "-".join(Path(rel).parts[1:]), "image/jpeg")
+            if media_id:
+                _research_media_cache[key] = media_id
+                _save_research_media_cache()
+        media_id = _research_media_cache.get(key)
+        url = _media_source_url(media_id) if media_id else ""
+        return m.group(0).replace(f'src="{rel}"', f'src="{url}"') if url else ""
+
+    html = _LOCAL_IMG.sub(_img, html)
+    return re.sub(r'href="/(?!/)', f'href="{WP_URL}/', html)
+
+
+def _fetch_post_cards(slugs: list) -> dict:
+    """Return {slug: {"link": post URL, "image": featured image URL}} for publication posts."""
+    cards: dict = {}
+    slugs = sorted(set(slugs))
+    for i in range(0, len(slugs), 50):
+        r = _api("GET", "posts", params={"slug": ",".join(slugs[i:i + 50]), "per_page": 100,
+                                         "_fields": "slug,link,featured_media"})
+        if r.ok and isinstance(r.json(), list):
+            for p in r.json():
+                cards[p["slug"]] = {"link": p.get("link", ""), "media": p.get("featured_media", 0)}
+    media_ids = [c["media"] for c in cards.values() if c["media"]]
+    urls: dict = {}
+    for i in range(0, len(media_ids), 100):
+        batch = ",".join(str(x) for x in media_ids[i:i + 100])
+        r = _api("GET", f"media?include={batch}&per_page=100&_fields=id,source_url")
+        if r.ok and isinstance(r.json(), list):
+            urls.update({m["id"]: m["source_url"] for m in r.json()})
+    for c in cards.values():
+        c["image"] = urls.get(c.pop("media"), "")
+    return cards
+
+
+def _research_project_html(r: dict, image_url: str, pubs_by_id: dict, cards: dict) -> str:
+    title = r.get("title", "")
+    body_file = RESEARCH_PAGES_DIR / f"{r.get('id', '')}.html"
+    body = _resolve_local_links(body_file.read_text(encoding="utf-8")) if body_file.exists() else ""
+
+    parts = []
+    if image_url and "<img" not in body:
+        parts.append(f'<p><img src="{image_url}" alt="{title}"'
+                     f' style="max-width:100%;max-height:420px;height:auto;border-radius:4px"></p>')
+    parts.append(body or f"<p>{r.get('description', '')}</p>")
+
+    pubs = [pubs_by_id[p] for p in r.get("publicationIds", []) if p in pubs_by_id]
+    if pubs:
+        parts.append("<h2>Publications</h2>")
+        for pub in sorted(pubs, key=lambda p: p.get("year", 0), reverse=True):
+            card = cards.get(pub["id"], {})
+            link = card.get("link", "")
+            ptitle = f'<a href="{link}">{pub["title"]}</a>' if link else pub["title"]
+            thumb = (f'<img src="{card["image"]}" alt="" loading="lazy" style="width:140px;height:100px;'
+                     f'object-fit:cover;border-radius:4px">' if card.get("image") else "")
+            authors = ", ".join(pub.get("authors", []))
+            venue = ", ".join(str(x) for x in (pub.get("venue"), pub.get("year")) if x)
+            award = f'<br><strong>{pub["award"]}</strong>' if pub.get("award") else ""
+            parts.append(
+                f'<table style="width:100%;border-collapse:collapse;margin-bottom:12px"><tr>'
+                f'<td style="width:156px;padding:6px;vertical-align:top">{thumb}</td>'
+                f'<td style="padding:6px;vertical-align:top"><strong>{ptitle}</strong><br>'
+                f'<span style="color:#444">{authors}</span><br>'
+                f'<em style="color:#666">{venue}</em>{award}</td></tr></table>'
+            )
+
+    parts.append(f'<p><a href="{WP_URL}/research/">&larr; All research</a></p>')
+    return "\n".join(parts)
 
 
 # ─────────────────────────────────────────────
@@ -1063,7 +1149,13 @@ def sync_pages():
     home_id = _upsert_page("about", lab_name, _about_html(cfg))
     _upsert_page("publications", "Publications", _publications_page_html(pubs))
     _upsert_page("people", "People", _people_html(people, photo_urls))
-    _upsert_page("research", "Research", _research_html(research, research_image_urls))
+    research_id = _upsert_page("research", "Research", _research_html(research, research_image_urls))
+    pubs_by_id = {p["id"]: p for p in pubs}
+    cards = _fetch_post_cards([pid for r in research for pid in r.get("publicationIds", [])])
+    for r in research:
+        _upsert_page(r["id"], r.get("title", ""),
+                     _research_project_html(r, research_image_urls.get(r["id"], ""), pubs_by_id, cards),
+                     parent_id=research_id)
     _upsert_page("news", "News", _news_html(news))
     _upsert_page("join", "Join Us", _join_html(cfg))
 

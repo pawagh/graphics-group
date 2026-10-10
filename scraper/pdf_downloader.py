@@ -90,9 +90,18 @@ class PDFDownloader:
         no_url = 0
         needs_manual = []
 
+        on_drive = 0
+
         for i, pub in enumerate(publications, 1):
             pdf_url = pub.get("pdfUrl") or pub.get("_pdf_url", "")
             slug = pub.get("id") or pub.get("_slug") or pub.get("slug", f"paper-{i}")
+
+            # Drive is the source of truth for PDFs; public/papers/ is not committed,
+            # so it is empty at the start of every CI run.
+            if pub.get("driveUrl"):
+                pub["pdfMissing"] = False
+                on_drive += 1
+                continue
 
             print(f"\n[{i}/{len(publications)}] {pub.get('title', 'Unknown')[:60]}...")
 
@@ -116,6 +125,7 @@ class PDFDownloader:
 
         print(f"\n{'='*70}")
         print(f"PDF Download Summary:")
+        print(f"  ↩ Already on Drive:         {on_drive}")
         print(f"  ✓ Downloaded/found locally: {downloaded}")
         print(f"  ✗ Download failed:          {failed}")
         print(f"  ℹ No URL (closed access):   {no_url}")
@@ -128,7 +138,7 @@ class PDFDownloader:
             for title, slug, filename, reason in needs_manual:
                 print(f"  • {title[:65]}")
                 print(f"      slug: {slug}  |  reason: {reason}")
-                print(f"      → place file at: public/papers/{filename}")
+                print(f"      → upload to the shared Drive folder as: {filename}")
             print(f"{'='*70}")
 
         return publications
