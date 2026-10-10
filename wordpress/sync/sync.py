@@ -919,7 +919,9 @@ def _research_project_html(r: dict, image_url: str, pubs_by_id: dict, cards: dic
             thumb = (f'<img src="{card["image"]}" alt="" loading="lazy" style="width:140px;height:100px;'
                      f'object-fit:cover;border-radius:4px">' if card.get("image") else "")
             authors = ", ".join(pub.get("authors", []))
-            venue = ", ".join(str(x) for x in (pub.get("venue"), pub.get("year")) if x)
+            venue, year = pub.get("venue") or "", str(pub.get("year") or "")
+            if year and year not in venue:
+                venue = f"{venue}, {year}" if venue else year
             award = f'<br><strong>{pub["award"]}</strong>' if pub.get("award") else ""
             parts.append(
                 f'<table style="width:100%;border-collapse:collapse;margin-bottom:12px"><tr>'
