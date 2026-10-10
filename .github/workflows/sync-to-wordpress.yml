@@ -12,6 +12,7 @@ on:
       - "data/publications.json"
       - "data/people.json"
       - "data/research.json"
+      - "data/research/**"
       - "data/news.json"
   schedule:
     - cron: "0 3 * * 1"
