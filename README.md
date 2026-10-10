@@ -154,6 +154,14 @@ If a PDF cannot be found anywhere, set `"pdfMissing": true` on the entry in `dat
 
 All content is in `data/*.json`. Edit directly and commit.
 
-- **People**: `data/people.json`. Roles: `faculty`, `phd`, `ms`, `undergrad`, `postdoc`, `alumni`, `visitor`. Alumni entries can include `alumniYear` and `alumniPosition`.
-- **Research projects**: `data/research.json`. Set `"active": true/false` to control which section a project appears in.
+The About, Publications, People, Research, News, and Join Us pages are generated from these files on every sync. Changes made to those pages in the WordPress editor are overwritten the next time the sync runs, so make changes in this repo instead. Publication posts are regenerated the same way.
+
+- **People**: `data/people.json`. Roles: `faculty`, `phd`, `ms`, `undergrad`, `postdoc`, `alumni`, `visitor`. Alumni entries can include `alumniYear` and `alumniPosition`. Photos go in `public/images/people/`.
+- **Research projects**: `data/research.json`. Set `"active": true/false` to control which section a project appears in, and `order` to control position. `imagePath` points to a file in `public/images/research/`. `url` is where the title and image link to: a path starting with `/` links to a page on this site (for example `/wang-2023-bringing/` for a publication post), and a full `https://` address links elsewhere. Leave `url` empty for no link.
 - **News**: `data/news.json`. Types: `award`, `paper`, `talk`, `media`, `hiring`, `other`.
+
+### How images reach the site
+
+Images live in this repo under `public/images/`. During a sync, any image that is not already in the WordPress media library is uploaded there, and the generated pages point to the uploaded copy. To change a research image, replace the file in `public/images/research/` under a new filename, update `imagePath`, and remove that project's entry from `wordpress/sync/.research-media-cache.json` so the sync uploads the new file.
+
+The WordPress site has a storage limit. If uploads fail with `rest_upload_limited_space`, the media library is full.

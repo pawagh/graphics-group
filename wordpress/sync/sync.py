@@ -31,6 +31,7 @@ Optional:
 import json
 import mimetypes
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -174,6 +175,51 @@ def _fetch_media_urls() -> dict:
     return urls
 
 
+def _find_existing_media(upload_name: str) -> int:
+    """Return the oldest attachment whose file matches upload_name (WP may add -1, -2, -scaled)."""
+    stem, ext = os.path.splitext(upload_name)
+    r = session.get(
+        f"{WP_URL}/wp-json/wp/v2/media",
+        params={"search": stem, "per_page": 100, "orderby": "id", "order": "asc",
+                "_fields": "id,source_url"},
+    )
+    if not r.ok or not isinstance(r.json(), list):
+        return 0
+    pattern = re.compile(rf"^{re.escape(stem)}(-\d+)?(-scaled)?{re.escape(ext)}$", re.IGNORECASE)
+    for item in r.json():
+        if pattern.match(item.get("source_url", "").rsplit("/", 1)[-1]):
+            return item["id"]
+    return 0
+
+
+def _upload_or_reuse(image_path: Path, upload_name: str, default_mime: str) -> int:
+    """Upload to the media library unless the file is already there.
+
+    The JSON caches are only committed from local runs, so CI starts each run with
+    a stale cache; checking WordPress first keeps it from uploading duplicates.
+    """
+    existing = _find_existing_media(upload_name)
+    if existing:
+        return existing
+
+    mime, _ = mimetypes.guess_type(str(image_path))
+    with open(image_path, "rb") as f:
+        data = f.read()
+    r = session.post(
+        f"{WP_URL}/wp-json/wp/v2/media",
+        headers={
+            "Content-Disposition": f'attachment; filename="{upload_name}"',
+            "Content-Type": mime or default_mime,
+        },
+        data=data,
+    )
+    if r.ok:
+        print(f"   ⬆ Uploaded: {upload_name}")
+        return r.json().get("id", 0)
+    print(f"   ✗ Media upload failed ({r.status_code}): {r.text[:100]}")
+    return 0
+
+
 def _upload_media(image_path: Path, pub_id: str) -> int:
     """Upload image to WP media library; return attachment ID. Cached per pub_id."""
     if pub_id in _media_cache:
@@ -183,30 +229,11 @@ def _upload_media(image_path: Path, pub_id: str) -> int:
         print(f"   [dry-run] upload media: {image_path.name}")
         return 0
 
-    mime, _ = mimetypes.guess_type(str(image_path))
-    mime = mime or "image/png"
-
-    with open(image_path, "rb") as f:
-        data = f.read()
-
-    r = session.post(
-        f"{WP_URL}/wp-json/wp/v2/media",
-        headers={
-            "Content-Disposition": f'attachment; filename="{image_path.name}"',
-            "Content-Type": mime,
-        },
-        data=data,
-    )
-
-    if r.ok:
-        media_id = r.json().get("id", 0)
+    media_id = _upload_or_reuse(image_path, image_path.name, "image/png")
+    if media_id:
         _media_cache[pub_id] = media_id
         _save_media_cache(_media_cache)
-        print(f"   🖼 Uploaded thumbnail: {image_path.name}")
-        return media_id
-    else:
-        print(f"   ✗ Media upload failed ({r.status_code}): {r.text[:100]}")
-        return 0
+    return media_id
 
 
 # ─────────────────────────────────────────────
@@ -231,27 +258,11 @@ def _upload_person_photo(image_path: Path, person_id: str) -> int:
     if DRY_RUN:
         print(f"   [dry-run] upload person photo: {image_path.name}")
         return 0
-    mime, _ = mimetypes.guess_type(str(image_path))
-    mime = mime or "image/jpeg"
-    with open(image_path, "rb") as f:
-        data = f.read()
-    r = session.post(
-        f"{WP_URL}/wp-json/wp/v2/media",
-        headers={
-            "Content-Disposition": f'attachment; filename="person-{image_path.name}"',
-            "Content-Type": mime,
-        },
-        data=data,
-    )
-    if r.ok:
-        media_id = r.json().get("id", 0)
+    media_id = _upload_or_reuse(image_path, f"person-{image_path.name}", "image/jpeg")
+    if media_id:
         _people_media_cache[person_id] = media_id
         _save_people_media_cache()
-        print(f"   👤 Uploaded photo: {image_path.name}")
-        return media_id
-    else:
-        print(f"   ✗ Photo upload failed ({r.status_code}): {r.text[:100]}")
-        return 0
+    return media_id
 
 
 def _sync_people_photos(people: list) -> None:
@@ -267,8 +278,8 @@ def _sync_people_photos(people: list) -> None:
         img_file = PUBLIC_DIR / photo_path.lstrip("/")
         if not img_file.exists():
             continue
-        _upload_person_photo(img_file, person_id)
-        uploaded += 1
+        if _upload_person_photo(img_file, person_id):
+            uploaded += 1
     already = len([k for k, v in _people_media_cache.items() if isinstance(v, int) and v])
     print(f"   ✓ {uploaded} new, {already} total in media library")
 
@@ -315,27 +326,11 @@ def _upload_research_image(image_path: Path, research_id: str) -> int:
     if DRY_RUN:
         print(f"   [dry-run] upload research image: {image_path.name}")
         return 0
-    mime, _ = mimetypes.guess_type(str(image_path))
-    mime = mime or "image/jpeg"
-    with open(image_path, "rb") as f:
-        data = f.read()
-    r = session.post(
-        f"{WP_URL}/wp-json/wp/v2/media",
-        headers={
-            "Content-Disposition": f'attachment; filename="research-{image_path.name}"',
-            "Content-Type": mime,
-        },
-        data=data,
-    )
-    if r.ok:
-        media_id = r.json().get("id", 0)
+    media_id = _upload_or_reuse(image_path, f"research-{image_path.name}", "image/jpeg")
+    if media_id:
         _research_media_cache[research_id] = media_id
         _save_research_media_cache()
-        print(f"   🔬 Uploaded research image: {image_path.name}")
-        return media_id
-    else:
-        print(f"   ✗ Research image upload failed ({r.status_code}): {r.text[:100]}")
-        return 0
+    return media_id
 
 
 def _sync_research_images(research: list) -> None:
@@ -351,8 +346,8 @@ def _sync_research_images(research: list) -> None:
         img_file = PUBLIC_DIR / image_path.lstrip("/")
         if not img_file.exists():
             continue
-        _upload_research_image(img_file, rid)
-        uploaded += 1
+        if _upload_research_image(img_file, rid):
+            uploaded += 1
     already = len([k for k, v in _research_media_cache.items() if isinstance(v, int) and v])
     print(f"   ✓ {uploaded} new, {already} total in media library")
 
@@ -810,21 +805,23 @@ def _research_html(research: list, image_urls: dict) -> str:
         desc  = r.get("description", "")
         rid   = r.get("id", "")
         img   = image_urls.get(rid, "")
+        url   = r.get("url", "")
+        if url.startswith("/"):
+            url = f"{WP_URL}{url}"
+
+        def _linked(inner: str) -> str:
+            return f'<a href="{url}">{inner}</a>' if url else inner
 
         if img:
-            thumb = (
-                f'<a href="{WP_URL}/research/{rid}/">'
+            thumb = _linked(
                 f'<img src="{img}" alt="{title}" loading="lazy"'
                 f' style="width:200px;height:130px;object-fit:cover;border-radius:4px;'
                 f'vertical-align:top">'
-                f'</a>'
             )
         else:
             thumb = (
-                f'<a href="{WP_URL}/research/{rid}/"'
-                f' style="width:200px;height:130px;background:#e5e7eb;border-radius:4px;'
-                f'vertical-align:top;text-decoration:none;padding:8px;color:#999;'
-                f'font-size:.8rem">{title[:30]}</a>'
+                f'<div style="width:200px;height:130px;background:#e5e7eb;'
+                f'border-radius:4px"></div>'
             )
 
         return (
@@ -834,7 +831,7 @@ def _research_html(research: list, image_urls: dict) -> str:
             f'<td style="width:216px;padding:12px;vertical-align:top">{thumb}</td>'
             f'<td style="padding:12px;vertical-align:top">'
             f'<h3 style="margin-top:0;margin-bottom:6px">'
-            f'<a href="{WP_URL}/research/{rid}/">{title}</a></h3>'
+            f'{_linked(title)}</h3>'
             f'<p style="margin:0;font-size:.95rem;color:#444;line-height:1.5">{desc}</p>'
             f'</td>'
             f'</tr>'

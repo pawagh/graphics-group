@@ -2,52 +2,57 @@
   {
     "id": "desktop-3d-telepresence",
     "title": "Desktop 3D Telepresence",
-    "description": "Bringing Telepresence to Every Desk \u2014 developing systems for real-time 3D telepresence using commodity RGBD cameras.",
-    "imagePath": "",
+    "description": "Bringing Telepresence to Every Desk — developing systems for real-time 3D telepresence using commodity RGBD cameras.",
+    "imagePath": "/images/research/desktop-3d-telepresence.png",
     "tags": [],
     "publicationIds": [],
     "active": true,
-    "order": 0
+    "order": 0,
+    "url": "/wang-2023-bringing/"
   },
   {
     "id": "egocentric-body-pose-tracking",
     "title": "Egocentric Body Pose Tracking",
     "description": "Mobile, egocentric human body motion reconstruction using eyeglasses-mounted cameras and body-worn inertial sensors.",
-    "imagePath": "",
+    "imagePath": "/images/research/egocentric-body-pose-tracking.png",
     "tags": [],
     "publicationIds": [],
     "active": true,
-    "order": 1
+    "order": 1,
+    "url": "/cha-2021-mobile/"
   },
   {
     "id": "eye-tracking-with-3d-pupil-localization",
     "title": "Eye Tracking with 3D Pupil Localization",
     "description": "3D pupil localization and gaze tracking based on anatomical eye models and neural refraction correction for AR/VR displays.",
-    "imagePath": "",
+    "imagePath": "/images/research/eye-tracking-with-3d-pupil-localization.png",
     "tags": [],
     "publicationIds": [],
     "active": true,
-    "order": 2
+    "order": 2,
+    "url": "/lu-2022-gaze/"
   },
   {
     "id": "holographic-near-eye-display",
     "title": "Holographic Near-Eye Display",
     "description": "Computing high-quality phase-only holograms for near-eye holographic displays with applications in AR eyeglasses.",
-    "imagePath": "",
+    "imagePath": "/images/research/holographic-near-eye-display.jpg",
     "tags": [],
     "publicationIds": [],
     "active": true,
-    "order": 3
+    "order": 3,
+    "url": "/chakravarthula-2020-computing/"
   },
   {
     "id": "novel-view-rendering-using-neural-networks",
     "title": "Novel View Rendering using Neural Networks",
     "description": "Learning generalizable radiance fields for human performance rendering and novel view synthesis.",
-    "imagePath": "",
+    "imagePath": "/images/research/novel-view-rendering-using-neural-networks.png",
     "tags": [],
     "publicationIds": [],
     "active": true,
-    "order": 4
+    "order": 4,
+    "url": "/kwon-2021-human/"
   },
   {
     "id": "dynamic-focus-augmented-reality-display",
@@ -57,7 +62,8 @@
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 5
+    "order": 5,
+    "url": "https://telepresence.web.unc.edu/research/dynamic-focus-augmented-reality-display/"
   },
   {
     "id": "immersive-learning-from-3d-reconstruction",
@@ -67,7 +73,8 @@
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 6
+    "order": 6,
+    "url": "https://telepresence.web.unc.edu/research/3dreconstructiondynamic/"
   },
   {
     "id": "low-latency-display",
@@ -77,17 +84,19 @@
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 7
+    "order": 7,
+    "url": "https://telepresence.web.unc.edu/research/low-latency-displays/"
   },
   {
     "id": "pinlight-display",
     "title": "Pinlight Display",
-    "description": "Novel optical see-through augmented reality display offering wide field of view and compact eyeglasses form factor. Prototype demonstrates 110\u00b0 diagonal field of view.",
+    "description": "Novel optical see-through augmented reality display offering wide field of view and compact eyeglasses form factor. Prototype demonstrates 110° diagonal field of view.",
     "imagePath": "/images/research/pinlight-display.jpeg",
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 8
+    "order": 8,
+    "url": ""
   },
   {
     "id": "office-of-the-future",
@@ -97,7 +106,8 @@
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 9
+    "order": 9,
+    "url": ""
   },
   {
     "id": "3d-telepresence-for-medical-consultation",
@@ -107,7 +117,8 @@
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 10
+    "order": 10,
+    "url": ""
   },
   {
     "id": "wall-to-wall-telepresence",
@@ -117,7 +128,8 @@
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 11
+    "order": 11,
+    "url": "https://henryfuchs.web.unc.edu/wp-content/uploads/sites/4964/2013/05/roomsized-informal-telepresence-system.pdf"
   },
   {
     "id": "multi-view-teleconferencing",
@@ -127,7 +139,19 @@
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 12
+    "order": 12,
+    "url": "http://telepresence.web.unc.edu/wp-content/uploads/sites/11620/2016/04/lincoln-imm2009-multiview.pdf"
+  },
+  {
+    "id": "avatar",
+    "title": "Avatar",
+    "description": "One-to-many teleconferencing system in which a user inhabits an animatronic shader lamps avatar at a remote site, maintaining gaze awareness with the people there.",
+    "imagePath": "/images/research/avatar.jpg",
+    "url": "http://telepresence.web.unc.edu/wp-content/uploads/sites/11620/2016/04/lincoln-2011ijvr-avatars.pdf",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 13
   },
   {
     "id": "ultrasound-medical-augmented-reality",
@@ -137,7 +161,8 @@
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 13
+    "order": 14,
+    "url": ""
   },
   {
     "id": "pixel-planes-pixelflow",
@@ -147,7 +172,8 @@
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 14
+    "order": 15,
+    "url": ""
   },
   {
     "id": "3d-laparoscopic-visualization",
@@ -157,7 +183,8 @@
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 15
+    "order": 16,
+    "url": ""
   },
   {
     "id": "wide-area-tracking",
@@ -167,7 +194,8 @@
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 16
+    "order": 17,
+    "url": ""
   },
   {
     "id": "image-based-rendering",
@@ -177,7 +205,8 @@
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 17
+    "order": 18,
+    "url": ""
   },
   {
     "id": "telecollaboration",
@@ -187,6 +216,18 @@
     "tags": [],
     "publicationIds": [],
     "active": false,
-    "order": 18
+    "order": 19,
+    "url": "http://cs.brown.edu/stc/resea/telecollaboration/overview_telecollaboration.html"
+  },
+  {
+    "id": "wide-area-visuals-with-projectors",
+    "title": "Wide Area Visuals with Projectors",
+    "description": "Portable multi-projector display and rendering system that can be rapidly deployed in geometrically complex environments, with seamless geometric and photometric projection and continuous self-calibration using pan-tilt-zoom cameras and imperceptible structured light.",
+    "imagePath": "/images/research/wide-area-visuals-with-projectors.gif",
+    "url": "",
+    "tags": [],
+    "publicationIds": [],
+    "active": false,
+    "order": 20
   }
 ]
